@@ -1,0 +1,20 @@
+site_name: Validation SONIC designs
+theme:
+  # name: 'cinder' 3
+  name: 'material'
+  # name: 'windmill' 1
+  # name: readthedocs
+
+plugins:
+    - search
+    # - autolinks
+    - em-img2fig
+
+
+nav: 
+    - Home: index.md
+    - Day 1 Operations:  
+        - Day 1 Operattions : Day1Operation.md
+        - Day 1 Operations - Simplified by ONES: Day1Ones.md
+        - SONiC Validated Designs - ONES: SonicValidateDesign.md
+        - BGP IP CLOS : BGP_IP_CLOS.md
