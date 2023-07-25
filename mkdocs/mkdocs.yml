@@ -1,23 +1,65 @@
-site_name: Validation SONIC designs
+site_name: ONES Validation Design
+site_author: Aviz Engineering & Sales Team
+site_description: ONES Validation Design Documentation
+copyright: Copyright &copy; 2023 Aviz Networks
+
+# Repository information
+repo_name: ones-svd on github
+repo_url: https://github.com/AvizNetworks/ones-svd
+
 theme:
   # name: 'cinder' 3
   name: 'material'
-  # name: 'windmill' 1
+  # name: 'windmill' 
   # name: readthedocs
-
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+   
 plugins:
-    - search
-    # - autolinks
-    - em-img2fig
+  - search
+  - em-img2fig
+
+markdown_extensions:
+  - pymdownx.superfences
+  - tables
+  - pymdownx.tabbed:
+      alternate_style: true 
+
 
 
 nav:
-  - Home: index.md
+  - Introduction: index.md
+  - SONiC Advantages: SonicAdvantages.md
   - Day 1 Operations:
-    - Day 1 Operattions: Day1Operation.md
-    - Day 1 Operations - Simplified by ONES: Day1Ones.md
-    - SONiC Validated Designs - ONES: SonicValidateDesign.md
-    - BGP IP CLOS: BGP_IP_CLOS.md
+    - Day 1 Operations: day1Operation/Day1OperationsSONiC.md
+    - Day 1 Operations - Simplified by ONES: 
+      - Day 1 Operations - Simplified by ONES: day1Operation/day1OperationByOnes/Day1OperationsSimplifiedbyONES.md
+    - SONiC Validated Designs - ONES: 
+      - SONiC Validated Designs - ONES: SonicValidateDesign.md
+      - BGP IP CLOS: sonicValidatedDesignsByOnse/BGP_IP_CLOS.md
+      - BGP-IP-CLOS-MCLAG: sonicValidatedDesignsByOnse/BGP-IP-CLOS-MCLAG.md
+      - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L3 VXLAN + EVPN Symmetric IRB over MC-LAG.md
+      - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L2 VXLAN + EVPN Asymmetric IRB over MC-LAG.md
+
+
+
+      
+
+      # - BGP IP CLOS: 
+      #   - BGP IP CLOS: sonicValidatedDesignsByOnse/bgpIpClos/bgpipclos.md
+      #   - Configuration:
+      #     - Configuration: sonicValidatedDesignsByOnse/bgpIpClos/files/configuration.md
+      #     - YAML Template: sonicValidatedDesignsByOnse/bgpIpClos/files/yamlTemplate.md
+
   - Day 2 Operations - SONiC:
     - Day 2 Operations - SONiC: day2Operations/Day2OperationSonic.md
     - ONES API: 
@@ -26,6 +68,10 @@ nav:
       - ONES Sample API:
         - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/Simplified Day 1 Orchestration.md
         - Get Day1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/Get Day1 Operational Status.md
-
-
-
+        - ZTP Upgrade: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ZTP Upgrade.md
+        - Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/Upgrade SONiC NOS Image.md
+        - Device Reboot: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/Device Reboot.md
+        - Show Difference between golden and running config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ConfigDiff.md
+        - Get ONES Version: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/OnesVersion.md
+        - Backup Current Golden Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/Backup Current Golden Config.md
+        - Replace Current Config for Devices: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/Replace Current Config for Devices.md
