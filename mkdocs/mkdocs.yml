@@ -11,10 +11,21 @@ plugins:
     - em-img2fig
 
 
-nav: 
-    - Home: index.md
-    - Day 1 Operations:  
-        - Day 1 Operattions : Day1Operation.md
-        - Day 1 Operations - Simplified by ONES: Day1Ones.md
-        - SONiC Validated Designs - ONES: SonicValidateDesign.md
-        - BGP IP CLOS : BGP_IP_CLOS.md
+nav:
+  - Home: index.md
+  - Day 1 Operations:
+    - Day 1 Operattions: Day1Operation.md
+    - Day 1 Operations - Simplified by ONES: Day1Ones.md
+    - SONiC Validated Designs - ONES: SonicValidateDesign.md
+    - BGP IP CLOS: BGP_IP_CLOS.md
+  - Day 2 Operations - SONiC:
+    - Day 2 Operations - SONiC: day2Operations/Day2OperationSonic.md
+    - ONES API: 
+      - ONES API: day2Operations/onesAPI/OnesAPI.md
+      - ONES API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
+      - ONES Sample API:
+        - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/Simplified Day 1 Orchestration.md
+        - Get Day1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/Get Day1 Operational Status.md
+
+
+
