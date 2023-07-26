@@ -1,1 +1,1 @@
-YAML files will go here.
+Supported YAML files for day 1 operations.
