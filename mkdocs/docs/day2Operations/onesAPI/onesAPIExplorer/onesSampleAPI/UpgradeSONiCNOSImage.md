@@ -6,6 +6,10 @@
     border-collapse: collapse;
     table-layout: fixed;
     width: 400px;
+    border: 1px solid black;
+  }
+  th {
+    border: 1px solid black;
   }
 
   td {
@@ -43,7 +47,7 @@ Returns False Status if Image upgrade to sonic devices is unsuccessful
   </tr>
   <tr>
     <th>Example</th>
-    <td><pre>POST /imageUpgradeRequest HTTP/1.1
+    <td><pre>POST /upgradeNOSImage  HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Host: localhost:8080
 Connection: close

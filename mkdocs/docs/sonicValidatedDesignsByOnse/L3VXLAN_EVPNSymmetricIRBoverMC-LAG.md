@@ -268,9 +268,9 @@ Parameters:
   sag: true
 
 ```
-### Config Applied and ValidatedW
+### Config Applied and Validated
 
-![configuration](../../img/config2.png)
+![configuration](../img/L3-VXLAN.png)
 
 ### Applied Configuration on Switches
 

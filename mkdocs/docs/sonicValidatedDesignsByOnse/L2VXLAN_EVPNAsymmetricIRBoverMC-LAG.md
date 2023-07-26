@@ -269,7 +269,7 @@ Parameters:
 ```
 ### Config Applied and Verified
 
-![configuration](../img/asymmetricconfig.png)
+![configuration](../img/L2-VXLAN.png)
 
 ### Applied Configuration on Switches
 

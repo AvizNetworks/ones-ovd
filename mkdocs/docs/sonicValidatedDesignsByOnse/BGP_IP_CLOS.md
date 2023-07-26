@@ -237,7 +237,7 @@ Parameters:
 
 ## Configure, Validate & Verify
 
-![configuration](../../img/bgpclos%20config.png)
+![configuration](../img/BGP-IPCLOS.png)
 
 ## IP Configuration
 

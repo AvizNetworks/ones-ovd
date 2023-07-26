@@ -6,8 +6,11 @@
     border-collapse: collapse;
     table-layout: fixed;
     width: 400px;
+    border: 1px solid black;
   }
-
+  th {
+    border: 1px solid black;
+  }
   td {
     border: 1px solid black;
     padding: 8px;

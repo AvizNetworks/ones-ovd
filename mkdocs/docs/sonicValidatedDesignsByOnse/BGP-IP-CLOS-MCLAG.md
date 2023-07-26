@@ -235,7 +235,7 @@ anycast_gateway: "100.10.0.0/23"
 
 ### Config Applied and Verified
 
-![configuration](../../img/mclag-config.png)
+![configuration](../img/ipclos-mclag-bgp.png)
 
 ### Applied Configuration on Switches
 

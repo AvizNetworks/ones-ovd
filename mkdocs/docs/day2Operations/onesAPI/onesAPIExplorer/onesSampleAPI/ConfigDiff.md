@@ -6,6 +6,10 @@
     border-collapse: collapse;
     table-layout: fixed;
     width: 400px;
+    border: 1px solid black;
+  }
+  th {
+    border: 1px solid black;
   }
 
   td {
@@ -51,8 +55,7 @@ Input
 
 Response: current config on device vs config done via FM
 {
- "orchestrated_config": "Last login: Fri Sep 30 11:44:05 2022 from 10.x.x.150\r\r\nsave\nsave\r\n\rSN2100-Leaf1# save\r\n\rSaving Configuration\r\n\rSN2100-Leaf1# show run\show run\r\n\r configure terminal\r\nrouter-id 3.0.0.2\r\nntp add 128.138.141.172\r\nclock timezone Asia/Kolkata\r\nsyslog add 10.x.11\r\snmp-server trap modify
-}
+ "orchestrated_config": "Last login: Fri Sep 30 11:44:05 2022 from 10.x.x.150\r\r\nsave\nsave\r\n\rSN2100-Leaf1# save\r\n\rSaving Configuration\r\n\rSN2100-Leaf1# show run\show run\r\n\r configure terminal\r\nrouter-id 3.0.0.2\r\nntp add 128.138.141.172\r\nclock timezone Asia/Kolkata\r\nsyslog add 10.x.11\r\snmp-server trap modify"}
 </pre>
     </td>
   </tr>

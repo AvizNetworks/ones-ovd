@@ -6,6 +6,10 @@
     border-collapse: collapse;
     table-layout: fixed;
     width: 400px;
+    border: 1px solid black;
+  }
+  th {
+    border: 1px solid black;
   }
 
   td {
@@ -54,13 +58,15 @@ Returns status false if ZTP enabled upgrade to sonic enrolled devices is unsucce
   </tr>
   <tr>
     <th>Example</th>
-    <td><pre>POST /imageUpgradeRequest HTTP/1.1
+    <td><pre>POST /enableZTPUpgrade HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Host: localhost:8080
 Connection: close
 User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
 Content-Length: 61
-[{"ip":"10.x.x.67","pathToImage":"http://10.x.x.10:8191/mnt/ws/images/sonic-mellanox-e8daeacd.bin"}]</pre>
+
+["10.x.x.10", "10.x.x.11"]
+</pre>
     </td>
   </tr>
 </table>

@@ -6,6 +6,10 @@
     border-collapse: collapse;
     table-layout: fixed;
     width: 400px;
+    border: 1px solid black;
+  }
+  th {
+    border: 1px solid black;
   }
 
   td {
@@ -41,14 +45,16 @@
   </tr>
   <tr>
     <th>Example</th>
-    <td><pre>POST /getVersion HTTP/1.1
+    <td><pre>POST /getONESVersion HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Host: 10.1.1.8:8787
 Connection: close
 User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
 Content-Length: 61
 
+
 ["10.x.x.79"]
+
 
 [
   {
@@ -56,6 +62,7 @@ Content-Length: 61
     "IP": "10.x.x.61"
   }
 ]
+
 
 </pre>
     </td>

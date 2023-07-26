@@ -6,8 +6,11 @@
     border-collapse: collapse;
     table-layout: fixed;
     width: 400px;
+    border: 1px solid black;
   }
-
+  th {
+    border: 1px solid black;
+  }
   td {
     border: 1px solid black;
     padding: 8px;
@@ -48,14 +51,16 @@ Returns Response - Parity Config when  Operator chooses hard provisioned
   </tr>
   <tr>
     <th>Example</th>
-    <td><pre>POST /configreplace HTTP/1.1
+    <td><pre>POST /replaceConfig HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Host: 10.101.118.10:8787
 Connection: close
 User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
 Content-Length: 61
 
-onlydiff= <b>true</b>
+file: goldenconfigfile
+onlydiff: true/false
+
 </pre>
     </td>
   </tr>
