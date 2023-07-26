@@ -26,9 +26,12 @@ Within the spine layer, BGP utilizes Equal-Cost Multi-Path (ECMP) routing to dis
 
 
 The template includes the inventory, connectivity, BGP, and other configurations needed for the topology. You can modify the template to fit your specific needs
+<br />
+<br />
 
-
-![Configuration](../img/bgp_conf.png)
+![Configuration](../img/IPCLOS.svg)
+<br />
+<br />
 
 ## YAML Template
 
