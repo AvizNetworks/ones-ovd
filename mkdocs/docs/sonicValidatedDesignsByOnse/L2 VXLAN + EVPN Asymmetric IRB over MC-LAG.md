@@ -3,7 +3,7 @@ With the asymmetric model, leaf devices serving as VXLAN tunnel endpoints (VTEPs
 With this model, VXLAN traffic must use the destination VNI in each direction. The source VTEP always routes the traffic to the destination VLAN and sends it using the destination L2 VNI. When the traffic arrives at the destination VTEP, that device forwards the traffic on the destination VLAN.
 Operators have to configure all source and destination VLANs and their corresponding VNIs on each leaf switch, even if a leaf doesn’t host traffic for some of those VLANs. As a result, this model has scaling issues when the network has a large number of VLANs. However, when DC operations have fewer VLANs, this model will have lower latency over the symmetric model. 
 
-![configuration](../img/asymetric.png)
+![configuration](../img/L2_VXLAN_ASSYMETRIC.svg)
 
 ## Configuration
 
