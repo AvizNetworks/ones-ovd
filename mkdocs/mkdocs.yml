@@ -43,12 +43,12 @@ nav:
     - Day 1 Operations: day1Operation/Day1OperationsSONiC.md
     - Day 1 Operations - Simplified by ONES: 
       - Day 1 Operations - Simplified by ONES: day1Operation/day1OperationByOnes/Day1OperationsSimplifiedbyONES.md
-    - SONiC Validated Designs - ONES: 
-      - SONiC Validated Designs - ONES: SonicValidateDesign.md
-      - BGP IP CLOS: sonicValidatedDesignsByOnse/BGP_IP_CLOS.md
-      - BGP-IP-CLOS-MCLAG: sonicValidatedDesignsByOnse/BGP-IP-CLOS-MCLAG.md
-      - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
-      - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
+  - SONiC Validated Designs - ONES: 
+    - SONiC Validated Designs - ONES: SonicValidateDesign.md
+    - BGP IP CLOS: sonicValidatedDesignsByOnse/BGP_IP_CLOS.md
+    - BGP-IP-CLOS-MCLAG: sonicValidatedDesignsByOnse/BGP-IP-CLOS-MCLAG.md
+    - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
+    - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
 
 
 
