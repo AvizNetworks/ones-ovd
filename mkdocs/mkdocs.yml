@@ -75,3 +75,9 @@ nav:
         - Get ONES Version: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/OnesVersion.md
         - Backup Current Golden Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/Backup Current Golden Config.md
         - Replace Current Config for Devices: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/Replace Current Config for Devices.md
+  - Deploy ONES:
+    - System Requirements : Deploy ONES/System Requirements.md
+    - ONES Software requirements : Deploy ONES/ONES Software requirements.md
+    - Browser Requirements : Deploy ONES/Browser Requirements.md
+
+  
