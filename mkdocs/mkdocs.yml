@@ -39,12 +39,12 @@ markdown_extensions:
 nav:
   - Introduction: index.md
   - SONiC Advantages: SonicAdvantages.md
-  - Day 1 Operations:
-    - Day 1 Operations: day1Operation/Day1OperationsSONiC.md
+  - Overview Day 1 Operations:
+    - Day 1 Operations - SONiC: day1Operation/Day1OperationsSONiC.md
     - Day 1 Operations - Simplified by ONES: 
       - Day 1 Operations - Simplified by ONES: day1Operation/day1OperationByOnes/Day1OperationsSimplifiedbyONES.md
-  - SONiC Validated Designs - ONES: 
-    - SONiC Validated Designs - ONES: SonicValidateDesign.md
+  - Overview - SONiC Validated Designs: 
+    - SONiC Validated Designs by ONES: SonicValidateDesign.md
     - BGP IP CLOS: sonicValidatedDesignsByOnse/BGP_IP_CLOS.md
     - BGP-IP-CLOS-MCLAG: sonicValidatedDesignsByOnse/BGP-IP-CLOS-MCLAG.md
     - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
@@ -60,21 +60,22 @@ nav:
       #     - Configuration: sonicValidatedDesignsByOnse/bgpIpClos/files/configuration.md
       #     - YAML Template: sonicValidatedDesignsByOnse/bgpIpClos/files/yamlTemplate.md
 
-  - Day 2 Operations - SONiC:
+  - Overview Day 2 Operations - SONiC:
     - Day 2 Operations - SONiC: day2Operations/Day2OperationSonic.md
-    - ONES API: 
-      - ONES API: day2Operations/onesAPI/OnesAPI.md
+    - Ones For Day 2 operations: day2Operations/OnesForDay2.md
+    - ONES APIs Overview: 
+      - ONES APIs: day2Operations/onesAPI/OnesAPI.md
       - ONES API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
-      - ONES Sample API:
-        - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/SimplifiedDay1Orchestration.md
-        - Get Day1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
-        - ZTP Upgrade: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ZTPUpgrade.md
-        - Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/UpgradeSONiCNOSImage.md
-        - Device Reboot: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/DeviceReboot.md
-        - Show Difference between golden and running config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ConfigDiff.md
-        - Get ONES Version: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/OnesVersion.md
-        - Backup Current Golden Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/BackupCurrentGoldenConfig.md
-        - Replace Current Config for Devices: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ReplaceCurrentConfigforDevices.md
+    - ONES Sample APIs:
+      - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/SimplifiedDay1Orchestration.md
+      - Get Day1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
+      - ZTP Upgrade: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ZTPUpgrade.md
+      - Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/UpgradeSONiCNOSImage.md
+      - Device Reboot: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/DeviceReboot.md
+      - Show Difference between golden and running config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ConfigDiff.md
+      - Get ONES Version: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/OnesVersion.md
+      - Backup Current Golden Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/BackupCurrentGoldenConfig.md
+      - Replace Current Config for Devices: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ReplaceCurrentConfigforDevices.md
   - Deploy ONES:
     - System Requirements : DeployONES/SystemRequirements.md
     - ONES Software requirements : DeployONES/ONESSoftwarerequirements.md
