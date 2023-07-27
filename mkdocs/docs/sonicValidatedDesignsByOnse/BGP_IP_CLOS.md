@@ -246,7 +246,10 @@ Parameters:
   table {
     border-collapse: collapse;
     table-layout: fixed;
-    width: 400px;
+    width: 400px; border: 1px solid black;
+  }
+  th {
+    border: 1px solid black;
   }
 
   td {
