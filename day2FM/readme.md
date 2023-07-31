@@ -5,7 +5,7 @@ This illustration demonstrates various day 2 operations such as backup&restore, 
 ## Importing ONES Fabric Manager Agent
 
 ```py
-from client import FMClient
+from restclient.orchestration.client import FMClient
 import json
 ```
 
