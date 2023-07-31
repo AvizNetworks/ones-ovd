@@ -5,7 +5,7 @@ This illustration demonstrates the deployment of the configuration using an inte
 ## Importing ONES Fabric Manager Agent
 
 ```py
-from client import FMClient
+from restclient.orchestration.client import FMClient
 ```
 
 ## Setting Up connection
