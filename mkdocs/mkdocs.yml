@@ -40,8 +40,8 @@ nav:
   - Introduction: index.md
   - SONiC Advantages: SonicAdvantages.md
   - Overview Day 1 Operations:
-    - Day 1 Operations - SONiC: day1Operation/Day1OperationsSONiC.md
-    - Day 1 Operations - Simplified by ONES: day1Operation/day1OperationByOnes/Day1OperationsSimplifiedbyONES.md
+    - Day 1 Operations - SONiC: day1Operations/Day1OperationsSONiC.md
+    - Day 1 Operations - Simplified by ONES: day1Operations/Day1OperationsSimplifiedbyONES.md
   - Overview - SONiC Validated Designs: 
     - SONiC Validated Designs by ONES: SonicValidateDesign.md
     - BGP IP CLOS: sonicValidatedDesignsByOnse/BGP_IP_CLOS.md
