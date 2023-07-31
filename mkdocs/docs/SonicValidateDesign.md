@@ -11,4 +11,4 @@ Aviz ONES has pre-validated templates for various data center fabric deployments
 
 Sonic validated design fully integrates with Aviz ONES orchestration and Supportability applications which add configuration management life cycle , configuration change control workflow , continuous validation check of applied configurations to enrolled devices in a sonic fabric .
 
-![configuration](../img/day1_ones.png)
+![configuration](img/day1_ones.png)
