@@ -48,23 +48,12 @@ nav:
     - BGP-IP-CLOS-MCLAG: sonicValidatedDesignsByOnse/BGP-IP-CLOS-MCLAG.md
     - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
     - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
-
-
-
-      
-
-      # - BGP IP CLOS: 
-      #   - BGP IP CLOS: sonicValidatedDesignsByOnse/bgpIpClos/bgpipclos.md
-      #   - Configuration:
-      #     - Configuration: sonicValidatedDesignsByOnse/bgpIpClos/files/configuration.md
-      #     - YAML Template: sonicValidatedDesignsByOnse/bgpIpClos/files/yamlTemplate.md
-
   - Overview Day 2 Operations - SONiC:
     - Day 2 Operations - SONiC: day2Operations/Day2OperationSonic.md
     - ONES For Day 2 operations: day2Operations/OnesForDay2.md
     - ONES APIs Overview: 
-      - ONES APIs: day2Operations/onesAPI/OnesAPI.md
-      - ONES API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
+      - APIs: day2Operations/onesAPI/OnesAPI.md
+      - API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
     - ONES Sample APIs:
       - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/SimplifiedDay1Orchestration.md
       - Get Day1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
@@ -79,5 +68,6 @@ nav:
     - System Requirements : DeployONES/SystemRequirements.md
     - ONES Software requirements : DeployONES/ONESSoftwarerequirements.md
     - Browser Requirements : DeployONES/BrowserRequirements.md
+    - Documentation : DeployONES/Documentation.md
 
   

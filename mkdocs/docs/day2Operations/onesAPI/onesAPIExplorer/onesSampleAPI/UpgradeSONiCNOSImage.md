@@ -1,6 +1,5 @@
 # ZTP Upgrade 
 
-<!-- markdownlint-disable MD033 -->
 <style>
   table {
     border-collapse: collapse;
@@ -28,11 +27,11 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>Custom Image Upgrade for  Sonic devices  . Performs custom image upgrades for specific enrolled selected  sonic devices only.
- Custom image management via ONES application.
-                 ONES application  needs the following information as the input -
-List of devices (IP address or host name) to upgrade images
-Image path , user credentials to scp server
+    <td><pre>Custom Image Upgrade for  Sonic devices  . Performs custom image upgrades for specific enrolled  sonic devices only.
+ Custom image management via ONES application. ONES application  needs the following information as the input -
+- List of devices (IP address or host name) for the upgrade image operation
+- Image path and  user credentials to scp server
+
 </pre>
     </td>
   </tr>
@@ -46,8 +45,8 @@ Input Parameters: one or more device ip address
   <tr>
     <th>Response</th>
     <td><pre>Response: True/False- 
-Returns True status if image upgrade to sonic devices is successful 
-Returns False Status if Image upgrade to sonic devices is unsuccessful
+Returns True status , if  image upgrade to sonic devices is successful 
+Returns False Status , if  Image upgrade to sonic devices is unsuccessful 
 </pre> </td>
   </tr>
   <tr>

@@ -28,18 +28,20 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>getDay1ConfigStatus- Retrieve Generic Intent Status for provisioning on sonic enabled fabric switches . This restful API allows network  operators  to  get the status of orchestration progress on a specific switch in sonic fabric  enrolled with ONES application  </pre>
+    <td><pre>getDay1ConfigStatus- Retrieve Generic Intent Status for provisioning over sonic enabled fabric switches . This restful API allows network  operators  to  get the status of orchestration progress on a specific switch in sonic fabric  enrolled with ONES application </pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>Input: `<`Intent ID`>` Output: JSON (status)
-        Input Parameter for the Rest API call -  Template file for the intent configuration for the whole fabric switches enrolled with ONES </pre>
+    <td><pre>Input: `<`Intent `ID>`  Output: JSON (status)
+
+Input Parameter for the Rest API call -  Intent ID for the intent configuration for the complete  fabric switches enrolled with ONES 
+</pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td> <pre>Return  the Intent Status for the Day 1 orchestration.</pre> </td>
+    <td> <pre> Return  the Intent Status for the Day 1 orchestration. </pre> </td>
   </tr>
   <tr>
     <th>Example</th>

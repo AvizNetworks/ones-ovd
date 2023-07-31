@@ -1,46 +1,54 @@
 # L2 VXLAN + EVPN Asymmetric IRB over MC-LAG
-With the asymmetric model, leaf devices serving as VXLAN tunnel endpoints (VTEPs) both route and bridge to initiate the VXLAN tunnel (tunnel ingress). However, when exiting the VXLAN tunnel (tunnel egress), the VTEPs can only bridge the traffic to the destination VLAN.
-With this model, VXLAN traffic must use the destination VNI in each direction. The source VTEP always routes the traffic to the destination VLAN and sends it using the destination L2 VNI. When the traffic arrives at the destination VTEP, that device forwards the traffic on the destination VLAN.
-Operators have to configure all source and destination VLANs and their corresponding VNIs on each leaf switch, even if a leaf doesn’t host traffic for some of those VLANs. As a result, this model has scaling issues when the network has a large number of VLANs. However, when DC operations have fewer VLANs, this model will have lower latency over the symmetric model. 
+With the asymmetric model, leaf devices serving as VXLAN tunnel endpoints (VTEPs) perform both  routing  and bridging  to initiate the VXLAN tunnel (tunnel ingress). However, when exiting the VXLAN tunnel (tunnel egress), the VTEPs can only bridge the traffic to the destination VLAN.
+
+With this model, VXLAN traffic must use the destination VNI in each direction. The source VTEP always routes the traffic to the destination VLAN and sends it using the destination L2 VNI. When the traffic arrives at the destination VTEP that device forwards the traffic to the destination VLAN.
+
+Operators have to configure all source and destination VLANs and their corresponding VNI values on each leaf switch  even if a leaf switch does not host traffic for some of those VLANs. As a result, this model has scaling issues when the network has a large number of VLANs. However, when DC operations have fewer VLANs, this model will have lower latency over the symmetric model. 
+ 
 
 ![configuration](../img/FourthImage.png)
 
 ## Configuration
 
-In a "L2 VXLAN EVPN with MC LAG  Data Center fabric topology, the configuration sequence involves setting up the necessary components to enable Layer 2 VXLAN with BGP EVPN over MC-LAG interfaces . Following are  summarized configuration sequence:
+In a "L2 VXLAN EVPN with MC LAG”  Data Center fabric topology, the configuration sequence involves setting up the necessary components to enable Layer 2 VXLAN with EBGP EVPN over MC LAG interfaces . Following are  the summarized configuration sequence:
 
-* IP Addressing and EBGP Underlay Configuration:
-* Assign IP addresses to all switches participating in the fabric. 
-* Configure the underlay routing protocol (usually BGP) between the spine switches and leaf switches to establish IP reachability.
-* Establish eBGP  routing protocols  to exchange routing information between data center sites.
-Overlay VXLAN Tunnel Interface Configuration:
-* Create a VXLAN tunnel interface on each leaf switch to serve as the endpoint for VXLAN traffic. Assign an IP address to each tunnel interface.
+**IP Addressing and EBGP Underlay Configuration:**
+- Assign IP addresses to all the switches participating in the fabric. 
+- Configure the underlay routing protocol (usually EBGP) between the spine switches and the leaf switches to establish an IP reachability.
+- Establish eBGP  routing protocols  to exchange routing information between the data center sites.
+
+**Overlay VXLAN Tunnel Interface Configuration:**
+- Create a VXLAN tunnel interface over  each leaf switch to serve as the endpoint for VXLAN traffic. Assign an IP address to each tunnel interface.
+
 
 **MC-LAG Configuration:**
 
-* Enable MCLAG on the leaf switches. Configure the MC-LAG system ID and dual peering links between the MC-LAG peer switches.
+- Enable MCLAG on the leaf switches. Configure the MC LAG system ID and dual peering links between the MC LAG peer switches.
 
 **VLAN-to-VNI Mapping:**
 
-* Create a VLAN-to-VNI (VXLAN Network Identifier) mapping on each leaf switch. This maps VLANs to VXLAN segments (VNIs) that will be used for VXLAN encapsulation. Configure VLAN-to-VNI (VXLAN Network Identifier) mapping to associate each VLAN in the data center with a specific VNI for Layer 2 extension.
-* Configure each leaf switch as a VXLAN VTEP (VXLAN Tunnel Endpoint). This involves associating the VXLAN tunnel interface with the VLAN-to-VNI mapping.
+- Create a VLAN-to-VNI (VXLAN Network Identifier) mapping on each leaf switch. This maps VLANs to VXLAN segments (VNIs) that will be used for VXLAN encapsulation.
+- Configure VLAN-to-VNI (VXLAN Network Identifier) mapping to associate each VLAN in the data center with a specific VNI for Layer 2 extension.
+- Configure the designated ingress and egress  leaf switch with  VXLAN VTEP (VXLAN Tunnel Endpoint). This involves associating the VXLAN tunnel interface with the VLAN-to-VNI mapping.
 
 **BGP EVPN Configuration:**
 
-* Enable BGP EVPN on each leaf switch and establish a BGP peering relationship with the other leaf switches.
-* Configure the BGP EVPN address family and activate BGP EVPN signaling
- Enable  BGP with EVPN address family to exchange MAC and IP reachability information across the VXLAN fabric between data center sites.
+- Enable BGP EVPN on each leaf switch and establish a BGP peering relationship with the other leaf switches.
+- Configure the BGP EVPN address family and activate the BGP EVPN signaling
+- Enable  BGP with EVPN address family to exchange MAC and IP reachability information across the VXLAN fabric between data center sites.
 
 **MC LAG Peer Link Configuration:**
 
-* Set up a dedicated link between the MC LAG peer switches for control plane communication.
-* Configure MC LAG interfaces on each leaf switch to bundle the physical links connected to servers.
-* VLAN Configuration on MC LAG Interfaces: Apply the VLANs that need to be extended over the VXLAN fabric to the MC LAG interfaces.
+- Set up a dedicated link between the MC LAG peer switches for control plane communication.
+- Configure MC LAG interfaces on each  of the leaf switches  to bundle the physical links connected to servers.
+- VLAN Configuration on MC LAG Interfaces -  Apply the VLANs that need to be extended over the VXLAN fabric to the MC LAG interfaces.
 
 **Scenarios for using Asymmetric IRB:**
-1. Preferred model for centralized gateway deployment model
-2. Networks that involve legacy ASICs that do not support L3 VXLAN and must use centralized gateways
+
+1. This is a preferred  model for centralized gateway deployment 
+2. Networks that involve legacy ASICs do not support L3 VXLAN and must leverage centralized gateways models.
 3. Small and medium scale data center deployments
+
 
 ### YAML template
 

@@ -28,18 +28,20 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>Intent Driven orchestration - Performs Day 1 fabric orchestration for various Data Center topologies.This method will initiate the Day-1 orchestration depending on topology and intent supplied via template file. This restful API  allows network operators  to upload an entire intent file (yaml-based) and orchestrate the entire fabric in desired intent based underlay and overlay. For example, if customers  want to provision  BGP as an underlay and  VXLAN as an overlay ,they can operate the template form and provide minimum parameter inputs , with the rest of the derivation and parameters handled by the ONES application.</pre>
+    <td><pre>Intent Driven orchestration - Performs Day 1 fabric orchestration for various Data Center topologies.This method will initiate the Day-1 orchestration depending on  the topology and intent supplied via template file. This restful API  allows network operators  to upload an entire intent file (yaml-based) and orchestrate the entire fabric in a desired intent based underlay and overlay. For example, if customers  want to provision  BGP as an underlay and  VXLAN as an overlay ,they can operate the template form and provide minimum parameter inputs , with the rest of the derivation and parameters handled by the ONES application.</pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>Intent YAML file- Path to Template file -> Output: Intent ID
-        Input Parameter for the Rest API call -  Template file for the intent configuration for the whole fabric switches enrolled with ONES </pre>
+    <td><pre>Intent YAML file- Path to Template file > Output:< Intent ID>
+
+Input Parameter for the Rest API call -  Template file for the intent configuration for the whole fabric switches enrolled with ONES 
+</pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>Provides the intent status of Day1 orchestration </pre></td>
+    <td><pre>Returns  the intent ID which is an unique tag mapped to the specific intended input configuration desired by the network operator  while defining the intended configuration with only specific desired network entities </pre></td>
   </tr>
   <tr>
     <th>Example</th>

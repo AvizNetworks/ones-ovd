@@ -28,18 +28,18 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>With This rest API call Operators gets a view on difference between running config and committed applied config on enrolled devices</pre>
+    <td><pre>Leveraging this  rest API call Operators gets a view on difference between running config and committed applied config on enrolled devices</pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>API Input Parameter : < List of device IPs for which Configuration difference is required > 
+    <td><pre>API Input Parameter : < List of device IPs for which Configuration difference is required >  
 </pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>Response is the current running configuration on enrolled switch devices
+    <td><pre>Response is the difference  of the running configuration vs configuration committed  through  ONES fabric manager 
 </pre> </td>
   </tr>
   <tr>
@@ -55,7 +55,8 @@ Input
 
 Response: current config on device vs config done via FM
 {
- "orchestrated_config": "Last login: Fri Sep 30 11:44:05 2022 from 10.x.x.150\r\r\nsave\nsave\r\n\rSN2100-Leaf1# save\r\n\rSaving Configuration\r\n\rSN2100-Leaf1# show run\show run\r\n\r configure terminal\r\nrouter-id 3.0.0.2\r\nntp add 128.138.141.172\r\nclock timezone Asia/Kolkata\r\nsyslog add 10.x.11\r\snmp-server trap modify"}
+ "orchestrated_config": "Last login: Fri Sep 30 11:44:05 2022 from 10.x.x.150\r\r\nsave\nsave\r\n\rSN2100-Leaf1# save\r\n\rSaving Configuration\r\n\rSN2100-Leaf1# show run\show run\r\n\r configure terminal\r\nrouter-id 3.0.0.2\r\nntp add 128.138.141.172\r\nclock timezone Asia/Kolkata\r\nsyslog add 10.x.11\r\snmp-server trap modify
+}
 </pre>
     </td>
   </tr>

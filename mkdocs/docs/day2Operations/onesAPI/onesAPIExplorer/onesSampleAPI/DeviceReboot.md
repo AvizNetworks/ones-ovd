@@ -27,19 +27,19 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>This API performs ONES  enrolled sonic device reboot . Network operators can reboot ONES application enrolled sonic devices through rest API calls</pre>
+    <td><pre>This API performs ONES  enrolled sonic device reboot . Network operators can reboot ONES application enrolled sonic devices through rest API calls </pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>API Input Parameter : < List of device IPs to be rebooted> 
+    <td><pre>API Input Parameter : < List of device IPs to be rebooted>
 </pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
     <td><pre>Response: True/False
-Returns True status , if Device reboot is successful and ONES receives an acknowledge for the same 
+Returns True status , if  Device reboot is successful and ONES receives an acknowledge for the same 
 Returns False  status , if Device reboot is unsuccessful and ONES receives an acknowledge for the same 
 
 </pre> </td>

@@ -4,12 +4,13 @@
 
 ## Configuration
 
-* IPv4/IPv6/BGP-Unnumbered Underlay Fabric.
-* Host facing port with IPv4/IPv6/L2-Access/L2-Trunk based on requirement.
-* ECMP Load Balancing for Leaf & Spine
-* SVI Configuration for the Gateway
-* MCLAG Configuration on the Leaf Switches
-The template includes the inventory, connectivity, BGP, and other configurations needed for the topology. You can modify the template to fit your specific needs
+- IPv4/IPv6/BGP-Unnumbered Underlay Fabric.
+- Host facing port with IPv4/IPv6/L2-Access/L2-Trunk based on requirement.
+- ECMP Load Balancing for Leaf & Spine
+- SVI Configuration for the Gateway
+- MC LAG Configuration on the Leaf Switches
+
+The template includes the inventory, connectivity, BGP and other configurations needed for the topology. Customers can modify the template to fit their specific requirements.
 
 ### YAML Template
 

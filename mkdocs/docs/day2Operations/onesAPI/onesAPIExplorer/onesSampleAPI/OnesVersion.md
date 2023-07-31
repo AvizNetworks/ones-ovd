@@ -29,18 +29,19 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>This API call enabled network operators  to retrieve  the version of ONES Fabric manager application controller and ONES fabric manager application agent which are running as container services on sonic enabled fabric devices .</pre>
+    <td><pre>This API call enables network operators  to retrieve  version of both the ONES Fabric manager controller and ONES fabric manager agent application which are running as container services on sonic enabled fabric devices .
+</pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>Input Parameters: device ip address - List of Devices IP whose Version numbers needs to be retrieved >
+    <td><pre>Input Parameters: Device ip address - List of Devices IP whose Version numbers needs to be retrieved 
 </pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>Returns the current running  version of  ONES applications both controller and agent 
+    <td><pre>Returns the current running  version of  ONES controller as well as agent application 
 </pre> </td>
   </tr>
   <tr>
@@ -62,7 +63,6 @@ Content-Length: 61
     "IP": "10.x.x.61"
   }
 ]
-
 
 </pre>
     </td>
