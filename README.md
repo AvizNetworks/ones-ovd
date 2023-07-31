@@ -1,5 +1,5 @@
 # ones-svd
-SONiC Validated Designs
+ONES SONiC Validated Designs
 
 
 # Introduction 
