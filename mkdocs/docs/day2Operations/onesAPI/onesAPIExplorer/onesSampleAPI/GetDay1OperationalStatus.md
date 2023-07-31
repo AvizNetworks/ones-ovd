@@ -28,7 +28,7 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>Show Generic Status - Retrieve Generic Intent Status for provisioning on sonic enabled fabric switches . This restful API allows network  operators  to  get the status of orchestration progress on a specific switch in sonic fabric  enrolled with ONES application </pre>
+    <td><pre>getDay1ConfigStatus- Retrieve Generic Intent Status for provisioning on sonic enabled fabric switches . This restful API allows network  operators  to  get the status of orchestration progress on a specific switch in sonic fabric  enrolled with ONES application  </pre>
     </td>
   </tr>
   <tr>

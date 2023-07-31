@@ -1,6 +1,6 @@
 # BGP-IP-CLOS-MCLAG 
 
-![configuration](../img/BGP_IPCLOS_WITH_MCLAG.svg)
+![configuration](../img/ThirdImage.png)
 
 ## Configuration
 

@@ -30,17 +30,13 @@
   <tr>
     <th>Description</th>
     <td><pre>
-After Sonic enabled DC fabric switches are orchestrated completely using Aviz’s ONES API ,
-Network operators can take backup of running configuration on sonic switches at any time instance 
+After Sonic enabled DC fabric switches are orchestrated completely using Aviz’s ONES API  , Network operators can  take backup of running configuration on sonic switches at any time instance 
 
-ONES application offers flexibility to network operators to trigger an  auto backup at 
-fixed interval of time or a specified time in a given operational day in DC fabric 
+ONES application offers flexibility to network operators to trigger an  auto backup at fixed interval of time or a specified time in a given operational day in DC fabric 
 
-ONES network operators  can leverage rest API calls to validate the available configuration
- snapshot of specific devices at any time instance .
+ONES network operators  can leverage rest API calls to validate the available configuration snapshot  of  specific devices at any time instance .
 
-This  API will list the existing backups  already taken for specific devices. Operators have the
-option to Timestamp the  label while restoring the configuration.
+ This  API will list the existing backups  already taken for specific devices. Operators have the option to Timestamp the  label while restoring the configuration.
 </pre>
     </td>
   </tr>

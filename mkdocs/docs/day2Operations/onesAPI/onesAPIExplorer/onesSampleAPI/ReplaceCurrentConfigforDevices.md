@@ -30,8 +30,9 @@
     <td><pre>
 This Rest API client call will feed the golden configuration template as input  and provides the following operational value to network operators 
 
- Provides difference between golden configuration and running configure and accordingly does required configure replacement operations through ONES API call also called as soft provisioning in Day2 Operations 
-PUSH - This Rest API client call also provisions and append  any new Day2 operations over existing orchestrated DC fabric Sonic switches 
+  - Provides difference between golden configuration and running configure and accordingly does required configure replacement operations through ONES API call also called as soft provisioning in Day2 Operations 
+  - PUSH - This Rest API client call also provisions and append  any new Day2 operations over existing orchestrated DC fabric Sonic switches 
+
 
 </pre>
     </td>

@@ -29,7 +29,7 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>This API call enabled network operators  to retrieve  the version of ONES application controller and ONES application agent which are running as container services on sonic enabled fabric devices .</pre>
+    <td><pre>This API call enabled network operators  to retrieve  the version of ONES Fabric manager application controller and ONES fabric manager application agent which are running as container services on sonic enabled fabric devices .</pre>
     </td>
   </tr>
   <tr>

@@ -28,7 +28,12 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>Custom Image Upgrade for  Sonic devices  . Performs custom image upgrades for specific enrolled selected  sonic devices only</pre>
+    <td><pre>Custom Image Upgrade for  Sonic devices  . Performs custom image upgrades for specific enrolled selected  sonic devices only.
+ Custom image management via ONES application.
+                 ONES application  needs the following information as the input -
+List of devices (IP address or host name) to upgrade images
+Image path , user credentials to scp server
+</pre>
     </td>
   </tr>
   <tr>

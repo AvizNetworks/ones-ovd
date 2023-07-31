@@ -7,7 +7,7 @@ Traditionally network operators used to provision day1 operations like interface
 Using Sonic Validated Designs (SVD) , commissioning of network services in day1 operations is automated , is greatly simplified and reduces considerable  time to deploy day1 services . SVD ensures consistency , accuracy and availability of all configurations committed in Day1 operations through a unified fabric automation approach .
 
 
-![configuration](../img/testsvdImage.png)
+![configuration](../img/FirstImage.png)
 
 
 Using an overlay architecture in the data center allows end users (network administrators) to place endpoints (servers or virtual machines) anywhere in the network and remain connected to the same logical Layer 2 network, enabling the virtual topology to be decoupled from the physical topology. 

@@ -31,18 +31,15 @@
     <td><pre>ZTP upgrade - Perform SONiC ZTP upgrade for image and configuration .
 To support image management, There are two options for network operators running sonic fabric 
 Image Upgrade with ZTP 
-Custom image management via ONES application.
-                 ONES application  needs the following information as the input -
-List of devices (IP address or host name) to upgrade images
-Image path , user credentials to scp server
 
-Both ZTP and Custom image upgrades enables the  network operators to change  the version of the operating NOS during maintenance window</pre>
+Both ZTP image upgrade  enables the  network operators to change  the version of the operating NOS during maintenance window
+</pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>API Input parameter : <Input Device IPs>
-Both ZTP and Custom image upgrades enable  network operators  to change  the version of the Sonic  NOS during the maintenance window . . Following  are the  rest API call  signatures for the same.
+    <td><preAPI Input parameter : <Input Device IPs>
+ZTP  enable  image upgrade by network operators use case is to change  the version of the Sonic  NOS during the maintenance window  . Following  are the  rest API call  signatures for the same.
 
 API: enableZTPAndRunRequest
 Type: POST
