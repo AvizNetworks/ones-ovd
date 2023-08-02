@@ -45,10 +45,10 @@ nav:
   - Overview - SONiC Validated Designs: 
     - SONiC Validated Designs by ONES: SonicValidateDesign.md
     - BGP IP CLOS: sonicValidatedDesignsByOnse/BGP_IP_CLOS.md
-    - BGP-IP-CLOS-MCLAG: sonicValidatedDesignsByOnse/BGP-IP-CLOS-MCLAG.md
+    - BGP-IP-CLOS-MC LAG : sonicValidatedDesignsByOnse/BGP-IP-CLOS-MCLAG.md
     - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
     - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
-  - Overview Day 2 Operations - SONiC:
+  - Overview Day 2 Operations:
     - Day 2 Operations - SONiC: day2Operations/Day2OperationSonic.md
     - ONES For Day 2 operations: day2Operations/OnesForDay2.md
   - ONES REST APIs: 
@@ -58,11 +58,11 @@ nav:
     - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/SimplifiedDay1Orchestration.md
     - Get Day1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
     - ZTP Upgrade: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ZTPUpgrade.md
-    - Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/UpgradeSONiCNOSImage.md
+    - Custom Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/UpgradeSONiCNOSImage.md
     - Device Reboot: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/DeviceReboot.md
     - Show Difference between golden and running config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ConfigDiff.md
     - Get ONES Version: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/OnesVersion.md
-    - Backup Current Golden Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/BackupCurrentGoldenConfig.md
+    - Backup Current running Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/BackupCurrentGoldenConfig.md
     - Replace Current Config for Devices: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ReplaceCurrentConfigforDevices.md
   - Deploy ONES:
     - ONES System Requirements : DeployONES/SystemRequirements.md
