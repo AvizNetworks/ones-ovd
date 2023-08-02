@@ -6,6 +6,4 @@
 
 ## Deploying VM for ONES installation 
 
-(https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm)[https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm]
-
-
+<a href="https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm">https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm</a>
