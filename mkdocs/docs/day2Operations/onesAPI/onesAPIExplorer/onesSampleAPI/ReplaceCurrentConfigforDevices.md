@@ -27,29 +27,27 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>
-This Rest API client call will feed the golden configuration template as input  and provides the following operational value to network operators 
+    <td>
+This Rest API client call will feed the golden configuration template as input  and provides the following operational value to network operators <br /></br />
 
- - Provides difference between golden configuration and running configure and accordingly do the  required configure replacement operations through ONES API call also called as soft provisioning in Day2 Operations 
- - PUSH - This Rest API client call also provisions and append  any new Day2 operations over existing orchestrated DC fabric Sonic switches 
+ - Provides difference between golden configuration and running configure and accordingly do the  required configure replacement operations through ONES API call also called as soft provisioning in Day 2 Operations <br />
+ - PUSH - This Rest API client call also provisions and append  any new Day 2 operations over existing orchestrated DC fabric Sonic switches 
 
-</pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre><b>
-    <List of Device IPs > with boolean flag “only diff” = TRUE/FALSE Status,</b> If status return is true , API call returns  difference between golden configuration and running configuration 
+    <td><b>&lt;List of Device IPs &gt; with boolean flag “only diff” = TRUE/FALSE Status,</b> If status return is true , API call returns  difference between golden configuration and running configuration <br /><br />
     If status return is false , API call returns  the parity configuration 
 </pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>
-    - Returns  response - Difference  between running config vs golden config when network Operator chooses Soft provisioning
-    - Returns Response - Parity Config when  network Operator chooses hard provisioning method.
-</pre> </td>
+    <td>
+    - Returns  response - Difference  between running config vs golden config when network Operator chooses Soft provisioning <br /><br />
+    - Returns Response - Parity Config when  network Operator chooses hard provisioning method.<br />
+ </td>
   </tr>
   <tr>
     <th>Example</th>

@@ -1,8 +1,8 @@
-# Overview Day1 Operations 
+# Overview Day 1 Operations 
 
-Traditionally network operators were used to provision  Day1 operations like interface creation , VLAN creation , BGP neighborship configuration etc using manual CLI for configuring DC Leaf and Spine switches  in 2 or 3 CLOS architecture. Configuration application to various Data Center switches through CLIs is a tedious and time consuming process for the operation teams .
+Traditionally network operators were used to provision  Day 1 operations like interface creation , VLAN creation , BGP neighborship configuration etc using manual CLI for configuring DC Leaf and Spine switches  in 2 or 3 CLOS architecture. Configuration application to various Data Center switches through CLIs is a tedious and time consuming process for the operation teams .
 
-The validation process of applied configuration  is also manual resulting in probability of errors during commissioning . Operators will then have to troubleshoot the complete control path and data path to isolate issues due to misconfiguration in Day1 network entity provisioning.
+The validation process of applied configuration  is also manual resulting in probability of errors during commissioning . Operators will then have to troubleshoot the complete control path and data path to isolate issues due to misconfiguration in Day 1 network entity provisioning.
 
 
 ## Day 1 Operations - SONiC 
@@ -10,9 +10,9 @@ The validation process of applied configuration  is also manual resulting in pro
 The most prominently  leveraged data center fabric topology is the highly scalable Layer3  IP-CLOS network design and routing architecture commonly used in large-scale data center and cloud environments. The IP-CLOS provides a scalable and flexible solution for interconnecting multiple switches  in a hierarchical manner in leaf and spine architecture allowing efficient utilization of network resources and simplified routing.
 
 
-Using Aviz network’s  Sonic Validated Designs (SVD) , commissioning of network services in Day1 operations is automated ,  greatly simplified and reduces considerable  time to deploy services . 
+Using Aviz network’s  Sonic Validated Designs (SVD) , commissioning of network services in Day 1 operations is automated ,  greatly simplified and reduces considerable  time to deploy services . 
 
-SVD ensures consistency , accuracy and availability of all configurations committed in Day1 operations through a unified fabric automation approach .
+SVD ensures consistency , accuracy and availability of all configurations committed in Day 1 operations through a unified fabric automation approach .
 
 
 

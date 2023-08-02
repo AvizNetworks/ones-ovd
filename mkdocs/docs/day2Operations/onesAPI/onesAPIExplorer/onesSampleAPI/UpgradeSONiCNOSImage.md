@@ -27,33 +27,29 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>
-    Custom Image Upgrade for  Sonic devices  . Performs custom image upgrades for specific enrolled  sonic devices only.
-    Custom image management via ONES application. ONES application  needs the following #information as the input -
+    <td>
+    Custom Image Upgrade for  Sonic devices  . Performs custom image upgrades for specific enrolled  sonic devices only.<br /><br />
+    Custom image management via ONES application. ONES application  needs the following #information as the input -<br /><br />
 
     - List of devices (IP address or host name) for the upgrade image operation.
     - Image path and  user credentials to scp server
-
-</pre>
-    </td>
+  </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>
-    <b>REST API Input Parameter : <Device IPs, PathToImage></b>
+    <td>
+    <b>REST API Input Parameter : <Device IPs, PathToImage></b> <br />
     Input Parameters: one or more device ip address
-
-</pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>
-    Response: True/False- 
-    Returns True status , if  image upgrade to SONiC devices is successful 
-    Returns False Status , if  Image upgrade to SONiC devices is unsuccessful 
+    <td>
+    Response: True/False- <br /><br />
+    Returns True status , if  image upgrade to SONiC devices is successful <br /><br />
+    Returns False Status , if  Image upgrade to SONiC devices is unsuccessful <br /><br />
 
-</pre> </td>
+ </td>
   </tr>
   <tr>
     <th>Example</th>
@@ -65,7 +61,8 @@
   User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
   Content-Length: 61
 
-  [{"ip":"10.x.x.67","pathToImage":"http://10.x.x.10:8191/mnt/ws/images/SONiC-mellanox-e8daeacd.bin"}]</pre>
+  [{"ip":"10.x.x.67","pathToImage":"http://10.x.x.10:8191/mnt/ws/<br />
+  images/SONiC-mellanox-e8daeacd.bin"}]</pre>
     </td>
   </tr>
 </table>

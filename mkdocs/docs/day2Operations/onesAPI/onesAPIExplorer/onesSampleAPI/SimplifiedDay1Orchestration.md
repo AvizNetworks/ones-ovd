@@ -28,14 +28,13 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre><b>Intent Driven orchestration</b> -Performs Day 1 fabric orchestration for various Data Center topologies.This method will initiate the Day-1 orchestration depending on  the topology and intent supplied via template file. This  REST API  allows network operators  to upload an entire intent file (yaml-based) and orchestrate the entire fabric in a desired intent based underlay and overlay. For example, if customers  want to provision  BGP as an underlay and  VXLAN as an overlay ,they can operate the template form and provide minimum parameter inputs , with the rest of the derivation and parameters handled by the ONES application.
-</pre>
+    <td><b>Intent Driven orchestration</b> -Performs Day 1 fabric orchestration for various Data Center topologies.This method will initiate the Day-1 orchestration depending on  the topology and intent supplied via template file. This  REST API  allows network operators  to upload an entire intent file (yaml-based) and orchestrate the entire fabric in a desired intent based underlay and overlay. For example, if customers  want to provision  BGP as an underlay and  VXLAN as an overlay ,they can operate the template form and provide minimum parameter inputs , with the rest of the derivation and parameters handled by the ONES application.
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>
-    <b>Intent YAML file- Path to Template file > Output:< Intent ID></b>
+    <td>
+    <b>&lt;Intent YAML file- Path to Template file &gt; Output:< Intent ID></b>
 
 Input Parameter for the REST API call -  Template file for the intent configuration for the whole fabric switches enrolled with ONES 
  
@@ -44,7 +43,7 @@ Input Parameter for the REST API call -  Template file for the intent configurat
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>Returns  the intent ID which is an unique tag mapped to the specific intended input configuration desired by the network operator  while defining the intended configuration with only specific desired network entities </pre></td>
+    <td>Returns  the intent ID which is an unique tag mapped to the specific intended input configuration desired by the network operator  while defining the intended configuration with only specific desired network entities </td>
   </tr>
   <tr>
     <th>Example</th>

@@ -19,7 +19,7 @@ With the symmetric IRB routing model, the VTEPs do routing and bridging on both 
   - Configure BGP to run EVPN for the exchange of MAC and IP reachability information between Data Center sites.
   - Establish BGP peering between the participating switches and routers for the control plane establishment .
 
-**Symmetric IRB Configuration**
+**Symmetric IRB Configuration:**
 
   - Set up the Layer 3 gateway IP address on the leaf switches for each L3 VNI. Ensure that this gateway IP address is consistent across all the interconnected data center sites.
 

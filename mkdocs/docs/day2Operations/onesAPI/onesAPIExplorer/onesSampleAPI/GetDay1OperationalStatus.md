@@ -1,4 +1,4 @@
-# Get Day1 Operational Status
+# Get Day 1 Operational Status
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -28,21 +28,19 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre> <b>getDay1ConfigStatus</b>- Retrieve Generic Intent Status for provisioning over SONiC enabled fabric switches . This  REST API allows network  operators  to  get the status of orchestration progress on a specific switch in a SONiC fabric  enrolled with ONES application 
-</pre>
+    <td><b>getDay1ConfigStatus</b>- Retrieve Generic Intent Status for provisioning over SONiC enabled fabric switches . This  REST API allows network  operators  to  get the status of orchestration progress on a specific switch in a SONiC fabric  enrolled with ONES application 
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre><b>Input: `<`Intent `ID>`  Output: JSON (status)</b>
+    <td><b>Input: &lt;Intent ID&gt;  Output: JSON (status)</b>
 
 Input Parameter for the Rest API call -  Intent ID for the intent configuration for the complete  fabric switches enrolled with ONES 
-</pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td> <pre> Return  the Intent Status for the Day 1 orchestration. </pre> </td>
+    <td> Return  the Intent Status for the Day 1 orchestration.  </td>
   </tr>
   <tr>
     <th>Example</th>
@@ -58,13 +56,13 @@ Input Parameter for the Rest API call -  Intent ID for the intent configuration 
 
     Response
     [
-    {
-      "intentName": "SNMPServer",
-      "ip": "10.x.x.69",
-      "verification_status": "1",
-      "config_status": "1",
-      "logs": ""
-    },
+      {
+        "intentName": "SNMPServer",
+        "ip": "10.x.x.69",
+        "verification_status": "1",
+        "config_status": "1",
+        "logs": ""
+      },
     ]
     </pre>
     </td>

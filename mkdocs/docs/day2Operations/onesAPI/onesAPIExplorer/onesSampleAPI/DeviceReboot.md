@@ -27,24 +27,22 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>This REST API performs ONES  enrolled SONiC device reboot . Network operators can reboot SONiC devices  enrolled through ONES application via REST API calls </pre>
+    <td>This REST API performs ONES  enrolled SONiC device reboot . Network operators can reboot SONiC devices  enrolled through ONES application via REST API calls
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre><b>REST API Input Parameter : < List of device IPs to be rebooted> </b>
-</pre>
+    <td><b>REST API Input Parameter : < List of device IPs to be rebooted> </b>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>
+    <td>
+    Response: True/False <br /><br />
+    Returns True status , if  Device reboot is successful and ONES receives an acknowledge for the same <br /><br />
+    Returns False  status , if Device reboot is unsuccessful and ONES receives an acknowledge for the same <br /><br />
 
-    Response: True/False
-    Returns True status , if  Device reboot is successful and ONES receives an acknowledge for the same 
-    Returns False  status , if Device reboot is unsuccessful and ONES receives an acknowledge for the same 
-
-</pre> </td>
+</td>
   </tr>
   <tr>
     <th>Example</th>

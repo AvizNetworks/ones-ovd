@@ -14,17 +14,16 @@ Operators have to configure all source and destination VLANs and their correspon
 In a "L2 VXLAN EVPN with MC LAG”  Data Center fabric topology, the configuration sequence involves setting up the necessary components to enable Layer 2 VXLAN with EBGP EVPN over MC LAG interfaces . Following are  the summarized configuration sequence:
 
 
-**IP Addressing and EBGP Underlay Configuration:**
+### IP Addressing and EBGP Underlay Configuration:
 - Assign IP addresses to all the switches participating in the fabric. 
 - Configure the underlay routing protocol (usually EBGP) between the spine switches and the leaf switches to establish an IP reachability.
 - Establish eBGP  routing protocols  to exchange routing information between the data center sites.
 
-
-**Overlay VXLAN Tunnel Interface Configuration:**
+### Overlay VXLAN Tunnel Interface Configuration:
 - Create a VXLAN tunnel interface over  each leaf switch to serve as the endpoint for VXLAN traffic. Assign an IP address to each tunnel interface.
 
 
-**MC-LAG Configuration:**
+### MC-LAG Configuration:
 
 - Enable MCLAG on the leaf switches. Configure the MC LAG system ID and dual peering links between the MC LAG peer switches.
 - Set up a dedicated link between the MC LAG peer switches for control plane communication.
@@ -32,14 +31,14 @@ In a "L2 VXLAN EVPN with MC LAG”  Data Center fabric topology, the configurati
 - VLAN Configuration on MC LAG Interfaces -  Apply the VLANs that need to be extended over the VXLAN fabric to the MC LAG interfaces.
 
 
-**VLAN-to-VNI Mapping:**
+### VLAN-to-VNI Mapping:
 
 - Create a VLAN-to-VNI (VXLAN Network Identifier) mapping on all the leaf switches in the DC fabric. This maps VLANs to VXLAN segments (VNIs) that will be used for VXLAN encapsulation.
 - Configure VLAN-to-VNI (VXLAN Network Identifier) mapping to associate each VLAN in the data center with a specific VNI for Layer 2 extension.
 - Configure the designated ingress and egress  leaf switches with  VXLAN VTEP (VXLAN Tunnel Endpoint). This involves associating the VXLAN tunnel interface with the VLAN-to-VNI mapping.
 
 
-**BGP EVPN Configuration:**
+### BGP EVPN Configuration:
 
 - Enable BGP EVPN on each leaf switch and establish a BGP peering relationship with the other leaf switches.
 - Configure the BGP EVPN address family and activate the BGP EVPN signaling
@@ -51,7 +50,7 @@ In a "L2 VXLAN EVPN with MC LAG”  Data Center fabric topology, the configurati
 - Small and medium scale data center deployments with low latency use cases. 
 
 
-### YAML template
+## YAML template
 
 ```yaml
 Inventory:

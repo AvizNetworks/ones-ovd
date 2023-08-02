@@ -1,7 +1,9 @@
-# Day 2 Operations - SONiC
+# Overview Day 2 Operations 
+Day 2 Operations in Data center fabric involves monitoring the Network Fabric for health, anomalies and alerting . It also includes the maintenance of network devices due to failures or upgrades. 
 
-Day 2 Operations in Data center fabric involves monitoring the Network Fabric for health, anomalies and alerting . It also includes the maintenance of network devices due to failures or upgrades. Following  are some of the most critical operations done by Network Administrators  as  a part of  Day 2 Operations-
 
+## Day 2 Operations - SONiC through ONES 
+Following  are some of the most critical operations done by Network Administrators  as  a part of  Day 2 Operations-
 
 - Monitor Health for Data centers
 - Alerting and Notification on Anomalies

@@ -44,19 +44,20 @@ nav:
     - Day 1 Operations - Simplified by ONES: day1Operations/Day1OperationsSimplifiedbyONES.md
   - Overview - SONiC Validated Designs: 
     - SONiC Validated Designs by ONES: SonicValidateDesign.md
-    - BGP IP CLOS: sonicValidatedDesignsByOnse/BGP_IP_CLOS.md
-    - BGP-IP-CLOS-MC LAG : sonicValidatedDesignsByOnse/BGP-IP-CLOS-MCLAG.md
-    - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
-    - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
+    - Supported Topologies:
+      - BGP IP CLOS: sonicValidatedDesignsByOnse/BGP_IP_CLOS.md
+      - BGP-IP-CLOS-MC LAG : sonicValidatedDesignsByOnse/BGP-IP-CLOS-MCLAG.md
+      - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
+      - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: sonicValidatedDesignsByOnse/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
   - Overview Day 2 Operations:
-    - Day 2 Operations - SONiC: day2Operations/Day2OperationSonic.md
+    - Day 2 Operations - SONiC through ONES: day2Operations/Day2OperationSonic.md
     - ONES For Day 2 operations: day2Operations/OnesForDay2.md
   - ONES REST APIs: 
     - Overview: day2Operations/onesAPI/OnesAPI.md
     - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
   - ONES Sample REST APIs:
     - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/SimplifiedDay1Orchestration.md
-    - Get Day1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
+    - Get Day 1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
     - ZTP Upgrade: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ZTPUpgrade.md
     - Custom Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/UpgradeSONiCNOSImage.md
     - Device Reboot: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/DeviceReboot.md
@@ -68,6 +69,7 @@ nav:
     - ONES System Requirements : DeployONES/SystemRequirements.md
     - ONES Software requirements : DeployONES/ONESSoftwarerequirements.md
     - Browser Requirements : DeployONES/BrowserRequirements.md
+    - Deploying VM for ONES installation: DeployONES/DeployVmsForOnes.md
     - Reference Documentation : DeployONES/Documentation.md
 
   

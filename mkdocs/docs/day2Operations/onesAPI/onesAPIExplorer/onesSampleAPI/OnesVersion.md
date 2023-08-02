@@ -29,21 +29,18 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>This REST API call enables network operators  to retrieve  versions of both the ONES Fabric manager application and ONES fabric manager agent application which are running as container services on SONiC enabled fabric devices .
-</pre>
+    <td>This REST API call enables network operators  to retrieve  versions of both the ONES Fabric manager application and ONES fabric manager agent application which are running as container services on SONiC enabled fabric devices .
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>
+    <td>
     <b>Input Parameters: Device ip address - List of Devices IP </b>whose Version numbers needs to be retrieved 
-</pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>Returns the current running  version of  ONE'S controller as well as agent application
-</pre> </td>
+    <td>Returns the current running  version of  ONE'S controller as well as agent application</td>
   </tr>
   <tr>
     <th>Example</th>
