@@ -1,6 +1,6 @@
 # L3 VXLAN + EVPN Symmetric IRB over MC-LAG
 
-With the symmetric IRB routing model, the VTEPs do routing and bridging on both the ingress and egress sides of the VXLAN tunnel. As a result, VTEPs can do inter-subnet routing for the same virtual routing and forwarding (VRF) instance mapped to the same VNI in both directions. We implement this model for EVPN Type 2 routes the same way as for EVPN Type 5 routes (which we support using only the symmetric model). These  VTEPs uses  dedicated Layer 3 traffic VNI in both directions for each tenant VRF instance.
+With the symmetric IRB routing model, the VTEPs do routing and bridging on both the ingress and egress sides of the VXLAN tunnel. As a result, VTEPs can do inter-subnet routing for the same virtual routing and forwarding (VRF) instance mapped to the same VNI in both directions. We implement this model for EVPN Type 2 routes the same way as for EVPN Type 5 routes. These VTEPs use  dedicated Layer 3 traffic VNI in both directions for each tenant VRF instance.
 
 ![configuration](../img/Fifthimage.png)
 
@@ -12,27 +12,25 @@ With the symmetric IRB routing model, the VTEPs do routing and bridging on both 
 
 **VXLAN VRF Mapping**
 
-  - Configure VRF-to-VNI (VXLAN Network Identifier) mapping. Each VRF in the data center will be mapped to a specific VNI to extend Layer 3 connectivity.
+  - Configure VRF-to-VNI (VXLAN Network Identifier) mapping. Each VRF in the Data Center will be mapped to a specific VNI to extend Layer 3 connectivity.
 
 **BGP EVPN Configuration**
 
-  - Configure BGP to run EVPN for the exchange of MAC and IP reachability information between data center sites.
+  - Configure BGP to run EVPN for the exchange of MAC and IP reachability information between Data Center sites.
   - Establish BGP peering between the participating switches and routers for the control plane establishment .
 
 **Symmetric IRB Configuration**
 
-  - Set up the Layer 3 gateway IP address on the switches and routers for each VNI. Ensure that this gateway IP address is consistent across all the  interconnected data center sites.
+  - Set up the Layer 3 gateway IP address on the leaf switches for each L3 VNI. Ensure that this gateway IP address is consistent across all the interconnected data center sites.
 
 **Routing Configuration:**
 
-  - Set up eBGP routing protocols over all the DC fabric switches to ensure the routing information is exchanged between the interconnected data center sites.
+  - Set up eBGP routing protocols over all the Data Center fabric switches to ensure the routing information is exchanged between the interconnected data center sites.
   - This routing information will be used to direct traffic between the sites through the symmetric IRB gateway.
 
-## Use Cases
-
-1. All use cases of EVPN fabric within the  data center except where there is a need for the centralized gateway
-2. Non-EVPN routes such as default routes/static routes/dynamic routes are involved in the data center fabric
-3. Large-scale EVPN deployments
+### Scenarios for L3 VXLAN Symmetric Model
+- Network Operators looking for multi-tenancy for their VM applications in a data center fabric.
+- Advantage on scalability and efficiency of the Data center Fabric .
 
 
 ### YAML Template

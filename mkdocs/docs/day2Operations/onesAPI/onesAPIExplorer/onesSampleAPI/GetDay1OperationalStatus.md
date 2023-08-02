@@ -28,12 +28,13 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>getDay1ConfigStatus- Retrieve Generic Intent Status for provisioning over sonic enabled fabric switches . This restful API allows network  operators  to  get the status of orchestration progress on a specific switch in sonic fabric  enrolled with ONES application </pre>
+    <td><pre> <b>getDay1ConfigStatus</b>- Retrieve Generic Intent Status for provisioning over SONiC enabled fabric switches . This  REST API allows network  operators  to  get the status of orchestration progress on a specific switch in a SONiC fabric  enrolled with ONES application 
+</pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>Input: `<`Intent `ID>`  Output: JSON (status)
+    <td><pre><b>Input: `<`Intent `ID>`  Output: JSON (status)</b>
 
 Input Parameter for the Rest API call -  Intent ID for the intent configuration for the complete  fabric switches enrolled with ONES 
 </pre>
@@ -47,23 +48,24 @@ Input Parameter for the Rest API call -  Intent ID for the intent configuration 
     <th>Example</th>
     <td> 
     <pre>
-    GET/getDay1ConfigStatus?intentID=configure_az_1.yaml_20230223115541 HTTP/1.1
-Content-Type: application/json; charset=utf-8
-Host: 10.x.x.6:8787
-Connection: close
-User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-Content-Length: 61
+    <b>GET/getDay1ConfigStatus?intentID=configure_az_1.yaml_20230223115541</b>
+    HTTP/1.1
+    Content-Type: application/json; charset=utf-8
+    Host: 10.x.x.6:8787
+    Connection: close
+    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+    Content-Length: 61
 
-Response
-[
- {
-   "intentName": "SNMPServer",
-   "ip": "10.x.x.69",
-   "verification_status": "1",
-   "config_status": "1",
-   "logs": ""
- },
-]
+    Response
+    [
+    {
+      "intentName": "SNMPServer",
+      "ip": "10.x.x.69",
+      "verification_status": "1",
+      "config_status": "1",
+      "logs": ""
+    },
+    ]
     </pre>
     </td>
   </tr>

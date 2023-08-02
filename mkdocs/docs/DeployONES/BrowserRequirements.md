@@ -4,4 +4,8 @@
 - Mozilla Firefox version 106 or later
 
 
+## Deploying VM for ONES installation 
+
+(https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm)[https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm]
+
 

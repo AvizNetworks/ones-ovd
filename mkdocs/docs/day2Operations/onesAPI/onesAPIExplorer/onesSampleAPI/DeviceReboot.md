@@ -27,35 +27,40 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>This API performs ONES  enrolled sonic device reboot . Network operators can reboot ONES application enrolled sonic devices through rest API calls </pre>
+    <td><pre>This REST API performs ONES  enrolled SONiC device reboot . Network operators can reboot SONiC devices  enrolled through ONES application via REST API calls </pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>API Input Parameter : < List of device IPs to be rebooted>
+    <td><pre><b>REST API Input Parameter : < List of device IPs to be rebooted> </b>
 </pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>Response: True/False
-Returns True status , if  Device reboot is successful and ONES receives an acknowledge for the same 
-Returns False  status , if Device reboot is unsuccessful and ONES receives an acknowledge for the same 
+    <td><pre>
+
+    Response: True/False
+    Returns True status , if  Device reboot is successful and ONES receives an acknowledge for the same 
+    Returns False  status , if Device reboot is unsuccessful and ONES receives an acknowledge for the same 
 
 </pre> </td>
   </tr>
   <tr>
     <th>Example</th>
-    <td><pre>POST /rebootRequest HTTP/1.1
-Content-Type: application/json; charset=utf-8
-Host: localhost:8080
-Connection: close
-User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-Content-Length: 61
-Input
-["10.x.x.236"]
-Response:
-True
+    <td><pre>
+
+    POST /rebootRequest HTTP/1.1
+    Content-Type: application/json; charset=utf-8
+    Host: localhost:8080
+    Connection: close
+    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+    Content-Length: 61
+    Input
+    ["10.x.x.236"]
+    Response:
+    True
+
 </pre>
     </td>
   </tr>

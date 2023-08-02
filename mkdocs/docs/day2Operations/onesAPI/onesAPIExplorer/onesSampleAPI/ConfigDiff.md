@@ -28,23 +28,24 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>Leveraging this  rest API call Operators gets a view on difference between running config and committed applied config on enrolled devices</pre>
+    <td><pre>Leveraging this  REST API call, Operators get a view on difference between running configuration and applied configuration on enrolled devices</pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>API Input Parameter : < List of device IPs for which Configuration difference is required >  
+    <td><pre><b>REST API Input Parameter : < List of device IPs for which Configuration difference is required > </b>
 </pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>Response is the difference  of the running configuration vs configuration committed  through  ONES fabric manager 
+    <td><pre>API Response is the difference  of running configuration vs Applied configuration  through  ONES fabric manager 
 </pre> </td>
   </tr>
   <tr>
     <th>Example</th>
-    <td><pre>POST /getConfigDiff HTTP/1.1
+    <td><pre>
+<b>POST /getConfigDiff HTTP/1.1</b>
 Content-Type: application/json; charset=utf-8
 Host: localhost:8080
 Connection: close

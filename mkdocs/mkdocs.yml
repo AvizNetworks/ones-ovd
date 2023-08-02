@@ -51,23 +51,23 @@ nav:
   - Overview Day 2 Operations - SONiC:
     - Day 2 Operations - SONiC: day2Operations/Day2OperationSonic.md
     - ONES For Day 2 operations: day2Operations/OnesForDay2.md
-    - ONES APIs Overview: 
-      - APIs: day2Operations/onesAPI/OnesAPI.md
-      - API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
-    - ONES Sample APIs:
-      - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/SimplifiedDay1Orchestration.md
-      - Get Day1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
-      - ZTP Upgrade: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ZTPUpgrade.md
-      - Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/UpgradeSONiCNOSImage.md
-      - Device Reboot: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/DeviceReboot.md
-      - Show Difference between golden and running config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ConfigDiff.md
-      - Get ONES Version: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/OnesVersion.md
-      - Backup Current Golden Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/BackupCurrentGoldenConfig.md
-      - Replace Current Config for Devices: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ReplaceCurrentConfigforDevices.md
+  - ONES REST APIs: 
+    - Overview: day2Operations/onesAPI/OnesAPI.md
+    - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
+  - ONES Sample REST APIs:
+    - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/SimplifiedDay1Orchestration.md
+    - Get Day1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
+    - ZTP Upgrade: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ZTPUpgrade.md
+    - Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/UpgradeSONiCNOSImage.md
+    - Device Reboot: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/DeviceReboot.md
+    - Show Difference between golden and running config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ConfigDiff.md
+    - Get ONES Version: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/OnesVersion.md
+    - Backup Current Golden Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/BackupCurrentGoldenConfig.md
+    - Replace Current Config for Devices: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ReplaceCurrentConfigforDevices.md
   - Deploy ONES:
-    - System Requirements : DeployONES/SystemRequirements.md
+    - ONES System Requirements : DeployONES/SystemRequirements.md
     - ONES Software requirements : DeployONES/ONESSoftwarerequirements.md
     - Browser Requirements : DeployONES/BrowserRequirements.md
-    - Documentation : DeployONES/Documentation.md
+    - Reference Documentation : DeployONES/Documentation.md
 
   

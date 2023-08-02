@@ -29,40 +29,43 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td><pre>This API call enables network operators  to retrieve  version of both the ONES Fabric manager controller and ONES fabric manager agent application which are running as container services on sonic enabled fabric devices .
+    <td><pre>This REST API call enables network operators  to retrieve  versions of both the ONES Fabric manager application and ONES fabric manager agent application which are running as container services on SONiC enabled fabric devices .
 </pre>
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
-    <td><pre>Input Parameters: Device ip address - List of Devices IP whose Version numbers needs to be retrieved 
+    <td><pre>
+    <b>Input Parameters: Device ip address - List of Devices IP </b>whose Version numbers needs to be retrieved 
 </pre>
     </td>
   </tr>
   <tr>
     <th>Response</th>
-    <td><pre>Returns the current running  version of  ONES controller as well as agent application 
+    <td><pre>Returns the current running  version of  ONE'S controller as well as agent application
 </pre> </td>
   </tr>
   <tr>
     <th>Example</th>
-    <td><pre>POST /getONESVersion HTTP/1.1
-Content-Type: application/json; charset=utf-8
-Host: 10.1.1.8:8787
-Connection: close
-User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-Content-Length: 61
+    <td><pre>
+    <b>POST /getONESVersion HTTP/1.1</b>
+    Content-Type: application/json; charset=utf-8
+    Host: 10.1.1.8:8787
+    Connection: close
+    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+    Content-Length: 61
 
 
-["10.x.x.79"]
+    ["10.x.x.79"]
 
 
-[
-  {
-    "Version": "v1.3.16/1.3.25",
-    "IP": "10.x.x.61"
-  }
-]
+    [
+      {
+        "Version": "v1.3.16/1.3.25",
+        "IP": "10.x.x.61"
+      }
+    ]
+
 
 </pre>
     </td>

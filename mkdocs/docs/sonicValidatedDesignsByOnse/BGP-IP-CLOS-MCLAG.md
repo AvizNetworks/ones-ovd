@@ -12,6 +12,7 @@
 
 The template includes the inventory, connectivity, BGP and other configurations needed for the topology. Customers can modify the template to fit their specific requirements.
 
+
 ### YAML Template
 
 ```yaml
