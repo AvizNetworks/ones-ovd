@@ -6,13 +6,14 @@
     border-collapse: collapse;
     table-layout: fixed;
     width: 400px;
-    border: 1px solid black;
+    border: .1rem  solid #0000001f;
   }
-  th {
-    border: 1px solid black;
+  th, tr {
+    border: .1rem solid #0000001f;
   }
+
   td {
-    border: 1px solid black;
+    border: .1rem solid #0000001f;
     padding: 8px;
     text-align: center;
     vertical-align: middle;
