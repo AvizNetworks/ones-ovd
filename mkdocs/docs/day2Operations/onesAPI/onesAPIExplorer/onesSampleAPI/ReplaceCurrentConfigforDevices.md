@@ -48,7 +48,7 @@ This Rest API client call will feed the golden configuration template as input  
     <th>Response</th>
     <td>
     - Returns  response - Difference  between running config vs golden config when network Operator chooses Soft provisioning <br /><br />
-    - Returns Response - Parity Config when  network Operator chooses hard provisioning method.<br />
+    - Returns Response - Returns the appended configuration to the existing running baseline configuration<br />
  </td>
   </tr>
   <tr>

@@ -29,7 +29,7 @@
   </tr>
   <tr>
     <th>Description</th>
-    <td>This REST API call enables network operators  to retrieve  versions of both the ONES Fabric manager application and ONES fabric manager agent application which are running as container services on SONiC enabled fabric devices .
+    <td>This REST API call enables network operators  to retrieve  versions of both the ONES Fabric manager application and ONES Fabric manager agent application which are running as container services on SONiC enabled fabric devices .
     </td>
   </tr>
   <tr>
