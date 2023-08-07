@@ -1,4 +1,4 @@
-site_name: Aviz SONiC Validated Designs
+site_name: Aviz ONES Validated Design
 site_author: Aviz Engineering & Sales Team
 site_description: SONiC Validated Designs Documentation
 copyright: Copyright &copy; 2023 Aviz Networks
@@ -39,6 +39,7 @@ markdown_extensions:
 nav:
   - Introduction: index.md
   - SONiC Advantages: SonicAdvantages.md
+  - How Aviz lowers the Barrier to Adopt SONiC based Fabric: AvizBuisnessModel.md
   - Overview Day 1 Operations:
     - Day 1 Operations - SONiC: day1Operation/Day1OperationsSONiC.md
     - Day 1 Operations - Simplified by ONES: day1Operation/Day1OperationsSimplifiedbyONES.md
