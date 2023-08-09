@@ -50,7 +50,7 @@ In a "L2 VXLAN EVPN with MC LAG”  Data Center fabric topology, the configurati
 - Small and medium scale data center deployments with low latency use cases. 
 
 
-## YAML template
+### YAML template
 
 ```yaml
 Inventory:

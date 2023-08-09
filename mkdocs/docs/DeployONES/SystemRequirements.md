@@ -1,7 +1,7 @@
 # Deploy ONES
 ## ONES System Requirements
 
-## System Hardware Requirements – ONES Application
+### System Hardware Requirements – ONES Application
 
 In the latest release, ONES can support managing up to 1024 devices. For ONES Application Installation, the system hardware requirements may vary based on the number of devices to manage.
 

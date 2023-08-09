@@ -13,7 +13,7 @@
 The template includes the inventory, connectivity, BGP and other configurations needed for the topology. Customers can modify the template to fit their specific requirements.
 
 
-## YAML Template
+### YAML Template
 
 ```yaml
 Inventory:
@@ -235,11 +235,11 @@ anycast_gateway: "100.10.0.0/23"
 
 ```
 
-## Config Applied and Verified through UI
+### Config Applied and Verified through UI
 
 ![configuration](../img/ipclos-mclag-bgp.png)
 
-## Applied Configuration on Switches
+### Applied Configuration on Switches
 
 === "Leaf1"
 

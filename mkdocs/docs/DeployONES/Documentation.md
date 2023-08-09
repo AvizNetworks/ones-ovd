@@ -1,6 +1,6 @@
 # Reference Documentation
 
-<a href="https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/ones-web-gui-administration/ones-orchestration">https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/ones-web-gui-administration/ones-orchestration</a>
+<a href="https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/ones-web-gui-administration/ones-orchestration">https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/ones-web-gui-administration/ones-orchestration</a> - ONES Orchestration Configuration Guide
 
 <a href="https://github.com/AvizNetworks/ones-svd">https://github.com/AvizNetworks/ones-svd</a> - OVD's ONES API for orchestration 
 

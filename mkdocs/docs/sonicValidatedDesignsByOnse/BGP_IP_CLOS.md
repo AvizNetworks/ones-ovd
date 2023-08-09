@@ -1,4 +1,5 @@
-# BGP IP CLOS
+# Supported Topologies
+## BGP IP CLOS
 
 ## Overview
 BGP IP-CLOS is a network design and routing architecture commonly used in large-scale data center and cloud environments. IP-CLOS provides a scalable and flexible solution for interconnecting multiple routers in a hierarchical manner allowing efficient utilization of network resources and simplified routing. 
@@ -31,7 +32,7 @@ The template includes the inventory, connectivity, BGP and other configurations 
 
 ![Configuration](../img/SecondImage.png)
 
-## YAML Template
+### YAML Template
 
 ```yaml
 Inventory:
@@ -236,11 +237,11 @@ Parameters:
   sag: false
 ```
 
-## Configure, Validate & Verify through UI
+### Configure, Validate & Verify through UI
 
 ![configuration](../img/BGP-IPCLOS.png)
 
-## IP Configuration
+### IP Configuration
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -341,7 +342,7 @@ Parameters:
 </table>
 
 
-## Applied Configuration on Switches
+### Applied Configuration on Switches
 
 === "Leaf1"
 
