@@ -1,4 +1,5 @@
-# SONiC Validated Designs by ONES 
+# Overview - SONiC Validated Designs
+## SONiC Validated Designs by ONES 
 
 Aviz ONES has pre-validated templates for various data center fabric deployments using SONiC. The template defines the simplified configuration intent, which is then consumed by ONES fabric manager to orchestrate the network running SONiC on multi-vendor platforms. Following fabric deployments are validated using ONES Application-
 

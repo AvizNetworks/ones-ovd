@@ -8,21 +8,21 @@ repo_name: ones-svd on github
 repo_url: https://github.com/AvizNetworks/ones-svd
 
 theme:
-  # name: 'cinder' 3
   name: 'material'
-  # name: 'windmill' 
-  # name: readthedocs
   palette:
-    - media: "(prefers-color-scheme: dark)"  # Set dark mode as default
-      scheme: default
+    - scheme: slate
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/weather-night
-        name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: slate
-      toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-7
         name: Switch to dark mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
    
 plugins:
   - search
