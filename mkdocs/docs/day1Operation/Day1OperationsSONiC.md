@@ -10,9 +10,9 @@ The validation process of applied configuration  is also manual resulting in pro
 The most prominently  leveraged data center fabric topology is the highly scalable Layer3  IP-CLOS network design and routing architecture commonly used in large-scale data center and cloud environments. The IP-CLOS provides a scalable and flexible solution for interconnecting multiple switches  in a hierarchical manner in leaf and spine architecture allowing efficient utilization of network resources and simplified routing.
 
 
-Using Aviz network’s  Sonic Validated Designs (SVD) , commissioning of network services in Day 1 operations is automated ,  greatly simplified and reduces considerable  time to deploy services . 
+Using Aviz network’s  ONES Validated Designs (OVD) , commissioning of network services in Day 1 operations is automated ,  greatly simplified and reduces considerable  time to deploy services . 
 
-SVD ensures consistency , accuracy and availability of all configurations committed in Day 1 operations through a unified fabric automation approach .
+OVD ensures consistency , accuracy and availability of all configurations committed in Day 1 operations through a unified fabric automation approach .
 
 
 

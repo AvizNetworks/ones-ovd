@@ -1,5 +1,5 @@
-# ones-svd
-ONES SONiC Validated Designs
+# ones-ovd
+ONES Validated Designs
 
 
 # Introduction 
@@ -38,4 +38,4 @@ Aviz ONES simplifies the Day 1 orchestration with a unified approach of configur
 - **Open Data Models** using YAML templates for configuration and OpenConfig based for Monitoring.
 - **Multi-vendor Orchestration** supporting both Hardware (ASIC/Switches) and Software (SONiC NOS - Community or Vendor).
 
-Refer [this](https://github.com/AvizNetworks/ones-svd/tree/master/mkdocs/docs) folder for all documentation.
+Refer [this](https://github.com/AvizNetworks/ones-ovd/tree/master/mkdocs/docs) folder for all documentation.

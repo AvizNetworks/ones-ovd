@@ -4,7 +4,7 @@ Layer3  IP-CLOS is a network design and routing architecture commonly used in la
 
 Traditionally network operators used to provision day1 operations like interface creation , VLAN creation , BGP neighborship configuration etc using manual CLI provided to network operators for configuring DC switches Leaf , Spine in 2 or 3 CLOS architecture . Configuration application to various DC switches through CLIs is tedious and time consuming for the operations team and validation process of applied config is also manual resulting in probability of errors during commissioning . Operators will then have to troubleshoot the complete control path and data path to isolate issues due to misconfiguration in day1 , day2 network entity provisioning.
 
-Using Sonic Validated Designs (SVD) , commissioning of network services in day1 operations is automated , is greatly simplified and reduces considerable  time to deploy day1 services . SVD ensures consistency , accuracy and availability of all configurations committed in Day 1 operations through a unified fabric automation approach .
+Using ONES Validated Designs (OVD) , commissioning of network services in day1 operations is automated , is greatly simplified and reduces considerable  time to deploy day1 services . OVD ensures consistency , accuracy and availability of all configurations committed in Day 1 operations through a unified fabric automation approach .
 
 
 ![Sonic Day1 Operations](img/img1.png)

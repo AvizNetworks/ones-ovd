@@ -1,11 +1,11 @@
 site_name: Aviz ONES Validated Design
 site_author: Aviz Engineering & Sales Team
-site_description: SONiC Validated Designs Documentation
+site_description: ONES Validated Designs Documentation
 copyright: Copyright &copy; 2023 Aviz Networks
 
 # Repository information
-repo_name: ones-svd on github
-repo_url: https://github.com/AvizNetworks/ones-svd
+repo_name: ones-ovd on github
+repo_url: https://github.com/AvizNetworks/ones-ovd
 
 theme:
   name: 'material'
@@ -43,8 +43,8 @@ nav:
   - Overview Day 1 Operations:
     - Day 1 Operations - SONiC: day1Operation/Day1OperationsSONiC.md
     - Day 1 Operations - Simplified by ONES: day1Operation/Day1OperationsSimplifiedbyONES.md
-  - Overview - SONiC Validated Designs: 
-    - SONiC Validated Designs by ONES: SonicValidateDesign.md
+  - Overview - ONES Validated Designs: 
+    - ONES Validated Designs by ONES: SonicValidateDesign.md
     - Supported Topologies:
       - BGP IP CLOS: sonicValidatedDesignsByOnse/BGP_IP_CLOS.md
       - BGP-IP-CLOS-MC LAG : sonicValidatedDesignsByOnse/BGP-IP-CLOS-MCLAG.md
