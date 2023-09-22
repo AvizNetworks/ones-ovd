@@ -9,6 +9,8 @@ repo_url: https://github.com/AvizNetworks/ones-ovd
 
 theme:
   name: 'material'
+  favicon: icons/avizLogo.png
+  logo: icons/image2vector.svg
   palette:
     - scheme: slate
       primary: indigo
@@ -22,6 +24,9 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
 
    
 plugins:
@@ -40,37 +45,40 @@ nav:
   - Introduction: index.md
   - SONiC Advantages: SonicAdvantages.md
   - How Aviz lowers the Barrier to Adopt SONiC based Fabric: AvizBuisnessModel.md
-  - Overview Day 1 Operations:
-    - Day 1 Operations - SONiC: day1Operation/Day1OperationsSONiC.md
-    - Day 1 Operations - Simplified by ONES: day1Operation/Day1OperationsSimplifiedbyONES.md
-  - Overview - ONES Validated Designs: 
-    -  ONES Validated Designs: ONESValidateDesign.md
-    - Supported Topologies:
-      - BGP IP CLOS: OverviewOnesValidatedDesigns/BGP_IP_CLOS.md
-      - BGP-IP-CLOS-MC LAG : OverviewOnesValidatedDesigns/BGP-IP-CLOS-MCLAG.md
-      - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
-      - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
-  - Overview Day 2 Operations:
-    - Day 2 Operations - SONiC through ONES: day2Operations/Day2OperationSonic.md
-    - ONES For Day 2 operations: day2Operations/OnesForDay2.md
-  - ONES REST APIs: 
+  - Day 1 Operations for SONiC with ONES: day1Operation/Day1OperationsSONiC.md
+  - Day 2 Operations for SONiC with ONES: day2Operations/Day2OperationSonic.md
+  # - Overview Day 1 Operations:
+  #   - Day 1 Operations - SONiC: day1Operation/Day1OperationsSONiC.md
+  #   - Day 1 Operations - Simplified by ONES: day1Operation/Day1OperationsSimplifiedbyONES.md
+  - SONiC Validated Designs by ONES: 
+    - Overview: ONESValidateDesign.md
+    - BGP IP CLOS: OverviewOnesValidatedDesigns/BGP_IP_CLOS.md
+    - BGP-IP-CLOS-MC LAG : OverviewOnesValidatedDesigns/BGP-IP-CLOS-MCLAG.md
+    - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
+    - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
+    - DCL EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
+  # - Overview Day 2 Operations:
+  #   - Day 2 Operations - SONiC through ONES: day2Operations/Day2OperationSonic.md
+  #   - ONES For Day 2 operations: day2Operations/OnesForDay2.md
+  - ONES REST APIs for SONiC: 
     - Overview: day2Operations/onesAPI/OnesAPI.md
     - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
-  - ONES Sample REST APIs:
-    - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/SimplifiedDay1Orchestration.md
-    - Get Day 1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
-    - ZTP Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ZTPUpgrade.md
-    - Custom Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/UpgradeSONiCNOSImage.md
-    - Device Reboot: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/DeviceReboot.md
-    - Show Difference between golden and running config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ConfigDiff.md
-    - Get ONES Version: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/OnesVersion.md
-    - Backup Current running Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/BackupCurrentGoldenConfig.md
-    - Replace Current Config for Devices: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ReplaceCurrentConfigforDevices.md
-  - Deploy ONES:
-    - ONES System Requirements : DeployONES/SystemRequirements.md
-    - ONES Software requirements : DeployONES/ONESSoftwarerequirements.md
-    - Browser Requirements : DeployONES/BrowserRequirements.md
-    - Deploying VM for ONES installation: DeployONES/DeployVmsForOnes.md
-    - Reference Documentation : DeployONES/Documentation.md
+    - ONES ‘s Sample REST APIs: day2Operations/onesAPI/onesAPIExplorer/SampleRestAPIs.md
+  # - ONES Sample REST APIs:
+  #   - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/SimplifiedDay1Orchestration.md
+  #   - Get Day 1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
+  #   - ZTP Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ZTPUpgrade.md
+  #   - Custom Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/UpgradeSONiCNOSImage.md
+  #   - Device Reboot: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/DeviceReboot.md
+  #   - Show Difference between golden and running config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ConfigDiff.md
+  #   - Get ONES Version: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/OnesVersion.md
+  #   - Backup Current running Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/BackupCurrentGoldenConfig.md
+  #   - Replace Current Config for Devices: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ReplaceCurrentConfigforDevices.md
+  - Deploy ONES: DeployONES/DeployONES.md
+    # - ONES System Requirements : DeployONES/SystemRequirements.md
+    # - ONES Software requirements : DeployONES/ONESSoftwarerequirements.md
+    # - Browser Requirements : DeployONES/BrowserRequirements.md
+    # - Deploying VM for ONES installation: DeployONES/DeployVmsForOnes.md
+    # - Reference Documentation : DeployONES/Documentation.md
 
   

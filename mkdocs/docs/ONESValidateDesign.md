@@ -12,3 +12,4 @@ Aviz ONES has pre-validated templates for various data center fabric deployments
 ONES validated design fully integrates with Aviz ONES orchestration and supportability application which does configuration management life cycle for Day 1 and Day 2 operations . This includes the validation for the applied configurations to the  enrolled devices and configuration change control workflow  in a SONiC fabric . 
 
 ![configuration](img/day1_ones.png)
+
