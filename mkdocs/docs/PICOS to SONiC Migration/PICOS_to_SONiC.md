@@ -7,3 +7,55 @@ Aviz offers  SONiC support to live Data center production which helps operators 
 This document is intended for network administrators with PICOS background. This guide will help network admins to migrate their current PICOS deployment for various Fabric architectures to SONiC.
 PICOS User guide  https://docs.pica8.com/ can be used as a checklist to get started with the  migration plan from PICOS to SONiC. Following  document provides example configuration commands for comparison.
 
+# SONiC NOS Installation from ONIE  
+Before entering into ONIE install mode, operator should ensure to uninstall the PICOS
+Note: Switch shall automatically enter the ONIE install mode if there's no NOS installed yet.
+
+<style>
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 400px;
+  }
+  th{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    color: white;
+    background-color:  #000080;
+    
+  }
+
+  td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+</style>
+
+
+Step 1. Enter the ONIE install mode
+
+GNU GRUB  version 2.02
+ 
++----------------------------------------------------------------------------+
+|*ONIE: Install OS                                                       	|
+| ONIE: Rescue                                                           	|
+| ONIE: Uninstall OS                                                     	|
+| ONIE: Update ONIE                                                      	|
+| ONIE: Embed ONIE                                                       	|
+| DIAG: Accton Diagnostic (accton_as7326_56x)                            	|
+|                                                                        	|
+|                                                                        	|
+|                                                                        	|
+|                                                                        	|
+|                                                                        	|
+|                                                                        	|
++----------------------------------------------------------------------------+
+ 
+     Use the ^ and v keys to select which entry is highlighted.
+     Press enter to boot the selected OS, `e' to edit the commands
+     before booting or `c' for a command-line.
+  The highlighted entry will be executed automatically in 2s.
