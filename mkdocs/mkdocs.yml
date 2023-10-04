@@ -50,6 +50,7 @@ nav:
   # - Overview Day 1 Operations:
   #   - Day 1 Operations - SONiC: day1Operation/Day1OperationsSONiC.md
   #   - Day 1 Operations - Simplified by ONES: day1Operation/Day1OperationsSimplifiedbyONES.md
+  - PICOS to SONiC Migration: PICOS_to_SONiC.md 
   - SONiC Validated Designs by ONES: 
     - Overview: ONESValidateDesign.md
     - BGP IP CLOS: OverviewOnesValidatedDesigns/BGP_IP_CLOS.md
