@@ -50,17 +50,6 @@ nav:
   # - Overview Day 1 Operations:
   #   - Day 1 Operations - SONiC: day1Operation/Day1OperationsSONiC.md
   #   - Day 1 Operations - Simplified by ONES: day1Operation/Day1OperationsSimplifiedbyONES.md
-  - Why Migrate from PICOS to SONiC: PICOStoSONiCMigration/PICOS_to_SONiC.md
-  - SONiC NOS Installation from ONIE: SONIC-NOS-INSTALL/SONIC-NOS-INSTALL.md
-  - Switch Management: SwitchManagement/SwitchManagement.md
-  - Management Services: Management-services/management-services.md
-  - Port Mirroring: Port-Mirroring/Port-Mirroring.md
-  - Layer 2 Switching:
-    - Interface and Port VLAN : Layer-2-switching/Interface-and-port-VLAN.md
-    - Multi-Chassis Link Aggregation Group (MC-LAG): 
-      - Layer 2 Multi Chassis LAG: Layer-2-switching/Layer-2(mc-lag).md
-      - Layer 3 Multi Chassis LAG: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-    - Link Layer Discovery protocol:
   - SONiC Validated Designs by ONES: 
     - Overview: ONESValidateDesign.md
     - BGP IP CLOS: OverviewOnesValidatedDesigns/BGP_IP_CLOS.md
