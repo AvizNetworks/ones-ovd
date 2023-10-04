@@ -1,6 +1,6 @@
 # Layer 3 Multi Chassis LAG
 
-![interface and port vlan](../img/layer3(mc-lag).png)
+![Layre3](../img/layer3(mc-lag).png)
 
 <div style="border: 1px solid black; padding: 10px;">
 <b># Command to create PortChannel on MC LAG Pair switches</b><br> 
@@ -59,7 +59,7 @@ config interface ip add Vlan10 192.168.10.2/24<br>
 show interfaces portchannel<br>
 Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available,<br>
        S - selected, D - deselected, * - not synced<br>
-````
+```
   No.  Team Dev       Protocol     Ports                          Oper Key  Admin Key    Fast Rate
 -----  -------------  -----------  ---------------------------  ----------  -----------  -----------
   01  PortChannel01  LACP(A)(Up)  Ethernet0(S)                       101  auto         false

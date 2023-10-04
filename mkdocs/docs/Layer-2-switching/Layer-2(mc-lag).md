@@ -1,6 +1,9 @@
-# Layer 2 Multi Chassis LAG
+## Multi-Chassis Link Aggregation Group (MC-LAG) 
 
-![interface and port vlan](../img/layer2(mc-lag).png)
+This is a pair of links that terminates on two cooperating switches and appears as an ordinary link aggregation group (LAG). 
+### Layer 2 Multi Chassis LAG
+
+![Layer 2](../img/layer2(mc-lag).png)
 
 <style>
   table {
