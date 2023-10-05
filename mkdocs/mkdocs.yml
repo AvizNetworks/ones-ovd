@@ -81,4 +81,10 @@ nav:
     - Overview: day2Operations/onesAPI/OnesAPI.md
     - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
   - Deploy ONES: DeployONES/DeployONES.md
+    # - ONES System Requirements : DeployONES/SystemRequirements.md
+    # - ONES Software requirements : DeployONES/ONESSoftwarerequirements.md
+    # - Browser Requirements : DeployONES/BrowserRequirements.md
+    # - Deploying VM for ONES installation: DeployONES/DeployVmsForOnes.md
+    # - Reference Documentation : DeployONES/Documentation.md
+
   
