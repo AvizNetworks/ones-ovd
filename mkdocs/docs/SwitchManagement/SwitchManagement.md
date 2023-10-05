@@ -182,16 +182,16 @@ load merge myconfig.conf<br>
 </td>
  <td>
  
-<b>\# Command to save the configuration on SONiC</b><br>
+<b># Command to save the configuration on SONiC</b><br>
 config save -y<br>
 </br>
-<b>\# Command  to  delete and re-add  a new save config -</b><br> 
+<b># Command  to  delete and re-add  a new save config -</b><br> 
 config reload &lt;config_db.json/SONiCYang><br>
 </br>
-<b>\# Command to load the configuration from json.db</b><br>
+<b># Command to load the configuration from json.db</b><br>
 config load &lt;config json file><br>
 </br>
-<b>\# Replace  a new configuration on top of existing running configuration -</b><br>
+<b># Replace  a new configuration on top of existing running configuration -</b><br>
 config replace &lt;config_db.json/SONiCYang>
 
 </td>

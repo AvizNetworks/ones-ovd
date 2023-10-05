@@ -63,11 +63,10 @@ show syslog<br>
 <b>#Location of syslog configuration file -</b><br>
 Configuration file for syslog available at: /etc/rsyslog.conf<br>
 </br>
-
 <b>#Example Configuration</b><br>
 config syslog add 1.1.1.1 --source 192.168.8.231<br>
 config syslog del 1.1.1.1<br>
-
+</br>
 <b># Command to view syslog file location</b><br>
 Path: /var/log/syslog*
 </td>
@@ -120,18 +119,18 @@ Config_db.json
 ```
 {
 "ztp": {
-    "01-configdb-json": {
-          "url": {
-            "source": "tftp://188.188.36.36/7326_56X_config_db.json",
-            "destination": "/etc/sonic/config_db.json"
-          }
-        },
-    "02-firmware": {
-          "install": {
-            "url": "http://188.188.36.36：8000/sonic-broadcom.bin",
-           "skip-reboot": true
-            }
-        } 
+ "01-configdb-json": {
+    "url": {
+      "source": "tftp://188.188.36.36/7326_56X_config_db.json",
+        "destination": "/etc/sonic/config_db.json"
+     }
+    },
+   "02-firmware": {
+      "install": {
+        "url": "http://188.188.36.36：8000/sonic-broadcom.bin",
+         "skip-reboot": true
+         }
+      } 
    }
 }
 ```
@@ -160,6 +159,7 @@ ovs-vsctl set-snmp-trap-targets
 
   </td>
   <td>
+
 <b># SONiC - Add SNMP Community and Agent Address</b><br> 
 <b>#syntax</b><br>
  config snmp community add &ltsnmp_community_name>  &ltMode_Readonly or read Write><br> 
@@ -177,12 +177,12 @@ config snmp user add &lt;user> (noAuthNoPriv | AuthNoPriv | Priv) (RO | RW) [[(M
 <b>#Example</b><br>
 config snmp user add testuser3 priv rw md5 testuser3_auth_pass aes testuser3_encrypt_pass<br>
 </br>
-
 <b># Add SNMP traps and SNMP server target address -</b><br> 
 config snmptrap modify 2 &lt;Server_IP_Address><br>
 show snmptrap<br>
 show snmp agentaddress<br>
 show running configuration snmp<br>
+
   </td>
   </tr>
   <tr>
@@ -191,6 +191,7 @@ show running configuration snmp<br>
  <tr>
   <tr>
   <td>
+
 <b># Configure Radius Server IP and Port</b><br>  
 set system aaa radius authorization disable &lt;true | false><br>
 set system aaa radius authorization server-ip &lt;ipv4_address><br>
@@ -218,7 +219,6 @@ show radius <br>
 <b>#Syntax</b><br>
 aaa  authentication login tacacs+<br>
 </br>
-
 <b># If one AAA server fails , go to backup AAA server for authentication</b><br> 
 aaa authentication failthrough &lt;enable/disable/default><br> 
 aaa authentication fallback &lt;enable/disable/default> <br>
@@ -231,7 +231,7 @@ config aaa accounting tacacs+<br>
 <b># Command to add aaa accounting server IP and bind it to a data interface  </b><br>
 config radius add &lt;accounting_server_ip><br>
 config radius add &lt;accounting_server_ip> --s &lt;source_interface><br>
-</br>
+
   </td>
   </tr>
   <tr>
@@ -240,6 +240,7 @@ config radius add &lt;accounting_server_ip> --s &lt;source_interface><br>
  <tr>
   <tr>
   <td>
+
 <b>#sflow commands</b><br>
 ovs-vsctl  --id=@s create sFlow agent=eth0 target=\"10.10.50.207:9901\" header=128 sampling=5000 polling=30 -- set Bridge br0 sflow=@s
 ovs-vsctl list sflow<br>
@@ -247,11 +248,11 @@ ovs-vsctl -- clear Bridge br0 sflow
 
   </td>
   <td>
+
 <b># Command to add  sflow  collector</b><br> 
 config sflow collector add &lt;collector_name1>  &lt;sflow_collector_ipv4> &lt;port_number><br>
 config sflow collector add &lt;collector_name2>  &lt;sflow_collector_ipv6> &lt;port_number><br>
 </br>
-
 <b># Command to delete   sflow  collector </b><br>
 config sflow collector del &lt;collector-name1><br>
 config sflow collector del &lt;collector-name2><br>
@@ -259,11 +260,11 @@ config sflow collector del &lt;collector-name2><br>
 <b># Command to add  and delete  sflow agent</b><br> 
 config sflow  agent-id add<br>
 config sflow  agent-id del<br>
-
+</br>
 <b># Command to bind  sflow agent  to an interface</b><br> 
 config sflow  agent-id add &lt;Ethernet_interface_number><br>
 config sflow  agent-id add &lt;loop_interface_number><br>
-
+</br>
 <b># Command  Enable / Disable sflow -</b><br>
 config sflow  enable<br>
 config sflow  disable<br>
@@ -274,10 +275,11 @@ config sflow  interface enable &lt;Ethernet_interface><br>
 <b># Configure sflow sample rate , interval</b><br> 
 config sflow interface sample-rate &lt;interface_name> &lt;sample_rate><br>
 config sflow  polling-interval <time_interval_seconds><br>
- 
+ </br>
 <b># Command to show  sflow  configuration -</b><br>
 show sflow<br> 
 show sflow  interface
+  
   </td>
   </tr>
   <tr>
@@ -285,6 +287,7 @@ show sflow  interface
  </tr>
  <tr>
   <tr>
+  
   <td>
 <b># Configuring the NTP Server IP Address</b><br>
  set system ntp server-ip &lt;NTP_SERVER_IP><br>
@@ -292,16 +295,15 @@ show sflow  interface
 <b># Configuring NTP Source Interface</b>
 set system ntp source-interface &lt;VLAN-INTERFACE-NUMBER><br>
 </br>
-
 <b>#Configuring Time Zone</b><br>
 set system timezone &lt;TIME_ZONE><br>
 </br>
-
 <b>#Configuring System Clock</b><br>
 set date YYYY:MM:DD -TT
 
   </td>
   <td>
+
 <b># Command to configure  NTP Server IP</b><br> 
 <b>#Syntax </b><br>
 config ntp add &lt;NTP_SERVER_IP><br>
@@ -318,13 +320,12 @@ systemctl restart ntp-config<br>
 <b># Command to list  system timezone.</b><br>
 timedatectl list-timezones<br>
 </br>
-
 <b>#Command  to modify the time zone</b><br>
 timedatectl set-timezone &lt;TIME_ZONE><br>
-
+</br>
 <b>#Command  to show the NTP server information</b><br> 
 show ntp
+
   </td>
   </tr>
-  
 </table>
