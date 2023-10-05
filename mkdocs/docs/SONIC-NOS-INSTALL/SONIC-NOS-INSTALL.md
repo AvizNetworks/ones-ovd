@@ -24,46 +24,46 @@ Step 1. Enter the ONIE install mode<br>
 
 Since switch will automatically start the ONIE Service Discovery, the ONIE-Stop command ensures the  users enter the keywords  easily. This is not a mandatory  command but it  won't affect installation no matter whether the user executes it or not though   it will enable users  to clear the ONIE running logs screen .  
 
-\# ONIE-stop
+<b># ONIE-stop</b>
 
 <div style="border: 1px solid black; padding: 10px;">
-<b>Step 2: Call the command to stop ONIE discovery process because DHCP server is not available</b> 
+<b>Step 2: Call the command to stop ONIE discovery process because DHCP server is not available</b> <br>
 ONIE:/ # onie-stop<br>
 discover: installer mode detected.<br>
 Stopping: discover... done.<br>
 </br>
-<b>Step 3. Setup the ip address binding to switch management port</b>
+<b>Step 3. Setup the ip address binding to switch management port</b><br>
 ONIE:/ # ifconfig eth0 192.168.1.2 netmask 255.255.255.0<br>
 Caution: If user does not specific any management IP statically , Default ONIE  will get ip from DHCP server <br>
 <b>Step 4. Install the image from the remote URL via TFTP server IP location 
 ONIE:/ # onie-nos-install tftp://192.168.1.1/SONiC.<br>Edgecore-SONiC_20230330_091754_ec202111_352.bin</b><br>
 If the installation is successful, the device will reboot automatically and boot-up with SONiC.
 </div>
-
+<br>
 
 # \# Example SONiC Image upgrade from ONIE prompt 
 
 <div style="border: 1px solid black; padding: 10px;">
 <b># Login using the console port and reboot the switch</b><br>
-Enter ONIE mode
+Enter ONIE mode<br>
 
-<b># The Switch will reboot and boot into 'ONIE: Install OS' mode, run the below command to stop auto-discovery
- ONIE:/ # onie-stop</b>
+<b># The Switch will reboot and boot into 'ONIE: Install OS' mode, run the below command to stop auto-discovery</b><br>
+ ONIE:/ # onie-stop<br>
 
-<b># Assign 'eth0' with a management-IP to copy image from remote server</b>
-ONIE:/ # ifconfig eth0 &lt;mgmt-ip> netmask &lt;netmask> up
+<b># Assign 'eth0' with a management-IP to copy image from remote server</b><br>
+ONIE:/ # ifconfig eth0 &lt;mgmt-ip> netmask &lt;netmask> up<br>
 
-<b># If server is present on different network using below command to add a default route</b>
-ONIE:/ # route add default gw &lt;gw-ip>
+<b># If server is present on different network using below command to add a default route</b><br>
+ONIE:/ # route add default gw &lt;gw-ip><br>
 
-<b>via SCP</b> 
-<b>#SCP method to copy the SONiC  image file</b>
-ONIE:/ # scp &lt;user>@&lt;server-ip>:/&lt;dir>/sonic_image.bin
+<b>via SCP</b> <Br>
+<b>#SCP method to copy the SONiC  image file</b><br>
+ONIE:/ # scp &lt;user>@&lt;server-ip>:/&lt;dir>/sonic_image.bin<br>
 
-<b># Install copied image -</b>
-ONIE:/ # onie-nos-install &lt;sonic_image.bin>
-ONIE:/ # onie-nos-install http://&lt;IP>:<port>/<sonic_image.bin>
+<b># Install copied image -</b><br>
+ONIE:/ # onie-nos-install &lt;sonic_image.bin><Br>
+ONIE:/ # onie-nos-install http://&lt;IP>:<port>/<sonic_image.bin><Br>
 
-<b>via HTTP</b>
+<b>via HTTP</b><Br>
 ONIE:/ # onie-nos-install http://&lt;IP>:&lt;port>/&lt;sonic-image-nos.bin>
 </div>
