@@ -106,16 +106,17 @@ admin@sonic:~$ config ztp enable
 admin@sonic:~$ config ztp run -y
 <br></br>
 <b>#Check the ZTP Status</b>
-admin@sonic:~$ show ztp status
-
-#Check the  /etc/sonic , user will be able to see config_db.json
-admin@sonic:~$ ls /etc/sonic/ | grep config_db.json
-Config_db.json
-
-<b># Server where ZTP server is hosted , operator can edit in a customized way various parameters like URL , source path  location , destination path location during ZTP automated discovery  process.</b>
-<b>#Using ZTP to download the config_db.json and the new SONiC version.</b>
-<b>#Example</b>
-<b>Example for ztp.json.</b>
+admin@sonic:~$ show ztp status<br>
+</br>
+<b>#Check the  /etc/sonic , user will be able to see config_db.json</b><br>
+admin@sonic:~$ ls /etc/sonic/ | grep config_db.json<br>
+Config_db.json<br>
+</br>
+<b># Server where ZTP server is hosted , operator can edit in a customized way various parameters like URL , source path  location , destination path location during ZTP automated discovery  process.</b><br>
+<b>#Using ZTP to download the config_db.json and the new SONiC version.</b><br>
+<b>#Example</b><br>
+<b>Example for ztp.json.</b><br>
+</br>
 ```
 {
 "ztp": {
