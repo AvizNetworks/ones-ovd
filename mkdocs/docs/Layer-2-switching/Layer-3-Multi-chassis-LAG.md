@@ -57,62 +57,70 @@ config interface ip add Vlan10 192.168.10.2/24<br>
 <div style="border: 1px solid black; padding: 10px;">
 <b>#MC1 switch configuration -</b><br> 
 show interfaces portchannel<br>
-Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available,<br>
-       S - selected, D - deselected, * - not synced<br>
-```
+Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available,S - selected, D - deselected, * - not synced<br>
+``````
   No.  Team Dev       Protocol     Ports                          Oper Key  Admin Key    Fast Rate
 -----  -------------  -----------  ---------------------------  ----------  -----------  -----------
   01  PortChannel01  LACP(A)(Up)  Ethernet0(S)                       101  auto         false
   02  PortChannel02  LACP(A)(Up)  Ethernet1(S)                       102  auto         false
   03  PortChannel03  LACP(A)(Up)  Ethernet60(S) Ethernet56(S)        103  auto         false
-```
-show mclag brief  
-       Domain ID                    : 1
-        Role                         : Active
-        Session Status               : Up
-       Peer Link Status             :
-        Source Address               : 192.168.10.1
-        Peer Address                 : 192.168.10.2
-        Peer Link                    :
-       Keepalive Interval           : 1 secs
-        Session Timeout              : 15 secs
-        System MAC                   : 00:a0:c9:00:00:00
-       Number of MCLAG Interfaces   : 2
-        MCLAG Interface              Local/Remote Status
-        PortChannel01                Up/Up
-        PortChannel02                Up/Up
+``````
+<br></br>
+show mclag brief  <br>
+Domain ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1<br>
+Role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Active<br>
+Session Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Up<br>
+Peer Link Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<br>
+Source Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 192.168.10.1<br>
+Peer Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 192.168.10.2<br>
+Peer Link&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<br>
+Keepalive Interval&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1 secs<br>
+Session Timeout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 15 secs<Br>
+System MAC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 00:a0:c9:00:00:00<br>
+Number of MCLAG Interfaces&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 2<br>
+MCLAG Interface&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local/Remote Status<Br>
+PortChannel01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Up/Up<Br>
+PortChannel02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Up/Up<Br>
+</br>
 
-
-MC2 switch configuration - 
-
-admin@sonic:~$ show interfaces portchannel
+<b>MC2 switch configuration - </b><br>
+</br>
+admin@sonic:~$ show interfaces portchannel<br>
 Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available,
-       S - selected, D - deselected, * - not synced
+       S - selected, D - deselected, * - not synced<br>
+``````
   No.  Team Dev       Protocol     Ports                          Oper Key  Admin Key    Fast Rate
 -----  -------------  -----------  ---------------------------  ----------  -----------  -----------
   01  PortChannel01  LACP(A)(Up)  Ethernet0(S)                       101  auto         false
   02  PortChannel02  LACP(A)(Up)  Ethernet1(S)                       102  auto         false
   03  PortChannel03  LACP(A)(Up)  Ethernet60(S) Ethernet56(S)        103  auto         false
-admin@sonic:~$ show mclag brief  
-       Domain ID                    : 1
-        Role                         : Standby
-        Session Status               : Up
-        Peer Link Status             :
-        Source Address               : 192.168.10.2
-        Peer Address                 : 192.168.10.1
-        Peer Link                    :
-        Keepalive Interval           : 1 secs
-        Session Timeout              : 15 secs
-        System MAC                   : 00:a0:c9:00:00:00
-        Number of MCLAG Interfaces   : 2
-        MCLAG Interface              Local/Remote Status
-        PortChannel01                Up/Up
-        PortChannel02                Up/Up
+``````
+admin@sonic:~$ show mclag brief<br>  
+Domain ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1<br>
+Role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Standby<Br>
+Session Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Up<br>
+Peer Link Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<br>
+Source Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 192.168.10.2<br>
+Peer Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 192.168.10.1<br>
+Peer Link&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<br>
+Keepalive Interval&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1 secs<br>
+Session Timeout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 15 secs<br>
+System MAC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 00:a0:c9:00:00:00<br>
+Number of MCLAG Interfaces&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 2<br>
+MCLAG Interface&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Local/Remote Status<br>
+PortChannel01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Up/Up<br>
+PortChannel02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Up/Up<br>
 
 </div>
 
 <br>
 
 <div style="border: 1px solid black; padding: 10px;">
+<b>SONiC Command to verify ARP synchronization</b><br>
+mclagdctl dump arp -i 1<br>
+
+No.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flag<br>
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.12.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80:a2:35:5a:22:50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PortChannel02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R<br>
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.11.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b8:6a:97:19:ba:12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PortChannel01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L<Br>
 
 </div>
