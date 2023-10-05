@@ -107,18 +107,18 @@ show vlan  brief<br>
   
 </td>
 <td>
-#  SONiC Command to enable DHCP relay
-config feature state dhcp_relay enabled
-
-# Enable DHCP relay on Vlan number 
-config vlan dhcp_relay add <vlan_number> <IP_ADDRESS>
-
-#Enable DHCP relay on Loopback interface
-config vlan dhcp_relay src_intf add <vlan_number> Loopback0
-
-#Example
-config vlan dhcp_relay add 10 192.168.20.100
-config vlan dhcp_relay src_intf add 10 Loopback0
+<b>#  SONiC Command to enable DHCP relay</b><br>
+config feature state dhcp_relay enabled<br>
+</br>
+<b># Enable DHCP relay on Vlan number</b><br> 
+config vlan dhcp_relay add &lt;vlan_number> &lt;IP_ADDRESS><br>
+</br>
+<b>#Enable DHCP relay on Loopback interface</b><br>
+config vlan dhcp_relay src_intf add &lt;vlan_number> Loopback0<br>
+</br>
+<b>#Example</b><br>
+config vlan dhcp_relay add 10 192.168.20.100<Br>
+config vlan dhcp_relay src_intf add 10 Loopback0<br>
 
 
 </td>
