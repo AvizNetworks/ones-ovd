@@ -58,13 +58,13 @@ nav:
       - Multi-Chassis Link Aggregation Group (MC-LAG):
         - Layer 2 Multi Chassis LAG: Layer-2-switching/Layer-2(mc-lag).md
         - Layer 3 Multi Chassis LAG: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-      - Link Layer Discovery protocol: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
+      - Link Layer Discovery protocol: Layer-2-switching/Link-Layer-Discovery-protocol .md
     - Layer 3 Routing:
-      - Routed Interface: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-      - SVI & DHCP Relay: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-      - BGP Routing: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-      - OSPF Routing: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-      - VRF Routing: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
+      - Routed Interface: Layer3-Routing/Routed-Interface.md
+      - SVI & DHCP Relay: Layer3-Routing/SVI-&-DHCP-Relay.md
+      - BGP Routing: Layer-2-switching/BGP-Routing.md
+      - OSPF Routing: Layer-2-switching/OSPF-Routing.md
+      - VRF Routing: Layer-2-switching/VRF-Routing.md
       - L2-VXLAN Asymmetric IRB Configuration: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
       - L3-VXLAN Symmetric IRB Configuration: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
     - QoS Configuration: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
