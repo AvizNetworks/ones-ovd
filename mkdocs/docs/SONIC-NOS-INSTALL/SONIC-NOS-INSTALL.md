@@ -46,24 +46,24 @@ If the installation is successful, the device will reboot automatically and boot
 <div style="border: 1px solid black; padding: 10px;">
 <b># Login using the console port and reboot the switch</b><br>
 Enter ONIE mode<br>
-
+</br>
 <b># The Switch will reboot and boot into 'ONIE: Install OS' mode, run the below command to stop auto-discovery</b><br>
  ONIE:/ # onie-stop<br>
-
+</br>
 <b># Assign 'eth0' with a management-IP to copy image from remote server</b><br>
 ONIE:/ # ifconfig eth0 &lt;mgmt-ip> netmask &lt;netmask> up<br>
-
+</br>
 <b># If server is present on different network using below command to add a default route</b><br>
 ONIE:/ # route add default gw &lt;gw-ip><br>
-
+</br>
 <b>via SCP</b> <Br>
 <b>#SCP method to copy the SONiC  image file</b><br>
 ONIE:/ # scp &lt;user>@&lt;server-ip>:/&lt;dir>/sonic_image.bin<br>
-
+</br>
 <b># Install copied image -</b><br>
 ONIE:/ # onie-nos-install &lt;sonic_image.bin><Br>
 ONIE:/ # onie-nos-install http://&lt;IP>:<port>/<sonic_image.bin><Br>
-
+<br>
 <b>via HTTP</b><Br>
 ONIE:/ # onie-nos-install http://&lt;IP>:&lt;port>/&lt;sonic-image-nos.bin>
 </div>

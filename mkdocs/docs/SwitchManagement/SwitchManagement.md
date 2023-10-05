@@ -34,48 +34,48 @@ Operator has to login to PICOS and SONiC switch as super user using “sudo su�
  <tr>
    <td>
   
-  <b># OOB Management IP</b>
-  <b># Syntax</b>
+  <b># OOB Management IP</b><br>
+  <b># Syntax</b><br>
    set system management-ethernet &lt;mgmt-if> ip-address IPv4 &lt;ip-address>
-   run show system management-ethernet
-
-   <b>#Example</b>
-   set system management-ethernet eth0 ip-address IPv4 192.168.10.5/24<br>
-   <b>#Inband Management IP</b>
-   <b>#Syntax</b>
-   set system inband vlan-interface &lt;vlan-interface-name>
-   set system inband loopback &lt;ip-address>
+   run show system management-ethernet<br>
+</br>
+   <b>#Example</b><br>
+   set system management-ethernet eth0 ip-address IPv4 192.168.10.5/24<br><br>
+   <b>#Inband Management IP</b><br>
+   <b>#Syntax</b><br>
+   set system inband vlan-interface &lt;vlan-interface-name><br>
+   set system inband loopback &lt;ip-address><br>
    set system inband routed-interface &lt;routed-interface-name><br>
-
-   <b>#Example</b>
-   set system inband vlan-interface VLAN400
-   set system inband loopback 192.168.10.1
-   set system inband routed-interface rif-ge3
+</br>
+   <b>#Example</b><br>
+   set system inband vlan-interface VLAN400<br>
+   set system inband loopback 192.168.10.1<br>
+   set system inband routed-interface rif-ge3<br>
 
 </td>
 
 <td>
 
-<b># OOB Management IP</b>
-<b>#Syntax</b>
-config interface ip add &ltmgmt-if> &ltIpv4_address> / &ltIpv4_subnet> &ltgateway_ipv4_address>
-
-<b>#Example</b>
-config interface ip add eth0 192.168.1.1/24 192.168.1.254 
-
-<b># OOB Management IP with VRF</b>
-<b>#Syntax</b>
-config VRF  add mgmt
-config interface ip add mgmt &lt;VRF-NAME> Ipv4_address>/ &lt;Ipv4_subnet> &lt;gateway_IPV4_address> 
-
-<b>#Example</b>
-config VRF  add mgmt
-config interface ip add mgmt VRF-1 192.168.1.1/24 192.168.1.254
-
-<b># Command to verify management ip address configured</b> 
-show management_interface address
-Management IP address = 192.168.1.1/24
-Management Network Default Gateway = 192.168.1.254
+<b># OOB Management IP</b><br>
+<b>#Syntax</b><Br>
+config interface ip add &ltmgmt-if> &ltIpv4_address> / &ltIpv4_subnet> &ltgateway_ipv4_address><br>
+</br>
+<b>#Example</b><br>
+config interface ip add eth0 192.168.1.1/24 192.168.1.254<br> 
+</br>
+<b># OOB Management IP with VRF</b><br>
+<b>#Syntax</b><Br>
+config VRF  add mgmt<br>
+config interface ip add mgmt &lt;VRF-NAME> Ipv4_address>/ &lt;Ipv4_subnet> &lt;gateway_IPV4_address> <br>
+</br>
+<b>#Example</b></br>
+config VRF  add mgmt<Br>
+config interface ip add mgmt VRF-1 192.168.1.1/24 192.168.1.254<br>
+</br>
+<b># Command to verify management ip address configured</b><br> 
+show management_interface address<br>
+Management IP address = 192.168.1.1/24<br>
+Management Network Default Gateway = 192.168.1.254<br>
 
 </td>
  </tr>
@@ -85,37 +85,37 @@ Management Network Default Gateway = 192.168.1.254
  <tr>
  <td>
 
-<b>#Command in PICOS to reboot system but it will cause traffic disruption</b>
-request system reboot
-
-<b># Command sets the system log file to save to disk.</b>
-set system syslog local-file disk
-tail -f /var/log/messages
+<b>#Command in PICOS to reboot system but it will cause traffic disruption</b><br>
+request system reboot<br>
+<br>
+<b># Command sets the system log file to save to disk.</b><br>
+set system syslog local-file disk<br>
+tail -f /var/log/messages<br>
 
 </td>
  <td>
 
-<b>#Command  to perform system reboot which cause some disruption of data traffic -</b> 
-reboot
-
-<b>#Command defines the cause of reboot of a sonic device</b> 
-show reboot-cause
-show reboot-cause history
-
-<b>#Command  enables a switch to reboot up quickly  with minimum disruption to the data plane. </b>
-fast-reboot
-
-<b>#Warm reboot commands perform  in-service NOS upgrade without impacting the data plane traffic</b> 
-warm-reboot -v
-config warm_restart enable/disable
-config warm_restart enable
-
-<b># Command shows configuration of warm restart setting and show whether that service is enabled or disabled </b>
-show warm_restart config
-show warm_restart state
-
-<b># Command to view syslogs</b>
-tail -f /var/log/syslog 
+<b>#Command  to perform system reboot which cause some disruption of data traffic -</b><br> 
+reboot<br>
+</br>
+<b>#Command defines the cause of reboot of a sonic device</b><Br> 
+show reboot-cause<Br>
+show reboot-cause history<br>
+</br>
+<b>#Command  enables a switch to reboot up quickly  with minimum disruption to the data plane. </b><br>
+fast-reboot<br>
+</br>
+<b>#Warm reboot commands perform  in-service NOS upgrade without impacting the data plane traffic</b><br> 
+warm-reboot -v<br>
+config warm_restart enable/disable<Br>
+config warm_restart enable<br>
+</br>
+<b># Command shows configuration of warm restart setting and show whether that service is enabled or disabled </b><br>
+show warm_restart config<br>
+show warm_restart state<br>
+</br>
+<b># Command to view syslogs</b><br>
+tail -f /var/log/syslog <br>
 
 </td>
  </tr>
@@ -125,41 +125,41 @@ tail -f /var/log/syslog
  <tr>
  <td>
 
-<b>#Command to check the version in PICOS</b> 
-Version
-
-<b>#Command to upgrade  the version in PICOS</b> 
-upgrade
-upgrade [image_name] [factory-default] [backup-file=(*.lst)]
-image_name - Image with bin format file(*.bin)
-factory-default - Recovery configuration to factory default
-backup-file=(*.lst) - Specify a user defined backup list
-
-upgrade backup-file=/admin/back_files.lst onie-installer-picos-4.0.1-x86.bin Sync
-
-<b># Example</b>
+<b>#Command to check the version in PICOS</b><br> 
+Version<br>
+</br>
+<b>#Command to upgrade  the version in PICOS</b><br> 
+upgrade<br>
+upgrade [image_name] [factory-default] [backup-file=(*.lst)]<br>
+image_name - Image with bin format file(*.bin)<br>
+factory-default - Recovery configuration to factory default<br>
+backup-file=(*.lst) - Specify a user defined backup list<br>
+</br>
+upgrade backup-file=/admin/back_files.lst onie-installer-picos-4.0.1-x86.bin Sync<br>
+</br>
+<b># Example</b><br>
 upgrade onie-installer-picos-4.0.1-x86.bin
 
   </td>
 <td>
 
-<b>#Syntax</b> 
-<b>#Command to check the version in SONiC</b> 
-Show version
-
-<b>#Command to upgrade  the version in SONiC</b> 
-sonic-installer
-sonic-installer install
-sonic-installer install [OPTIONS] &lt;image_file_path>
-sonic-installer list
-
-<b># Command to set which image will be used for default boot image after any system reboot</b>
-sonic-installer set-default
-sonic-installer set-default &lt;image_name>
-sonic-installer set-next-boot <image_name>
-
-<b># Operator can use following command to remove a saved sonic image in device flash/disk -</b>
-sonic-installer remove
+<b>#Syntax</b> <Br>
+<b>#Command to check the version in SONiC</b><br> 
+Show version<Br>
+</br>
+<b>#Command to upgrade  the version in SONiC</b><br> 
+sonic-installer<br>
+sonic-installer install<br>
+sonic-installer install [OPTIONS] &lt;image_file_path><br>
+sonic-installer list<br>
+</br>
+<b># Command to set which image will be used for default boot image after any system reboot</b><br>
+sonic-installer set-default<br>
+sonic-installer set-default &lt;image_name><br>
+sonic-installer set-next-boot <image_name><br>
+</br>
+<b># Operator can use following command to remove a saved sonic image in device flash/disk -</b><br>
+sonic-installer remove<br>
 sonic-installer remove [y|-yes] &lt;image_name>
 
 </td>
@@ -170,28 +170,28 @@ sonic-installer remove [y|-yes] &lt;image_name>
  <tr>
  <td>
 
-<b># Command to save the configuration on PICOS</b>
-save myconfig.conf
-
-<b># CLI to  delete and re-add  a new save config -</b>
-load override myconfig.conf
-
-<b># Merge a new config on top of existing running configuration –</b>
-load merge myconfig.conf
+<b># Command to save the configuration on PICOS</b><br>
+save myconfig.conf<br>
+</br>
+<b># CLI to  delete and re-add  a new save config -</b><Br>
+load override myconfig.conf<br>
+</br>
+<b># Merge a new config on top of existing running configuration –</b><br>
+load merge myconfig.conf<br>
 
 </td>
  <td>
  
-<b>\# Command to save the configuration on SONiC</b>
-config save -y
-
-<b>\# Command  to  delete and re-add  a new save config -</b> 
-config reload &lt;config_db.json/SONiCYang>
-
-<b>\# Command to load the configuration from json.db</b>
-config load &lt;config json file>
-
-<b>\# Replace  a new configuration on top of existing running configuration -</b>
+<b>\# Command to save the configuration on SONiC</b><br>
+config save -y<br>
+</br>
+<b>\# Command  to  delete and re-add  a new save config -</b><br> 
+config reload &lt;config_db.json/SONiCYang><br>
+</br>
+<b>\# Command to load the configuration from json.db</b><br>
+config load &lt;config json file><br>
+</br>
+<b>\# Replace  a new configuration on top of existing running configuration -</b><br>
 config replace &lt;config_db.json/SONiCYang>
 
 </td>
