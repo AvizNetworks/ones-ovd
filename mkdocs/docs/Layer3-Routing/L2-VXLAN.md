@@ -220,7 +220,7 @@ Source interface : Loopback0<br>
 <b>Check vxlan and VLAN mapping.AS7326-56X:</b><br>
 admin@AS7326-56X:~$ show vxlan vlanvnimap<br>
 
-``````
+<pre>
 +--------+-------+
 | VLAN   |   VNI |
 +========+=======+
@@ -235,23 +235,23 @@ admin@AS5835-54X:~$ show vxlan vlanvnimap
 | Vlan30 |  3000 |
 +--------+-------+
 Total count : 1
-``````
+</pre>
 <br><br>
 <b><u>Check the status for Vxlan tunneling.</b></u><br>
 <u><b>AS7326-56X:(202111.3)</b></u><br>
 admin@AS7326-56X:~$ show vxlan tunnel<br>
 
-``````
+<pre>
 vxlan tunnel name    source ip    destination ip    tunnel map name    tunnel map mapping(vni -> vlan)
 -------------------  -----------  ----------------  -----------------  ---------------------------------
 vtep                 1.1.1.1                       map_3000_Vlan30    3000 -> Vlan30
 Total count : 1
-``````
+</pre>
 <br><br>
 <b><u>AS7326-56X:(202111.3)</u></b><br>
 admin@AS7326-56X:~$ show vxlan remotevtep<br>
 
-``````
+<pre>
 +---------+---------+-------------------+--------------+
 | SIP 	| DIP 	| Creation Source   | OperStatus   |
 +=========+=========+===================+==============+
@@ -259,45 +259,45 @@ admin@AS7326-56X:~$ show vxlan remotevtep<br>
 | 1.1.1.1 | 2.2.2.2 | EVPN          	| oper_up  	|
 +---------+---------+-------------------+--------------+
 Total count : 1
-``````
+</pre>
 <br><br>
 <u><b>AS5835-54X:(202111.3)</b></u><br>
 admin@AS5835-54X:~$ show vxlan tunnel<br>
-``````
+<pre>
 vxlan tunnel name    source ip    destination ip    tunnel map name    tunnel map mapping(vni -> vlan)
 -------------------  -----------  ----------------  -----------------  ---------------------------------
 vtep                 2.2.2.2                      map_3000_Vlan30    3000 -> Vlan30
 Total count : 1
-``````
+</pre>
 <br><br>
 <u><b>AS5835-54X:(202111.3)</b></u><br>
 admin@AS5835-54X:~$ show vxlan remotevtep<br>
 
-``````
+<pre>
 | SIP 	| DIP 	| Creation Source   | OperStatus   |
 +=========+=========+===================+==============+
 | 2.2.2.2 | 1.1.1.1 | EVPN          	| oper_up  	|
 +---------+---------+-------------------+--------------+
 Total count : 1
- ``````
- <br><br>
+ </pre>
+<br><br>
 <b><u>Check the Mac learning.</u></b><br>
 <b>AS7326-56X:(202111.3)</b><br>
 <br>
 admin@AS7326-56X:~$ show mac<br>
 
-``````
+<pre>
   No.	Vlan  MacAddress     	Port            	Type
 -----  ------  -----------------  ------------------  -------
 	1  	30  8C:EA:1B:30:DA:50  VxLAN DIP: 2.2.2.2  Static
 	2  	30  8C:EA:1B:30:DA:4F  Ethernet0       	Dynamic
 Total number of entries 2
-``````
+</pre>
 <br><br>
 <u><b>AS7326-56X(202111.3)</b></u><br>
 admin@AS7326-56X:~$ show mac<br>
 
-``````
+<pre>
   No.	Vlan  MacAddress     	Port   	Type
 -----  ------  -----------------  ---------  -------
 	1  	30  8C:EA:1B:30:DA:4F  Ethernet0  Dynamic
@@ -312,23 +312,23 @@ Total count : 1
 Note.
 "8C:EA:1B:30:DA:50" is synced from remote vtep(2.2.2.2).
 "8C:EA:1B:30:DA:4F" is learned locally.
-``````
+</pre>
 <br><br>
 <u><b>AS5835-54X:(202111.3)</b></u><br>
 admin@AS5835-54X:~$ show mac<br>
 
-``````
+<pre>
   No.	Vlan  MacAddress     	Port            	Type
 -----  ------  -----------------  ------------------  -------
 	1  	30  8C:EA:1B:30:DA:50  Ethernet0       	Dynamic
 	2  	30  8C:EA:1B:30:DA:4F  VxLAN DIP: 1.1.1.1  Static
 Total number of entries 2
-``````
+</pre>
 <br><br>
 <u><b>AS5835-54X:(202111.3)</b></u><br>
 admin@AS5835-54X:~$ show mac<br>
 
-``````
+<pre>
   No.	Vlan  MacAddress     	Port   	Type
 -----  ------  -----------------  ---------  -------
 	1  	30  8C:EA:1B:30:DA:50  Ethernet0  Dynamic
@@ -340,7 +340,7 @@ admin@AS5835-54X:~$ show vxlan remotemac all
 | Vlan30 | 8c:ea:1b:30:da:4f | 1.1.1.1  	|   	|  3000 | dynamic |
 +--------+-------------------+--------------+-------+-------+---------+
 Total count : 1
- ``````
+ </pre>
  <br><br>
 <b>Check IPv4 BGP session</b><br>
 <b><u>AS7326-56X:</u></b><br>
@@ -352,11 +352,11 @@ BGP table version 6<br>
 RIB entries 3, using 552 bytes of memory<br>
 Peers 1, using 20 KiB of memory<br>
 
-``````
+<pre>
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.1    	4  	65100  	80  	85    	0	0	0 01:01:28        	1
 Total number of neighbors 1
-``````
+</pre>
 <br><br>
 <u><b>AS5835-54X:</b></u><br>
 AS5835-54X# show bgp ipv4 summary<br>
@@ -366,11 +366,11 @@ BGP table version 6<Br>
 RIB entries 3, using 552 bytes of memory<br>
 Peers 1, using 20 KiB of memory<br>
 
-``````
+<pre>
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.0    	4  	65100  	79  	79    	0	0	0 01:01:28        	1
 Total number of neighbors 1
-``````
+</pre>
 <br><br>
 <u><b>Check L2EVPN BGP session</u></b><br>
 <br>
@@ -381,11 +381,11 @@ BGP table version 0<br>
 RIB entries 3, using 552 bytes of memory<br>
 Peers 1, using 20 KiB of memory<br>
 
-``````
+<pre>
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.1    	4  	65100  	82  	87    	0	0	0 01:03:43        	3
 Total number of neighbors 1
-``````
+</pre>
 <br><br>
 AS5835-54X:<br>
 AS5835-54X# show bgp l2vpn evpn summary<Br>
@@ -394,11 +394,11 @@ BGP table version 0<br>
 RIB entries 3, using 552 bytes of memory<br>
 Peers 1, using 20 KiB of memory<br>
 
-``````
+<pre>
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.0    	4  	65100  	81  	81    	0	0	0 01:03:43        	3
 Total number of neighbors 1
-``````
+</pre>
 <br><br>
 <u><b>Check underlay routing</b></u><br>
 <u><b>AS7326-56X:</b></u><br>
@@ -464,19 +464,19 @@ Advertise-gw-macip: No<br>
 <b><u>AS7326-56X:</u></b><br>
 AS7326-56X# show evpn mac vni all<br>
 VNI 3000 #MACs (local and remote) 3<br>
-``````
+<pre>
 MAC           	Type   Intf/Remote VTEP  	VLAN  Seq #'s
 8c:ea:1b:30:da:50 remote 2.2.2.2                 	1/0
 8c:ea:1b:30:da:4f local  Ethernet0         	30	0/0
-``````
+</pre>
 <br><br>
 <u><b>AS5835-54X:</b></u><br>
 AS5835-54X# show evpn mac vni all<br>
-``````
+</pre>
 VNI 3000 #MACs (local and remote) 3MAC           	Type   Intf/Remote VTEP  	VLAN  Seq #'s
 8c:ea:1b:30:da:50 local  Ethernet0         	30	0/0
 8c:ea:1b:30:da:4f remote 1.1.1.1                 	1/0
-``````
+</pre>
 <br><br>
 <u><b>Check the type 2 EVPN route</b></u><br>
 <b><u>AS7326-56X:</u></b><br>
