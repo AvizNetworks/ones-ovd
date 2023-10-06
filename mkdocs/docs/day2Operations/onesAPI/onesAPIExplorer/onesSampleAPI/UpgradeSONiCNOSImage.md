@@ -1,4 +1,4 @@
-# Custom Upgrade SONiC NOS Image
+# <b>Custom Upgrade SONiC NOS Image</b>
 
 <style>
   table {

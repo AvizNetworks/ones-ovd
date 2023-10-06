@@ -1,9 +1,9 @@
-# REST API Explorer 
+# <b> REST API Explorer </b>
 
 Data center operations and Support teams can login to https://&lt;ONES-serverIP&gt;/explorer and get access to all the REST APIs which customers can leverage to develop their own custom scripts to monitor the SONiC based data center. Aviz ONES REST API explorer section ensures customers get flexibility in their DevOps operation approach with limited resources and OEM dependency .
 
  
-## Why use ONES REST APIs interface over SONiC enabled Fabric
+## <b> Why use ONES REST APIs interface over SONiC enabled Fabric</b>
 
 - **Ease-of-use and flexibility**- Availability of third-party Yaml  clients ensures  the  REST API is language agnostic and can integrate into any existing NetOps  infrastructure and workflow. 
 

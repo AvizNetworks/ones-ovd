@@ -1,4 +1,4 @@
-# Day 1 Operations - SONiC 
+# <b> Day 1 Operations - SONiC</b> 
 
 Layer3  IP-CLOS is a network design and routing architecture commonly used in large-scale data center and cloud environments. IP-CLOS provides a scalable and flexible solution for interconnecting multiple switches  in a hierarchical manner in leaf and spine architecture , allowing efficient utilization of network resources and simplified routing.
 

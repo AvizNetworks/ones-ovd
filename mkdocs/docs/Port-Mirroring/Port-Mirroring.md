@@ -1,4 +1,4 @@
- # Port Mirroring
+ # <b> Port Mirroring</b>
 
  <style>
   table {
@@ -30,6 +30,7 @@
  <tr>
   <tr>
   <td>
+  
 <b>#Configuring port as port mirroring</b><br>
 <b>#Syntax </b><br>
 </br>

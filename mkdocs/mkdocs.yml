@@ -47,6 +47,13 @@ nav:
   - How Aviz lowers the Barrier to Adopt SONiC based Fabric: AvizBuisnessModel.md
   - Day 1 Operations for SONiC with ONES: day1Operation/Day1OperationsSONiC.md
   - Day 2 Operations for SONiC with ONES: day2Operations/Day2OperationSonic.md
+  - SONiC Validated Designs by ONES:
+    - Overview: ONESValidateDesign.md
+    - BGP IP CLOS: OverviewOnesValidatedDesigns/BGP_IP_CLOS.md
+    - BGP-IP-CLOS-MC LAG : OverviewOnesValidatedDesigns/BGP-IP-CLOS-MCLAG.md
+    - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
+    - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
+    - DCL EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
   - Migrate from PICOS to SONiC:
     - Why Migrate from PICOS to SONiC?: PICOStoSONiCMigration/PICOS_to_SONiC.md
     - SONiC NOS Installation from ONIE: SONIC-NOS-INSTALL/SONIC-NOS-INSTALL.md
@@ -65,18 +72,11 @@ nav:
       - BGP Routing: Layer3-Routing/BGP-Routing.md
       - OSPF Routing: Layer3-Routing/OSPF-Routing.md
       - VRF Routing: Layer3-Routing/VRF-Routing.md
-      - L2-VXLAN Asymmetric IRB Configuration: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-      - L3-VXLAN Symmetric IRB Configuration: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-    - QoS Configuration: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-    - ACL Configuration: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-    - References: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-  - SONiC Validated Designs by ONES:
-    - Overview: ONESValidateDesign.md
-    - BGP IP CLOS: OverviewOnesValidatedDesigns/BGP_IP_CLOS.md
-    - BGP-IP-CLOS-MC LAG : OverviewOnesValidatedDesigns/BGP-IP-CLOS-MCLAG.md
-    - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
-    - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
-    - DCL EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
+      - L2-VXLAN Asymmetric IRB Configuration: Layer3-Routing/L2-VXLAN.md
+      - L3-VXLAN Symmetric IRB Configuration: Layer3-Routing/L3-VXLAN-Sym.md
+    - QoS Configuration: Layer3-Routing/QoS-Configuration.md
+    - ACL Configuration: Layer3-Routing/ACL-Configuration.md
+    - References: Layer3-Routing/References.md
   - ONES REST APIs for SONiC:
     - Overview: day2Operations/onesAPI/OnesAPI.md
     - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md

@@ -2,7 +2,7 @@
 
 <br />
 
-## YAML Template
+## <b> YAML Template</b>
 
 ```yaml
 Inventory:
@@ -226,12 +226,12 @@ Parameters:
 
 <br />
 
-## Config Applied and Validated
+## <b> Config Applied and Validated</b>
 
 ![img](../img/configDCL.png)
 
 
-## Applied Configuration on Switches
+## <b> Applied Configuration on Switches</b>
 
 === "Leaf1"
 

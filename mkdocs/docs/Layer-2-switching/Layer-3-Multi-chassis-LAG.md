@@ -1,4 +1,4 @@
-### Layer 3 Multi Chassis LAG
+### <b> Layer 3 Multi Chassis LAG </b>
 
 ![Layre3](../img/layer3(mc-lag).png)
 

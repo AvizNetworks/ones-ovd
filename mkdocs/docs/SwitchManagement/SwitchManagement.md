@@ -1,4 +1,4 @@
-# Switch Management
+# <b> Switch Management</b>
 Operator has to login to PICOS and SONiC switch as super user using “sudo su”
 
 <style>
@@ -30,6 +30,9 @@ Operator has to login to PICOS and SONiC switch as super user using “sudo su�
   <tr>
     <th>PICOS</th>
     <th>SONiC</th>
+  </tr>
+  <tr>
+  <th colspan='2'>Management IP</th>
   </tr>
  <tr>
    <td>

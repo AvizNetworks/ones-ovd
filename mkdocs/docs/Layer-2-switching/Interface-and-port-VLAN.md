@@ -1,5 +1,5 @@
-# Layer 2 Switching
-## Inerface and pory VLAN
+# <b> Layer 2 Switching</b>
+## <b> Interface and port VLAN</b>
 
 ![interface and port vlan](../img/interface_and_port.png)
 

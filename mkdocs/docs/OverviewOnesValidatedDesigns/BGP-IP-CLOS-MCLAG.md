@@ -1,8 +1,8 @@
-# BGP-IP-CLOS-MCLAG 
+# <b> BGP-IP-CLOS-MCLAG</b> 
 
 ![configuration](../img/ThirdImage.png)
 
-## Configuration
+## <b> Configuration</b>
 
 - IPv4/IPv6/BGP-Unnumbered Underlay Fabric.
 - Host facing port with IPv4/IPv6/L2-Access/L2-Trunk based on requirement.
@@ -13,7 +13,7 @@
 The template includes the inventory, connectivity, BGP and other configurations needed for the topology. Customers can modify the template to fit their specific requirements.
 
 
-### YAML Template
+### <b> YAML Template</b>
 
 ```yaml
 Inventory:
@@ -235,11 +235,11 @@ anycast_gateway: "100.10.0.0/23"
 
 ```
 
-### Config Applied and Verified through UI
+### <b> Config Applied and Verified through UI</b>
 
 ![configuration](../img/ipclos-mclag-bgp.png)
 
-### Applied Configuration on Switches
+### <b> Applied Configuration on Switches</b>
 
 === "Leaf1"
 

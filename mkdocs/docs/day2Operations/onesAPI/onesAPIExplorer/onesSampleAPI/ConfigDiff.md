@@ -1,4 +1,4 @@
-# Show Difference between golden and running config
+# <b>Show Difference between golden and running config</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>

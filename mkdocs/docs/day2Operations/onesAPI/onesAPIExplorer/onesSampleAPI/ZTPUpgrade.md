@@ -1,4 +1,4 @@
-# ZTP Upgrade SONiC NOS Image
+# <b>ZTP Upgrade SONiC NOS Image</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>

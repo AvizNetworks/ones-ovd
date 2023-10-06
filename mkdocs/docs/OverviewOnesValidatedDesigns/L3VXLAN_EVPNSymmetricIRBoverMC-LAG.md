@@ -1,10 +1,10 @@
-# L3 VXLAN + EVPN Symmetric IRB over MC-LAG
+# <b> L3 VXLAN + EVPN Symmetric IRB over MC-LAG </b>
 
 With the symmetric IRB routing model, the VTEPs do routing and bridging on both the ingress and egress sides of the VXLAN tunnel. As a result, VTEPs can do inter-subnet routing for the same virtual routing and forwarding (VRF) instance mapped to the same VNI in both directions. We implement this model for EVPN Type 2 routes the same way as for EVPN Type 5 routes. These VTEPs use  dedicated Layer 3 traffic VNI in both directions for each tenant VRF instance.
 
 ![configuration](../img/Fifthimage.png)
 
-## Configuration
+## <b> Configuration </b>
 **Configure VXLAN and EVPN**
 
   - Set up VXLAN tunnel interfaces on the participating switches and routers to facilitate the creation of VXLAN overlays.
@@ -28,12 +28,12 @@ With the symmetric IRB routing model, the VTEPs do routing and bridging on both 
   - Set up eBGP routing protocols over all the Data Center fabric switches to ensure the routing information is exchanged between the interconnected data center sites.
   - This routing information will be used to direct traffic between the sites through the symmetric IRB gateway.
 
-### Scenarios for L3 VXLAN Symmetric Model
+### <b> Scenarios for L3 VXLAN Symmetric Model </b>
 - Network Operators looking for multi-tenancy for their VM applications in a data center fabric.
 - Advantage on scalability and efficiency of the Data center Fabric .
 
 
-### YAML Template
+### <b> YAML Template </b>
 ```yaml
 Inventory:
   SSpines: 0
@@ -267,11 +267,11 @@ Parameters:
   sag: true
 
 ```
-### Config Applied and Validated
+### <b> Config Applied and Validated </b>
 
 ![configuration](../img/L3-VXLAN.png)
 
-### Applied Configuration on Switches
+### <b> Applied Configuration on Switches </b>
 
 === "Leaf1"
 

@@ -1,6 +1,6 @@
-# ONES ‘s Sample REST APIs
+# <b> ONES ‘s Sample REST APIs</b>
 
-## Simplified Day 1 Orchestration
+## <b> Simplified Day 1 Orchestration</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -68,7 +68,7 @@ Input Parameter for the REST API call -  Template file for the intent configurat
 
 <br />
 
-## Get Day 1 Operational Status
+## <b> Get Day 1 Operational Status</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -142,7 +142,7 @@ Input Parameter for the Rest API call -  Intent ID for the intent configuration 
 
 <br />
 
-## ZTP Upgrade SONiC NOS Image
+## <b> ZTP Upgrade SONiC NOS Image</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -217,7 +217,7 @@ Input Parameter for the Rest API call -  Intent ID for the intent configuration 
 
 <br />
 
-## Custom Upgrade SONiC NOS Image
+## <b> Custom Upgrade SONiC NOS Image</b>
 
 <style>
   table {
@@ -289,7 +289,7 @@ Input Parameter for the Rest API call -  Intent ID for the intent configuration 
 
 <br />
 
-## Device Reboot
+## <b> Device Reboot</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -358,7 +358,7 @@ Input Parameter for the Rest API call -  Intent ID for the intent configuration 
 
 <br />
 
-## Show Difference between golden and running config
+## <b> Show Difference between golden and running config</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -429,7 +429,7 @@ Response: current config on device vs config done via FM
 
 <br />
 
-## Get ONES Version
+## <b> Get ONES Version</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -503,7 +503,7 @@ Response: current config on device vs config done via FM
 
 <br />
 
-## Backup Current running Config
+## <b> Backup Current running Config</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -576,7 +576,7 @@ This  REST API will list the existing backups  already taken for specific device
 
 <br />
 
-## Replace Current Config for Devices
+## <b> Replace Current Config for Devices</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>

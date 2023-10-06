@@ -1,7 +1,7 @@
-## Multi-Chassis Link Aggregation Group (MC-LAG) 
+## <b> Multi-Chassis Link Aggregation Group (MC-LAG) </b>
 
 This is a pair of links that terminates on two cooperating switches and appears as an ordinary link aggregation group (LAG). 
-### Layer 2 Multi Chassis LAG
+### <b> Layer 2 Multi Chassis LAG</b>
 
 ![Layer 2](../img/layer2(mc-lag).png)
 
@@ -124,7 +124,7 @@ config vlan member add &lt;vid> &lt;pch-id><br>
 <th colspan='2'>SONiC Port Channel Configuration</th>
 </tr>
 <tr>
-<td>
+<td colspan='2'>
 
 <b># Creating port channel on the MCLAG pair switches running SONiC</b><br> 
 config portchannel add PortChannel01<br>

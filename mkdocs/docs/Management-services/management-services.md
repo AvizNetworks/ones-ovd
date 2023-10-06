@@ -1,4 +1,4 @@
-# Management Services
+# <b> Management Services </b>
 
 <style>
   table {
@@ -34,6 +34,7 @@
  <tr>
   <tr>
     <td>
+
 <b>#Syslog commands in PICOS</b><br>
 <b>#Syntax</b><br> 
 set system log-level info<br>
@@ -42,8 +43,10 @@ set protocols OSPF  traceoptions packet all detail<br>
 set system log-level trace<br>
 commit<br>
 syslog monitor on<br>
+
 </td>
-    <td>
+<td>
+
 <b>#Syslog commands in SONiC</b><br>
 <b>#Syntax</b><br> 
 config syslog add<br> 
@@ -69,6 +72,7 @@ config syslog del 1.1.1.1<br>
 </br>
 <b># Command to view syslog file location</b><br>
 Path: /var/log/syslog*
+
 </td>
   </tr>
   <tr>
@@ -80,6 +84,7 @@ Path: /var/log/syslog*
 <b># Configuration to enable and disable Zero Touch Provisioning</b><br>
 <b># Syntax</b><br>
 </br>
+
 ztp-config<br>
 Please configure the default PicOS ZTP options:<br>
  (Press other key if no change)<br>
@@ -91,11 +96,14 @@ PicOS ZTP is disabled.<Br>
 </br>
 <b># Alternative Method is to  edit the PICOS  configuration file picos_start.conf and change the value of the ztp_disable variable.</b><br> 
 </br>
-admin@LEAF-A$more /etc/picos/picos_start.conf | grep ztp
+admin@LEAF-A\$more /etc/picos/picos_start.conf | grep ztp
 ztp_disable=true<br>
+
 \# To enable ZTP, the user needs to set ztp_disable to false.
+
 </td>
-  <td>
+ <td>
+
 <b>#Configuration</b></br>
 <b>#Syntax</b><br>
 </br>
@@ -144,6 +152,7 @@ Config_db.json<br>
   </tr>
   <tr>
   <td>
+
 <b># Add SNMP Community and Agent Address</b><br> 
 ovs-vsctl set-snmp-enable true<br>
 ovs-vsctl show-snmp<br>
@@ -243,7 +252,7 @@ config radius add &lt;accounting_server_ip> --s &lt;source_interface><br>
   <td>
 
 <b>#sflow commands</b><br>
-ovs-vsctl  --id=@s create sFlow agent=eth0 target=\"10.10.50.207:9901\" header=128 sampling=5000 polling=30 -- set Bridge br0 sflow=@s
+ovs-vsctl  --id=@s create sFlow agent=eth0 target=\"10.10.50.207:9901\" header=128 sampling=5000 polling=30 -- set Bridge br0 sflow=@s<br>
 ovs-vsctl list sflow<br>
 ovs-vsctl -- clear Bridge br0 sflow
 

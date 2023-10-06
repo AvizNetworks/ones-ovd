@@ -1,4 +1,4 @@
-# ONES for Day 2 operations
+# <b> ONES for Day 2 operations</b>
 
 ![img](../img/day2New.png)
 

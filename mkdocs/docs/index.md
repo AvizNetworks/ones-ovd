@@ -1,6 +1,6 @@
-# Aviz ONES Validated Design
+# <b> Aviz ONES Validated Design </b>
 
-## Introduction 
+## <b> Introduction </b>
 
 SONiC, the open-source NOS, is one of the best examples of “Multi-Vendor Open-Source” software in networking, where multiple vendors, service providers, hyperscalers and enterprises collaborate with the community and contribute to the future of open source networking .
 

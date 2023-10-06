@@ -1,4 +1,4 @@
-# SONiC NOS Installation from ONIE  
+# <b> SONiC NOS Installation from ONIE  </b>
 Before entering into ONIE install mode, operator should ensure to uninstall the PICOS
 Note: Switch shall automatically enter the ONIE install mode if there's no NOS installed yet.
 
@@ -41,7 +41,7 @@ If the installation is successful, the device will reboot automatically and boot
 </div>
 <br>
 
-# \# Example SONiC Image upgrade from ONIE prompt 
+# <b>\# Example SONiC Image upgrade from ONIE prompt </b>
 
 <div style="border: 1px solid black; padding: 10px;">
 <b># Login using the console port and reboot the switch</b><br>

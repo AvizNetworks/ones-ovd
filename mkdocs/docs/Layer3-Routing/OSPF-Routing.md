@@ -1,4 +1,4 @@
-## OSPF Routing 
+## <b> OSPF Routing </b>
 
 ![OSPF Routing ](../img/OSPF-Routing.png)
 
@@ -167,7 +167,7 @@ area 1 virtual-link 2.2.2.2
 <tr>
 <td colspan='2'>
 
-<b>#AS7326-56X-OS1 Configuration</b><br>
+<u><b>#AS7326-56X-OS1 Configuration</b><br></u>
 </br>
 <b># VLAN and IP Configuration</b><br>
 config interface ip add Loopback0 1.1.1.1/32<Br>

@@ -1,5 +1,5 @@
-# ONES Sample REST APIs
-## Simplified Day 1 Orchestration
+# <b> ONES Sample REST APIs</b>
+## <b> Simplified Day 1 Orchestration</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>
