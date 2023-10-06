@@ -65,7 +65,7 @@ nav:
       - Multi-Chassis Link Aggregation Group (MC-LAG):
         - Layer 2 Multi Chassis LAG: Layer-2-switching/Layer-2(mc-lag).md
         - Layer 3 Multi Chassis LAG: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-      - Link Layer Discovery protocol: Layer-2-switching/Link-Layer-Discovery-protocol .md
+      - Link Layer Discovery protocol: Layer-2-switching/Link-Layer-Discovery-protocol.md
     - Layer 3 Routing:
       - Routed Interface: Layer3-Routing/Routed-Interface.md
       - SVI & DHCP Relay: Layer3-Routing/SVI-&-DHCP-Relay.md
@@ -76,7 +76,7 @@ nav:
       - L3-VXLAN Symmetric IRB Configuration: Layer3-Routing/L3-VXLAN-Sym.md
     - QoS Configuration: Layer3-Routing/QoS-Configuration.md
     - ACL Configuration: Layer3-Routing/ACL-Configuration.md
-    - References: Layer3-Routing/References.md
+    - References: Layer3-Routing/Layer-3-Multi-chassis-LAG.md
   - ONES REST APIs for SONiC:
     - Overview: day2Operations/onesAPI/OnesAPI.md
     - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
