@@ -45,9 +45,9 @@ set interface gigabit-ethernet &lt;port-id> ether-options 802.3ad ae1
   </td>
   <td>
 
-<b>#Add Port Channel</b>
-config port channel add &lt;PCH ID><br>
-<b>#Add Members</b>
+<b>#Add Port Channel</b><br>
+config port channel add &lt;PCH ID><br><br>
+<b>#Add Members</b><br>
 config port channel member add &lt;PCH-ID> &lt;member-port>
 
   </td>
