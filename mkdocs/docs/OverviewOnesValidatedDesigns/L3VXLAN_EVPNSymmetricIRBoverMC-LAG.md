@@ -1,4 +1,4 @@
-# <b> L3 VXLAN + EVPN Symmetric IRB over MC-LAG </b>
+# <b> L3-VXLAN + EVPN Symmetric IRB over MC-LAG </b>
 
 With the symmetric IRB routing model, the VTEPs do routing and bridging on both the ingress and egress sides of the VXLAN tunnel. As a result, VTEPs can do inter-subnet routing for the same virtual routing and forwarding (VRF) instance mapped to the same VNI in both directions. We implement this model for EVPN Type 2 routes the same way as for EVPN Type 5 routes. These VTEPs use  dedicated Layer 3 traffic VNI in both directions for each tenant VRF instance.
 

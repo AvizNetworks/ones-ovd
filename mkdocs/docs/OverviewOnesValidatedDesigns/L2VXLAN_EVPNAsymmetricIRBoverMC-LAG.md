@@ -1,4 +1,4 @@
-# <b> L2 VXLAN + EVPN Asymmetric IRB over MC-LAG</b>
+# <b> L2-VXLAN + EVPN Asymmetric IRB over MC-LAG</b>
 
 With the asymmetric model, leaf devices serving as VXLAN tunnel endpoints (VTEPs) perform both  routing  and bridging  to initiate the VXLAN tunnel (tunnel ingress). 
 

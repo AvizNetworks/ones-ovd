@@ -5,8 +5,8 @@ Aviz ONES has pre-validated templates for various data center fabric deployments
 
 - BGP-IP-CLOS
 - BGP-IP-CLOS-MC LAG 
-- L3 VXLAN + EVPN Symmetric IRB over MC-LAG
-- L2 VXLAN + EVPN Asymmetric IRB over MC-LAG
+- L3-VXLAN + EVPN Symmetric IRB over MC-LAG
+- L2-VXLAN + EVPN Asymmetric IRB over MC-LAG
 - DCL EVPN Multihoming
 
 
