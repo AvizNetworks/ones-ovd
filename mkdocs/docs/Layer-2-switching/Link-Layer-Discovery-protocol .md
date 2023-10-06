@@ -3,7 +3,7 @@
 LLDP is a standard link-layer discovery protocol which can broadcast its capability, IP address, ID, and interface name as TLVs (Type/Length/Value) in LLDP PDUs (Link Layer Discovery Protocol Data Units).<br> 
 </br>
 
-![Link-Layer-Discovery-protocol](../img/Link-Layer-Discovery.png)<br>
+![Link-Layer-Discovery-protocol](../img/Link-layer-discovery.png)<br>
 
 </br>
 
