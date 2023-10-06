@@ -19,22 +19,17 @@
     width: 50%;
   }
 
-  th {
-    color: white;
-    background-color: ;
-  }
 </style>
 
  <table>
- <tr>
-   <th>PICOS</th>
-   <th>SONiC</th>
- </tr>
- <tr>
- <th colspan='2'>Port, VLAN</th>
- </tr>
- <tr>
-  <tr>
+   <tr>
+     <th>PICOS</th>
+     <th>SONiC</th>
+    </tr>
+   <tr>
+     <th colspan='2'>Port, VLAN</th>
+    </tr>
+   <tr>
   <td>
 
 <b>#Configure Access and Trunk Mode over interfaces</b><br>
