@@ -1,6 +1,6 @@
 ## L3-VXLAN Symmetric IRB Configuration
 
-![L2-VXLAN](../img/L3-VXLAN-sym.png)
+![L3-VXLAN](../img/L3-VXLAN-Sym.png)
 
 <style>
   table {
@@ -336,11 +336,11 @@ BGP table version 17<br>
 RIB entries 3, using 552 bytes of memory<br>
 Peers 1, using 723 KiB of memory<br>
 
-``````
+<pre>
 Neighbor        V         AS   MsgRcvd   MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd   PfxSnt Desc
 10.0.0.5        4      65100      1436      1449        0    0    0 03:02:18            1        1 N/A
 Total number of neighbors 1
-``````
+</pre>
 <br>
 L2VPN EVPN Summary (VRF default):<br>
 BGP router identifier 188.188.9.14, local AS number 65100 vrf-id 0<br>
@@ -348,11 +348,11 @@ BGP table version 0<br>
 RIB entries 27, using 4968 bytes of memory<br>
 Peers 1, using 723 KiB of memory<br>
 
-``````
+<pre>
 Neighbor        V         AS   MsgRcvd   MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd   PfxSnt Desc
 10.0.0.5        4      65100      1436      1449        0    0    0 03:02:18            4        4 N/A
 Total number of neighbors 1
-``````
+</pre>
 <br>
 <b><u>A4630-54PE</u></b><br>
 sonic# show bgp summary<br>
@@ -362,11 +362,11 @@ BGP table version 8<br>
 RIB entries 3, using 552 bytes of memory<br>
 Peers 1, using 723 KiB of memory<br>
 
-``````
+<pre>
 Neighbor        V         AS   MsgRcvd   MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd   PfxSnt Desc
 10.0.0.4        4      65100       220       221        0    0    0 03:02:18            1        1 N/A
 Total number of neighbors 1
-``````
+</pre>
 <br>
 L2VPN EVPN Summary (VRF default):<br>
 BGP router identifier 188.188.9.6, local AS number 65100 vrf-id 0<br>
@@ -374,11 +374,11 @@ BGP table version 0<br>
 RIB entries 11, using 2024 bytes of memory<br>
 Peers 1, using 723 KiB of memory<br>
 
-``````
+<pre>
 Neighbor        V         AS   MsgRcvd   MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd   PfxSnt Desc
 10.0.0.4        4      65100       220       221        0    0    0 03:02:18            4        4 N/A
 Total number of neighbors 1
-``````
+</pre>
 <br>
 <b># Validate EVPN route learning</b><br>
 <b><u>AS5835-54X</u></b><br>
@@ -414,7 +414,7 @@ EVPN type-4 prefix: [4]:[ESI]:[IPlen]:[OrigIP]<br>
 EVPN type-5 prefix: [5]:[EthTag]:[IPlen]:[IP]<br>
 <br>
 
-``````
+<pre>
    Network          Next Hop            Metric LocPrf Weight Path
 Route Distinguisher: 188.188.9.6:2
 *>i[2]:[0]:[48]:[80:a2:35:5a:22:50]
@@ -445,7 +445,7 @@ Route Distinguisher: 192.168.2.254:3
                     2.2.2.2                  0    100      0 ?
                     RT:65100:3000 ET:8 Rmac:68:21:5f:29:c0:d2
 Displayed 8 out of 8 total prefixes
-``````
+</pre>
 
 <b><u>>#A4630-54PE</u></b><btr>
 <b>sonic# show ip route vrf all</b><br>
@@ -478,7 +478,7 @@ EVPN type-2 prefix: [2]:[EthTag]:[MAClen]:[MAC]:[IPlen]:[IP]<br>
 EVPN type-3 prefix: [3]:[EthTag]:[IPlen]:[OrigIP]<br>
 EVPN type-4 prefix: [4]:[ESI]:[IPlen]:[OrigIP]<br>
 EVPN type-5 prefix: [5]:[EthTag]:[IPlen]:[IP]<br>
-``````
+<pre>
    Network          Next Hop            Metric LocPrf Weight Path
 Route Distinguisher: 188.188.9.6:2
 *> [2]:[0]:[48]:[80:a2:35:5a:22:50]
@@ -509,7 +509,7 @@ Route Distinguisher: 192.168.2.254:3
                     2.2.2.2                  0         32768 ?
                     ET:8 RT:65100:3000 Rmac:68:21:5f:29:c0:d2
 Displayed 8 out of 8 total prefixes
-``````
+</pre>
 
 </td>
 </tr>

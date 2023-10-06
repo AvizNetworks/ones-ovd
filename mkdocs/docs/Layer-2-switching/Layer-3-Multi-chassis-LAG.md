@@ -88,13 +88,13 @@ PortChannel02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Up/Up<B
 admin@sonic:~$ show interfaces portchannel<br>
 Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available,
        S - selected, D - deselected, * - not synced<br>
-``````
+<pre>
   No.  Team Dev       Protocol     Ports                          Oper Key  Admin Key    Fast Rate
 -----  -------------  -----------  ---------------------------  ----------  -----------  -----------
   01  PortChannel01  LACP(A)(Up)  Ethernet0(S)                       101  auto         false
   02  PortChannel02  LACP(A)(Up)  Ethernet1(S)                       102  auto         false
   03  PortChannel03  LACP(A)(Up)  Ethernet60(S) Ethernet56(S)        103  auto         false
-``````
+</pre>
 admin@sonic:~$ show mclag brief<br>  
 Domain ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1<br>
 Role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Standby<Br>

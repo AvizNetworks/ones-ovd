@@ -489,7 +489,7 @@ EVPN type-2 prefix: [2]:[EthTag]:[MAClen]:[MAC]:[IPlen]:[IP]<br>
 EVPN type-3 prefix: [3]:[EthTag]:[IPlen]:[OrigIP]<Br>
 EVPN type-4 prefix: [4]:[ESI]:[IPlen]:[OrigIP]<br>
 EVPN type-5 prefix: [5]:[EthTag]:[IPlen]:[IP]<br>
-``````
+<pre>
                    Network          Next Hop            Metric LocPrf Weight Path
             Extended Community
 Route Distinguisher: 1.1.1.1:2
@@ -501,7 +501,7 @@ Route Distinguisher: 2.2.2.2:2
                     2.2.2.2                       100      0 i
                     RT:65100:3000 ET:8
 Displayed 2 prefixes (2 paths) (of requested type)
-``````
+</pre>
 <br><br>
 <b><u>AS5835-54X:</u></b><br>
 AS5835-54X# show bgp l2vpn evpn route type macip<br> 
@@ -513,7 +513,7 @@ EVPN type-2 prefix: [2]:[EthTag]:[MAClen]:[MAC]:[IPlen]:[IP]<Br>
 EVPN type-3 prefix: [3]:[EthTag]:[IPlen]:[OrigIP]<br>
 EVPN type-4 prefix: [4]:[ESI]:[IPlen]:[OrigIP]<br>
 EVPN type-5 prefix: [5]:[EthTag]:[IPlen]:[IP]<br>
-``````
+<pre>
    Network          Next Hop            Metric LocPrf Weight Path
                     Extended Community
 Route Distinguisher: 1.1.1.1:2
@@ -525,7 +525,7 @@ Route Distinguisher: 2.2.2.2:2
                     2.2.2.2                            32768 i
                     ET:8 RT:65100:3000
 Displayed 2 prefixes (2 paths) (of requested type)
-``````
+</pre>
 <br><br>
 <b><u>Check the type 3 EVPN route</u></b><br>
  <b><u>AS7326-56X:</b></u><br>

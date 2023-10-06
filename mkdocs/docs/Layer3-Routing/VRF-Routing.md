@@ -96,7 +96,7 @@ VRF 	Interfaces<br>
 ------  ------------<br>
 Vrf_01  Ethernet0<br>
 
-```
+<pre>
 admin@sonic:~$ show ip interfaces
 Interface	Master	IPv4 address/mask	Admin/Oper	BGP Neighbor	Neighbor IP
 -----------  --------  -------------------  ------------  --------------  -------------
@@ -105,7 +105,7 @@ Loopback0          	10.1.0.1/32      	up/up     	N/A         	N/A
 docker0     	       240.127.1.1/24   	up/down   	N/A         	N/A
 eth0               	188.188.97.31/16 	up/up     	N/A         	N/A
 lo                 	127.0.0.1/8      	up/up     	N/A         	N/A
-```
+</pre>
 <b># Checking the routing table.</b><br>
 admin@sonic:~\$ show ip route vrf Vrf_01<br>
 Codes: K - kernel route, C - connected, S - static, R - RIP,<br>
@@ -147,7 +147,7 @@ Management VRF interfaces in Linux:<br>
 129: lo-m: &lt;BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue master mgmt state UNKNOWN mode DEFAULT group default qlen 1000<br>
 	link/ether 0a:25:2e:1f:32:90 brd ff:ff:ff:ff:ff:ff<Br>
 admin@sonic:~\$ show ip interfaces<br>
-``````
+<pre>
 Interface	Master	IPv4 address/mask	Admin/Oper	BGP Neighbor	Neighbor IP
 -----------  --------  -------------------  ------------  --------------  -------------
 Ethernet0	Vrf_01	192.168.1.1/24   	up/up     	N/A         	N/A
@@ -156,7 +156,7 @@ docker0            	240.127.1.1/24   	up/down   	N/A         	N/A
 eth0     	mgmt  	188.188.97.31/16 	up/up     	N/A         	N/A
 lo                 	127.0.0.1/8      	up/up     	N/A         	N/A
 lo-m     	mgmt  	127.0.0.1/8      	up/up     	N/A     	    N/A
-``````
+</pre>
 <b>#Checking the routing table.</b><br>
 admin@sonic:~\$ show ip route vrf mgmt<br>
 Codes: K - kernel route, C - connected, S - static, R - RIP,<br>
