@@ -76,7 +76,7 @@ nav:
       - L3-VXLAN Symmetric IRB Configuration: Layer3-Routing/L3-VXLAN-Sym.md
     - QoS Configuration: Layer3-Routing/QoS-Configuration.md
     - ACL Configuration: Layer3-Routing/ACL-Configuration.md
-    - References: Layer3-Routing/Layer-3-Multi-chassis-LAG.md
+    - References: Layer3-Routing/References.md
   - ONES REST APIs for SONiC:
     - Overview: day2Operations/onesAPI/OnesAPI.md
     - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
