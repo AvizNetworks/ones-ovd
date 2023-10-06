@@ -272,6 +272,7 @@ Total count : 1
 <br><br>
 <u><b>AS5835-54X:(202111.3)</b></u><br>
 admin@AS5835-54X:~$ show vxlan remotevtep<br>
+
 ``````
 | SIP 	| DIP 	| Creation Source   | OperStatus   |
 +=========+=========+===================+==============+
@@ -283,8 +284,8 @@ Total count : 1
 <b><u>Check the Mac learning.</u></b><br>
 <b>AS7326-56X:(202111.3)</b><br>
 <br>
-
 admin@AS7326-56X:~$ show mac<br>
+
 ``````
   No.	Vlan  MacAddress     	Port            	Type
 -----  ------  -----------------  ------------------  -------
@@ -295,6 +296,7 @@ Total number of entries 2
 <br><br>
 <u><b>AS7326-56X(202111.3)</b></u><br>
 admin@AS7326-56X:~$ show mac<br>
+
 ``````
   No.	Vlan  MacAddress     	Port   	Type
 -----  ------  -----------------  ---------  -------
@@ -314,6 +316,7 @@ Note.
 <br><br>
 <u><b>AS5835-54X:(202111.3)</b></u><br>
 admin@AS5835-54X:~$ show mac<br>
+
 ``````
   No.	Vlan  MacAddress     	Port            	Type
 -----  ------  -----------------  ------------------  -------
@@ -324,6 +327,7 @@ Total number of entries 2
 <br><br>
 <u><b>AS5835-54X:(202111.3)</b></u><br>
 admin@AS5835-54X:~$ show mac<br>
+
 ``````
   No.	Vlan  MacAddress     	Port   	Type
 -----  ------  -----------------  ---------  -------
@@ -347,6 +351,7 @@ BGP router identifier 1.1.1.1, local AS number 65100 vrf-id 0<br>
 BGP table version 6<br>
 RIB entries 3, using 552 bytes of memory<br>
 Peers 1, using 20 KiB of memory<br>
+
 ``````
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.1    	4  	65100  	80  	85    	0	0	0 01:01:28        	1
@@ -360,6 +365,7 @@ BGP router identifier 2.2.2.2, local AS number 65100 vrf-id 0<br>
 BGP table version 6<Br>
 RIB entries 3, using 552 bytes of memory<br>
 Peers 1, using 20 KiB of memory<br>
+
 ``````
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.0    	4  	65100  	79  	79    	0	0	0 01:01:28        	1
@@ -374,6 +380,7 @@ BGP router identifier 1.1.1.1, local AS number 65100 vrf-id 0<br>
 BGP table version 0<br>
 RIB entries 3, using 552 bytes of memory<br>
 Peers 1, using 20 KiB of memory<br>
+
 ``````
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.1    	4  	65100  	82  	87    	0	0	0 01:03:43        	3
@@ -386,6 +393,7 @@ BGP router identifier 2.2.2.2, local AS number 65100 vrf-id 0<br>
 BGP table version 0<br>
 RIB entries 3, using 552 bytes of memory<br>
 Peers 1, using 20 KiB of memory<br>
+
 ``````
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.0    	4  	65100  	81  	81    	0	0	0 01:03:43        	3
