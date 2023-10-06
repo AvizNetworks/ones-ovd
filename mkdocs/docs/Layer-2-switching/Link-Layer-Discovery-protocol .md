@@ -22,11 +22,6 @@ LLDP is a standard link-layer discovery protocol which can broadcast its capabil
     word-wrap: break-word;
     width: 50%; 
   }
-
-  th {
-    color: white;
-    background-color: ;
-  }
 </style>
 
 <table>

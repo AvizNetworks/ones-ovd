@@ -16,10 +16,6 @@
     width: 50%; 
   }
 
-  th {
-    color: white;
-    background-color: ;
-  }
 </style>
 
 <table>

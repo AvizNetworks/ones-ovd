@@ -16,12 +16,6 @@ Operator has to login to PICOS and SONiC switch as super user using â€œsudo suâ€
     word-wrap: break-word;
     width: 50%; 
   }
-  
-
-  th {
-    color: white;
-    background-color: ;
-  }
 </style>
 
 

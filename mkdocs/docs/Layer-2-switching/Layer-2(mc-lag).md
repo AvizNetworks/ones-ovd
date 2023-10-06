@@ -20,11 +20,6 @@ This is a pair of links that terminates on two cooperating switches and appears 
     word-wrap: break-word;
     width: 50%; 
   }
-
-  th {
-    color: white;
-    background-color: ;
-  }
 </style>
 
 
