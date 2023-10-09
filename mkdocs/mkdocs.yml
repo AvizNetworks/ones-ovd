@@ -28,6 +28,16 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra:
+  social:
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@AvizNetworks
+      
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/AvizNews
+
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/aviz-networks/
    
 plugins:
   - search
