@@ -1,4 +1,4 @@
-# Device Reboot
+# <b>Device Reboot</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>

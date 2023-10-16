@@ -1,6 +1,7 @@
 site_name: Aviz ONES Validated Design
 site_author: Aviz Engineering & Sales Team
 site_description: ONES Validated Designs Documentation
+site_url: https://www.aviznetworks.com
 copyright: Copyright &copy; 2023 Aviz Networks
 
 # Repository information
@@ -28,6 +29,16 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra:
+  social:
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@AvizNetworks
+      
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/AvizNews
+
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/aviz-networks/
    
 plugins:
   - search
@@ -47,33 +58,39 @@ nav:
   - How Aviz lowers the Barrier to Adopt SONiC based Fabric: AvizBuisnessModel.md
   - Day 1 Operations for SONiC with ONES: day1Operation/Day1OperationsSONiC.md
   - Day 2 Operations for SONiC with ONES: day2Operations/Day2OperationSonic.md
-  # - Overview Day 1 Operations:
-  #   - Day 1 Operations - SONiC: day1Operation/Day1OperationsSONiC.md
-  #   - Day 1 Operations - Simplified by ONES: day1Operation/Day1OperationsSimplifiedbyONES.md
-  - SONiC Validated Designs by ONES: 
+  - SONiC Validated Designs by ONES:
     - Overview: ONESValidateDesign.md
     - BGP IP CLOS: OverviewOnesValidatedDesigns/BGP_IP_CLOS.md
     - BGP-IP-CLOS-MC LAG : OverviewOnesValidatedDesigns/BGP-IP-CLOS-MCLAG.md
     - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
     - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
     - DCL EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
-  # - Overview Day 2 Operations:
-  #   - Day 2 Operations - SONiC through ONES: day2Operations/Day2OperationSonic.md
-  #   - ONES For Day 2 operations: day2Operations/OnesForDay2.md
-  - ONES REST APIs for SONiC: 
+  - Migrate from PICOS to SONiC:
+    - Why Migrate from PICOS to SONiC?: PICOStoSONiCMigration/PICOS_to_SONiC.md
+    - SONiC NOS Installation from ONIE: SONIC-NOS-INSTALL/SONIC-NOS-INSTALL.md
+    - Switch Management: SwitchManagement/SwitchManagement.md
+    - Management Services: Management-services/management-services.md
+    - Port Mirroring: Port-Mirroring/Port-Mirroring.md
+    - Layer 2 Switching:
+      - Interface and Port VLAN: Layer-2-switching/Interface-and-port-VLAN.md
+      - Multi-Chassis Link Aggregation Group (MC-LAG):
+        - Layer 2 Multi Chassis LAG: Layer-2-switching/Layer-2(mc-lag).md
+        - Layer 3 Multi Chassis LAG: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
+      - Link Layer Discovery protocol: Layer-2-switching/Link-Layer-Discovery-protocol.md
+    - Layer 3 Routing:
+      - Routed Interface: Layer3-Routing/Routed-Interface.md
+      - SVI & DHCP Relay: Layer3-Routing/SVI-&-DHCP-Relay.md
+      - BGP Routing: Layer3-Routing/BGP-Routing.md
+      - OSPF Routing: Layer3-Routing/OSPF-Routing.md
+      - VRF Routing: Layer3-Routing/VRF-Routing.md
+      - L2-VXLAN Asymmetric IRB Configuration: Layer3-Routing/L2-VXLAN.md
+      - L3-VXLAN Symmetric IRB Configuration: Layer3-Routing/L3-VXLAN-Sym.md
+    - QoS Configuration: Layer3-Routing/QoS-Configuration.md
+    - ACL Configuration: Layer3-Routing/ACL-Configuration.md
+    - References: Layer3-Routing/References.md
+  - ONES REST APIs for SONiC:
     - Overview: day2Operations/onesAPI/OnesAPI.md
     - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
-    - ONES ‘s Sample REST APIs: day2Operations/onesAPI/onesAPIExplorer/SampleRestAPIs.md
-  # - ONES Sample REST APIs:
-  #   - Simplified Day 1 Orchestration: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/SimplifiedDay1Orchestration.md
-  #   - Get Day 1 Operational Status: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/GetDay1OperationalStatus.md
-  #   - ZTP Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ZTPUpgrade.md
-  #   - Custom Upgrade SONiC NOS Image: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/UpgradeSONiCNOSImage.md
-  #   - Device Reboot: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/DeviceReboot.md
-  #   - Show Difference between golden and running config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ConfigDiff.md
-  #   - Get ONES Version: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/OnesVersion.md
-  #   - Backup Current running Config: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/BackupCurrentGoldenConfig.md
-  #   - Replace Current Config for Devices: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/ReplaceCurrentConfigforDevices.md
   - Deploy ONES: DeployONES/DeployONES.md
     # - ONES System Requirements : DeployONES/SystemRequirements.md
     # - ONES Software requirements : DeployONES/ONESSoftwarerequirements.md

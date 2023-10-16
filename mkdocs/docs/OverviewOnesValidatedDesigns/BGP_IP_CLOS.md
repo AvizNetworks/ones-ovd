@@ -1,25 +1,25 @@
-# Supported Topologies
-## BGP IP CLOS
+# <b> Supported Topologies</b>
+## <b> BGP IP CLOS</b>
 
-## Overview
+## <b> Overview</b>
 BGP IP-CLOS is a network design and routing architecture commonly used in large-scale data center and cloud environments. IP-CLOS provides a scalable and flexible solution for interconnecting multiple routers in a hierarchical manner allowing efficient utilization of network resources and simplified routing. 
 
-### Spine-Leaf Architecture:
+### <b> Spine-Leaf Architecture:</b>
 The BGP IP CLOS topology is based on a spine-leaf architecture. In this design, there are two layers of switches -  spine switches and leaf switches. The spine switches provide connectivity between the leaf switches, forming the "spine" of the topology. The leaf switches connect directly to servers, forming the "leafs" of the topology.
 
-### BGP as the Underlay Routing Protocol:
+### <b> BGP as the Underlay Routing Protocol:</b>
 In the BGP IP CLOS topology, BGP is used as the underlay routing protocol. The spine switches and leaf switches run BGP to establish IP reachability and advertise loopback addresses. This allows for dynamic and efficient IP routing throughout the fabric.
 
-### Unnumbered BGP interfaces:
+### <b> Unnumbered BGP interfaces:</b>
 Unnumbered BGP interfaces are particularly useful in deployments where IPv4 prefixes are advertised through BGP over a section without any IPv4/IPv6 address configuration on links. As a result, the routing entries are also IPv4 for destination lookup and have IPv6 next hops for forwarding purposes. This saves IP addresses pool utilized for underlay routing . 
 
-### Non-Blocking Connectivity:
+### <b> Non-Blocking Connectivity:</b>
 The CLOS design ensures that every leaf switch is connected to every spine switch, providing non-blocking connectivity between any server in the data center fabric. This architecture allows for optimal east-west traffic flow within the data center  supporting the communication needs of modern distributed applications and workloads.
 
-### Equal-Cost Multi-Path (ECMP) Routing:
+### <b> Equal-Cost Multi-Path (ECMP) Routing:</b>
 Within the spine layer, BGP utilizes Equal-Cost Multi-Path (ECMP) routing to distribute traffic evenly across multiple paths. ECMP enables load balancing of traffic, maximizing the utilization of available links and increasing overall DC fabric ‘s network capacity. In SONiC, the BGP multipath option works by default. It is set to 64 paths so the switch can install multiple equal-cost BGP paths to the forwarding table and load balance the  traffic across multiple links. 
 
-## Configuration
+## <b> Configuration</b>
 
 - IPv4/IPv6/BGP-Unnumbered Underlay Fabric.
 - Host facing port with IPv4/IPv6/L2-Access/L2-Trunk based on requirement.
@@ -32,7 +32,7 @@ The template includes the inventory, connectivity, BGP and other configurations 
 
 ![Configuration](../img/SecondImage.png)
 
-### YAML Template
+### <b>YAML Template</b>
 
 ```yaml
 Inventory:
@@ -241,7 +241,7 @@ Parameters:
 
 ![configuration](../img/BGP-IPCLOS.png)
 
-### IP Configuration
+### <b> IP Configuration</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -342,7 +342,7 @@ Parameters:
 </table>
 
 
-### Applied Configuration on Switches
+### <b> Applied Configuration on Switches</b>
 
 === "Leaf1"
 

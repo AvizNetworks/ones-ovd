@@ -1,7 +1,7 @@
-# Deploy ONES
-## ONES System Requirements
+# <b> Deploy ONES</b>
+## <b> ONES System Requirements</b>
 
-### System Hardware Requirements – ONES Application
+### <b> System Hardware Requirements – ONES Application</b>
 
 In the latest release, ONES can support managing up to 1024 devices. For ONES Application Installation, the system hardware requirements may vary based on the number of devices to manage.
 
@@ -39,7 +39,7 @@ In the latest release, ONES can support managing up to 1024 devices. For ONES Ap
   }
 </style>
 
-# ONES Software Requirements
+# <b> ONES Software Requirements</b>
 
 |Software            |Command                                |Validation|
 |--------------------|----------------------------------------|----------|
@@ -79,14 +79,14 @@ In the latest release, ONES can support managing up to 1024 devices. For ONES Ap
 
 <br />
 
-## Browser Requirements
+## <b> Browser Requirements</b>
 
 - Google Chrome version 107 or later
 - Mozilla Firefox version 106 or later
 
 <br />
 
-## Deploying VM for ONES installation 
+## <b> Deploying VM for ONES installation</b> 
 
 Please refer the following link for deployment of a virtual machine as a host for ONES application installation
 
@@ -94,7 +94,7 @@ Please refer the following link for deployment of a virtual machine as a host fo
 
 <br />
 
-## Reference Documentation
+## <b> Reference Documentation</b>
 
 <a href="https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/ones-web-gui-administration/ones-orchestration">https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/ones-web-gui-administration/ones-orchestration</a> - ONES Orchestration Configuration Guide
 

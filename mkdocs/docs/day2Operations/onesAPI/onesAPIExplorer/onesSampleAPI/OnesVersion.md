@@ -1,4 +1,4 @@
-# Get ONES Version
+# <b>Get ONES Version</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>

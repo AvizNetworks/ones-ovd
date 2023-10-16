@@ -1,4 +1,4 @@
-# How Aviz lowers the Barrier to Adopt SONiC based Fabric 
+# <b> How Aviz lowers the Barrier to Adopt SONiC based Fabric </b>
 
 ![img](../img/AvizOperatingBusinessModel.png)
 

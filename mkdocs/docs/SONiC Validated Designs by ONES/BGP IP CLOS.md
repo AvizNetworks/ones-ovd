@@ -1,4 +1,4 @@
-# BGP IP CLOS 
+# <b> BGP IP CLOS </b> 
 
 **Overview**
 BGP IP-CLOS is a network design and routing architecture commonly used in large-scale data center and cloud environments. IP-CLOS provides a scalable and flexible solution for interconnecting multiple routers in a hierarchical manner, allowing efficient utilization of network resources and simplified routing. 
@@ -18,7 +18,7 @@ The CLOS design ensures that every leaf switch is connected to every spine switc
 **Equal-Cost Multi-Path (ECMP) Routing:**
 Within the spine layer, BGP utilizes Equal-Cost Multi-Path (ECMP) routing to distribute traffic evenly across multiple paths. ECMP enables load balancing of traffic, maximizing the utilization of available links and increasing overall network capacity.In SONiC, the BGP multipath option works by default. It is set to 64 paths so the switch can install multiple equal-cost BGP paths to the forwarding table and load balance traffic across multiple links. 
 
-## Configuration
+## <b> Configuration </b>
 - IPv4/IPv6/BGP-Unnumbered Underlay Fabric.
 - Host facing port with IPv4/IPv6/L2-Access/L2-Trunk based on requirement.
 - ECMP Load Balancing for Leaf & Spine
@@ -33,7 +33,7 @@ The template includes the inventory, connectivity, BGP, and other configurations
 <br />
 <br />
 
-## YAML Template
+## <b> YAML Template</b>
 
 ```
 Inventory:

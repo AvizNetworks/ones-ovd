@@ -1,4 +1,4 @@
-# Get Day 1 Operational Status
+# <b>Get Day 1 Operational Status</b>
 
 <!-- markdownlint-disable MD033 -->
 <style>

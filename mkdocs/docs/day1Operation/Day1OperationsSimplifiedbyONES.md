@@ -1,4 +1,4 @@
-# Day 1 Operations - Simplified by ONES
+# <b>Day 1 Operations - Simplified by ONES</b>
 
 Aviz ONES simplifies the Day 1 orchestration with an unified approach of configuring data center fabric running SONiC. ONES collects the necessary fabric intent in a simplified YAML format, generates the unified configuration for each device enrolled and managed by ONES . The generated configuration is applied, validated and verified for operational readiness. ONES provides the following advantages to network operation teams-
 

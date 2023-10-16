@@ -1,4 +1,4 @@
-# SONiC Advantages:
+# <b> SONiC Advantages:</b>
 
 - **Standardization** of NOS layer for control, flexibility, TCO savings ,in-house innovation and brings  uniformity in orchestration and NetOps layer as well
 - **Supply chain diversification** through a single software platform that runs across a multitude of hardware  including white-boxes
