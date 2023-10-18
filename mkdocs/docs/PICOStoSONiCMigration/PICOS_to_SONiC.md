@@ -4,6 +4,4 @@ Existing PICOS  customers  who are looking to transition to an open networking N
 
 Aviz offers  SONiC support to live Data center production which helps operators reduce their TCO by 40% while bringing up Data center underlay and overlay services over a Fabric by seamlessly upgrading to SONiC NOS over any choice of vendor switches. 
 
-This document is intended for network administrators with PICOS background. This guide will help network admins to migrate their current PICOS deployment for various Fabric architectures to SONiC.
-PICOS User guide  https://docs.pica8.com/ can be used as a checklist to get started with the  migration plan from PICOS to SONiC. Following  document provides example configuration commands for comparison.
 

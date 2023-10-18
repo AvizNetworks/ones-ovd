@@ -9,6 +9,8 @@ repo_name: ones-ovd on github
 repo_url: https://github.com/AvizNetworks/ones-ovd
 
 theme:
+  features:
+    - content.code.copy
   name: 'material'
   favicon: icons/avizLogo.png
   logo: icons/image2vector.svg
@@ -53,49 +55,33 @@ markdown_extensions:
 
 
 nav:
-  - Introduction: index.md
+  - Getting started with SONiC Journey: index.md
   - SONiC Advantages: SonicAdvantages.md
   - How Aviz lowers the Barrier to Adopt SONiC based Fabric: AvizBuisnessModel.md
   - Day 1 Operations for SONiC with ONES: day1Operation/Day1OperationsSONiC.md
   - Day 2 Operations for SONiC with ONES: day2Operations/Day2OperationSonic.md
-  - SONiC Validated Designs by ONES:
+  - SONiC Deployment Configurations & Templates:
     - Overview: ONESValidateDesign.md
     - BGP IP CLOS: OverviewOnesValidatedDesigns/BGP_IP_CLOS.md
     - BGP-IP-CLOS-MC LAG : OverviewOnesValidatedDesigns/BGP-IP-CLOS-MCLAG.md
     - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
     - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
     - DCL EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
-  - Migrate from PICOS to SONiC:
-    - Why Migrate from PICOS to SONiC?: PICOStoSONiCMigration/PICOS_to_SONiC.md
+  - Migrate to SONiC  Example Configurations :
+    - Overview: migrateToSonic/overview.md
     - SONiC NOS Installation from ONIE: SONIC-NOS-INSTALL/SONIC-NOS-INSTALL.md
-    - Switch Management: SwitchManagement/SwitchManagement.md
-    - Management Services: Management-services/management-services.md
-    - Port Mirroring: Port-Mirroring/Port-Mirroring.md
-    - Layer 2 Switching:
-      - Interface and Port VLAN: Layer-2-switching/Interface-and-port-VLAN.md
-      - Multi-Chassis Link Aggregation Group (MC-LAG):
-        - Layer 2 Multi Chassis LAG: Layer-2-switching/Layer-2(mc-lag).md
-        - Layer 3 Multi Chassis LAG: Layer-2-switching/Layer-3-Multi-chassis-LAG.md
-      - Link Layer Discovery protocol: Layer-2-switching/Link-Layer-Discovery-protocol.md
-    - Layer 3 Routing:
-      - Routed Interface: Layer3-Routing/Routed-Interface.md
-      - SVI & DHCP Relay: Layer3-Routing/SVI-&-DHCP-Relay.md
-      - BGP Routing: Layer3-Routing/BGP-Routing.md
-      - OSPF Routing: Layer3-Routing/OSPF-Routing.md
-      - VRF Routing: Layer3-Routing/VRF-Routing.md
-      - L2-VXLAN Asymmetric IRB Configuration: Layer3-Routing/L2-VXLAN.md
-      - L3-VXLAN Symmetric IRB Configuration: Layer3-Routing/L3-VXLAN-Sym.md
-    - QoS Configuration: Layer3-Routing/QoS-Configuration.md
-    - ACL Configuration: Layer3-Routing/ACL-Configuration.md
-    - References: Layer3-Routing/References.md
-  - ONES REST APIs for SONiC:
+    - PICOS to SONiC Migration guide: 
+      - Why Migrate from PICOS to SONiC?: PICOStoSONiCMigration/PICOS_to_SONiC.md
+      - Configuration convertor from PICOS to SONiC: PICOStoSONiCMigration/MainSection.md
+    - Cumulus to SONiC Migration guide:
+      - Migrate from Cumulus to Future Proof and Proven NOS - SONiC: CumulusMigration/cumulus1.md
+      - Why Migrate from Cumulus: CumulusMigration/cumulus2.md
+      - Why Migrate to SONiC: CumulusMigration/cumulus3.md
+      - Configuration convertor from Cumulus to SONiC: CumulusMigration/MainSection.md
+  - ONES REST APIs for multi-vendor SONiC:
     - Overview: day2Operations/onesAPI/OnesAPI.md
     - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
   - Deploy ONES: DeployONES/DeployONES.md
-    # - ONES System Requirements : DeployONES/SystemRequirements.md
-    # - ONES Software requirements : DeployONES/ONESSoftwarerequirements.md
-    # - Browser Requirements : DeployONES/BrowserRequirements.md
-    # - Deploying VM for ONES installation: DeployONES/DeployVmsForOnes.md
-    # - Reference Documentation : DeployONES/Documentation.md
+  - Connect Aviz Networks for more deployment References: ConnectWithAviz.md
 
   
