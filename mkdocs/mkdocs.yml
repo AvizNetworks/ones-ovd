@@ -52,8 +52,6 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true 
 
-
-
 nav:
   - Getting started with SONiC Journey: index.md
   - SONiC Advantages: SonicAdvantages.md
@@ -81,7 +79,9 @@ nav:
   - ONES REST APIs for multi-vendor SONiC:
     - Overview: day2Operations/onesAPI/OnesAPI.md
     - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
+    - ONES‘s Sample REST APIs: 
+      - Fabric Manager orchestration Sample APIs: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/FebricManagerAPIs.md
   - Deploy ONES: DeployONES/DeployONES.md
-  - Connect Aviz Networks for more deployment References: ConnectWithAviz.md
+  - Connect Us: ConnectWithAviz.md
 
   
