@@ -77,14 +77,11 @@ In the latest release, ONES can support managing up to 1024 devices. For ONES Ap
 </style>
 
 
-<br />
-
 ## <b> Browser Requirements</b>
 
 - Google Chrome version 107 or later
 - Mozilla Firefox version 106 or later
 
-<br />
 
 ## <b> Deploying VM for ONES installation</b> 
 
@@ -92,7 +89,6 @@ Please refer the following link for deployment of a virtual machine as a host fo
 
 <a href="https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm">https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm</a>
 
-<br />
 
 ## <b> Reference Documentation</b>
 
