@@ -20,6 +20,11 @@ Operator has to login to PICOS and SONiC switch as super user using â€œsudo suâ€
     word-wrap: break-word;
     width: 50%; 
   }
+
+  th {
+    color: white;
+    background-color:  #3393F3;
+  }
 </style>
 
 
@@ -1038,7 +1043,7 @@ config vlan member add &lt;vid> &lt;pch-id><br>
   </tr>
 </table>
 
-```yaml
+```
 # Creating port channel on the MCLAG pair switches running SONiC 
 config portchannel add PortChannel01
 config portchannel add PortChannel02
@@ -1083,7 +1088,7 @@ Total number of entries 3
 
 ![Layre3](../img/layer3(mc-lag).png)
 
-```yaml
+```
 # Command to create PortChannel on MC LAG Pair switches 
 config portchannel add PortChannel01
 config portchannel add PortChannel02
@@ -1098,7 +1103,7 @@ config portchannel member add PortChannel03 Ethernet60
 
 <br>
 
-```yaml
+```
 # Commands to Create Port Channel IPs on MC LAG pair switches 
 config interface ip add PortChannel01 192.168.11.1/24
 config interface ip add PortChannel02 192.168.12.1/24
@@ -1112,7 +1117,7 @@ config interface ip add PortChannel03 192.168.10.2/24
 
 <br>
 
-```yaml
+```
 # command to configure MCLAG on MC LAG pair switches  (Domain ID, VLANs and MLAG members)
 config mclag add 1 192.168.10.2 192.168.10.1
 config mclag member add 1 PortChannel01
@@ -1126,7 +1131,7 @@ config mclag member add 1 PortChannel02
 
 <br>
 
-```yaml
+```
 SONiC command to Configure IP for MCLAG Peer health check on MC LAG peers
 config interface ip add Vlan10 192.168.10.1/24
 config interface ip add Vlan10 192.168.10.2/24
@@ -1135,7 +1140,7 @@ config interface ip add Vlan10 192.168.10.2/24
 
 <br>
 
-```yaml
+```
 # Command to show MCLAG Status
 #MC1 switch configuration - 
 show interfaces portchannel
@@ -1195,7 +1200,7 @@ admin@sonic:~$ show mclag brief
 
 
 
-```yaml
+```
 SONiC Command to verify ARP synchronization
 mclagdctl dump arp -i 1
 No.   IP                  MAC                 DEV                 Flag
@@ -1740,7 +1745,7 @@ area 1 virtual-link 2.2.2.2
 
 <br></br>
 
-```yaml
+```
 #AS7326-56X-OS1 Configuration
 
 # VLAN and IP Configuration
@@ -1915,7 +1920,7 @@ address-family ipv4 unicast<br>
 </tr>
 </table>
 
-```yaml
+```
 # Create VRF instance
 admin@sonic:~$ config vrf add Vrf_01
 # Binding the Ethernet0 to VRF instance.
@@ -2142,7 +2147,7 @@ show evpn vni detail<Br>
 
 ![L2-VXLAN-EVPN-topology](../img/L2-VXLAN-EVPN-topology.png)
 
-```yaml
+```
 Step 1: Configure IP address to Loopback0 of both switches.
 AS7326-56X
 admin@AS7326-56X:~$ config interface ip remove Loopback0 10.1.0.1/32   
@@ -2690,7 +2695,7 @@ show ip route vrf all<Br>
 
 <br>
 
-```yaml
+```
 #Configure IP address and  Loopback IPs of both switches.
 AS5835-54X
 admin@SONIC01:~$ config interface ip add Loopback0 1.1.1.1/32

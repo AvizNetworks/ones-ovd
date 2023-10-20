@@ -21,6 +21,10 @@ Operator has to login to CUMULUS and SONiC switch as super user using `sudo su`
     word-wrap: break-word;
     width: 50%; 
   }
+  th {
+    color: white;
+    background-color:  #3393F3;
+  }
 </style>
 
 <table>
@@ -278,12 +282,12 @@ Management Network Default Gateway = 192.168.1.254<br />
 
 <table>
 <tr>
-    <td><b>CUMULUS</b</td>
-    <td><b>SONiC</b></td>
+    <th><b>CUMULUS</b</th>
+    <th><b>SONiC</b></th>
 </tr>
 
 <tr>
-   <td colspan='2'><b>SYSLOG</b></td>
+   <th colspan='2'><b>SYSLOG</b></th>
 </tr>
 
 <tr>
@@ -333,7 +337,7 @@ Path: /var/log/syslog*<br />
 </td>
 </tr>
 
-<tr><td colspan='2'><b>ZTP</b></td></tr>
+<tr><th colspan='2'><b>ZTP</b></th></tr>
 
 
 <tr>
@@ -347,13 +351,13 @@ Path: /var/log/syslog*<br />
 <code>option cumulus-provision-url code 239 = text;</code><br />
 <code>subnet 192.0.2.0 netmask 255.255.255.0 {</code><br />
 <code>range 192.0.2.100 192.168.0.200;</code><br />
-<code>option cumulus-provision-url "http://192.0.2.1/demo.sh";</code><br /><br />
+<code>option cumulus-provision-url "http://192.0.2.1/demo.";</code><br /><br />
 
 <b># Command to specify the hostname of the switch in ZTP script</b><br />
 <b># Example</b><br />
 <code>subnet 192.168.0.0 netmask 255.255.255.0 {</code><br />
 <code>range 192.168.0.100 192.168.0.200;</code><br />
-<code>option cumulus-provision-url "http://192.0.2.1/demo.sh";</code><br />
+<code>option cumulus-provision-url "http://192.0.2.1/demo.";</code><br />
 <code>host dc1-tor-sw1 { hardware ethernet 44:38:39:00:1a:6b; fixed-address 192.168.0.101; option host-name "dc1-tor-sw1"; }</code><br /><br />
 
 <b># Command function to demonstrate the ZTP function through a Linux call</b><br />
@@ -362,7 +366,7 @@ Path: /var/log/syslog*<br />
 <code>CUMULUS_CURRENT_RELEASE=$(cat /etc/lsb-release | grep RELEASE | cut -d "=" -f2)</code><br />
 <code>IMAGE_SERVER_HOSTNAME=webserver.example.com</code><br />
 <code>IMAGE_SERVER="http://"$IMAGE_SERVER_HOSTNAME"/"$CUMULUS_TARGET_RELEASE".bin"</code><br />
-<code>ZTP_URL="http://"$IMAGE_SERVER_HOSTNAME"/ztp.sh"</code><br />
+<code>ZTP_URL="http://"$IMAGE_SERVER_HOSTNAME"/ztp."</code><br />
 <code>if [ "$CUMULUS_TARGET_RELEASE" != "$CUMULUS_CURRENT_RELEASE" ]; then</code><br />
 <code>ping_until_reachable $IMAGE_SERVER_HOSTNAME</code><br />
 <code>/usr/cumulus/bin/onie-install -fa -i $IMAGE_SERVER -z $ZTP_URL && reboot</code><br />
@@ -373,7 +377,7 @@ Path: /var/log/syslog*<br />
 
 <b># Command to test the ZTP Scripts</b><br />
 <b># Validate and debug your ZTP scripts</b><br />
-<code>sudo ztp -v -r http://192.x.x.x/script.sh</code><br /><br />
+<code>sudo ztp -v -r http://192.x.x.x/script.</code><br /><br />
 
 <b># Verify ZTP status</b><br />
 <code>sudo systemctl -l status ztp.service</code><br />
@@ -418,7 +422,7 @@ Path: /var/log/syslog*<br />
 </td>
 </tr>
 
-<tr><td colspan='2'><b>SNMP</b></td></tr>
+<tr><th colspan='2'><b>SNMP</b></th></tr>
 <tr>
 <td>
 <b># Add SNMP Community and Agent Address</b><br />
@@ -486,7 +490,7 @@ Path: /var/log/syslog*<br />
 </tr>
 
 <tr>
-<td colspan='2'><b>AAA/Radius</b> </td>
+<th colspan='2'><b>AAA/Radius</b> </th>
 </tr>
 
 <tr>
@@ -543,7 +547,7 @@ Path: /var/log/syslog*<br />
 </td>
 </tr>
 
-<tr><td colspan='2'><b>sFlow</b></td></tr>
+<tr><th colspan='2'><b>sFlow</b></th></tr>
 <tr>
 <td>
 <b># sFlow Commands</b><br />
@@ -595,7 +599,7 @@ Path: /var/log/syslog*<br />
 
 
 
-<tr><td colspan='2'><b>NTP</b></td></tr>
+<tr><th colspan='2'><b>NTP</b></th></tr>
 
 <tr><td>
 <b># Configuring the NTP Server IP Address</b><br />
@@ -797,7 +801,7 @@ Path: /var/log/syslog*<br />
     <th>CUMULUS</th>
     <th>SONiC</th>
 </tr>
-<tr><th>Port VLAN</th></tr>
+<tr><th colspan='2'>Port VLAN</th></tr>
 
 <tr>
 <td>
@@ -962,7 +966,7 @@ Path: /var/log/syslog*<br />
 <table>
 <tr><th>CUMULUS</th><th>SONiC</th></tr>
 
-<tr><th>FDB/MAC</th></tr>
+<tr><th colspan='2'>FDB/MAC</th></tr>
 
 <tr>
 <td>
@@ -1062,16 +1066,20 @@ This is a pair of links that terminates on two cooperating switches and appears 
     word-wrap: break-word;
     width: 50%; 
   }
+  th {
+    color: white;
+    background-color:  #3393F3;
+  }
 </style>
 
 <table>
 <tr>
-<td><b>CUMULUS</b></td>
-<td><b>SONiC</b></td>
+<th><b>CUMULUS</b></th>
+<th><b>SONiC</b></th>
 </tr>
 
 <tr>
-<td colspan='2'><b>PortChannel (LACP) and Member </b></td>
+<th colspan='2'><b>PortChannel (LACP) and Member </b></th>
 </tr>
 
 <tr>
@@ -1094,7 +1102,7 @@ This is a pair of links that terminates on two cooperating switches and appears 
 </td>
 </tr>
 
-<tr><td colspan='2'><b>MC-LAG</b></td></tr>
+<tr><th colspan='2'><b>MC-LAG</b></th></tr>
 
 <tr>
 <td>
@@ -1133,7 +1141,7 @@ This is a pair of links that terminates on two cooperating switches and appears 
 
 </tr>
 
-<tr><td colspan='2'><b>VLAN</b></td></tr>
+<tr><th colspan='2'><b>VLAN</b></th></tr>
 
 <tr>
 <td>
@@ -1153,7 +1161,7 @@ This is a pair of links that terminates on two cooperating switches and appears 
 
 
 <b>SONiC Port Channel Configuration </b>
-```yaml
+```
 # Creating port channel on the MCLAG pair switches running SONiC 
 config portchannel add PortChannel01
 config portchannel add PortChannel02
@@ -1200,7 +1208,7 @@ Total number of entries 3
 
 ![Layer3 MultiChasis LAG](../img/Layer3ImageCUMULUS.png)
 
-```yaml
+```
 # Command to create PortChannel on MC LAG Pair switches 
 config portchannel add PortChannel01
 config portchannel add PortChannel02
@@ -1212,7 +1220,7 @@ config portchannel member add PortChannel03 Ethernet60
 
 ```
 
-```yaml
+```
 # Commands to Create Port Channel IPs on MC LAG pair switches 
 config interface ip add PortChannel01 192.168.11.1/24
 config interface ip add PortChannel02 192.168.12.1/24
@@ -1224,7 +1232,7 @@ config interface ip add PortChannel03 192.168.10.2/24
 
 ```
 
-```yaml
+```
 # command to configure MCLAG on MC LAG pair switches  (Domain ID, VLANs and MLAG members)
 config mclag add 1 192.168.10.2 192.168.10.1
 config mclag member add 1 PortChannel01
@@ -1236,14 +1244,14 @@ config mclag member add 1 PortChannel02
 
 ```
 
-```yaml
+```
 # SONiC command to Configure IP for MCLAG Peer health check on MC LAG peers
 config interface ip add Vlan10 192.168.10.1/24
 config interface ip add Vlan10 192.168.10.2/24
 ```
 
 
-```yaml
+```
 # Command to show MCLAG Status
 #MC1 switch configuration - 
 show interfaces portchannel
@@ -1301,7 +1309,7 @@ admin@sonic:~$ show mclag brief
 ```
 
 
-```yaml
+```
 SONiC Command to verify ARP synchronization
 mclagdctl dump arp -i 1
 No.   IP                  MAC                 DEV                 Flag
@@ -1475,13 +1483,13 @@ LLDP is a standard link-layer discovery protocol which can broadcast its capabil
 
 <table>
 <tr>
-<td><b>CUMULUS</b></td>
-<td><b>SONiC</b></td>
+<th><b>CUMULUS</b></th>
+<th><b>SONiC</b></th>
 </tr>
 
 
 <tr>
-<td colspan='2'>SVI</td>
+<th colspan='2'>SVI</th>
 </tr>
 
 <tr>
@@ -1569,7 +1577,7 @@ LLDP is a standard link-layer discovery protocol which can broadcast its capabil
 </tr>
 
 <tr>
-<td colspan='2'><b>DHCP Relay</b></td>
+<th colspan='2'><b>DHCP Relay</b></th>
 </tr>
 
 <tr>
@@ -1768,12 +1776,12 @@ LLDP is a standard link-layer discovery protocol which can broadcast its capabil
 
 <table>
 <tr>
-<td><b>CUMULUS</b></td>
-<td><b>SONiC</b></td>
+<th><b>CUMULUS</b></th>
+<th><b>SONiC</b></th>
 </tr>
 
 <tr>
-<td><b>OSPF Routing</b></td>
+<th><b>OSPF Routing</b></th>
 </tr>
 
 <tr>
@@ -1993,7 +2001,7 @@ LLDP is a standard link-layer discovery protocol which can broadcast its capabil
 
 ![OSPF Routing Image 2](../img/OSPF_IMAGE2.png)
 
-```yaml
+```
 #AS7326-56X-OS1 Configuration
 
 # VLAN and IP Configuration
@@ -2093,8 +2101,8 @@ O>* 192.168.30.0/24 [110/20] via 10.0.0.0, Ethernet56, 00:06:07
 
 <table>
 <tr>
-<td><b>CUMULUS</b></td>
-<td><b>SONiC</b></td>
+<th><b>CUMULUS</b></th>
+<th><b>SONiC</b></th>
 </tr>
 
 <tr>
@@ -2178,7 +2186,7 @@ O>* 192.168.30.0/24 [110/20] via 10.0.0.0, Ethernet56, 00:06:07
 
 <b>SONIC - VRF Routing</b>
 
-```yaml
+```
 # Create VRF instance
 admin@sonic:~$ config vrf add Vrf_01
 # Binding the Ethernet0 to VRF instance.
@@ -2285,8 +2293,8 @@ C>* 188.188.0.0/16 is directly connected, eth0, 00:01:21
 
 <table>
 <tr>
-<td><b>CUMULUS</b></td>
-<td><b>SONiC</b></td>
+<th><b>CUMULUS</b></th>
+<th><b>SONiC</b></th>
 </tr>
 
 <tr>
@@ -2371,7 +2379,7 @@ C>* 188.188.0.0/16 is directly connected, eth0, 00:01:21
 
 <b>Sample SONiC- L2VXLAN EVPN Asymmetric IRB </b>
 
-```yaml
+```
 Step 1: Configure IP address to Loopback0 of both switches.
 AS7326-56X
 admin@AS7326-56X:~$ config interface ip remove Loopback0 10.1.0.1/32   
@@ -2774,8 +2782,8 @@ ET:8 RT:65100:3000
 
 <table>
 <tr>
-<td><b>CUMULUS</b></td>
-<td><b>SONiC</b></td>
+<th><b>CUMULUS</b></th>
+<th><b>SONiC</b></th>
 </tr>
 
 <tr>
@@ -2894,7 +2902,7 @@ ET:8 RT:65100:3000
 
 <b>Sample SONiC L3-VXLAN EVPN Symmetric IRB Example</b>
 
-```yaml
+```
 # Configure IP address and  Loopback IPs of both switches.
 AS5835-54X
 admin@SONIC01:~$ config interface ip add Loopback0 1.1.1.1/32
@@ -3232,8 +3240,8 @@ Displayed 8 out of 8 total prefixes
 ## <b>QoS Configuration</b>
 <table>
 <tr>
-<td><b>CUMULUS(SN2700)</b></td>
-<td><b>SONiC</b></td>
+<th><b>CUMULUS(SN2700)</b></th>
+<th><b>SONiC</b></th>
 </tr>
 
 <tr>
@@ -3380,8 +3388,8 @@ Displayed 8 out of 8 total prefixes
 
 <table>
 <tr>
-<td><b>CUMULUS(SN2700)</b></td>
-<td><b>SONiC</b></td>
+<th><b>CUMULUS(SN2700)</b></th>
+<th><b>SONiC</b></th>
 </tr>
 
 <tr>
