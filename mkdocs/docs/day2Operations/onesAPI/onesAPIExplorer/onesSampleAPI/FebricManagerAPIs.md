@@ -1,6 +1,68 @@
 # <b>Fabric Manager orchestration Sample APIs</b>
 
 ## <b> ONES Sample REST APIs</b>
+
+### <b>Prerequisites</b>
+
+- Whole FMCLI config file and not just change while doing incremental config/device
+- Devices has to be onboarded in FM Controller, below is the API. This is required to eliminate the need of sharing credential repetitively on every API call. 
+- Encryption is in place to avoid storging device credential in plain text.
+
+<!-- markdownlint-disable MD033 -->
+<style>
+ table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 400px;
+    border: .1rem  solid #0000001f;
+  }
+  th, tr {
+    border: .1rem solid #0000001f;
+  }
+  
+  td {
+    border: .1rem solid #0000001f;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>API</th>
+    <td><b>addDeviceFacts</b></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>
+      Allows the user to add device facts to the FM database. This is a one time operation and is required to be done before any other API call. This API will add the device username, password and IP address to the FM database and will be used for all other API calls. This API will also validate the device credentials and will return an error if the credentials are not valid.
+    </td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td>1. Device IP (Mgmt IP/SSH IP) <br />
+	2. Userid (required for ssh) <br />
+	3. Password (required for ssh) <br />
+    </td>
+  </tr>
+  <tr>
+    <th>Response</th>
+    <td>true/false</td>
+  </tr>
+  <tr>
+    <th>Example</th>
+    <td><pre>
+curl -X POST -H "Content-Type: application/json"
+ -d '[{"ip":"device","user":"user","password":"pwd"}]' 
+ http://server_ip:server_port/addDeviceFacts
+
+</pre>
+    </td>
+  </tr>
+</table>
+
 ### <b> Simplified Day 1 Orchestration</b>
 
 <!-- markdownlint-disable MD033 -->
@@ -556,6 +618,78 @@ This Rest API client call will feed the golden configuration template as input  
 
     file: goldenconfigfile
     onlydiff: true/false
+
+</pre>
+    </td>
+  </tr>
+</table>
+
+### <b>ZTP Upgrade SONiC NOS Image</b>
+
+<!-- markdownlint-disable MD033 -->
+<style>
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 400px;
+    border: .1rem  solid #0000001f;
+  }
+  th, tr {
+    border: .1rem solid #0000001f;
+  }
+
+
+  td {
+    border: .1rem solid #0000001f;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>API</th>
+    <td><b>enableZTPUpgrade</b></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>ZTP upgrade - Perform SONiC upgrade using ZTP mechanism for a specific  image and configuration file.<br /><br />
+    Use Case is to support image management for network operators running SONiC fabric <br /><br />
+
+    Both ZTP image upgrade  enables  network operators to change  the version of the operating Sonic NOS during maintenance window
+  </td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td><b>REST API Input parameter : `<`Input Device IPs`>`</b>
+    ZTP  enable  image upgrade by network operators use case is to change  the version of the Sonic  NOS during the maintenance window  . Following  are the  REST API call  signatures for the same.
+
+    REST API: enableZTPUpgrade
+    Type: POST
+  </td>
+  </tr>
+  <tr>
+    <th>Response</th>
+    <td>
+    Response: true/False <br /><br />
+    Returns status true,  if ZTP enabled upgrade to SONiC enrolled devices is successful<br /><br />
+    Returns status false,  if ZTP enabled upgrade to SONiC enrolled devices is unsuccessful<br /><br />
+
+</pre> </td>
+  </tr>
+  <tr>
+    <th>Example</th>
+    <td><pre>
+    <b>POST /enableZTPUpgrade HTTP/1.1</b>
+    Content-Type: application/json; charset=utf-8
+    Host: localhost:8080
+    Connection: close
+    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
+    Content-Length: 61
+
+    ["10.x.x.10", "10.x.x.11"]
 
 </pre>
     </td>

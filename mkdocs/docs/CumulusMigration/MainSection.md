@@ -1160,9 +1160,9 @@ This is a pair of links that terminates on two cooperating switches and appears 
 </table>
 
 
-<b>SONiC Port Channel Configuration </b>
+<b>SONiC Port Channel Configuration </b> <br />
+<h4 style="color: black"><b>Creating port channel on the MCLAG pair switches running SONiC</b></h4>
 ```
-# Creating port channel on the MCLAG pair switches running SONiC 
 config portchannel add PortChannel01
 config portchannel add PortChannel02
 config portchannel add PortChannel03
@@ -1179,17 +1179,17 @@ config vlan member add -u 100 PortChannel01
 config vlan member add 100 PortChannel02
 config vlan member add 100 PortChannel03
 
-#Configure MCLAG pair switches with domain ID and child member links
+# Configure MCLAG pair switches with domain ID and child member links
 config mclag add 1 192.168.10.1 192.168.10.2 PortChannel03
 config mclag unique-ip add Vlan10
 config mclag member add 1 PortChannel01
 config mclag member add 1 PortChannel02
 
-#SONiC configuration for MC LAG peer health check 
+# SONiC configuration for MC LAG peer health check 
 config interface ip add Vlan10 192.168.10.1/24
 config interface ip add Vlan10 192.168.10.2/24
 
-#SONiC Command to Display MC LAG operationalstatus
+# SONiC Command to Display MC LAG operationalstatus
  show mclag brief
 
 # SONiC command to show MAC address learned for host traffic through member link interfaces 
