@@ -6,7 +6,7 @@
 
 - Whole FMCLI config file and not just change while doing incremental config/device
 - Devices has to be onboarded in FM Controller, below is the API. This is required to eliminate the need of sharing credential repetitively on every API call. 
-- Encryption is in place to avoid storging device credential in plain text.
+- Encryption is in place to avoid storing device credentials in plain text.
 
 <!-- markdownlint-disable MD033 -->
 <style>
