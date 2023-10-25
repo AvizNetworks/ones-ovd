@@ -4,8 +4,8 @@
 
 ### <b>Prerequisites</b>
 
-- Whole FMCLI config file and not just change while doing incremental config/device
-- Devices has to be onboarded in FM Controller, below is the API. This is required to eliminate the need of sharing credential repetitively on every API call. 
+- Whole Fabric Manager CLI config file and not just change while doing incremental config/device
+- Devices has to be onboarded in Fabric Manager Controller, below is the API. This is required to eliminate the need of sharing credential repetitively on every API call. 
 - Encryption is in place to avoid storing device credentials in plain text.
 
 <!-- markdownlint-disable MD033 -->
@@ -37,7 +37,7 @@
   <tr>
     <th>Description</th>
     <td>
-      Allows the user to add device facts to the FM database. This is a one time operation and is required to be done before any other API call. This API will add the device username, password and IP address to the FM database and will be used for all other API calls. This API will also validate the device credentials and will return an error if the credentials are not valid.
+      Allows the user to add device facts to the Fabric Manager database. This is a one time operation and is required to be done before any other API call. This API will add the device username, password and IP address to the Fabric Manager database and will be used for all other API calls. This API will also validate the device credentials and will return an error if the credentials are not valid.
     </td>
   </tr>
   <tr>
