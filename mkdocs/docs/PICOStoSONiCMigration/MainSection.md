@@ -376,7 +376,7 @@ Config_db.json<br>
 <b>#Example</b><br>
 <b>Example for ztp.json.</b><br>
 </br>
-```
+<pre>
 {
 "ztp": {
  "01-configdb-json": {
@@ -393,7 +393,7 @@ Config_db.json<br>
       } 
    }
 }
-```
+</pre>
 
   </td>
   </tr>
@@ -647,7 +647,7 @@ config mirror_session add ts1_everflow &lt;Source_Ip_address><br>
 </br>
 <b># Command  an ACL JSON file and load it to the configuration database for everflow.</b><br>
 cat acl.json
-```
+<pre>
 {
     "ACL_RULE": {
         "ACL_Mirror|ACE_Mirror": {
@@ -657,7 +657,7 @@ cat acl.json
         }
     }
 }
-```
+</pre>
 <b># Command to load the acl.json with new config related to ACL applied 
 config load acl.json -y</b><br>
 </br>
@@ -682,7 +682,7 @@ show mirror_session<br>
 </br>
 <b># Create ACL JSON file and load it to the configuration database for Mirror</b><br>
 cat acl.json<br>
-```
+<pre>
 {
 "ACL_RULE": {
         "Test|Forward": {
@@ -692,7 +692,7 @@ cat acl.json<br>
                 }
         }
 }
-```
+</pre>
 <b># Command to load the json file with ACL config applied</b><br> 
 config load acl.json -y <br>
 config  save -y<br>
@@ -1043,8 +1043,8 @@ config vlan member add &lt;vid> &lt;pch-id><br>
   </tr>
 </table>
 
+<b>Creating port channel on the MCLAG pair switches running SONiC </b>
 ```
-# Creating port channel on the MCLAG pair switches running SONiC 
 config portchannel add PortChannel01
 config portchannel add PortChannel02
 config portchannel add PortChannel03
@@ -1052,29 +1052,39 @@ config portchannel member add PortChannel01 Ethernet0
 config portchannel member add PortChannel02 Ethernet1
 config portchannel member add PortChannel03 Ethernet56
 config portchannel member add PortChannel03 Ethernet60
+```
 
-# Creating VLAN interface on MC LAG pair switches running SONiC
+<b>Creating VLAN interface on MC LAG pair switches running SONiC</b>
+```
 config vlan add 10
 config vlan add 100
 config vlan member add 10 PortChannel03
 config vlan member add -u 100 PortChannel01
 config vlan member add 100 PortChannel02
 config vlan member add 100 PortChannel03
+```
 
-#Configure MCLAG pair switches with domain ID and child member links
+<b>Configure MCLAG pair switches with domain ID and child member links</b>
+```
 config mclag add 1 192.168.10.1 192.168.10.2 PortChannel03
 config mclag unique-ip add Vlan10
 config mclag member add 1 PortChannel01
 config mclag member add 1 PortChannel02
+```
 
-#SONiC configuration for MC LAG peer health check 
+<b>SONiC configuration for MC LAG peer health check </b>
+```
 config interface ip add Vlan10 192.168.10.1/24
 config interface ip add Vlan10 192.168.10.2/24
+```
 
-#SONiC Command to Display MC LAG operationalstatus
- show mclag brief
+<b>SONiC Command to Display MC LAG operationalstatus </b>
+```
+show mclag brief
+```
 
-# SONiC command to show MAC address learned for host traffic through member link interfaces 
+<b>SONiC command to show MAC address learned for host traffic through member link interfaces </b>
+```
 show mac
 No.    Vlan  MacAddress         Port           Type
 -----  ------  -----------------  -------------  -------
@@ -1088,8 +1098,9 @@ Total number of entries 3
 
 ![Layre3](../img/layer3(mc-lag).png)
 
+
+<b>Command to create PortChannel on MC LAG Pair switches </b>
 ```
-# Command to create PortChannel on MC LAG Pair switches 
 config portchannel add PortChannel01
 config portchannel add PortChannel02
 config portchannel add PortChannel03
@@ -1103,8 +1114,8 @@ config portchannel member add PortChannel03 Ethernet60
 
 <br>
 
+<b>Commands to Create Port Channel IPs on MC LAG pair switches </b>
 ```
-# Commands to Create Port Channel IPs on MC LAG pair switches 
 config interface ip add PortChannel01 192.168.11.1/24
 config interface ip add PortChannel02 192.168.12.1/24
 config interface ip add PortChannel03 192.168.10.1/24
@@ -1117,8 +1128,8 @@ config interface ip add PortChannel03 192.168.10.2/24
 
 <br>
 
+<b>command to configure MCLAG on MC LAG pair switches  (Domain ID, VLANs and MLAG members)</b>
 ```
-# command to configure MCLAG on MC LAG pair switches  (Domain ID, VLANs and MLAG members)
 config mclag add 1 192.168.10.2 192.168.10.1
 config mclag member add 1 PortChannel01
 config mclag member add 1 PortChannel02
@@ -1131,8 +1142,9 @@ config mclag member add 1 PortChannel02
 
 <br>
 
+
+<b>SONiC command to Configure IP for MCLAG Peer health check on MC LAG peers</b>
 ```
-SONiC command to Configure IP for MCLAG Peer health check on MC LAG peers
 config interface ip add Vlan10 192.168.10.1/24
 config interface ip add Vlan10 192.168.10.2/24
 
@@ -1140,9 +1152,10 @@ config interface ip add Vlan10 192.168.10.2/24
 
 <br>
 
+
+<b>Command to show MCLAG Status</b>
+<b>MC1 switch configuration - </b>
 ```
-# Command to show MCLAG Status
-#MC1 switch configuration - 
 show interfaces portchannel
 Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available,
        S - selected, D - deselected, * - not synced
@@ -1167,10 +1180,11 @@ show mclag brief
         MCLAG Interface              Local/Remote Status
         PortChannel01                Up/Up
         PortChannel02                Up/Up
+```
 
+<b>MC2 switch configuration - </b>
 
-MC2 switch configuration - 
-
+```
 admin@sonic:~$ show interfaces portchannel
 Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available,
        S - selected, D - deselected, * - not synced
@@ -1200,8 +1214,9 @@ admin@sonic:~$ show mclag brief
 
 
 
+
+<b>SONiC Command to verify ARP synchronization</b>
 ```
-SONiC Command to verify ARP synchronization
 mclagdctl dump arp -i 1
 No.   IP                  MAC                 DEV                 Flag
 1     192.168.12.2        80:a2:35:5a:22:50   PortChannel02       R
@@ -1745,10 +1760,10 @@ area 1 virtual-link 2.2.2.2
 
 <br></br>
 
-```
-#AS7326-56X-OS1 Configuration
 
-# VLAN and IP Configuration
+<b>AS7326-56X-OS1 Configuration</b>
+<b>VLAN and IP Configuration</b>
+```
 config interface ip add Loopback0 1.1.1.1/32
 config vlan member add 10 Ethernet0
 config vlan member add 20 Ethernet0
@@ -1757,16 +1772,20 @@ config interface ip add Ethernet0.10 192.168.10.1/24
 config interface ip add Ethernet0.20 192.168.20.1/24
 config interface ip add Ethernet0.30 192.168.30.1/24
 config interface ip add Ethernet56 10.0.0.0/31
+```
 
-#OSPF Configuration
+<b>OSPF Configuration</b>
+```
 admin@sonic:~$ vtysh
 sonic(config)# router ospf
 sonic(config-router)# network 10.0.0.0/31 area 0
 sonic(config-router)# network 192.168.10.0/24 area 0
 sonic(config-router)# network 192.168.20.0/24 area 0
 sonic(config-router)# network 192.168.30.0/24 area 0
+```
 
-#OSPF Routing Verification Command
+<b>OSPF Routing Verification Command</b>
+```
 sonic# show ip ospf neighbor
 Neighbor ID     Pri State           Dead Time Address         Interface            RXmtL RqstL DBsmL
 192.168.25.1      1 Full/DR           31.440s 10.0.0.1        Ethernet56:10.0.0.0      0     0     0
@@ -1791,9 +1810,11 @@ C>* 192.168.20.0/24 is directly connected, Vlan20, 00:07:24
 O>* 192.168.25.0/24 [110/20] via 10.0.0.1, Ethernet56, 00:06:32
 O   192.168.30.0/24 [110/10] is directly connected, Vlan30, 00:04:47
 C>* 192.168.30.0/24 is directly connected, Vlan30, 00:07:24
+```
 
-#AS7326-56X-OS2 Configuration
-# VLAN and IP Configuration
+<b>AS7326-56X-OS2 Configuration</b>
+<b>VLAN and IP Configuration</b>
+```
 config interface ip add Loopback0 2.2.2.2/32
 config vlan member add 5 Ethernet0
 config vlan member add 15 Ethernet0
@@ -1802,17 +1823,21 @@ config interface ip add Ethernet0.5 192.168.51/24
 config interface ip add Ethernet0.15 192.168.15.1/24
 config interface ip add Ethernet0.25 192.168.25.1/24
 config interface ip add Ethernet56 10.0.0.1/31
+```
 
-#OSPF Configuration
+<b>OSPF Configuration</b>
+```
 admin@sonic:~$ vtysh
 sonic(config)# router ospf
 sonic(config-router)# network 10.0.0.0/31 area 0
 sonic(config-router)# network 192.168.5.0/24 area 0
 sonic(config-router)# network 192.168.15.0/24 area 0
 sonic(config-router)# network 192.168.25.0/24 area 0
+```
 
-#OSPF Routing Verification Command
-OS2:
+<b>OSPF Routing Verification Command</b>
+<b>OS2:</b>
+```
 sonic# show ip ospf neighbor
 Neighbor ID     Pri State           Dead Time Address         Interface            RXmtL RqstL DBsmL
 188.188.98.39     1 Full/Backup       33.721s 10.0.0.0        Ethernet56:10.0.0.1      0     0     0
@@ -1920,12 +1945,18 @@ address-family ipv4 unicast<br>
 </tr>
 </table>
 
+
+<b>Create VRF instance</b>
 ```
-# Create VRF instance
 admin@sonic:~$ config vrf add Vrf_01
-# Binding the Ethernet0 to VRF instance.
+```
+<b>Binding the Ethernet0 to VRF instance.</b>
+```
 admin@sonic:~$ config interface vrf bind Ethernet0 Vrf_01
-# Checking the VRF
+```
+
+<b>Checking the VRF</b>
+```
 admin@sonic:~$ show vrf
 VRF 	Interfaces
 ------  ------------
@@ -1938,7 +1969,10 @@ Loopback0          	10.1.0.1/32      	up/up     	N/A         	N/A
 docker0     	       240.127.1.1/24   	up/down   	N/A         	N/A
 eth0               	188.188.97.31/16 	up/up     	N/A         	N/A
 lo                 	127.0.0.1/8      	up/up     	N/A         	N/A
-# Checking the routing table.
+```
+
+<b>Checking the routing table.</b>
+```
 admin@sonic:~$ show ip route vrf Vrf_01
 Codes: K - kernel route, C - connected, S - static, R - RIP,
    	O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
@@ -1963,11 +1997,16 @@ Codes: K - kernel route, C - connected, S - static, R - RIP,
 K>* 0.0.0.0/0 [0/202] via 188.188.1.1, eth0, 00:15:16
 C>* 10.1.0.1/32 is directly connected, Loopback0, 00:15:16
 C>* 188.188.0.0/16 is directly connected, eth0, 00:15:16
+```
 
-# Management VRF
-# Create Management VRF
+<b>Management VRF</b>
+<b>Create Management VRF</b>
+```
 admin@sonic:~$ config vrf add mgmt
-# Checking the Management VRF
+```
+
+<b>Checking the Management VRF</b>
+```
 admin@sonic:~$ show mgmt-vrf
 ManagementVRF : Enabled
 Management VRF interfaces in Linux:
@@ -1987,7 +2026,9 @@ docker0            	240.127.1.1/24   	up/down   	N/A         	N/A
 eth0     	mgmt  	188.188.97.31/16 	up/up     	N/A         	N/A
 lo                 	127.0.0.1/8      	up/up     	N/A         	N/A
 lo-m     	mgmt  	127.0.0.1/8      	up/up     	N/A     	    N/A
-#Checking the routing table.
+```
+<b>Checking the routing table.</b>
+```
 admin@sonic:~$ show ip route vrf mgmt
 Codes: K - kernel route, C - connected, S - static, R - RIP,
    	O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
@@ -2147,18 +2188,23 @@ show evpn vni detail<Br>
 
 ![L2-VXLAN-EVPN-topology](../img/L2-VXLAN-EVPN-topology.png)
 
+
+<b>Step 1: Configure IP address to Loopback0 of both switches.</b>
+<b>AS7326-56X</b>
 ```
-Step 1: Configure IP address to Loopback0 of both switches.
-AS7326-56X
 admin@AS7326-56X:~$ config interface ip remove Loopback0 10.1.0.1/32   
 admin@AS7326-56X:~$ config interface ip add Loopback0 1.1.1.1/32
+```
 
-AS5835-54X:
+<b>AS5835-54X:</b>
+```
 admin@AS5835-54X:~$ config interface ip remove Loopback0 10.1.0.1/32   
 admin@AS5835-54X:~$ config interface ip add Loopback0 2.2.2.2/32
+```
 
-Step 2: Establish BGP Session between Ethernet52 and announce the network.
-AS7326-56X:
+<b>Step 2: Establish BGP Session between Ethernet52 and announce the network.</b>
+<b>AS7326-56X:</b>
+```
 admin@AS7326-56X:~$ vtysh
 Hello, this is FRRouting (version 7.2.1-sonic).
 Copyright 1996-2005 Kunihiro Ishiguro, et al.
@@ -2170,7 +2216,10 @@ AS7326-56X(config-router)# address-family ipv4
 AS7326-56X(config-router-af)# network 1.1.1.1/32
 AS7326-56X(config-router-af)# end
 AS7326-56X# exit
-AS5835-54X:
+```
+
+<b>AS5835-54X:</b>
+```
 admin@AS5835-54X:~$ vtysh
 Hello, this is FRRouting (version 7.2.1-sonic).
 Copyright 1996-2005 Kunihiro Ishiguro, et al.
@@ -2182,9 +2231,11 @@ AS5835-54X(config-router)# address-family ipv4
 AS5835-54X(config-router-af)# network 2.2.2.2/32
 AS5835-54X(config-router-af)# end
 AS5835-54X# exit
+```
 
-Step 3. Create Vxlan
-AS7326-56X:
+<b>Step 3. Create Vxlan</b>
+<b>AS7326-56X:</b>
+```
 admin@AS7326-56X:~$ config vxlan add vtep 1.1.1.1
 admin@AS7326-56X:~$ config vxlan evpn_nvo add nvo vtep
 admin@AS7326-56X:~$ config vxlan map add vtep 30 3000
@@ -2199,9 +2250,11 @@ Only one VTEP is allowed on one device. Please use loopback IP address for VTEP'
 NVO (Network Virtualization Overlay)
 Only one NVO is allowed on one device.
 VNI (VxLAN Network Identifier) : virtual extension of VLAN over IP network.
+```
 
-Step 4: Advertise  L2VPN EVPN routes. 
-AS7326-56X:
+<b>Step 4: Advertise  L2VPN EVPN routes. </b>
+<b>AS7326-56X:</b>
+```
 admin@AS7326-56X:~$ vtysh
 Hello, this is FRRouting (version 7.2.1-sonic).
 Copyright 1996-2005 Kunihiro Ishiguro, et al.
@@ -2211,7 +2264,9 @@ AS7326-56X(config)# router bgp 65100
 AS7326-56X(config-router)# address-family l2vpn evpn
 AS7326-56X(config-router-af)# neighbor 10.0.0.1 activate
 AS7326-56X(config-router-af)# advertise-all-vni
-AS5835-54X:
+```
+<b>AS5835-54X:</b>
+```
 admin@AS5835-54X:~$ vtysh
 Hello, this is FRRouting (version 7.2.1-sonic).
 AS5835-54X# 
@@ -2220,8 +2275,10 @@ AS5835-54X(config)# router bgp 65100
 AS5835-54X(config-router)# address-family l2vpn evpn
 AS5835-54X(config-router-af)# neighbor 10.0.0.0 activate
 AS5835-54X(config-router-af)# advertise-all-vni
+```
 
-Check VxLAN  interface configuration.AS7326-56X:
+<b>Check VxLAN  interface configuration.AS7326-56X:</b>
+```
 admin@AS7326-56X:~$ show vxlan interface 
 VTEP Information:
 VTEP Name : vtep, SIP : 1.1.1.1
@@ -2231,8 +2288,10 @@ admin@AS5835-54X:~$ show vxlan interface
 VTEP Information:
 VTEP Name : vtep, SIP : 2.2.2.2
 Source interface : Loopback0
+```
 
-Check vxlan and VLAN mapping.AS7326-56X:
+<b>Check vxlan and VLAN mapping.AS7326-56X:</b>
+```
 admin@AS7326-56X:~$ show vxlan vlanvnimap
 +--------+-------+
 | VLAN   |   VNI |
@@ -2248,16 +2307,20 @@ admin@AS5835-54X:~$ show vxlan vlanvnimap
 | Vlan30 |  3000 |
 +--------+-------+
 Total count : 1
+```
 
-Check the status for Vxlan tunneling. 
-AS7326-56X:(202111.3)
+<b>Check the status for Vxlan tunneling. </b>
+<b>AS7326-56X:(202111.3)</b>
+```
 admin@AS7326-56X:~$ show vxlan tunnel
 vxlan tunnel name    source ip    destination ip    tunnel map name    tunnel map mapping(vni -> vlan)
 -------------------  -----------  ----------------  -----------------  ---------------------------------
 vtep                 1.1.1.1                       map_3000_Vlan30    3000 -> Vlan30
 Total count : 1
+```
 
-AS7326-56X:(202111.3)
+<b>AS7326-56X:(202111.3)</b>
+```
 admin@AS7326-56X:~$ show vxlan remotevtep
 +---------+---------+-------------------+--------------+
 | SIP 	| DIP 	| Creation Source   | OperStatus   |
@@ -2265,34 +2328,42 @@ admin@AS7326-56X:~$ show vxlan remotevtep
 | 1.1.1.1 | 2.2.2.2 | EVPN          	| oper_up  	|
 +---------+---------+-------------------+--------------+
 Total count : 1
+```
 
-AS5835-54X:(202111.3)
+<b>AS5835-54X:(202111.3)</b>
+```
 admin@AS5835-54X:~$ show vxlan tunnel
 vxlan tunnel name    source ip    destination ip    tunnel map name    tunnel map mapping(vni -> vlan)
 -------------------  -----------  ----------------  -----------------  ---------------------------------
 vtep                 2.2.2.2                      map_3000_Vlan30    3000 -> Vlan30
 Total count : 1
+```
 
-AS5835-54X:(202111.3)
+<b>AS5835-54X:(202111.3)</b>
+```
 admin@AS5835-54X:~$ show vxlan remotevtep
 | SIP 	| DIP 	| Creation Source   | OperStatus   |
 +=========+=========+===================+==============+
 | 2.2.2.2 | 1.1.1.1 | EVPN          	| oper_up  	|
 +---------+---------+-------------------+--------------+
 Total count : 1
+```
  
-Check the Mac learning.
-AS7326-56X:(202111.3)
+<b>Check the Mac learning.</b>
+<b>AS7326-56X:(202111.3)</b>
 
 
+```
 admin@AS7326-56X:~$ show mac
   No.	Vlan  MacAddress     	Port            	Type
 -----  ------  -----------------  ------------------  -------
 	1  	30  8C:EA:1B:30:DA:50  VxLAN DIP: 2.2.2.2  Static
 	2  	30  8C:EA:1B:30:DA:4F  Ethernet0       	Dynamic
 Total number of entries 2
+```
 
-AS7326-56X(202111.3)
+<b>AS7326-56X(202111.3)</b>
+```
 admin@AS7326-56X:~$ show mac
   No.	Vlan  MacAddress     	Port   	Type
 -----  ------  -----------------  ---------  -------
@@ -2308,16 +2379,20 @@ Total count : 1
 Note.
 "8C:EA:1B:30:DA:50" is synced from remote vtep(2.2.2.2).
 "8C:EA:1B:30:DA:4F" is learned locally.
+```
 
-AS5835-54X:(202111.3)
+<b>AS5835-54X:(202111.3)</b>
+```
 admin@AS5835-54X:~$ show mac
   No.	Vlan  MacAddress     	Port            	Type
 -----  ------  -----------------  ------------------  -------
 	1  	30  8C:EA:1B:30:DA:50  Ethernet0       	Dynamic
 	2  	30  8C:EA:1B:30:DA:4F  VxLAN DIP: 1.1.1.1  Static
 Total number of entries 2
+```
 
-AS5835-54X:(202111.3)
+<b>AS5835-54X:(202111.3)</b>
+```
 admin@AS5835-54X:~$ show mac
   No.	Vlan  MacAddress     	Port   	Type
 -----  ------  -----------------  ---------  -------
@@ -2330,11 +2405,13 @@ admin@AS5835-54X:~$ show vxlan remotemac all
 | Vlan30 | 8c:ea:1b:30:da:4f | 1.1.1.1  	|   	|  3000 | dynamic |
 +--------+-------------------+--------------+-------+-------+---------+
 Total count : 1
+```
  
-Check IPv4 BGP session
-AS7326-56X:
+<b>Check IPv4 BGP session</b>
+<b>AS7326-56X:</b>
 
 
+```
 AS7326-56X# show bgp ipv4 summary
 IPv4 Unicast Summary:
 BGP router identifier 1.1.1.1, local AS number 65100 vrf-id 0
@@ -2344,8 +2421,10 @@ Peers 1, using 20 KiB of memory
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.1    	4  	65100  	80  	85    	0	0	0 01:01:28        	1
 Total number of neighbors 1
+```
 
-AS5835-54X:
+<b>AS5835-54X:</b>
+```
 AS5835-54X# show bgp ipv4 summary
 IPv4 Unicast Summary:
 BGP router identifier 2.2.2.2, local AS number 65100 vrf-id 0
@@ -2355,10 +2434,12 @@ Peers 1, using 20 KiB of memory
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.0    	4  	65100  	79  	79    	0	0	0 01:01:28        	1
 Total number of neighbors 1
+```
 
-Check L2EVPN BGP session
+<b>Check L2EVPN BGP session</b>
+<b>AS7326-56X:</b>
 
-AS7326-56X:
+```
 AS7326-56X# show bgp l2vpn evpn summary
 BGP router identifier 1.1.1.1, local AS number 65100 vrf-id 0
 BGP table version 0
@@ -2376,11 +2457,13 @@ Peers 1, using 20 KiB of memory
 Neighbor    	V     	AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
 10.0.0.0    	4  	65100  	81  	81    	0	0	0 01:03:43        	3
 Total number of neighbors 1
+```
 
-Check underlay routing
-AS7326-56X:
+<b>Check underlay routing</b>
+<b>AS7326-56X:</b>
 
 
+```
 AS7326-56X# show ip route
 Codes: K - kernel route, C - connected, S - static, R - RIP,
 O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
@@ -2392,10 +2475,12 @@ C>* 1.1.1.1/32 is directly connected, Loopback0, 00:49:14
 B>* 2.2.2.2/32 [200/0] via 10.0.0.1, Ethernet52, 00:42:04
 C>* 10.0.0.0/31 is directly connected, Ethernet52, 00:49:13
 C>* 188.188.0.0/16 is directly connected, eth0, 00:49:45
+```
 
-AS5835-54X:
+<b>AS5835-54X:</b>
 
 
+```
 AS5835-54X# show ip route
 Codes: K - kernel route, C - connected, S - static, R - RIP,
 O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
@@ -2407,9 +2492,11 @@ B>* 1.1.1.1/32 [200/0] via 10.0.0.0, Ethernet52, 00:42:25
 C>* 2.2.2.2/32 is directly connected, Loopback0, 00:46:34
 C>* 10.0.0.0/31 is directly connected, Ethernet52, 00:46:33
 C>* 188.188.0.0/16 is directly connected, eth0, 00:49:57
+```
 
-Check Vxlan VNI status
-AS7326-56X:
+<b>Check Vxlan VNI status</b>
+<b>AS7326-56X:</b>
+```
 AS7326-56X# show evpn vni detail 
 VNI: 3000
 Type: L2
@@ -2423,8 +2510,10 @@ Remote VTEPs for this VNI:
 Number of MACs (local and remote) known for this VNI: 3
 Number of ARPs (IPv4 and IPv6, local and remote) known for this VNI: 3
 Advertise-gw-macip: No
+```
 
-AS5835-54X:
+<b>AS5835-54X:</b>
+```
 AS5835-54X# show evpn vni detail 
 VNI: 3000
 Type: L2
@@ -2438,23 +2527,29 @@ Remote VTEPs for this VNI:
 Number of MACs (local and remote) known for this VNI: 3
 Number of ARPs (IPv4 and IPv6, local and remote) known for this VNI: 3
 Advertise-gw-macip: No
+```
 
-Check the evpn mac learning
-AS7326-56X:
+<b>Check the evpn mac learning</b>
+<b>AS7326-56X:</b>
+```
 AS7326-56X# show evpn mac vni all
 VNI 3000 #MACs (local and remote) 3
 MAC           	Type   Intf/Remote VTEP  	VLAN  Seq #'s
 8c:ea:1b:30:da:50 remote 2.2.2.2                 	1/0
 8c:ea:1b:30:da:4f local  Ethernet0         	30	0/0
+```
 
-AS5835-54X:
+<b>AS5835-54X:</b>
+```
 AS5835-54X# show evpn mac vni all
 VNI 3000 #MACs (local and remote) 3MAC           	Type   Intf/Remote VTEP  	VLAN  Seq #'s
 8c:ea:1b:30:da:50 local  Ethernet0         	30	0/0
 8c:ea:1b:30:da:4f remote 1.1.1.1                 	1/0
+```
 
-Check the type 2 EVPN route
-AS7326-56X:
+<b>Check the type 2 EVPN route</b>
+<b>AS7326-56X:</b>
+```
 AS7326-56X# show bgp l2vpn evpn route type macip 
 BGP table version is 2, local router ID is 1.1.1.1
 Status codes: s suppressed, d damped, h history, * valid, > best, i - internal
@@ -2475,8 +2570,10 @@ Route Distinguisher: 2.2.2.2:2
                     2.2.2.2                       100      0 i
                     RT:65100:3000 ET:8
 Displayed 2 prefixes (2 paths) (of requested type)
+```
 
-AS5835-54X:
+<b>AS5835-54X:</b>
+```
 AS5835-54X# show bgp l2vpn evpn route type macip 
 BGP table version is 2, local router ID is 2.2.2.2
 Status codes: s suppressed, d damped, h history, * valid, > best, i - internal
@@ -2497,11 +2594,12 @@ Route Distinguisher: 2.2.2.2:2
                     2.2.2.2                            32768 i
                     ET:8 RT:65100:3000
 Displayed 2 prefixes (2 paths) (of requested type)
+```
 
-Check the type 3 EVPN route
- AS7326-56X:
+<b>Check the type 3 EVPN route</b>
+<b>AS7326-56X:</b>
 
-
+```
 AS7326-56X# show bgp l2vpn evpn route type multicast 
 BGP table version is 3, local router ID is 1.1.1.1
 Status codes: s suppressed, d damped, h history, * valid, > best, i - internal
@@ -2521,8 +2619,10 @@ Route Distinguisher: 2.2.2.2:2
 2.2.2.2 100 0 i
 RT:65100:3000 ET:8
 Displayed 2 prefixes (2 paths) (of requested type)
+```
 
-AS5835-54X:
+<b>AS5835-54X:</b>
+```
 AS5835-54X# show bgp l2vpn evpn route type multicast 
 BGP table version is 3, local router ID is 2.2.2.2
 Status codes: s suppressed, d damped, h history, * valid, > best, i - internal
@@ -2541,7 +2641,6 @@ Route Distinguisher: 2.2.2.2:2
 *> [3]:[0]:[32]:[2.2.2.2]
 2.2.2.2 32768 i
 ET:8 RT:65100:3000
-
 ```
 
 ### <b>L3-VXLAN Symmetric IRB Configuration</b>
@@ -2695,31 +2794,39 @@ show ip route vrf all<Br>
 
 <br>
 
+<b>Configure IP address and  Loopback IPs of both switches.</b>
+<b>AS5835-54X</b>
 ```
-#Configure IP address and  Loopback IPs of both switches.
-AS5835-54X
 admin@SONIC01:~$ config interface ip add Loopback0 1.1.1.1/32
-admin@SONIC01:~$ config interface ip add Ethernet48 10.0.0.4/31
+admin@SONIC01:~$ config interface ip add Ethernet48 10.0.0.4/31\
+```
 
-A4630-54PE
+<b>A4630-54PE</b>
+```
 admin@SONIC02:~$ config interface ip add Loopback0 2.2.2.2/32
 admin@SONIC02:~$ config interface ip add Ethernet52 10.0.0.5/31
+```
 
-# Configure VRF Setting
-AS5835-54X
+<b>Configure VRF Setting</b>
+<b>AS5835-54X</b>
+```
 admin@SONIC01:~$ config vrf add Vrf01                                                           
 admin@SONIC01:~$ config interface vrf bind Vlan30 Vrf01                                          
 admin@SONIC01:~$ config interface vrf bind Vlan10 Vrf01                                          
-admin@SONIC01:~$ config interface ip add Vlan10 192.168.1.254/24                            
+admin@SONIC01:~$ config interface ip add Vlan10 192.168.1.254/24     
+```                       
 
-A4630-54PE
+<b>A4630-54PE</b>
+```
 admin@SONIC02:~$ config vrf add Vrf01                                                             
 admin@SONIC02:~$ config interface vrf bind Vlan30 Vrf01                                         
 admin@SONIC02:~$ config interface vrf bind Vlan20 Vrf01                                           
-admin@SONIC02:~$ config interface ip add Vlan20 192.168.2.254/24                                  
+admin@SONIC02:~$ config interface ip add Vlan20 192.168.2.254/24  
+```                                
 
-#Establish BGP Session between Ethernet48 and Ethernet52  
-AS5835-54X
+<b>Establish BGP Session between Ethernet48 and Ethernet52  </b>
+<b>AS5835-54X</b>
+```
 admin@SONIC01:~$ vtysh                                                                                 
 sonic# configure terminal
 sonic(config)# router bgp 65100                                                                        
@@ -2731,7 +2838,6 @@ sonic(config-router)# address-family l2vpn evpn
 sonic(config-router-af)# neighbor 10.0.0.5 activate                                      
 sonic(config-router-af)# advertise-all-vni                                                      
 sonic(config-router-af)# end
-
 sonic# configure terminal                                                                              
 sonic(config)# vrf Vrf01                                                                                 
 sonic(config-vrf)# vni 3000                                                                            
@@ -2745,8 +2851,10 @@ sonic(config-router)# address-family l2vpn evpn
 sonic(config-router-af)# advertise ipv4 unicast                                              
 sonic(config-router-af)# end
 sonic# write
+```
 
-A4630-54PE
+<b>A4630-54PE</b>
+```
 admin@SONIC02:~$ vtysh                                                                                 
 sonic# configure terminal
 sonic(config)# router bgp 65100                                                                   
@@ -2771,42 +2879,60 @@ sonic(config-router)# address-family l2vpn evpn
 sonic(config-router-af)# advertise ipv4 unicast                                              
 sonic(config-router-af)# end
 sonic# write
+```
 
 
-#Create Vxlan
-AS5835-54X
-# configuring VTEP_name (vtep) and its IP address 
+<b>Create Vxlan</b>
+<b>AS5835-54X</b>
+<b>configuring VTEP_name (vtep) and its IP address</b>
+```
 admin@SONIC01:~$ config vxlan add vtep 1.1.1.1  
+```
 
-#create nvo_name (nvo) and bind it to VTEP_name (vtep)
-admin@SONIC01:~$ config vxlan evpn_nvo add nvo vtep      
+<b>create nvo_name (nvo) and bind it to VTEP_name (vtep)</b>
+```
+admin@SONIC01:~$ config vxlan evpn_nvo add nvo vtep    
+```  
 
-# Command to map VXLAN VNI to VLAN                                        
+<b>Command to map VXLAN VNI to VLAN    </b>                                    
+```
 admin@SONIC01:~$ config vxlan map add vtep 10 1000                                                
 admin@SONIC01:~$ config vxlan map add vtep 30 3000                                               
 admin@SONIC01:~$ config save -y
+```
 
-#A4630-54PE
-# configuring VTEP_name (vtep) and its IP address 
-admin@SONIC02:~$ config vxlan add vtep 2.2.2.2     
+<b>A4630-54PE</b>
+<b>configuring VTEP_name (vtep) and its IP address </b>
+```
+admin@SONIC02:~$ config vxlan add vtep 2.2.2.2   
+```  
 
-#create nvo_name (nvo) and bind it to VTEP_name (vtep)
-admin@SONIC02:~$ config vxlan evpn_nvo add nvo vtep     
+<b>create nvo_name (nvo) and bind it to VTEP_name (vtep)</b>
+```
+admin@SONIC02:~$ config vxlan evpn_nvo add nvo vtep 
+```    
 
-# Command to map VXLAN VNI to VLAN                                           
+<b>Command to map VXLAN VNI to VLAN</b>
+```                                      
 admin@SONIC02:~$ config vxlan map add vtep 20 2000                                                
 admin@SONIC02:~$ config vxlan map add vtep 30 3000                                               
-admin@SONIC02:~$ config save -y     
+admin@SONIC02:~$ config save -y    
+``` 
 
-# Configure the  layer3 VNI on both switches.
-AS5835-54X
-admin@SONIC01:~$ config vrf add_vrf_vni_map Vrf01 3000            
+<b>Configure the  layer3 VNI on both switches.</b>
+<b>AS5835-54X</b>
+```
+admin@SONIC01:~$ config vrf add_vrf_vni_map Vrf01 3000 
+```           
 
-A4630-54PE
-admin@SONIC01:~$ config vrf add_vrf_vni_map Vrf01 3000            
+<b>A4630-54PE</b>
+```
+admin@SONIC01:~$ config vrf add_vrf_vni_map Vrf01 3000 
+```           
 
-# Verify  EVPN-VNI Route Status 
-AS5835-54X
+<b>Verify  EVPN-VNI Route Status </b>
+<b>AS5835-54X</b>
+```
 sonic# show evpn vni detail
 VNI: 1000
  Type: L2
@@ -2833,8 +2959,10 @@ VNI: 3000
   System MAC: 00:a0:c9:00:00:00
   Router MAC: 00:a0:c9:00:00:00
   L2 VNIs: 1000
+```
 
-#A4630-54PE
+<b>A4630-54PE</b>
+```
 sonic# show evpn vni detail
 VNI: 2000
  Type: L2
@@ -2861,11 +2989,12 @@ VNI: 3000
   System MAC: 68:21:5f:29:c0:d2
   Router MAC: 68:21:5f:29:c0:d2
   L2 VNIs: 2000
+```
 
 
-# Verify BGP Route Summary
-
-AS5835-54X
+<b>Verify BGP Route Summary</b>
+<b>AS5835-54X</b>
+```
 sonic# show bgp summary
 IPv4 Unicast Summary (VRF default):
 BGP router identifier 188.188.9.14, local AS number 65100 vrf-id 0
@@ -2883,8 +3012,10 @@ Peers 1, using 723 KiB of memory
 Neighbor        V         AS   MsgRcvd   MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd   PfxSnt Desc
 10.0.0.5        4      65100      1436      1449        0    0    0 03:02:18            4        4 N/A
 Total number of neighbors 1
+```
 
-A4630-54PE
+<b>A4630-54PE</b>
+```
 sonic# show bgp summary
 IPv4 Unicast Summary (VRF default):
 BGP router identifier 188.188.9.6, local AS number 65100 vrf-id 0
@@ -2902,10 +3033,12 @@ Peers 1, using 723 KiB of memory
 Neighbor        V         AS   MsgRcvd   MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd   PfxSnt Desc
 10.0.0.4        4      65100       220       221        0    0    0 03:02:18            4        4 N/A
 Total number of neighbors 1
+```
 
 
-# Validate EVPN route learning
-AS5835-54X
+<b>Validate EVPN route learning</b>
+<b>AS5835-54X</b>
+```
 sonic# show ip route vrf all
 Codes: K - kernel route, C - connected, S - static, R - RIP,
        O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,

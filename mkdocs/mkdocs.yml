@@ -74,11 +74,11 @@ nav:
     - PICOS to SONiC Migration guide: 
       - Why Migrate from PICOS to SONiC?: PICOStoSONiCMigration/PICOS_to_SONiC.md
       - Configuration convertor from PICOS to SONiC: PICOStoSONiCMigration/MainSection.md
-    # - Cumulus to SONiC Migration guide:
-    #   - Migrate from Cumulus to Future Proof and Proven NOS - SONiC: CumulusMigration/cumulus1.md
-    #   - Why Migrate from Cumulus: CumulusMigration/cumulus2.md
-    #   - Why Migrate to SONiC: CumulusMigration/cumulus3.md
-    #   - Configuration convertor from Cumulus to SONiC: CumulusMigration/MainSection.md
+    - Cumulus to SONiC Migration guide:
+      - Migrate from Cumulus to Future Proof and Proven NOS - SONiC: CumulusMigration/cumulus1.md
+      - Why Migrate from Cumulus: CumulusMigration/cumulus2.md
+      - Why Migrate to SONiC: CumulusMigration/cumulus3.md
+      - Configuration convertor from Cumulus to SONiC: CumulusMigration/MainSection.md
   - ONES REST APIs for multi-vendor SONiC:
     - Overview: day2Operations/onesAPI/OnesAPI.md
     - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md

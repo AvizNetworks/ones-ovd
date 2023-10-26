@@ -1,12 +1,14 @@
 # <b>Fabric Manager orchestration Sample APIs</b>
 
 ## <b> ONES Sample REST APIs</b>
+Fabric manager Command line interface provides a network operator an  interface to configure all the open standard protocols and is user-friendly. Network operators can run Fabric Manager CLI (FMCLI)  commands on the device to enter into  the configuration mode and can configure interfaces,  protocols or other required features to bring up services over a data center fabric .
+
 
 ### <b>Prerequisites</b>
 
-- Whole Fabric Manager CLI config file and not just change while doing incremental config/device
-- Devices has to be onboarded in Fabric Manager Controller, below is the API. This is required to eliminate the need of sharing credential repetitively on every API call. 
-- Encryption is in place to avoid storing device credentials in plain text.
+- Network operators are required to construct a complete configuration yaml  file including new incremental configuration section and not only the incremental change in the fabric configuration while doing incremental configuration as a part of Day2 Operations over the ONES enrolled Data center switches 
+- ONES Enrolled Devices will be on-boarded by a Fabric Manager Controller application called ONES  . Following rest API is first called which ensures network operator does not share the login  credentials with a re-occurrence 
+- This API call is well encrypted  which ensures ONES enrolled devices access credentials are not exposed in a  plain text to avoid any security compromise 
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -37,14 +39,14 @@
   <tr>
     <th>Description</th>
     <td>
-      Allows the user to add device facts to the Fabric Manager database. This is a one time operation and is required to be done before any other API call. This API will add the device username, password and IP address to the Fabric Manager database and will be used for all other API calls. This API will also validate the device credentials and will return an error if the credentials are not valid.
+      Allows the user to add device facts like Enrolled Device Management IP , username and Password to the Fabric Manager database. This is a one time operation and is required to be done before making any other API call. This API will add the device username, password and IP address to the Fabric Manager database and will be used for all other API calls. This API will also validate the device credentials and will return an error if the credentials are not valid.
     </td>
   </tr>
   <tr>
     <th>Parameters</th>
     <td>1. Device IP (Mgmt IP/SSH IP) <br />
-	2. Userid (required for ssh) <br />
-	3. Password (required for ssh) <br />
+2. Userid (required for ssh) <br />
+3. Password (required for ssh) <br />
     </td>
   </tr>
   <tr>
@@ -57,7 +59,6 @@
 curl -X POST -H "Content-Type: application/json"
  -d '[{"ip":"device","user":"user","password":"pwd"}]' 
  http://server_ip:server_port/addDeviceFacts
-
 </pre>
     </td>
   </tr>
