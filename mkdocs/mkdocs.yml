@@ -67,7 +67,7 @@ nav:
     - BGP-IP-CLOS-MC LAG : OverviewOnesValidatedDesigns/BGP-IP-CLOS-MCLAG.md
     - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
     - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
-    - DCL EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
+    - DCI EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
   - Migrate to SONiC  Example Configurations :
     - Overview: migrateToSonic/overview.md
     - SONiC NOS Installation from ONIE: SONIC-NOS-INSTALL/SONIC-NOS-INSTALL.md

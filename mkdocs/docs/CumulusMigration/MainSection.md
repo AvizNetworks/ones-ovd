@@ -1164,29 +1164,39 @@ config portchannel member add PortChannel01 Ethernet0
 config portchannel member add PortChannel02 Ethernet1
 config portchannel member add PortChannel03 Ethernet56
 config portchannel member add PortChannel03 Ethernet60
+```
 
-# Creating VLAN interface on MC LAG pair switches running SONiC
+<h4>Creating VLAN interface on MC LAG pair switches running SONiC</h4>
+```
 config vlan add 10
 config vlan add 100
 config vlan member add 10 PortChannel03
 config vlan member add -u 100 PortChannel01
 config vlan member add 100 PortChannel02
 config vlan member add 100 PortChannel03
+```
 
-# Configure MCLAG pair switches with domain ID and child member links
+<h4>Configure MCLAG pair switches with domain ID and child member links</h4>
+```
 config mclag add 1 192.168.10.1 192.168.10.2 PortChannel03
 config mclag unique-ip add Vlan10
 config mclag member add 1 PortChannel01
 config mclag member add 1 PortChannel02
+```
 
-# SONiC configuration for MC LAG peer health check 
+<h4>SONiC configuration for MC LAG peer health check </h4>
+```
 config interface ip add Vlan10 192.168.10.1/24
 config interface ip add Vlan10 192.168.10.2/24
+```
 
-# SONiC Command to Display MC LAG operationalstatus
+<h4>SONiC Command to Display MC LAG operationalstatus</h4>
+```
  show mclag brief
+```
 
-# SONiC command to show MAC address learned for host traffic through member link interfaces 
+<h4>SONiC command to show MAC address learned for host traffic through member link interfaces </h4>
+```
 show mac
 No.    Vlan  MacAddress         Port           Type
 -----  ------  -----------------  -------------  -------
@@ -1194,7 +1204,6 @@ No.    Vlan  MacAddress         Port           Type
     2     100  B8:6A:97:19:BA:12  PortChannel01  Dynamic
     3     100  80:A2:35:5A:22:50  PortChannel02  Dynamic
 Total number of entries 3
-
 ```
 
 
@@ -1202,8 +1211,8 @@ Total number of entries 3
 
 ![Layer3 MultiChasis LAG](../img/Layer3ImageCUMULUS.png)
 
+<h4>Command to create PortChannel on MC LAG Pair switches </h4>
 ```
-# Command to create PortChannel on MC LAG Pair switches 
 config portchannel add PortChannel01
 config portchannel add PortChannel02
 config portchannel add PortChannel03
@@ -1214,8 +1223,9 @@ config portchannel member add PortChannel03 Ethernet60
 
 ```
 
+<h4>Commands to Create Port Channel IPs on MC LAG pair switches </h4>
+
 ```
-# Commands to Create Port Channel IPs on MC LAG pair switches 
 config interface ip add PortChannel01 192.168.11.1/24
 config interface ip add PortChannel02 192.168.12.1/24
 config interface ip add PortChannel03 192.168.10.1/24
@@ -1223,11 +1233,10 @@ config interface ip add PortChannel03 192.168.10.1/24
 config interface ip add PortChannel01 192.168.11.1/24
 config interface ip add PortChannel02 192.168.12.1/24
 config interface ip add PortChannel03 192.168.10.2/24
-
 ```
 
+<h4>Command to configure MCLAG on MC LAG pair switches  (Domain ID, VLANs and MLAG members)</h4>
 ```
-# command to configure MCLAG on MC LAG pair switches  (Domain ID, VLANs and MLAG members)
 config mclag add 1 192.168.10.2 192.168.10.1
 config mclag member add 1 PortChannel01
 config mclag member add 1 PortChannel02
@@ -1235,19 +1244,18 @@ config mclag member add 1 PortChannel02
 config mclag add 1 192.168.10.1 192.168.10.2
 config mclag member add 1 PortChannel01
 config mclag member add 1 PortChannel02
-
 ```
 
+
+<h4>SONiC command to Configure IP for MCLAG Peer health check on MC LAG peers</h4>
 ```
-# SONiC command to Configure IP for MCLAG Peer health check on MC LAG peers
 config interface ip add Vlan10 192.168.10.1/24
 config interface ip add Vlan10 192.168.10.2/24
 ```
 
-
+<h4>Command to show MCLAG Status</h4>
+<b>MC1 switch configuration - </b>
 ```
-# Command to show MCLAG Status
-#MC1 switch configuration - 
 show interfaces portchannel
 Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available,
        S - selected, D - deselected, * - not synced
@@ -1272,10 +1280,12 @@ show mclag brief
         MCLAG Interface              Local/Remote Status
         PortChannel01                Up/Up
         PortChannel02                Up/Up
+```
 
 
-MC2 switch configuration - 
+<b>MC2 switch configuration - </b>
 
+```
 admin@sonic:~$ show interfaces portchannel
 Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available,
        S - selected, D - deselected, * - not synced
@@ -1303,8 +1313,8 @@ admin@sonic:~$ show mclag brief
 ```
 
 
+<b>SONiC Command to verify ARP synchronization</b>
 ```
-SONiC Command to verify ARP synchronization
 mclagdctl dump arp -i 1
 No.   IP                  MAC                 DEV                 Flag
 1     192.168.12.2        80:a2:35:5a:22:50   PortChannel02       R
@@ -1634,8 +1644,8 @@ LLDP is a standard link-layer discovery protocol which can broadcast its capabil
 
 <table>
 <tr>
-<td><b>CUMULUS</b></td>
-<td><b>SONiC</b></td>
+<th><b>CUMULUS</b></th>
+<th><b>SONiC</b></th>
 </tr>
 
 <tr>

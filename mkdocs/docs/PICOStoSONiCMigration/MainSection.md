@@ -347,10 +347,10 @@ PicOS ZTP is disabled.<Br>
 </br>
 <b># Alternative Method is to  edit the PICOS  configuration file picos_start.conf and change the value of the ztp_disable variable.</b><br> 
 </br>
-admin@LEAF-A\$more /etc/picos/picos_start.conf | grep ztp
+admin@LEAF-A$more /etc/picos/picos_start.conf | grep ztp
 ztp_disable=true<br>
 
-\# To enable ZTP, the user needs to set ztp_disable to false.
+# To enable ZTP, the user needs to set ztp_disable to false.
 
 </td>
  <td>
@@ -503,7 +503,7 @@ config radius add &lt;accounting_server_ip> --s &lt;source_interface><br>
   <td>
 
 <b>#sflow commands</b><br>
-ovs-vsctl  --id=@s create sFlow agent=eth0 target=\"10.10.50.207:9901\" header=128 sampling=5000 polling=30 -- set Bridge br0 sflow=@s<br>
+ovs-vsctl  --id=@s create sFlow agent=eth0 target="10.10.50.207:9901" header=128 sampling=5000 polling=30 -- set Bridge br0 sflow=@s<br>
 ovs-vsctl list sflow<br>
 ovs-vsctl -- clear Bridge br0 sflow
 
@@ -1128,7 +1128,7 @@ config interface ip add PortChannel03 192.168.10.2/24
 
 <br>
 
-<b>command to configure MCLAG on MC LAG pair switches  (Domain ID, VLANs and MLAG members)</b>
+<b>Command to configure MCLAG on MC LAG pair switches  (Domain ID, VLANs and MLAG members)</b>
 ```
 config mclag add 1 192.168.10.2 192.168.10.1
 config mclag member add 1 PortChannel01
@@ -2749,7 +2749,7 @@ config vrf add_vrf_vni_map &lt;VRF-NAME> &lt;VNI_VALUE>  <br>
 config save -y <br>
 <br>
 <b>#Establish a BGP environment for EVPN</b><br>
-\# vtysh command<br>
+<b># vtysh command</b><br>
 router bgp &lt;LOCAL_AS_NUMBER> <br>
 neighbor &lt;ebgp_neighbor_ip> remote-as &lt;REMOTE_AS_NUMBER><br>
 address-family ipv4 unicast<br>
@@ -2798,7 +2798,7 @@ show ip route vrf all<Br>
 <b>AS5835-54X</b>
 ```
 admin@SONIC01:~$ config interface ip add Loopback0 1.1.1.1/32
-admin@SONIC01:~$ config interface ip add Ethernet48 10.0.0.4/31\
+admin@SONIC01:~$ config interface ip add Ethernet48 10.0.0.4/31
 ```
 
 <b>A4630-54PE</b>
