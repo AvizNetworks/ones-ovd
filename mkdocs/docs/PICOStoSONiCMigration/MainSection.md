@@ -1009,10 +1009,9 @@ run show mlag link {<link-id>| summary}<Br>
 <b>#MCLAG Domain & Peer Configuration</b><br>
 config interface ip add &lt;VLAN ID> &lt;SVI-IP><br>
 config mclag add &lt;mclag-id> &lt;local-ip> &lt;remote-ip> &lt;peer-pch><br>
-config mclag unique-ip add &lt;peer-vlan>,br
-</br>
+config mclag unique-ip add &lt;peer-vlan>
+</br></br>
 <b>#MCLAG  Members</b><br>
-</br>
 config mclag member add &lt;mclag-id> &lt;member-pch><br>
 </br>
 <b>#MCLAG Show</b><br>
