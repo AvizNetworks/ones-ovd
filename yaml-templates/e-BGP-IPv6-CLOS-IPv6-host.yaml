@@ -12,7 +12,7 @@ Connectivity:
       ASN: 2001
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag: 
       Links:
         - link: "S1_Ethernet0 | L1_Ethernet48"
@@ -33,7 +33,7 @@ Connectivity:
       ASN: 2002
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag: 
       Links:
         - link: "S2_Ethernet0 | L1_Ethernet52"
@@ -55,7 +55,7 @@ Connectivity:
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag:
       Links:
         - link: "L1_Ethernet48 | S1_Ethernet0"
@@ -81,7 +81,7 @@ Connectivity:
       ASN: 1002
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag:
       Links:
         - link: "L2_Ethernet48 | S1_Ethernet4"
@@ -107,7 +107,7 @@ Connectivity:
       ASN: 1003
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag:
       Links:
         - link: "L3_Ethernet48 | S1_Ethernet8"
@@ -133,7 +133,7 @@ Connectivity:
       ASN: 1004
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag:
       Links:
         - link: "L4_Ethernet48 | S1_Ethernet12"
@@ -183,3 +183,4 @@ SYSLOG:
 SNMP:
   trapserver: "100.100.10.10"
 Parameters:
+  hosts_per_l3_subnet: 10

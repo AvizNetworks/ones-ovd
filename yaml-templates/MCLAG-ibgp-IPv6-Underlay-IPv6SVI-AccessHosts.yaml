@@ -12,7 +12,7 @@ Connectivity:
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag: null
       Links:
         - link: "S1_Ethernet0 | L1_Ethernet48"
@@ -33,7 +33,7 @@ Connectivity:
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag: null
       Links:
         - link: "S2_Ethernet0 | L1_Ethernet52"
@@ -55,7 +55,7 @@ Connectivity:
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag:
         enabled: true
         peer: "L2"
@@ -69,7 +69,8 @@ Connectivity:
           properties: null
         - link: "L1_Ethernet56 |  L2_Ethernet56"
           staticLink: true
-          properties: null
+          properties:
+            mode: "MC-LAG"
         - link: "L1_Ethernet0 |  H1_Ethernet0"
           staticLink: true
           properties:
@@ -88,7 +89,7 @@ Connectivity:
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag:
         enabled: true
         peer: "L1"
@@ -102,7 +103,8 @@ Connectivity:
           properties: null
         - link: "L2_Ethernet56 | L1_Ethernet56"
           staticLink: true
-          properties: null
+          properties:
+            mode: "MC-LAG"
         - link: "L2_Ethernet0 |  H1_Ethernet1"
           staticLink: true
           properties:
@@ -121,7 +123,7 @@ Connectivity:
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag:
         enabled: true
         peer: "L4"
@@ -135,7 +137,8 @@ Connectivity:
           properties: null
         - link: "L3_Ethernet56 | L4_Ethernet56"
           staticLink: true
-          properties: null
+          properties:
+            mode: "MC-LAG"
         - link: "L3_Ethernet0 |  H3_Ethernet0"
           staticLink: true
           properties:
@@ -154,7 +157,7 @@ Connectivity:
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "YourPaSsWoRd"
+        password: "admin"
       mclag:
         enabled: true
         peer: "L3"
@@ -168,7 +171,8 @@ Connectivity:
           properties: null
         - link: "L4_Ethernet56 | L3_Ethernet56"
           staticLink: true
-          properties: null
+          properties:
+            mode: "MC-LAG"
         - link: "L4_Ethernet0 |  H3_Ethernet1"
           staticLink: true
           properties:

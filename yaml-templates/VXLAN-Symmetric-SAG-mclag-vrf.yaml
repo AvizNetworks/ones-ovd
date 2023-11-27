@@ -57,6 +57,9 @@ Connectivity:
         user: "admin"
         password: "admin"
       mclag:
+        enabled: true
+        peer: "L2"
+        keepalive_vlan: 998
       Links:
         - link: "L1_Ethernet48 | S1_Ethernet0"
           staticLink: true
@@ -66,25 +69,33 @@ Connectivity:
           properties: 
         - link: "L1_Ethernet56 |  L2_Ethernet56"
           staticLink: true
-          properties: 
+          properties:
+            mode: "MC-LAG" 
         - link: "L1_Ethernet0 |  H1_Ethernet0"
           staticLink: true
           properties:
-            mode: "L2-Access"
-            vlan: 201
+            mode: "L2-Trunk"
+            vlan: 300
+            mc_po_group: 300
+            vrf: "evpn"
         - link: "L1_Ethernet4 |  H2_Ethernet0"
           staticLink: true
           properties:
-            mode: "L2-Access"
-            vlan: 202
+            mode: "L2-Trunk"
+            vlan: 301
+            mc_po_group: 301
+            vrf: "evpn"
     - switchId: 2
       switchName: "Leaf-2"
       ipAddress: "100.100.10.14"
-      ASN: 1002
+      ASN: 1001
       Credentials:
         user: "admin"
         password: "admin"
       mclag:
+        enabled: true
+        peer: "L1"
+        keepalive_vlan: 998
       Links:
         - link: "L2_Ethernet48 | S1_Ethernet4"
           staticLink: true
@@ -94,25 +105,33 @@ Connectivity:
           properties: 
         - link: "L2_Ethernet56 | L1_Ethernet56"
           staticLink: true
-          properties: 
+          properties:
+            mode: "MC-LAG" 
         - link: "L2_Ethernet0 |  H1_Ethernet1"
           staticLink: true
           properties:
-            mode: "L2-Access"
-            vlan: 201
+            mode: "L2-Trunk"
+            vlan: 300
+            mc_po_group: 300
+            vrf: "evpn"
         - link: "L2_Ethernet4 |  H2_Ethernet1"
           staticLink: true
           properties:
-            mode: "L2-Access"
-            vlan: 202
+            mode: "L2-Trunk"
+            vlan: 301
+            mc_po_group: 301
+            vrf: "evpn"
     - switchId: 3
       switchName: "Leaf-3"
       ipAddress: "100.100.10.15"
-      ASN: 1003
+      ASN: 1002
       Credentials:
         user: "admin"
         password: "admin"
       mclag:
+        enabled: true
+        peer: "L4"
+        keepalive_vlan: 998
       Links:
         - link: "L3_Ethernet48 | S1_Ethernet8"
           staticLink: true
@@ -122,25 +141,33 @@ Connectivity:
           properties: 
         - link: "L3_Ethernet56 | L4_Ethernet56"
           staticLink: true
-          properties: 
+          properties:
+            mode: "MC-LAG" 
         - link: "L3_Ethernet0 |  H3_Ethernet0"
           staticLink: true
           properties:
-            mode: "L2-Access"
-            vlan: 203
+            mode: "L2-Trunk"
+            vlan: 300
+            mc_po_group: 300
+            vrf: "evpn"
         - link: "L3_Ethernet4 |  H4_Ethernet0"
           staticLink: true
           properties:
-            mode: "L2-Access"
-            vlan: 204
+            mode: "L2-Trunk"
+            vlan: 301
+            mc_po_group: 301
+            vrf: "evpn"
     - switchId: 4
       switchName: "Leaf-4"
       ipAddress: "100.100.10.16"
-      ASN: 1004
+      ASN: 1002
       Credentials:
         user: "admin"
         password: "admin"
       mclag:
+        enabled: true
+        peer: "L3"
+        keepalive_vlan: 998
       Links:
         - link: "L4_Ethernet48 | S1_Ethernet12"
           staticLink: true
@@ -150,20 +177,25 @@ Connectivity:
           properties: 
         - link: "L4_Ethernet56 | L3_Ethernet56"
           staticLink: true
-          properties: 
+          properties:
+            mode: "MC-LAG" 
         - link: "L4_Ethernet0 |  H3_Ethernet1"
           staticLink: true
           properties:
-            mode: "L2-Access"
-            vlan: 203
+            mode: "L2-Trunk"
+            vlan: 300
+            mc_po_group: 300
+            vrf: "evpn"
         - link: "L4_Ethernet4 |  H4_Ethernet1"
           staticLink: true
           properties:
-            mode: "L2-Access"
-            vlan: 204
+            mode: "L2-Trunk"
+            vlan: 301
+            mc_po_group: 301
+            vrf: "evpn"
   Tor: []
 BGP:
-  BGP_U: false
+  BGP_U: true
   ND_RA: 30
 PhysicalIfCfg:
   FEC: "Off"
@@ -175,7 +207,7 @@ ASN:
   Leaf: "51000-60000"
   Tor: "61000-70000"
 IPv4Pool:
-  Loopback: "10.10.10.0/24"
+  Loopback: "10.10.200.0/24"
   LeafSpine: "40.0.0.0/24"
   LeafTor: "39.0.0.0/24"
   Host: "49.0.0.0/24"
@@ -191,10 +223,12 @@ SYSLOG:
 SNMP:
   trapserver: "100.100.10.10"
 Parameters:
-  vlan: "200-205"
-  vni: 
-  anycast_gateway: 4001::0/64
+  vlan: "300-310"
+  vni: "10300-10310"
+  anycast_gateway: "208.64.160.0/23"
   anycast_mac: "00:11:22:33:44:55"
   hosts_per_vlan: 10
-  routing_symmetric: false
-  sag: false
+  routing_symmetric: true
+  irb_vlan: "800-805"
+  irb_vni: "10800-10805"
+  sag: true
