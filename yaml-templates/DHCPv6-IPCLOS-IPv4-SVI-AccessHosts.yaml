@@ -13,20 +13,20 @@ Connectivity:
       Credentials:
         user: "admin"
         password: "admin"
-      mclag: 
+      mclag: null
       Links:
         - link: "S1_Ethernet0 | L1_Ethernet48"
           staticLink: true
-          properties: 
+          properties: null
         - link: "S1_Ethernet4 | L2_Ethernet48"
           staticLink: true
-          properties: 
+          properties: null
         - link: "S1_Ethernet8 | L3_Ethernet48"
           staticLink: true
-          properties: 
+          properties: null
         - link: "S1_Ethernet12 | L4_Ethernet48"
           staticLink: true
-          properties: 
+          properties: null
     - switchId: 2
       switchName: "Spine-2"
       ipAddress: "100.100.10.12"
@@ -34,20 +34,20 @@ Connectivity:
       Credentials:
         user: "admin"
         password: "admin"
-      mclag: 
+      mclag: null
       Links:
         - link: "S2_Ethernet0 | L1_Ethernet52"
           staticLink: true
-          properties: 
+          properties: null
         - link: "S2_Ethernet4 | L2_Ethernet52"
           staticLink: true
-          properties: 
+          properties: null
         - link: "S2_Ethernet8 | L3_Ethernet52"
           staticLink: true
-          properties: 
+          properties: null
         - link: "S2_Ethernet12 | L4_Ethernet52"
           staticLink: true
-          properties: 
+          properties: null
   Leaf:
     - switchId: 1
       switchName: "Leaf-1"
@@ -60,16 +60,15 @@ Connectivity:
       Links:
         - link: "L1_Ethernet48 | S1_Ethernet0"
           staticLink: true
-          properties: 
+          properties: null
         - link: "L1_Ethernet52 | S2_Ethernet0"
           staticLink: true
-          properties: 
+          properties: null
         - link: "L1_Ethernet0 |  H1_Ethernet0"
           staticLink: true
           properties:
-            mode: "L2-Trunk"
-            vlan: 201
-            mc_po_group: 201
+            mode: "L2-Access"
+            vlan: 200
     - switchId: 2
       switchName: "Leaf-2"
       ipAddress: "100.100.10.14"
@@ -81,16 +80,15 @@ Connectivity:
       Links:
         - link: "L2_Ethernet48 | S1_Ethernet4"
           staticLink: true
-          properties: 
+          properties: null
         - link: "L2_Ethernet52 | S2_Ethernet4"
           staticLink: true
-          properties: 
+          properties: null
         - link: "L2_Ethernet4 |  H2_Ethernet1"
           staticLink: true
           properties:
-            mode: "L2-Trunk"
-            vlan: 202
-            mc_po_group: 202
+            mode: "L2-Access"
+            vlan: 201
     - switchId: 3
       switchName: "Leaf-3"
       ipAddress: "100.100.10.15"
@@ -102,16 +100,15 @@ Connectivity:
       Links:
         - link: "L3_Ethernet48 | S1_Ethernet8"
           staticLink: true
-          properties: 
+          properties: null
         - link: "L3_Ethernet52 | S2_Ethernet8"
           staticLink: true
-          properties: 
+          properties: null
         - link: "L3_Ethernet0 |  H3_Ethernet0"
           staticLink: true
           properties:
-            mode: "L2-Trunk"
-            vlan: 203
-            mc_po_group: 203
+            mode: "L2-Access"
+            vlan: 200
     - switchId: 4
       switchName: "Leaf-4"
       ipAddress: "100.100.10.16"
@@ -123,19 +120,18 @@ Connectivity:
       Links:
         - link: "L4_Ethernet48 | S1_Ethernet12"
           staticLink: true
-          properties: 
+          properties: null
         - link: "L4_Ethernet52 | S2_Ethernet12"
           staticLink: true
-          properties: 
+          properties: null
         - link: "L4_Ethernet4 |  H4_Ethernet1"
           staticLink: true
           properties:
-            mode: "L2-Trunk"
-            vlan: 204
-            mc_po_group: 204
+            mode: "L2-Access"
+            vlan: 201
   Tor: []
 BGP:
-  BGP_U: true
+  BGP_U: false
   ND_RA: 30
 PhysicalIfCfg:
   FEC: "Off"
@@ -152,9 +148,9 @@ IPv4Pool:
   LeafTor: "39.0.0.0/24"
   Host: "49.0.0.0/24"
 IPv6Pool:
-  LeafSpine: 
-  LeafTor: 
-  Host: 
+  LeafSpine: null
+  LeafTor: null
+  Host: null
 NTP:
   server: "100.100.10.10"
   timezone: "Asia/Kolkata"
@@ -162,11 +158,10 @@ SYSLOG:
   server: "100.100.10.10"
 SNMP:
   trapserver: "100.100.10.10"
+DHCPRelay:
+  server: "2000::1" # can be one or more than one comma separated list
+  sourceinterface: "Loopback0" #it could be any valid interface name here
 Parameters:
   vlan: "200-205"
-  vni: "20000-20005"
   anycast_gateway: "100.10.0.0/23"
-  anycast_mac: "00:11:22:33:44:55"
   hosts_per_vlan: 10
-  routing_symmetric: false
-  sag: true
