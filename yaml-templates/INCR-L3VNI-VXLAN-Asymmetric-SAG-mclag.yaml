@@ -9,7 +9,7 @@ Connectivity:
     - switchId: 1
       switchName: "Spine-1"
       ipAddress: "100.100.10.11"
-      ASN: 1001
+      ASN: 2001
       Credentials:
         user: "admin"
         password: "admin"
@@ -30,7 +30,7 @@ Connectivity:
     - switchId: 2
       switchName: "Spine-2"
       ipAddress: "100.100.10.12"
-      ASN: 1001
+      ASN: 2002
       Credentials:
         user: "admin"
         password: "admin"
@@ -57,6 +57,9 @@ Connectivity:
         user: "admin"
         password: "admin"
       mclag:
+        enabled: true
+        peer: "L2"
+        keepalive_vlan: 10
       Links:
         - link: "L1_Ethernet48 | S1_Ethernet0"
           staticLink: true
@@ -64,12 +67,24 @@ Connectivity:
         - link: "L1_Ethernet52 | S2_Ethernet0"
           staticLink: true
           properties: 
+        - link: "L1_Ethernet56 |  L2_Ethernet56"
+          staticLink: true
+          properties:
+            mode: "MC-LAG" 
         - link: "L1_Ethernet0 |  H1_Ethernet0"
           staticLink: true
           properties:
             mode: "L2-Trunk"
             vlan: 201
             mc_po_group: 201
+            vrf: 1
+        - link: "L1_Ethernet4 |  H2_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 202
+            mc_po_group: 202
+            vrf: 1
     - switchId: 2
       switchName: "Leaf-2"
       ipAddress: "100.100.10.14"
@@ -78,6 +93,9 @@ Connectivity:
         user: "admin"
         password: "admin"
       mclag:
+        enabled: true
+        peer: "L1"
+        keepalive_vlan: 10
       Links:
         - link: "L2_Ethernet48 | S1_Ethernet4"
           staticLink: true
@@ -85,20 +103,35 @@ Connectivity:
         - link: "L2_Ethernet52 | S2_Ethernet4"
           staticLink: true
           properties: 
+        - link: "L2_Ethernet56 | L1_Ethernet56"
+          staticLink: true
+          properties:
+            mode: "MC-LAG" 
+        - link: "L2_Ethernet0 |  H1_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201
+            mc_po_group: 201
+            vrf: 1
         - link: "L2_Ethernet4 |  H2_Ethernet1"
           staticLink: true
           properties:
             mode: "L2-Trunk"
             vlan: 202
             mc_po_group: 202
+            vrf: 1
     - switchId: 3
       switchName: "Leaf-3"
       ipAddress: "100.100.10.15"
-      ASN: 1001
+      ASN: 1002
       Credentials:
         user: "admin"
         password: "admin"
       mclag:
+        enabled: true
+        peer: "L4"
+        keepalive_vlan: 10
       Links:
         - link: "L3_Ethernet48 | S1_Ethernet8"
           staticLink: true
@@ -106,20 +139,35 @@ Connectivity:
         - link: "L3_Ethernet52 | S2_Ethernet8"
           staticLink: true
           properties: 
+        - link: "L3_Ethernet56 | L4_Ethernet56"
+          staticLink: true
+          properties:
+            mode: "MC-LAG" 
         - link: "L3_Ethernet0 |  H3_Ethernet0"
           staticLink: true
           properties:
             mode: "L2-Trunk"
             vlan: 203
             mc_po_group: 203
+            vrf: 1
+        - link: "L3_Ethernet4 |  H4_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 204
+            mc_po_group: 204
+            vrf: 1
     - switchId: 4
       switchName: "Leaf-4"
       ipAddress: "100.100.10.16"
-      ASN: 1001
+      ASN: 1002
       Credentials:
         user: "admin"
         password: "admin"
       mclag:
+        enabled: true
+        peer: "L3"
+        keepalive_vlan: 10
       Links:
         - link: "L4_Ethernet48 | S1_Ethernet12"
           staticLink: true
@@ -127,15 +175,27 @@ Connectivity:
         - link: "L4_Ethernet52 | S2_Ethernet12"
           staticLink: true
           properties: 
+        - link: "L4_Ethernet56 | L3_Ethernet56"
+          staticLink: true
+          properties:
+            mode: "MC-LAG" 
+        - link: "L4_Ethernet0 |  H3_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 203
+            mc_po_group: 203
+            vrf: 1
         - link: "L4_Ethernet4 |  H4_Ethernet1"
           staticLink: true
           properties:
             mode: "L2-Trunk"
             vlan: 204
             mc_po_group: 204
+            vrf: 1
   Tor: []
 BGP:
-  BGP_U: true
+  BGP_U: false
   ND_RA: 30
 PhysicalIfCfg:
   FEC: "Off"
@@ -168,5 +228,7 @@ Parameters:
   anycast_gateway: "100.10.0.0/23"
   anycast_mac: "00:11:22:33:44:55"
   hosts_per_vlan: 10
-  routing_symmetric: false
-  sag: true
+  routing_symmetric: true
+  irb_vlan: "400-405"
+  irb_vni: "40000-40005"
+  sag: False

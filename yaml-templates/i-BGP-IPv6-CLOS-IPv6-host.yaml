@@ -183,3 +183,4 @@ SYSLOG:
 SNMP:
   trapserver: "100.100.10.10"
 Parameters:
+  hosts_per_l3_subnet: 10

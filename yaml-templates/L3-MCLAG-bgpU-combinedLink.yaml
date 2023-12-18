@@ -68,7 +68,7 @@ Connectivity:
         - link: "L1_Ethernet52 | S2_Ethernet0"
           staticLink: true
           properties: null        
-        - link: "L1_Ethernet64 |  L2_Ethernet64"
+        - link: "L1_Ethernet60 |  L2_Ethernet60"
           staticLink: true
           properties:
             mode: "MC-LAG-BGP"
@@ -109,7 +109,7 @@ Connectivity:
           staticLink: true
           properties:
             mode: "MC-LAG-BGP"
-        - link: "L2_Ethernet64 | L1_Ethernet64"
+        - link: "L2_Ethernet60 | L1_Ethernet60"
           staticLink: true
           properties:
             mode: "MC-LAG-BGP"            
