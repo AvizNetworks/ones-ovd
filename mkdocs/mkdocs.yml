@@ -68,6 +68,15 @@ nav:
     - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
     - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
     - DCI EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
+    - Layer 2 Leaf Spine Topology: OverviewOnesValidatedDesigns/Layer2LeafSpineTopology.md
+    - Rack-2-Rack Deployement: OverviewOnesValidatedDesigns/Rack2Deployement.md
+    - Layer 3 MC-LAG: OverviewOnesValidatedDesigns/Layer3mclag.md
+    - BGP over MC-LAG peering with Port channel ICL Link: OverviewOnesValidatedDesigns/BGPoverMCLAGpeeringwithPortchannelICLLink.md
+    - BGP over MC-LAG peering separate ICL link: OverviewOnesValidatedDesigns/BGPoverMCLAGpeeringseparateICLlink.md
+    - Layer3 BGP over Simple Link Aggregation (LAG) : OverviewOnesValidatedDesigns/Layer3BGPoverSimpleLinkAggregationLAG.md
+    - DHCP IP-CLOS SVI Access Host: OverviewOnesValidatedDesigns/DHCP_IP-CLOSSVIAccessHost.md
+    - BGP over Port Channel with Sflow enabled: OverviewOnesValidatedDesigns/BGPoverPortChannelwithSflowenabled.md
+
   - Migrate to SONiC  Example Configurations :
     - Overview: migrateToSonic/overview.md
     - SONiC NOS Installation from ONIE: SONIC-NOS-INSTALL/SONIC-NOS-INSTALL.md
