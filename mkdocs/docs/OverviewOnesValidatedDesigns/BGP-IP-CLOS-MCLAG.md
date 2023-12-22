@@ -1,6 +1,6 @@
 # <b> BGP-IP-CLOS-MCLAG</b> 
 
-![configuration](../img/ThirdImage.png)
+![configuration](../img/image14_BGP_IP_CLOS_MCLAG.png)
 
 ## <b> Configuration</b>
 
@@ -26,11 +26,11 @@ Connectivity:
   Spine:
     - switchId: 1
       switchName: "Spine-1"
-      ipAddress: "10.101.118.11"
+      ipAddress: "x.x.x.11"
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag: null
       Links:
         - link: "S1_Ethernet0 | L1_Ethernet48"
@@ -47,11 +47,11 @@ Connectivity:
           properties: null
     - switchId: 2
       switchName: "Spine-2"
-      ipAddress: "10.101.118.12"
+      ipAddress: "x.x.x.12"
       ASN: 1002
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag: null
       Links:
         - link: "S2_Ethernet0 | L1_Ethernet52"
@@ -69,11 +69,11 @@ Connectivity:
   Leaf:
     - switchId: 1
       switchName: "Leaf-1"
-      ipAddress: "10.101.118.13"
+      ipAddress: "x.x.x.13"
       ASN: 2001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
         enabled: true
         peer: "L2"
@@ -87,7 +87,8 @@ Connectivity:
           properties: null
         - link: "L1_Ethernet56 |  L2_Ethernet56"
           staticLink: true
-          properties: null
+          properties:
+            mode: "MC-LAG"
         - link: "L1_Ethernet0 |  H1_Ethernet0"
           staticLink: true
           properties:
@@ -102,11 +103,11 @@ Connectivity:
             mc_po_group: 201
     - switchId: 2
       switchName: "Leaf-2"
-      ipAddress: "10.101.118.14"
+      ipAddress: "x.x.x.14"
       ASN: 2001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
         enabled: true
         peer: "L1"
@@ -120,7 +121,8 @@ Connectivity:
           properties: null
         - link: "L2_Ethernet56 | L1_Ethernet56"
           staticLink: true
-          properties: null
+          properties:
+            mode: "MC-LAG"
         - link: "L2_Ethernet0 |  H1_Ethernet1"
           staticLink: true
           properties:
@@ -135,7 +137,7 @@ Connectivity:
             mc_po_group: 201
     - switchId: 3
       switchName: "Leaf-3"
-      ipAddress: "10.101.118.15"
+      ipAddress: "x.x.x.15"
       ASN: 2002
       Credentials:
         user: "admin"
@@ -153,7 +155,8 @@ Connectivity:
           properties: null
         - link: "L3_Ethernet56 | L4_Ethernet56"
           staticLink: true
-          properties: null
+          properties:
+            mode: "MC-LAG"
         - link: "L3_Ethernet0 |  H3_Ethernet0"
           staticLink: true
           properties:
@@ -168,7 +171,7 @@ Connectivity:
             mc_po_group: 201
     - switchId: 4
       switchName: "Leaf-4"
-      ipAddress: "10.101.118.16"
+      ipAddress: "x.x.x.16"
       ASN: 2002
       Credentials:
         user: "admin"
@@ -186,7 +189,8 @@ Connectivity:
           properties: null
         - link: "L4_Ethernet56 | L3_Ethernet56"
           staticLink: true
-          properties: null
+          properties:
+            mode: "MC-LAG"
         - link: "L4_Ethernet0 |  H3_Ethernet1"
           staticLink: true
           properties:
@@ -222,22 +226,21 @@ IPv6Pool:
   LeafTor: null
   Host: null
 NTP:
-  server: "10.101.118.10"
+  server: "x.x.x.10"
   timezone: "Asia/Kolkata"
 SYSLOG:
-  server: "10.101.118.10"
+  server: "x.x.x.10"
 SNMP:
-  trapserver: "10.101.118.10"
+  trapserver: "x.x.x.10"
 Parameters:
   vlan: "200-205"
-anycast_gateway: "100.10.0.0/23"
+  anycast_gateway: "x.x.x.0/23"
   hosts_per_vlan: 10
-
 ```
 
 ### <b> Config Applied and Verified through UI</b>
 
-![configuration](../img/ipclos-mclag-bgp.png)
+![configuration](../img/Configure_VALIDATE_Verify.png)
 
 ### <b> Applied Configuration on Switches</b>
 

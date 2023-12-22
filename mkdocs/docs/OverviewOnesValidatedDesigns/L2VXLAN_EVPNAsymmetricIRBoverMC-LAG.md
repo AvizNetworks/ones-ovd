@@ -7,7 +7,7 @@ With this model, VXLAN traffic must use the destination L2 VNI in each direction
 Operators have to configure all source and destination VLANs and their corresponding L2VNI values on each leaf switch even if a leaf switch does not host traffic for some of those VLANs. As a result, this model has scaling issues when the network has a large number of VLANs. However, when Data centers operations have fewer VLANs, this model will have lower latency over the L3VNI symmetric model. 
 
 
-![configuration](../img/FourthImage.png)
+![configuration](../img/image9_L2_VXLAN_EVPN_Asymmetric_IRB_over_MC-LAG.png)
 
 ## <b>Configuration</b>
 
@@ -63,11 +63,11 @@ Connectivity:
   Spine:
     - switchId: 1
       switchName: "Spine-1"
-      ipAddress: "10.101.118.11"
+      ipAddress: "x.x.x.11"
       ASN: 2001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "S1_Ethernet0 | L1_Ethernet48"
@@ -84,11 +84,11 @@ Connectivity:
           properties:
     - switchId: 2
       switchName: "Spine-2"
-      ipAddress: "10.101.118.12"
+      ipAddress: "x.x.x.12"
       ASN: 2002
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "S2_Ethernet0 | L1_Ethernet52"
@@ -106,11 +106,11 @@ Connectivity:
   Leaf:
     - switchId: 1
       switchName: "Leaf-1"
-      ipAddress: "10.101.118.13"
+      ipAddress: "x.x.x.13"
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
         enabled: true
         peer: "L2"
@@ -125,6 +125,7 @@ Connectivity:
         - link: "L1_Ethernet56 |  L2_Ethernet56"
           staticLink: true
           properties:
+            mode: "MC-LAG"
         - link: "L1_Ethernet0 |  H1_Ethernet0"
           staticLink: true
           properties:
@@ -139,11 +140,11 @@ Connectivity:
             mc_po_group: 202
     - switchId: 2
       switchName: "Leaf-2"
-      ipAddress: "10.101.118.14"
+      ipAddress: "x.x.x.14"
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
         enabled: true
         peer: "L1"
@@ -158,6 +159,7 @@ Connectivity:
         - link: "L2_Ethernet56 | L1_Ethernet56"
           staticLink: true
           properties:
+            mode: "MC-LAG"
         - link: "L2_Ethernet0 |  H1_Ethernet1"
           staticLink: true
           properties:
@@ -172,7 +174,7 @@ Connectivity:
             mc_po_group: 202
     - switchId: 3
       switchName: "Leaf-3"
-      ipAddress: "10.101.118.15"
+      ipAddress: "x.x.x.15"
       ASN: 1002
       Credentials:
         user: "admin"
@@ -191,6 +193,7 @@ Connectivity:
         - link: "L3_Ethernet56 | L4_Ethernet56"
           staticLink: true
           properties:
+            mode: "MC-LAG"
         - link: "L3_Ethernet0 |  H3_Ethernet0"
           staticLink: true
           properties:
@@ -203,9 +206,9 @@ Connectivity:
             mode: "L2-Trunk"
             vlan: 204
             mc_po_group: 204
-- switchId: 4
+    - switchId: 4
       switchName: "Leaf-4"
-      ipAddress: "10.101.118.16"
+      ipAddress: "x.x.x.16"
       ASN: 1002
       Credentials:
         user: "admin"
@@ -224,6 +227,7 @@ Connectivity:
         - link: "L4_Ethernet56 | L3_Ethernet56"
           staticLink: true
           properties:
+            mode: "MC-LAG"
         - link: "L4_Ethernet0 |  H3_Ethernet1"
           staticLink: true
           properties:
@@ -259,25 +263,25 @@ IPv6Pool:
   LeafTor:
   Host:
 NTP:
-  server: "10.101.118.10"
+  server: "x.x.x.10"
   timezone: "Asia/Kolkata"
 SYSLOG:
-  server: "10.101.118.10"
+  server: "x.x.x.10"
 SNMP:
-  trapserver: "10.101.118.10"
+  trapserver: "x.x.x.10"
 Parameters:
   vlan: "200-205"
   vni: "20000-20005"
-  anycast_gateway: "100.10.0.0/23"
+  anycast_gateway: "x.x.x.0/23"
   anycast_mac: "00:11:22:33:44:55"
- hosts_per_vlan: 10
+  hosts_per_vlan: 10
   routing_symmetric: false
   sag: true
 
 ```
 ### <b> Config Applied and Verified</b>
 
-![configuration](../img/L2-VXLAN.png)
+![configuration](../img/Configure_VALIDATE_Verify.md.png)
 
 ### <b> Applied Configuration on Switches</b>
 

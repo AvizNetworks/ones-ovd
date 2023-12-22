@@ -1,4 +1,5 @@
 # <b>BGP over Port Channel with Sflow enabled</b>
+This template enables NetOps to enable Sflow sampling on the egress port channel  interface of a leaf switch which is either facing server host or facing another Leaf switch 
 
 ## <b>YAML Template</b>
 
@@ -291,6 +292,8 @@ Sflow:
 ```
 
 ## <b>Configure, Validate & Verify through UI</b>
+
+![img](../img/Configure_VALIDATE_Verify.md.png)
 
 
 ## <b>Show running config on sonic switch </b>

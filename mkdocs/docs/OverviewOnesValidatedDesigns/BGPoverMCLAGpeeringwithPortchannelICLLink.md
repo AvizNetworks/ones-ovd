@@ -21,7 +21,7 @@ Layer 3 MC-LAG extends the capabilities of MC-LAG to Layer 3 routing. In a Layer
 - Layer 3 MC-LAG is often employed in data center environments and large enterprise networks where high availability and efficient routing are crucial.
 - It allows multiple switches (Leaf-Spine nodes) to act as a single logical entity for routing purposes, enhancing high availability and load balancing.
 
-
+![img](../img/image15_BGP_over_MCLAG_peering_with_Port_channel_ICL_Link.png)
 
 
 ## <b>YAML Template</b>
@@ -261,556 +261,551 @@ Parameters:
 
 ## <b> Configure, Validate & Verify through UI</b>
 
-## <b>Applied Configuration on Switches<b>
+![img](../img/Configure_VALIDATE_Verify.md.png)
+
+## <b>Applied Configuration on Switches</b>
 
 === "Leaf1"
 
     ```sh
     router-id 10.10.10.3
-ntp add x.x.x.10
-clock timezone Asia/Kolkata
-syslog add x.x.x.10
-snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
-hostname Leaf-1
-ip protocol bgp route-map RM_SET_SRC
-!
-route-map FMCLI_IPV6_NH_GLOBAL permit 1
- on-match next
- set ipv6 next-hop prefer-global
-!
-route-map RM_SET_SRC permit 10
- set src 10.10.10.3
-!
-interface port-channel 200
- mtu 9000
- ip address 49.0.0.0/27
-!
-interface port-channel 201
- mtu 9000
- ip address 49.0.0.32/27
-!
-interface port-channel 999
- mtu 9000
- ip address 192.168.0.0/31
-!
-interface ethernet Ethernet0
- no shutdown
- mtu 9000
- channel-group 200 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet4
- no shutdown
- mtu 9000
- channel-group 201 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet48
- no shutdown
- mtu 9000
- ip address 40.0.0.1/31
- forward-error-correction none
-!
-interface ethernet Ethernet52
- no shutdown
- mtu 9000
- ip address 40.0.0.9/31
- forward-error-correction none
-!
-interface ethernet Ethernet56
- no shutdown
- mtu 9000
- channel-group 999 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet64
- no shutdown
- mtu 9000
- channel-group 999 mode active
- forward-error-correction none
-!
-interface loopback 1
- ip address 10.10.10.3/32
-!
-router bgp 2001
- neighbor 192.168.0.1 remote-as 2001
- neighbor 40.0.0.0 remote-as 1001
- neighbor 40.0.0.8 remote-as 1002
- neighbor 192.168.0.1 capability extended-nexthop
- neighbor 40.0.0.0 capability extended-nexthop
- neighbor 40.0.0.8 capability extended-nexthop
- bgp bestpath as-path multipath-relax
- no bgp ebgp-requires-policy
- address-family ipv4 unicast
-  neighbor 192.168.0.1 allowas-in 1
-  neighbor 40.0.0.0 allowas-in 1
-  neighbor 40.0.0.8 allowas-in 1
-  network 40.0.0.0/31
-  network 40.0.0.8/31
-  redistribute connected
-  redistribute static
- !
- address-family ipv6 unicast
-  redistribute connected
-  redistribute static
- !
-!
-mlag domain-id 1
- peer-address 192.168.0.1
- peer-link port-channel 999
- src-address 192.168.0.0
- member port-channel 200
- member port-channel 201
-
+    ntp add x.x.x.10
+    clock timezone Asia/Kolkata
+    syslog add x.x.x.10
+    snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
+    hostname Leaf-1
+    ip protocol bgp route-map RM_SET_SRC
+    !
+    route-map FMCLI_IPV6_NH_GLOBAL permit 1
+    on-match next
+    set ipv6 next-hop prefer-global
+    !
+    route-map RM_SET_SRC permit 10
+    set src 10.10.10.3
+    !
+    interface port-channel 200
+    mtu 9000
+    ip address 49.0.0.0/27
+    !
+    interface port-channel 201
+    mtu 9000
+    ip address 49.0.0.32/27
+    !
+    interface port-channel 999
+    mtu 9000
+    ip address 192.168.0.0/31
+    !
+    interface ethernet Ethernet0
+    no shutdown
+    mtu 9000
+    channel-group 200 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet4
+    no shutdown
+    mtu 9000
+    channel-group 201 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet48
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.1/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet52
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.9/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet56
+    no shutdown
+    mtu 9000
+    channel-group 999 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet64
+    no shutdown
+    mtu 9000
+    channel-group 999 mode active
+    forward-error-correction none
+    !
+    interface loopback 1
+    ip address 10.10.10.3/32
+    !
+    router bgp 2001
+    neighbor 192.168.0.1 remote-as 2001
+    neighbor 40.0.0.0 remote-as 1001
+    neighbor 40.0.0.8 remote-as 1002
+    neighbor 192.168.0.1 capability extended-nexthop
+    neighbor 40.0.0.0 capability extended-nexthop
+    neighbor 40.0.0.8 capability extended-nexthop
+    bgp bestpath as-path multipath-relax
+    no bgp ebgp-requires-policy
+    address-family ipv4 unicast
+      neighbor 192.168.0.1 allowas-in 1
+      neighbor 40.0.0.0 allowas-in 1
+      neighbor 40.0.0.8 allowas-in 1
+      network 40.0.0.0/31
+      network 40.0.0.8/31
+      redistribute connected
+      redistribute static
+    !
+    address-family ipv6 unicast
+      redistribute connected
+      redistribute static
+    !
+    !
+    mlag domain-id 1
+    peer-address 192.168.0.1
+    peer-link port-channel 999
+    src-address 192.168.0.0
+    member port-channel 200
+    member port-channel 201
     ```
 
 === "Leaf2"
 
     ```sh
     router-id 10.10.10.4
-ntp add x.x.x.10
-clock timezone Asia/Kolkata
-syslog add x.x.x.10
-snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
-hostname Leaf-2
-ip protocol bgp route-map RM_SET_SRC
-!
-route-map FMCLI_IPV6_NH_GLOBAL permit 1
- on-match next
- set ipv6 next-hop prefer-global
-!
-route-map RM_SET_SRC permit 10
- set src 10.10.10.4
-!
-interface port-channel 200
- mtu 9000
- ip address 49.0.0.0/27
-!
-interface port-channel 201
- mtu 9000
- ip address 49.0.0.32/27
-!
-interface port-channel 999
- mtu 9000
- ip address 192.168.0.1/31
-!
-interface ethernet Ethernet0
- no shutdown
- mtu 9000
- channel-group 200 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet4
- no shutdown
- mtu 9000
- channel-group 201 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet48
- no shutdown
- mtu 9000
- ip address 40.0.0.3/31
- forward-error-correction none
-!
-interface ethernet Ethernet52
- no shutdown
- mtu 9000
- ip address 40.0.0.11/31
- forward-error-correction none
-!
-interface ethernet Ethernet56
- no shutdown
- mtu 9000
- channel-group 999 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet64
- no shutdown
- mtu 9000
- channel-group 999 mode active
- forward-error-correction none
-!
-interface loopback 1
- ip address 10.10.10.4/32
-!
-router bgp 2001
- neighbor 40.0.0.10 remote-as 1002
- neighbor 40.0.0.2 remote-as 1001
- neighbor 40.0.0.10 capability extended-nexthop
- neighbor 40.0.0.2 capability extended-nexthop
- bgp bestpath as-path multipath-relax
- no bgp ebgp-requires-policy
- address-family ipv4 unicast
-  neighbor 40.0.0.10 allowas-in 1
-  neighbor 40.0.0.2 allowas-in 1
-  network 40.0.0.10/31
-  network 40.0.0.2/31
-  redistribute connected
-  redistribute static
- !
- address-family ipv6 unicast
-  redistribute connected
-  redistribute static
- !
-!
-mlag domain-id 1
- peer-address 192.168.0.0
- peer-link port-channel 999
- src-address 192.168.0.1
- member port-channel 200
- member port-channel 201
-```
+    ntp add x.x.x.10
+    clock timezone Asia/Kolkata
+    syslog add x.x.x.10
+    snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
+    hostname Leaf-2
+    ip protocol bgp route-map RM_SET_SRC
+    !
+    route-map FMCLI_IPV6_NH_GLOBAL permit 1
+    on-match next
+    set ipv6 next-hop prefer-global
+    !
+    route-map RM_SET_SRC permit 10
+    set src 10.10.10.4
+    !
+    interface port-channel 200
+    mtu 9000
+    ip address 49.0.0.0/27
+    !
+    interface port-channel 201
+    mtu 9000
+    ip address 49.0.0.32/27
+    !
+    interface port-channel 999
+    mtu 9000
+    ip address 192.168.0.1/31
+    !
+    interface ethernet Ethernet0
+    no shutdown
+    mtu 9000
+    channel-group 200 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet4
+    no shutdown
+    mtu 9000
+    channel-group 201 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet48
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.3/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet52
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.11/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet56
+    no shutdown
+    mtu 9000
+    channel-group 999 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet64
+    no shutdown
+    mtu 9000
+    channel-group 999 mode active
+    forward-error-correction none
+    !
+    interface loopback 1
+    ip address 10.10.10.4/32
+    !
+    router bgp 2001
+    neighbor 40.0.0.10 remote-as 1002
+    neighbor 40.0.0.2 remote-as 1001
+    neighbor 40.0.0.10 capability extended-nexthop
+    neighbor 40.0.0.2 capability extended-nexthop
+    bgp bestpath as-path multipath-relax
+    no bgp ebgp-requires-policy
+    address-family ipv4 unicast
+      neighbor 40.0.0.10 allowas-in 1
+      neighbor 40.0.0.2 allowas-in 1
+      network 40.0.0.10/31
+      network 40.0.0.2/31
+      redistribute connected
+      redistribute static
+    !
+    address-family ipv6 unicast
+      redistribute connected
+      redistribute static
+    !
+    !
+    mlag domain-id 1
+    peer-address 192.168.0.0
+    peer-link port-channel 999
+    src-address 192.168.0.1
+    member port-channel 200
+    member port-channel 201
+    ```
 
 === "Leaf3"
 
     ```sh
     router-id 10.10.10.6
-ntp add x.x.x.10
-clock timezone Asia/Kolkata
-syslog add x.x.x.10
-snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
-hostname Leaf-3
-ip protocol bgp route-map RM_SET_SRC
-!
-route-map FMCLI_IPV6_NH_GLOBAL permit 1
- on-match next
- set ipv6 next-hop prefer-global
-!
-route-map RM_SET_SRC permit 10
- set src 10.10.10.6
-!
-interface port-channel 200
- mtu 9000
- ip address 49.0.0.64/27
-!
-interface port-channel 201
- mtu 9000
- ip address 49.0.0.96/27
-!
-interface port-channel 999
- mtu 9000
- ip address 192.168.0.2/31
-!
-interface ethernet Ethernet0
- no shutdown
- mtu 9000
- channel-group 200 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet4
- no shutdown
- mtu 9000
- channel-group 201 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet48
- no shutdown
- mtu 9000
- ip address 40.0.0.5/31
- forward-error-correction none
-!
-interface ethernet Ethernet52
- no shutdown
- mtu 9000
- ip address 40.0.0.13/31
- forward-error-correction none
-!
-interface ethernet Ethernet56
- no shutdown
- mtu 9000
- channel-group 999 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet60
- no shutdown
- mtu 9000
- channel-group 999 mode active
- forward-error-correction none
-!
-interface loopback 1
- ip address 10.10.10.6/32
-!
-router bgp 2002
- neighbor 192.168.0.3 remote-as 2002
- neighbor 40.0.0.12 remote-as 1002
- neighbor 40.0.0.4 remote-as 1001
- neighbor 192.168.0.3 capability extended-nexthop
- neighbor 40.0.0.12 capability extended-nexthop
- neighbor 40.0.0.4 capability extended-nexthop
- bgp bestpath as-path multipath-relax
- no bgp ebgp-requires-policy
- address-family ipv4 unicast
-  neighbor 192.168.0.3 allowas-in 1
-  neighbor 40.0.0.12 allowas-in 1
-  neighbor 40.0.0.4 allowas-in 1
-  network 40.0.0.12/31
-  network 40.0.0.4/31
-  redistribute connected
-  redistribute static
- !
- address-family ipv6 unicast
-  redistribute connected
-  redistribute static
- !
-!
-mlag domain-id 1
- peer-address 192.168.0.3
- peer-link port-channel 999
- src-address 192.168.0.2
- member port-channel 200
- member port-channel 201
-
+    ntp add x.x.x.10
+    clock timezone Asia/Kolkata
+    syslog add x.x.x.10
+    snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
+    hostname Leaf-3
+    ip protocol bgp route-map RM_SET_SRC
+    !
+    route-map FMCLI_IPV6_NH_GLOBAL permit 1
+    on-match next
+    set ipv6 next-hop prefer-global
+    !
+    route-map RM_SET_SRC permit 10
+    set src 10.10.10.6
+    !
+    interface port-channel 200
+    mtu 9000
+    ip address 49.0.0.64/27
+    !
+    interface port-channel 201
+    mtu 9000
+    ip address 49.0.0.96/27
+    !
+    interface port-channel 999
+    mtu 9000
+    ip address 192.168.0.2/31
+    !
+    interface ethernet Ethernet0
+    no shutdown
+    mtu 9000
+    channel-group 200 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet4
+    no shutdown
+    mtu 9000
+    channel-group 201 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet48
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.5/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet52
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.13/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet56
+    no shutdown
+    mtu 9000
+    channel-group 999 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet60
+    no shutdown
+    mtu 9000
+    channel-group 999 mode active
+    forward-error-correction none
+    !
+    interface loopback 1
+    ip address 10.10.10.6/32
+    !
+    router bgp 2002
+    neighbor 192.168.0.3 remote-as 2002
+    neighbor 40.0.0.12 remote-as 1002
+    neighbor 40.0.0.4 remote-as 1001
+    neighbor 192.168.0.3 capability extended-nexthop
+    neighbor 40.0.0.12 capability extended-nexthop
+    neighbor 40.0.0.4 capability extended-nexthop
+    bgp bestpath as-path multipath-relax
+    no bgp ebgp-requires-policy
+    address-family ipv4 unicast
+      neighbor 192.168.0.3 allowas-in 1
+      neighbor 40.0.0.12 allowas-in 1
+      neighbor 40.0.0.4 allowas-in 1
+      network 40.0.0.12/31
+      network 40.0.0.4/31
+      redistribute connected
+      redistribute static
+    !
+    address-family ipv6 unicast
+      redistribute connected
+      redistribute static
+    !
+    !
+    mlag domain-id 1
+    peer-address 192.168.0.3
+    peer-link port-channel 999
+    src-address 192.168.0.2
+    member port-channel 200
+    member port-channel 201
     ```
 
 === "Leaf4"
 
     ```sh
     router-id 10.10.10.7
-ntp add x.x.x.10
-clock timezone Asia/Kolkata
-syslog add x.x.x.10
-snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
-hostname Leaf-4
-ip protocol bgp route-map RM_SET_SRC
-!
-route-map FMCLI_IPV6_NH_GLOBAL permit 1
- on-match next
- set ipv6 next-hop prefer-global
-!
-route-map RM_SET_SRC permit 10
- set src 10.10.10.7
-!
-interface port-channel 200
- mtu 9000
- ip address 49.0.0.64/27
-!
-interface port-channel 201
- mtu 9000
- ip address 49.0.0.96/27
-!
-interface port-channel 999
- mtu 9000
- ip address 192.168.0.3/31
-!
-interface ethernet Ethernet0
- no shutdown
- mtu 9000
- channel-group 200 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet4
- no shutdown
- mtu 9000
- channel-group 201 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet48
- no shutdown
- mtu 9000
- ip address 40.0.0.7/31
- forward-error-correction none
-!
-interface ethernet Ethernet52
- no shutdown
- mtu 9000
- ip address 40.0.0.15/31
- forward-error-correction none
-!
-interface ethernet Ethernet56
- no shutdown
- mtu 9000
- channel-group 999 mode active
- forward-error-correction none
-!
-interface ethernet Ethernet60
- no shutdown
- mtu 9000
- channel-group 999 mode active
- forward-error-correction none
-!
-interface loopback 1
- ip address 10.10.10.7/32
-!
-router bgp 2002
- neighbor 192.168.0.2 remote-as 2002
- neighbor 40.0.0.14 remote-as 1002
- neighbor 40.0.0.6 remote-as 1001
- neighbor 192.168.0.2 capability extended-nexthop
- neighbor 40.0.0.14 capability extended-nexthop
- neighbor 40.0.0.6 capability extended-nexthop
- bgp bestpath as-path multipath-relax
- no bgp ebgp-requires-policy
- address-family ipv4 unicast
-  neighbor 192.168.0.2 allowas-in 1
-  neighbor 40.0.0.14 allowas-in 1
-  neighbor 40.0.0.6 allowas-in 1
-  network 40.0.0.14/31
-  network 40.0.0.6/31
-  redistribute connected
-  redistribute static
- !
- address-family ipv6 unicast
-  redistribute connected
-  redistribute static
- !
-!
-mlag domain-id 1
- peer-address 192.168.0.2
- peer-link port-channel 999
- src-address 192.168.0.3
- member port-channel 200
- member port-channel 201
-
+    ntp add x.x.x.10
+    clock timezone Asia/Kolkata
+    syslog add x.x.x.10
+    snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
+    hostname Leaf-4
+    ip protocol bgp route-map RM_SET_SRC
+    !
+    route-map FMCLI_IPV6_NH_GLOBAL permit 1
+    on-match next
+    set ipv6 next-hop prefer-global
+    !
+    route-map RM_SET_SRC permit 10
+    set src 10.10.10.7
+    !
+    interface port-channel 200
+    mtu 9000
+    ip address 49.0.0.64/27
+    !
+    interface port-channel 201
+    mtu 9000
+    ip address 49.0.0.96/27
+    !
+    interface port-channel 999
+    mtu 9000
+    ip address 192.168.0.3/31
+    !
+    interface ethernet Ethernet0
+    no shutdown
+    mtu 9000
+    channel-group 200 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet4
+    no shutdown
+    mtu 9000
+    channel-group 201 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet48
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.7/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet52
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.15/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet56
+    no shutdown
+    mtu 9000
+    channel-group 999 mode active
+    forward-error-correction none
+    !
+    interface ethernet Ethernet60
+    no shutdown
+    mtu 9000
+    channel-group 999 mode active
+    forward-error-correction none
+    !
+    interface loopback 1
+    ip address 10.10.10.7/32
+    !
+    router bgp 2002
+    neighbor 192.168.0.2 remote-as 2002
+    neighbor 40.0.0.14 remote-as 1002
+    neighbor 40.0.0.6 remote-as 1001
+    neighbor 192.168.0.2 capability extended-nexthop
+    neighbor 40.0.0.14 capability extended-nexthop
+    neighbor 40.0.0.6 capability extended-nexthop
+    bgp bestpath as-path multipath-relax
+    no bgp ebgp-requires-policy
+    address-family ipv4 unicast
+      neighbor 192.168.0.2 allowas-in 1
+      neighbor 40.0.0.14 allowas-in 1
+      neighbor 40.0.0.6 allowas-in 1
+      network 40.0.0.14/31
+      network 40.0.0.6/31
+      redistribute connected
+      redistribute static
+    !
+    address-family ipv6 unicast
+      redistribute connected
+      redistribute static
+    !
+    !
+    mlag domain-id 1
+    peer-address 192.168.0.2
+    peer-link port-channel 999
+    src-address 192.168.0.3
+    member port-channel 200
+    member port-channel 201
     ```
 
 === "Spine1"
 
     ```sh
     router-id 10.10.10.0
-ntp add x.x.x.10
-clock timezone Asia/Kolkata
-syslog add x.x.x.10
-snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
-hostname Spine-1
-ip protocol bgp route-map RM_SET_SRC
-!
-route-map FMCLI_IPV6_NH_GLOBAL permit 1
- on-match next
- set ipv6 next-hop prefer-global
-!
-route-map RM_SET_SRC permit 10
- set src 10.10.10.0
-!
-interface ethernet Ethernet0
- no shutdown
- mtu 9000
- ip address 40.0.0.0/31
- forward-error-correction none
-!
-interface ethernet Ethernet12
- no shutdown
- mtu 9000
- ip address 40.0.0.6/31
- forward-error-correction none
-!
-interface ethernet Ethernet4
- no shutdown
- mtu 9000
- ip address 40.0.0.2/31
- forward-error-correction none
-!
-interface ethernet Ethernet8
- no shutdown
- mtu 9000
- ip address 40.0.0.4/31
- forward-error-correction none
-!
-interface loopback 1
- ip address 10.10.10.0/32
-!
-router bgp 1001
- neighbor 40.0.0.1 remote-as 2001
- neighbor 40.0.0.3 remote-as 2001
- neighbor 40.0.0.5 remote-as 2002
- neighbor 40.0.0.7 remote-as 2002
- neighbor 40.0.0.1 capability extended-nexthop
- neighbor 40.0.0.3 capability extended-nexthop
- neighbor 40.0.0.5 capability extended-nexthop
- neighbor 40.0.0.7 capability extended-nexthop
- bgp bestpath as-path multipath-relax
- no bgp ebgp-requires-policy
- address-family ipv4 unicast
-  neighbor 40.0.0.1 allowas-in 1
-  neighbor 40.0.0.3 allowas-in 1
-  neighbor 40.0.0.5 allowas-in 1
-  neighbor 40.0.0.7 allowas-in 1
-  network 40.0.0.0/31
-  network 40.0.0.2/31
-  network 40.0.0.4/31
-  network 40.0.0.6/31
-  redistribute connected
-  redistribute static
- !
- address-family ipv6 unicast
-  redistribute connected
-  redistribute static
-
-
+    ntp add x.x.x.10
+    clock timezone Asia/Kolkata
+    syslog add x.x.x.10
+    snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
+    hostname Spine-1
+    ip protocol bgp route-map RM_SET_SRC
+    !
+    route-map FMCLI_IPV6_NH_GLOBAL permit 1
+    on-match next
+    set ipv6 next-hop prefer-global
+    !
+    route-map RM_SET_SRC permit 10
+    set src 10.10.10.0
+    !
+    interface ethernet Ethernet0
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.0/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet12
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.6/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet4
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.2/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet8
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.4/31
+    forward-error-correction none
+    !
+    interface loopback 1
+    ip address 10.10.10.0/32
+    !
+    router bgp 1001
+    neighbor 40.0.0.1 remote-as 2001
+    neighbor 40.0.0.3 remote-as 2001
+    neighbor 40.0.0.5 remote-as 2002
+    neighbor 40.0.0.7 remote-as 2002
+    neighbor 40.0.0.1 capability extended-nexthop
+    neighbor 40.0.0.3 capability extended-nexthop
+    neighbor 40.0.0.5 capability extended-nexthop
+    neighbor 40.0.0.7 capability extended-nexthop
+    bgp bestpath as-path multipath-relax
+    no bgp ebgp-requires-policy
+    address-family ipv4 unicast
+      neighbor 40.0.0.1 allowas-in 1
+      neighbor 40.0.0.3 allowas-in 1
+      neighbor 40.0.0.5 allowas-in 1
+      neighbor 40.0.0.7 allowas-in 1
+      network 40.0.0.0/31
+      network 40.0.0.2/31
+      network 40.0.0.4/31
+      network 40.0.0.6/31
+      redistribute connected
+      redistribute static
+    !
+    address-family ipv6 unicast
+      redistribute connected
+      redistribute static
     ```
 
 === "Spine2"
 
     ```sh
     router-id 10.10.10.1
-ntp add x.x.x.10
-clock timezone Asia/Kolkata
-syslog add x.x.x.10
-snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
-hostname Spine-2
-ip protocol bgp route-map RM_SET_SRC
-!
-route-map FMCLI_IPV6_NH_GLOBAL permit 1
- on-match next
- set ipv6 next-hop prefer-global
-!
-route-map RM_SET_SRC permit 10
- set src 10.10.10.1
-!
-interface ethernet Ethernet0
- no shutdown
- mtu 9000
- ip address 40.0.0.8/31
- forward-error-correction none
-!
-interface ethernet Ethernet12
- no shutdown
- mtu 9000
- ip address 40.0.0.14/31
- forward-error-correction none
-!
-interface ethernet Ethernet4
- no shutdown
- mtu 9000
- ip address 40.0.0.10/31
- forward-error-correction none
-!
-interface ethernet Ethernet8
- no shutdown
- mtu 9000
- ip address 40.0.0.12/31
- forward-error-correction none
-!
-interface loopback 1
- ip address 10.10.10.1/32
-!
-router bgp 1002
- neighbor 40.0.0.11 remote-as 2001
- neighbor 40.0.0.13 remote-as 2002
- neighbor 40.0.0.15 remote-as 2002
- neighbor 40.0.0.9 remote-as 2001
- neighbor 40.0.0.11 capability extended-nexthop
- neighbor 40.0.0.13 capability extended-nexthop
- neighbor 40.0.0.15 capability extended-nexthop
- neighbor 40.0.0.9 capability extended-nexthop
- bgp bestpath as-path multipath-relax
- no bgp ebgp-requires-policy
- address-family ipv4 unicast
-  neighbor 40.0.0.11 allowas-in 1
-  neighbor 40.0.0.13 allowas-in 1
-  neighbor 40.0.0.15 allowas-in 1
-  neighbor 40.0.0.9 allowas-in 1
-  network 40.0.0.10/31
-  network 40.0.0.12/31
-  network 40.0.0.14/31
-  network 40.0.0.8/31
-  redistribute connected
-  redistribute static
- !
- address-family ipv6 unicast
-  redistribute connected
-  redistribute static
-
-
+    ntp add x.x.x.10
+    clock timezone Asia/Kolkata
+    syslog add x.x.x.10
+    snmp-server trap modify 2 x.x.x.10 port 161 vrf None community Public
+    hostname Spine-2
+    ip protocol bgp route-map RM_SET_SRC
+    !
+    route-map FMCLI_IPV6_NH_GLOBAL permit 1
+    on-match next
+    set ipv6 next-hop prefer-global
+    !
+    route-map RM_SET_SRC permit 10
+    set src 10.10.10.1
+    !
+    interface ethernet Ethernet0
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.8/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet12
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.14/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet4
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.10/31
+    forward-error-correction none
+    !
+    interface ethernet Ethernet8
+    no shutdown
+    mtu 9000
+    ip address 40.0.0.12/31
+    forward-error-correction none
+    !
+    interface loopback 1
+    ip address 10.10.10.1/32
+    !
+    router bgp 1002
+    neighbor 40.0.0.11 remote-as 2001
+    neighbor 40.0.0.13 remote-as 2002
+    neighbor 40.0.0.15 remote-as 2002
+    neighbor 40.0.0.9 remote-as 2001
+    neighbor 40.0.0.11 capability extended-nexthop
+    neighbor 40.0.0.13 capability extended-nexthop
+    neighbor 40.0.0.15 capability extended-nexthop
+    neighbor 40.0.0.9 capability extended-nexthop
+    bgp bestpath as-path multipath-relax
+    no bgp ebgp-requires-policy
+    address-family ipv4 unicast
+      neighbor 40.0.0.11 allowas-in 1
+      neighbor 40.0.0.13 allowas-in 1
+      neighbor 40.0.0.15 allowas-in 1
+      neighbor 40.0.0.9 allowas-in 1
+      network 40.0.0.10/31
+      network 40.0.0.12/31
+      network 40.0.0.14/31
+      network 40.0.0.8/31
+      redistribute connected
+      redistribute static
+    !
+    address-family ipv6 unicast
+      redistribute connected
+      redistribute static
     ```
 
     

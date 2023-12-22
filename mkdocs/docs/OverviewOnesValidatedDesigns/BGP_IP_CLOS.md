@@ -30,7 +30,7 @@ Within the spine layer, BGP utilizes Equal-Cost Multi-Path (ECMP) routing to dis
 The template includes the inventory, connectivity, BGP and other configurations needed for the fabric topology formation .  You can modify the template to fit your specific needs
 
 
-![Configuration](../img/SecondImage.png)
+![Configuration](../img/image10_BGP_IP_CLOS.png)
 
 ### <b>YAML Template</b>
 
@@ -45,11 +45,11 @@ Connectivity:
   Spine:
     - switchId: 1
       switchName: "Spine-1"
-      ipAddress: "10.101.118.11"
+      ipAddress: "x.x.x.x"
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "S1_Ethernet0 | L1_Ethernet48"
@@ -66,11 +66,11 @@ Connectivity:
           properties:
     - switchId: 2
       switchName: "Spine-2"
-      ipAddress: "10.101.118.12"
+      ipAddress: "x.x.x.12"
       ASN: 1002
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "S2_Ethernet0 | L1_Ethernet52"
@@ -88,11 +88,11 @@ Connectivity:
   Leaf:
     - switchId: 1
       switchName: "Leaf-1"
-      ipAddress: "10.101.118.13"
+      ipAddress: "x.x.x.13"
       ASN: 2001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "L1_Ethernet48 | S1_Ethernet0"
@@ -116,11 +116,11 @@ Connectivity:
             vlan: 202
     - switchId: 2
       switchName: "Leaf-2"
-      ipAddress: "10.101.118.14"
+      ipAddress: "x.x.x.x"
       ASN: 2002
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "L2_Ethernet48 | S1_Ethernet4"
@@ -144,7 +144,7 @@ Connectivity:
             vlan: 202
     - switchId: 3
       switchName: "Leaf-3"
-      ipAddress: "10.101.118.15"
+      ipAddress: "x.x.x.15"
       ASN: 2003
       Credentials:
         user: "admin"
@@ -172,7 +172,7 @@ Connectivity:
             vlan: 204
     - switchId: 4
       switchName: "Leaf-4"
-      ipAddress: "10.101.118.16"
+      ipAddress: "x.x.x.16"
       ASN: 2004
       Credentials:
         user: "admin"
@@ -221,16 +221,16 @@ IPv6Pool:
   LeafTor:
   Host:
 NTP:
-  server: "10.101.118.10"
+  server: "x.x.x.10"
   timezone: "Asia/Kolkata"
 SYSLOG:
-  server: "10.101.118.10"
+  server: "x.x.x.10"
 SNMP:
-  trapserver: "10.101.118.10"
+  trapserver: "x.x.x.10"
 Parameters:
   vlan: "200-205"
   vni:
-  anycast_gateway: "100.10.0.0/23"
+  anycast_gateway: "10.10.10..0/23"
   anycast_mac: "00:11:22:33:44:55"
   hosts_per_vlan: 10
   routing_symmetric: false
@@ -239,7 +239,7 @@ Parameters:
 
 ### Configure, Validate & Verify through UI
 
-![configuration](../img/BGP-IPCLOS.png)
+![configuration](../img/Configure_VALIDATE_Verify.png)
 
 ### <b> IP Configuration</b>
 

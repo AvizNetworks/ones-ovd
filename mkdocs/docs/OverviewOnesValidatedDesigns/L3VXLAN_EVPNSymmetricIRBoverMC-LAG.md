@@ -2,7 +2,7 @@
 
 With the symmetric IRB routing model, the VTEPs do routing and bridging on both the ingress and egress sides of the VXLAN tunnel. As a result, VTEPs can do inter-subnet routing for the same virtual routing and forwarding (VRF) instance mapped to the same VNI in both directions. We implement this model for EVPN Type 2 routes the same way as for EVPN Type 5 routes. These VTEPs use  dedicated Layer 3 traffic VNI in both directions for each tenant VRF instance.
 
-![configuration](../img/Fifthimage.png)
+![configuration](../img/Image4_L3_VXLAN_EVPN_Symmetric_IRB_over_MC-LAG.png)
 
 ## <b> Configuration </b>
 **Configure VXLAN and EVPN**
@@ -45,11 +45,11 @@ Connectivity:
   Spine:
     - switchId: 1
       switchName: "Spine-1"
-      ipAddress: "10.101.118.11"
+      ipAddress: "x.x.x.11"
       ASN: 2001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "S1_Ethernet0 | L1_Ethernet48"
@@ -66,11 +66,11 @@ Connectivity:
           properties:
     - switchId: 2
       switchName: "Spine-2"
-      ipAddress: "10.101.118.12"
+      ipAddress: "x.x.x.12"
       ASN: 2002
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "S2_Ethernet0 | L1_Ethernet52"
@@ -88,11 +88,11 @@ Connectivity:
   Leaf:
     - switchId: 1
       switchName: "Leaf-1"
-      ipAddress: "10.101.118.13"
+      ipAddress: "x.x.x.13"
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
         enabled: true
         peer: "L2"
@@ -107,6 +107,7 @@ Connectivity:
         - link: "L1_Ethernet56 |  L2_Ethernet56"
           staticLink: true
           properties:
+            mode: "MC-LAG"
         - link: "L1_Ethernet0 |  H1_Ethernet0"
           staticLink: true
           properties:
@@ -123,11 +124,11 @@ Connectivity:
             vrf: 1
     - switchId: 2
       switchName: "Leaf-2"
-      ipAddress: "10.101.118.14"
+      ipAddress: "x.x.x.14"
       ASN: 1001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
         enabled: true
         peer: "L1"
@@ -142,6 +143,7 @@ Connectivity:
         - link: "L2_Ethernet56 | L1_Ethernet56"
           staticLink: true
           properties:
+            mode: "MC-LAG"
         - link: "L2_Ethernet0 |  H1_Ethernet1"
           staticLink: true
           properties:
@@ -158,7 +160,7 @@ Connectivity:
             vrf: 1
     - switchId: 3
       switchName: "Leaf-3"
-      ipAddress: "10.101.118.15"
+      ipAddress: "x.x.x.15"
       ASN: 1002
       Credentials:
         user: "admin"
@@ -177,6 +179,7 @@ Connectivity:
         - link: "L3_Ethernet56 | L4_Ethernet56"
           staticLink: true
           properties:
+            mode: "MC-LAG"
         - link: "L3_Ethernet0 |  H3_Ethernet0"
           staticLink: true
           properties:
@@ -193,7 +196,7 @@ Connectivity:
             vrf: 1
     - switchId: 4
       switchName: "Leaf-4"
-      ipAddress: "10.101.118.16"
+      ipAddress: "x.x.x.16"
       ASN: 1002
       Credentials:
         user: "admin"
@@ -212,12 +215,13 @@ Connectivity:
         - link: "L4_Ethernet56 | L3_Ethernet56"
           staticLink: true
           properties:
+            mode: "MC-LAG"
         - link: "L4_Ethernet0 |  H3_Ethernet1"
           staticLink: true
           properties:
             mode: "L2-Trunk"
             vlan: 200
- mc_po_group: 200
+            mc_po_group: 200
             vrf: 1
         - link: "L4_Ethernet4 |  H4_Ethernet1"
           staticLink: true
@@ -249,27 +253,26 @@ IPv6Pool:
   LeafTor:
   Host:
 NTP:
-  server: "10.101.118.10"
+  server: "x.x.x.10"
   timezone: "Asia/Kolkata"
 SYSLOG:
-  server: "10.101.118.10"
+  server: "x.x.x.10"
 SNMP:
-  trapserver: "10.101.118.10"
+  trapserver: "x.x.x.10"
 Parameters:
   vlan: "200-205"
   vni: "20000-20005"
-  anycast_gateway: "100.10.0.0/23"
+  anycast_gateway: "x.x.x.0/23"
   anycast_mac: "00:11:22:33:44:55"
   hosts_per_vlan: 10
   routing_symmetric: true
   irb_vlan: "300-305"
   irb_vni: "30000-30005"
   sag: true
-
 ```
 ### <b> Config Applied and Validated </b>
 
-![configuration](../img/L3-VXLAN.png)
+![configuration](../img/Configure_VALIDATE_Verify.md.png)
 
 ### <b> Applied Configuration on Switches </b>
 

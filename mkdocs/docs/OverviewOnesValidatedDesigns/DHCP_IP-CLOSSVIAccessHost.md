@@ -1,7 +1,7 @@
 # <b>DHCP IP-CLOS SVI Access Host</b>
+This template enables NetOps to enable DHCP Relay on the egress  interface of a leaf switch facing server host
 
-
-## <b>YAML TEMPALTE</b>
+## <b>YAML Template</b>
 
 ```yaml
 Inventory:
@@ -176,6 +176,8 @@ Parameters:
 ```
 
 ## <b>Configure, Validate & Verify through UI</b>
+
+![img](../img/Configure_VALIDATE_Verify.md.png)
 
 
 ## <b>Show running config on switch </b>

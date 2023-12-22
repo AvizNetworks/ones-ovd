@@ -1,5 +1,7 @@
 # <b>Layer3  MC-LAG </b>
 
+![img](../img/image5_Layer3_MC-LAG.png)
+
 ## <b> YAML Template </b>
 
 ```yaml
@@ -232,7 +234,7 @@ Parameters:
 ```
 
 ## <b>Configure, Validate & Verify through UI</b>
-
+![img](../img/Configure_VALIDATE_Verify.md.png)
 
 ## <b>Running config on Sonic Switch </b>
 

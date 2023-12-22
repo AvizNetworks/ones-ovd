@@ -1,6 +1,6 @@
 # <b>DCI EVPN Multihoming</b>
 
-![img](../img/DCLMVN.png)
+![img](../img/image16_DCI_EVPN_Multihoming.png)
 
 <br />
 
@@ -17,11 +17,11 @@ Connectivity:
   Spine:
     - switchId: 1
       switchName: "Spine-1"
-      ipAddress: "10.101.118.11"
+      ipAddress: "x.x.x.11"
       ASN: 2001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "S1_Ethernet0 | L1_Ethernet48"
@@ -38,11 +38,11 @@ Connectivity:
           properties:
     - switchId: 2
       switchName: "Spine-2"
-      ipAddress: "10.101.118.12"
+      ipAddress: "x.x.x.12"
       ASN: 2001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "S2_Ethernet0 | L1_Ethernet52"
@@ -60,11 +60,11 @@ Connectivity:
   Leaf:
     - switchId: 1
       switchName: "Leaf-1"
-      ipAddress: "10.101.118.13"
+      ipAddress: "x.x.x.13"
       ASN: 2001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "L1_Ethernet48 | S1_Ethernet0"
@@ -92,11 +92,11 @@ Connectivity:
             mh_po_group: 202
     - switchId: 2
       switchName: "Leaf-2"
-      ipAddress: "10.101.118.14"
+      ipAddress: "x.x.x.14"
       ASN: 2001
       Credentials:
         user: "admin"
-        password: "Edge-core"
+        password: "admin"
       mclag:
       Links:
         - link: "L2_Ethernet48 | S1_Ethernet4"
@@ -124,7 +124,7 @@ Connectivity:
             mh_po_group: 202
     - switchId: 3
       switchName: "Leaf-3"
-      ipAddress: "10.101.118.15"
+      ipAddress: "x.x.x.15"
       ASN: 2001
       Credentials:
         user: "admin"
@@ -156,7 +156,7 @@ Connectivity:
             mh_po_group: 204
     - switchId: 4
       switchName: "Leaf-4"
-      ipAddress: "10.101.118.16"
+      ipAddress: "x.x.x.16"
       ASN: 2001
       Credentials:
         user: "admin"
@@ -209,16 +209,16 @@ IPv6Pool:
   LeafTor:
   Host:
 NTP:
-  server: "10.101.118.10"
+  server: "x.x.x.10"
   timezone: "Asia/Kolkata"
 SYSLOG:
-  server: "10.101.118.10"
+  server: "x.x.x.10"
 SNMP:
-  trapserver: "10.101.118.10"
+  trapserver: "x.x.x.10"
 Parameters:
   vlan: "200-205"
   vni: "20000-20005"
-  anycast_gateway: "100.10.0.0/23"
+  anycast_gateway: "x.x.x.0/23"
   anycast_mac: "00:11:22:33:44:55"
   hosts_per_vlan: 10
   routing_symmetric: false
@@ -230,7 +230,7 @@ Parameters:
 
 ## <b> Config Applied and Validated</b>
 
-![img](../img/configDCL.png)
+![img](../img/Configure_VALIDATE_Verify.md.png)
 
 
 ## <b> Applied Configuration on Switches</b>

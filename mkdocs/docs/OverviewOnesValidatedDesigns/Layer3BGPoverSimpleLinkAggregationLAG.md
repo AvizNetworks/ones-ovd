@@ -1,6 +1,9 @@
 # <b>Layer3 BGP over Simple Link Aggregation (LAG) </b>
+This enables NetOps to configure BGP routing on a simple LAG between Inter chassis Links
 
-## <b>YAML Templates</b>
+![img](../img/image8_Layer3_BGP_over_Simple_Link_Aggregation_LAG.png)
+
+## <b>YAML Template</b>
 
 ```yaml
    Inventory:
@@ -292,7 +295,7 @@ Sflow:
 ```
 
 ## <b>Configure, Validate & Verify through UI</b>
-
+![img](../img/Configure_VALIDATE_Verify.md.png)
 
 ## <b>Show running config on switch  </b>
 
