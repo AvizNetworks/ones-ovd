@@ -73,7 +73,7 @@ nav:
     - Layer 3 MC-LAG: OverviewOnesValidatedDesigns/Layer3mclag.md
     - BGP over MC-LAG peering with Port channel ICL Link: OverviewOnesValidatedDesigns/BGPoverMCLAGpeeringwithPortchannelICLLink.md
     - BGP over MC-LAG peering separate ICL link: OverviewOnesValidatedDesigns/BGPoverMCLAGpeeringseparateICLlink.md
-    - Layer3 BGP over Simple Link Aggregation (LAG) : OverviewOnesValidatedDesigns/Layer3BGPoverSimpleLinkAggregationLAG.md
+    - Layer 3 Fabric with BGP over Port channel: OverviewOnesValidatedDesigns/Layer3BGPoverSimpleLinkAggregationLAG.md
     - DHCP IP-CLOS SVI Access Host: OverviewOnesValidatedDesigns/DHCP_IP-CLOSSVIAccessHost.md
     - BGP over Port Channel with Sflow enabled: OverviewOnesValidatedDesigns/BGPoverPortChannelwithSflowenabled.md
 

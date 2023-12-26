@@ -1,7 +1,7 @@
-# <b>Layer3 BGP over Simple Link Aggregation (LAG) </b>
-This enables NetOps to configure BGP routing on a simple LAG between Inter chassis Links
+# <b>Layer 3 Fabric with BGP over Port channel </b>
+Network operators can execute a deployment using ONES validated design for port group channels offering link protection from a leaf switch to the hosted server . BGP over a port channel is a strategy employed for link protection. In this context, BGP is configured to operate over a port channel, allowing for enhanced reliability and redundancy in data communication. This approach helps protect against link failures by providing an alternate path for data transmission, contributing to increased network resilience and minimizing potential disruptions.
 
-![img](../img/image8_Layer3_BGP_over_Simple_Link_Aggregation_LAG.png)
+![img](../img/BGPoverPortChannelForLinkProtection.png)
 
 ## <b>YAML Template</b>
 

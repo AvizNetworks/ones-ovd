@@ -2,7 +2,7 @@
 
 A deployment scenario tailored for fabrics designed with interconnection with leaf devices exclusively over Layer2 port channels between leafs , eliminating the need for spines. This streamlined configuration suits specific network architectures. 
 
-![img](../img/image6_Rack_to_rack_Deployment.png)
+![img](../img/Rack2Rack.png)
 
 ## <b> YAML Template </b>
 

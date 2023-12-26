@@ -4,7 +4,7 @@ Layer2 Leaf-Spine architecture offers low-latency, high-bandwidth connectivity w
 
 One of the main advantages of the L2LS design is that the pair of spine switches are presented to the leaf-layer switches as a single switch through the use of MLAG (Multi-chassis Link Aggregation Group), which inherently allows LAYER 2 flexibility throughout the environment. This also eliminates the dependence on spanning-tree for loop prevention and allows for full utilization of all links between the leaf and spine. It is worth noting that the scalability of the spine is limited to a total of 2 switches. By adopting a merchant silicon approach to switch design, architects are now able to design networks that have predictable traffic patterns, low latency, and minimal oversubscription. Legacy designs often incorporated more than two tiers to overcome density and oversubscription limitations. Leaf and spine switches are interconnected with LAG (802.3ad) links and each leaf has at least one connection to each spine. 
 
-![img](../img/image3_Layer2_Leaf_Spine_Topology.png)
+![img](../img/Layer2LeafSpine.png)
 
 ## Yaml Template
 

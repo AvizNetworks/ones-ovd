@@ -1,6 +1,6 @@
 # <b>Layer3  MC-LAG </b>
 
-![img](../img/image5_Layer3_MC-LAG.png)
+![img](../img/Layer3MclagDeployment.png)
 
 ## <b> YAML Template </b>
 
