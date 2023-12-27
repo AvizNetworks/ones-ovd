@@ -70,12 +70,12 @@ nav:
     - DCI EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
     - Layer 2 Leaf Spine Topology: OverviewOnesValidatedDesigns/Layer2LeafSpineTopology.md
     - Rack-2-Rack Deployement: OverviewOnesValidatedDesigns/Rack2Deployement.md
-    - Layer 3 MC-LAG: OverviewOnesValidatedDesigns/Layer3mclag.md
+    - Layer 3 MC-LAG Deployment: OverviewOnesValidatedDesigns/Layer3mclag.md
     - BGP over MC-LAG peering with Port channel ICL Link: OverviewOnesValidatedDesigns/BGPoverMCLAGpeeringwithPortchannelICLLink.md
     - BGP over MC-LAG peering separate ICL link: OverviewOnesValidatedDesigns/BGPoverMCLAGpeeringseparateICLlink.md
     - Layer 3 Fabric with BGP over Port channel: OverviewOnesValidatedDesigns/Layer3BGPoverSimpleLinkAggregationLAG.md
-    - DHCP IP-CLOS SVI Access Host: OverviewOnesValidatedDesigns/DHCP_IP-CLOSSVIAccessHost.md
-    - BGP over Port Channel with Sflow enabled: OverviewOnesValidatedDesigns/BGPoverPortChannelwithSflowenabled.md
+    # - DHCP IP-CLOS SVI Access Host: OverviewOnesValidatedDesigns/DHCP_IP-CLOSSVIAccessHost.md
+    # - BGP over Port Channel with Sflow enabled: OverviewOnesValidatedDesigns/BGPoverPortChannelwithSflowenabled.md
 
   - Migrate to SONiC  Example Configurations :
     - Overview: migrateToSonic/overview.md
