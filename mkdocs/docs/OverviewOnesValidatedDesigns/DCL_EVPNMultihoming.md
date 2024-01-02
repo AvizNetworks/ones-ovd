@@ -1,4 +1,6 @@
 # <b>DCI EVPN Multihoming</b>
+DCI EVPN Multihoming is a technology designed to enhance the reliability, redundancy, and load balancing capabilities of data center networks by allowing devices to connect to and utilize resources across multiple data center locations simultaneously. It leverages EVPN for efficient layer 2 and layer 3 connectivity and introduces multihoming concepts to achieve its goals.
+
 
 ![img](../img/image16_DCI_EVPN_Multihoming.png)
 

@@ -1,4 +1,6 @@
 # <b>Layer3  MC-LAG </b>
+This enables NetOps to configure dual homing of Server host  upstreaming  to 2 Leaf switches through MC-LAG protocol over Layer 3 interfaces thus offering protection to Server Hosted applications 
+
 
 ![img](../img/Layer3MclagDeployment.png)
 

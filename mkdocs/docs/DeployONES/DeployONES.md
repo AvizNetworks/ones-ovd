@@ -87,15 +87,17 @@ In the latest release, ONES can support managing up to 1024 devices. For ONES Ap
 
 Please refer the following link for deployment of a virtual machine as a host for ONES application installation
 
-<a href="https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm">https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm</a>
+<a href="https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/getting-started/deploy-the-vm">How to Deploy ONES applications on VM</a>
 
 
 ## <b> Reference Documentation</b>
 
-<a href="https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/ones-web-gui-administration/ones-orchestration">https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/ones-web-gui-administration/ones-orchestration</a> - ONES Orchestration Configuration Guide
+<a href="https://aviznetworks.gitbook.io/ones/ones-ga-v1.3/ones-web-gui-administration/ones-orchestration">ONES  REL 1.3 WEB GUI Admin Guide </a>
 
-<a href="https://github.com/AvizNetworks/ones-ovd">https://github.com/AvizNetworks/ones-ovd</a> - OVD's ONES API for orchestration 
+<a href="https://github.com/AvizNetworks/ones-ovd">OVD ONES API for Fabric Orchestration
+</a>
 
-<a href="https://github.com/AvizNetworks/ones-pyapi">https://github.com/AvizNetworks/ones-pyapi</a> - ONES API for 3rd party integration
+<a href="https://github.com/AvizNetworks/ones-pyapi">ONES API for 3rd party integration 
+</a>
 
-<a href="https://github.com/AvizNetworks/opbnos-api">https://github.com/AvizNetworks/opbnos-api</a> - OPBNOS API for 3rd party integration
+<a href="https://github.com/AvizNetworks/opbnos-api">OPBNOS API for 3rd party integration</a>

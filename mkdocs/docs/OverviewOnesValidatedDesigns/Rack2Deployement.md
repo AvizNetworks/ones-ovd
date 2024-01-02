@@ -1,6 +1,6 @@
 # <b>Rack-2-Rack Deployment</b>
 
-A deployment scenario tailored for fabrics designed with interconnection with leaf devices exclusively over Layer2 port channels between leafs , eliminating the need for spines. This streamlined configuration suits specific network architectures. 
+A deployment scenario  customized for fabrics engineered to interconnect leaf devices solely through Layer 2 port channels between leaves, obviating the requirement for spines. Rack-to-rack deployment facilitates seamless scalability, enabling the addition of extra racks to support the growing demand for computing resources. This modular approach empowers data centers to expand their capacity efficiently and in an organized manner, responding flexibly to increasing demands for computing 
 
 ![img](../img/Rack2Rack.png)
 
