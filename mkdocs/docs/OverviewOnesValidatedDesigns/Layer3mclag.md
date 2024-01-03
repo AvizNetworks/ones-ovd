@@ -1,8 +1,29 @@
-# <b>Layer3  MC-LAG </b>
+# <b>Layer3  MC-LAG Deployment</b>
 This enables NetOps to configure dual homing of Server host  upstreaming  to 2 Leaf switches through MC-LAG protocol over Layer 3 interfaces thus offering protection to Server Hosted applications 
 
 
 ![img](../img/Layer3MclagDeployment.png)
+
+### L3 MC LAG Functions:
+- MC-LAG involves two or more switches (peers) connected to each other and to the network.
+- The peers work together to appear as a single logical switch to the connected devices.
+- MC LAG enables load balancing and high availability by allowing traffic to flow through both peers.
+
+### Layer 3 Extension:
+- In a Layer 3 MC-LAG setup, the MLAG peers are capable of performing Layer 3 
+- routing functions.
+- This means they can route IP traffic between different subnets, extending the MC-LAG benefits to Layer 3.
+
+
+### Benefits:
+- <b>High Availability:</b> If one of the MLAG peers fails, the other can seamlessly take over, ensuring network continuity.
+- <b>Load Balancing:</b> Both peers actively participate in handling traffic, distributing the load and preventing bottlenecks.
+- <b>Scalability:</b> Layer 3 MC LAG allows for efficient scaling of IP subnets and routing capabilities.
+
+### Use Cases:
+- <b>Layer 3 MC-LAG</b> is often employed in data center environments and large enterprise networks where high availability and efficient routing are crucial.
+- It allows multiple switches (Leaf-Spine nodes) to act as a single logical entity for routing purposes, enhancing high availability and load balancing.
+
 
 ## <b> YAML Template </b>
 
