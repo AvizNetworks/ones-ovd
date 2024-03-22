@@ -626,7 +626,7 @@ Path: /var/log/syslog*<br />
 <p>config ntp add &lt;NTP_SERVER_IP></p>
 
 <b># Example</b><br />
-<p>config ntp add 10.101.118.10</p>
+<p>config ntp add 100.100.10.10</p>
 
 <b># Command to delete a configured NTP Server IP</b><br />
 <p>config ntp del &lt;ip_address></p>

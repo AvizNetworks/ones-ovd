@@ -281,10 +281,10 @@ Parameters:
     ``` sh
     configure terminal
     router-id 10.10.10.3
-    ntp add 10.101.118.10
+    ntp add 100.100.10.10
     clock timezone Asia/Kolkata
-    syslog add 10.101.118.10
-    snmp-server trap modify 2 10.101.118.10 port 161 vrf None community Public
+    syslog add 100.100.10.10
+    snmp-server trap modify 2 100.100.10.10 port 161 vrf None community Public
     hostname Leaf-1
     ip protocol bgp route-map RM_SET_SRC
     !
@@ -420,10 +420,10 @@ Parameters:
     ``` sh
     configure terminal
     router-id 10.10.10.4
-    ntp add 10.101.118.10
+    ntp add 100.100.10.10
     clock timezone Asia/Kolkata
-    syslog add 10.101.118.10
-    snmp-server trap modify 2 10.101.118.10 port 161 vrf None community Public
+    syslog add 100.100.10.10
+    snmp-server trap modify 2 100.100.10.10 port 161 vrf None community Public
     hostname Leaf-2
     ip protocol bgp route-map RM_SET_SRC
     !
@@ -559,10 +559,10 @@ Parameters:
     ``` sh
     configure terminal
     router-id 10.10.10.6
-    ntp add 10.101.118.10
+    ntp add 100.100.10.10
     clock timezone Asia/Kolkata
-    syslog add 10.101.118.10
-    snmp-server trap modify 2 10.101.118.10 port 161 vrf None community Public
+    syslog add 100.100.10.10
+    snmp-server trap modify 2 100.100.10.10 port 161 vrf None community Public
     hostname Leaf-3
     ip protocol bgp route-map RM_SET_SRC
     !
@@ -698,10 +698,10 @@ Parameters:
     ``` sh
     configure terminal
     router-id 10.10.10.7
-    ntp add 10.101.118.10
+    ntp add 100.100.10.10
     clock timezone Asia/Kolkata
-    syslog add 10.101.118.10
-    snmp-server trap modify 2 10.101.118.10 port 161 vrf None community Public
+    syslog add 100.100.10.10
+    snmp-server trap modify 2 100.100.10.10 port 161 vrf None community Public
     hostname Leaf-4
     ip protocol bgp route-map RM_SET_SRC
     !
@@ -837,10 +837,10 @@ Parameters:
     ``` sh
     configure terminal
     router-id 10.10.10.0
-    ntp add 10.101.118.10
+    ntp add 100.100.10.10
     clock timezone Asia/Kolkata
-    syslog add 10.101.118.10
-    snmp-server trap modify 2 10.101.118.10 port 161 vrf None community Public
+    syslog add 100.100.10.10
+    snmp-server trap modify 2 100.100.10.10 port 161 vrf None community Public
     hostname Spine-1
     ip protocol bgp route-map RM_SET_SRC
     !
@@ -918,10 +918,10 @@ Parameters:
     ``` sh
     configure terminal
     router-id 10.10.10.1
-    ntp add 10.101.118.10
+    ntp add 100.100.10.10
     clock timezone Asia/Kolkata
-    syslog add 10.101.118.10
-    snmp-server trap modify 2 10.101.118.10 port 161 vrf None community Public
+    syslog add 100.100.10.10
+    snmp-server trap modify 2 100.100.10.10 port 161 vrf None community Public
     hostname Spine-2
     ip protocol bgp route-map RM_SET_SRC
     !
