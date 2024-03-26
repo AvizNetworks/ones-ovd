@@ -570,7 +570,7 @@ set date YYYY:MM:DD -TT
 config ntp add &lt;NTP_SERVER_IP><br>
 </br>
 <b># Example</b><br>
-config ntp add 10.101.118.10<br>
+config ntp add 100.100.10.10<br>
 <br>
 <b># Command to delete a configure NTP Server IP</b><br>
 config ntp del &lt;ip_address><br>

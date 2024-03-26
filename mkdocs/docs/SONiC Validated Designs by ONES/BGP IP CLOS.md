@@ -46,7 +46,7 @@ Connectivity:
   Spine:
     - switchId: 1
       switchName: "Spine-1"
-      ipAddress: "10.101.118.11"
+      ipAddress: "100.100.10.11"
       ASN: 1001
       Credentials:
         user: "admin"
@@ -67,7 +67,7 @@ Connectivity:
           properties:
     - switchId: 2
       switchName: "Spine-2"
-      ipAddress: "10.101.118.12"
+      ipAddress: "100.100.10.12"
       ASN: 1002
       Credentials:
         user: "admin"
@@ -89,7 +89,7 @@ Connectivity:
   Leaf:
     - switchId: 1
       switchName: "Leaf-1"
-      ipAddress: "10.101.118.13"
+      ipAddress: "100.100.10.13"
       ASN: 2001
       Credentials:
         user: "admin"
@@ -117,7 +117,7 @@ Connectivity:
             vlan: 202
     - switchId: 2
       switchName: "Leaf-2"
-      ipAddress: "10.101.118.14"
+      ipAddress: "100.100.10.14"
       ASN: 2002
       Credentials:
         user: "admin"
@@ -145,7 +145,7 @@ Connectivity:
             vlan: 202
     - switchId: 3
       switchName: "Leaf-3"
-      ipAddress: "10.101.118.15"
+      ipAddress: "100.100.10.15"
       ASN: 2003
       Credentials:
         user: "admin"
@@ -173,7 +173,7 @@ Connectivity:
             vlan: 204
     - switchId: 4
       switchName: "Leaf-4"
-      ipAddress: "10.101.118.16"
+      ipAddress: "100.100.10.16"
       ASN: 2004
       Credentials:
         user: "admin"
@@ -222,12 +222,12 @@ IPv6Pool:
   LeafTor:
   Host:
 NTP:
-  server: "10.101.118.10"
+  server: "100.100.10.10"
   timezone: "Asia/Kolkata"
 SYSLOG:
-  server: "10.101.118.10"
+  server: "100.100.10.10"
 SNMP:
-  trapserver: "10.101.118.10"
+  trapserver: "100.100.10.10"
 Parameters:
   vlan: "200-205"
   vni:

@@ -612,7 +612,7 @@ This Rest API client call will feed the golden configuration template as input  
     
     POST /replaceConfig HTTP/1.1
     Content-Type: application/json; charset=utf-8
-    Host: 10.101.118.10:8787
+    Host: 100.100.10.10:8787
     Connection: close
     User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
     Content-Length: 61
