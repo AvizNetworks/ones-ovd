@@ -1,0 +1,186 @@
+Inventory:
+  SSpines: 0
+  Spines: 2
+  Leafs: 4
+  Tors: 0
+Connectivity:
+  SSpine: []
+  Spine:
+    - switchId: 1
+      switchName: "Spine-1"
+      ipAddress: "100.100.10.11"
+      ASN: 1001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag: 
+      Links:
+        - link: "S1_Ethernet0 | L1_Ethernet48"
+          staticLink: true
+          properties: 
+        - link: "S1_Ethernet4 | L2_Ethernet48"
+          staticLink: true
+          properties: 
+        - link: "S1_Ethernet8 | L3_Ethernet48"
+          staticLink: true
+          properties: 
+        - link: "S1_Ethernet12 | L4_Ethernet48"
+          staticLink: true
+          properties: 
+    - switchId: 2
+      switchName: "Spine-2"
+      ipAddress: "100.100.10.12"
+      ASN: 1001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag: 
+      Links:
+        - link: "S2_Ethernet0 | L1_Ethernet52"
+          staticLink: true
+          properties: 
+        - link: "S2_Ethernet4 | L2_Ethernet52"
+          staticLink: true
+          properties: 
+        - link: "S2_Ethernet8 | L3_Ethernet52"
+          staticLink: true
+          properties: 
+        - link: "S2_Ethernet12 | L4_Ethernet52"
+          staticLink: true
+          properties: 
+  Leaf:
+    - switchId: 1
+      switchName: "Leaf-1"
+      ipAddress: "100.100.10.13"
+      ASN: 1001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag:
+      Links:
+        - link: "L1_Ethernet48 | S1_Ethernet0"
+          staticLink: true
+          properties: 
+        - link: "L1_Ethernet52 | S2_Ethernet0"
+          staticLink: true
+          properties: 
+        - link: "L1_Ethernet56 |  L2_Ethernet56"
+          staticLink: true
+          properties: 
+        - link: "L1_Ethernet0 |  H1_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L3-V4"
+        - link: "L1_Ethernet5 |  H2_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L3-V4"
+    - switchId: 2
+      switchName: "Leaf-2"
+      ipAddress: "100.100.10.14"
+      ASN: 1001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag:
+      Links:
+        - link: "L2_Ethernet48 | S1_Ethernet4"
+          staticLink: true
+          properties: 
+        - link: "L2_Ethernet52 | S2_Ethernet4"
+          staticLink: true
+          properties: 
+        - link: "L2_Ethernet56 | L1_Ethernet56"
+          staticLink: true
+          properties: 
+        - link: "L2_Ethernet0 |  H1_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L3-V4"
+        - link: "L2_Ethernet5 |  H2_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L3-V4"
+    - switchId: 3
+      switchName: "Leaf-3"
+      ipAddress: "100.100.10.15"
+      ASN: 1001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag:
+      Links:
+        - link: "L3_Ethernet48 | S1_Ethernet8"
+          staticLink: true
+          properties: 
+        - link: "L3_Ethernet52 | S2_Ethernet8"
+          staticLink: true
+          properties: 
+        - link: "L3_Ethernet56 | L4_Ethernet56"
+          staticLink: true
+          properties: 
+        - link: "L3_Ethernet0 |  H3_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L3-V4"
+        - link: "L3_Ethernet5 |  H4_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L3-V4"
+    - switchId: 4
+      switchName: "Leaf-4"
+      ipAddress: "100.100.10.16"
+      ASN: 1001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag:
+      Links:
+        - link: "L4_Ethernet48 | S1_Ethernet12"
+          staticLink: true
+          properties: 
+        - link: "L4_Ethernet52 | S2_Ethernet12"
+          staticLink: true
+          properties: 
+        - link: "L4_Ethernet56 | L3_Ethernet56"
+          staticLink: true
+          properties: 
+        - link: "L4_Ethernet0 |  H3_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L3-V4"
+        - link: "L4_Ethernet5 |  H4_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L3-V4"
+  Tor: []
+BGP:
+  BGP_U: true
+  ND_RA: 30
+PhysicalIfCfg:
+  FEC: "Off"
+  MTU: 9000
+  AdminStatus: "Up"
+ASN:
+  SSpine: "10000-20000"
+  Spine: "21000-50000"
+  Leaf: "51000-60000"
+  Tor: "61000-70000"
+IPv4Pool:
+  Loopback: "10.10.10.0/24"
+  LeafSpine: 
+  LeafTor: 
+  Host: "49.0.0.0/24"
+IPv6Pool:
+  LeafSpine: 
+  LeafTor: 
+  Host: 
+NTP:
+  server: "100.100.10.10"
+  timezone: "Asia/Kolkata"
+SYSLOG:
+  server: "100.100.10.10"
+SNMP:
+  trapserver: "100.100.10.10"
+Parameters:
+  hosts_per_l3_subnet: 10

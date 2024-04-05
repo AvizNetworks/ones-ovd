@@ -1,0 +1,186 @@
+Inventory:
+  SSpines: 0
+  Spines: 2
+  Leafs: 4
+  Tors: 0
+Connectivity:
+  SSpine: []
+  Spine: []        
+  Leaf:
+    - switchId: 1
+      switchName: "Leaf-1"
+      ipAddress: "100.100.10.13"
+      ASN: 10001 
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag:
+      Links:
+        - link: "L1_Ethernet52 | L6_Ethernet0"
+          staticLink: true
+          properties:
+        - link: "L1_Ethernet56 |  L2_Ethernet56"
+          staticLink: true
+          properties:                   
+        - link: "L1_Ethernet0 |  H1_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201
+        - link: "L1_Ethernet5 |  H2_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201
+    - switchId: 2
+      switchName: "Leaf-2"
+      ipAddress: "100.100.10.14"
+      ASN: 10001 
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag:
+      Links:
+        - link: "L2_Ethernet56 | L1_Ethernet56"
+          staticLink: true
+          properties:
+        - link: "L2_Ethernet45 | L3_Ethernet46"
+          staticLink: true
+          properties:                   
+        - link: "L2_Ethernet0 |  H1_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201
+        - link: "L2_Ethernet5 |  H2_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201
+    - switchId: 3
+      switchName: "Leaf-3"
+      ipAddress: "100.100.10.15"
+      ASN: 10001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag:
+      Links:
+        - link: "L3_Ethernet56 | L4_Ethernet56"
+          staticLink: true
+          properties:
+        - link: "L3_Ethernet46 | L2_Ethernet45"
+          staticLink: true
+          properties:                    
+        - link: "L3_Ethernet0 |  H3_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201
+        - link: "L3_Ethernet5 |  H4_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201
+    - switchId: 4
+      switchName: "Leaf-4"
+      ipAddress: "100.100.10.16"
+      ASN: 10001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag:
+      Links:
+        - link: "L4_Ethernet48 | L5_Ethernet12"
+          staticLink: true
+          properties:
+        - link: "L4_Ethernet56 | L3_Ethernet56"
+          staticLink: true
+          properties:                  
+        - link: "L4_Ethernet0 |  H3_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201
+        - link: "L4_Ethernet5 |  H4_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201
+    - switchId: 5
+      switchName: "Leaf-5-Spine-1"
+      ipAddress: "100.100.10.11"
+      ASN: 10001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag:     
+      Links:
+        - link: "L5_Ethernet12 | L4_Ethernet48"
+          staticLink: true
+          properties:
+        - link: "L5_Ethernet124 | L6_Ethernet124"
+          staticLink: true
+          properties: 
+        - link: "L5_Ethernet16 |  H5_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201                    
+    - switchId: 6
+      switchName: "Leaf-6-Spine-2"
+      ipAddress: "100.100.10.12"
+      ASN: 10001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag: 
+      Links:
+        - link: "L6_Ethernet0 | L1_Ethernet52"
+          staticLink: true
+          properties:
+        - link: "L6_Ethernet124 | L5_Ethernet124"
+          staticLink: true
+          properties:
+        - link: "L6_Ethernet16 |  H6_Ethernet1"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 201           
+  Tor: []
+BGP:
+  BGP_U: true
+  ND_RA: 30
+PhysicalIfCfg:
+  FEC: "Off"
+  MTU: 9000
+  AdminStatus: "Up"
+ASN:
+  SSpine: "10000-20000"
+  Spine: "21000-50000"
+  Leaf: "51000-60000"
+  Tor: "61000-70000"
+IPv4Pool:
+  Loopback: "10.10.10.0/24"
+  LeafSpine: "40.0.0.0/24"
+  LeafTor: "39.0.0.0/24"
+  Host: "49.0.0.0/24"
+IPv6Pool:
+NTP:
+  server: "100.100.10.10"
+  timezone: "Asia/Kolkata"
+SYSLOG:
+  server: "100.100.10.10"
+SNMP:
+  trapserver: "100.100.10.10"
+Parameters:
+  vlan: "200-205"
+  vni: "20000-20005"
+  anycast_gateway: "100.10.0.0/22"
+  anycast_mac: "00:11:22:33:44:55"
+  hosts_per_vlan: 10
+  routing_symmetric: false
+  sag: true
+L2LS:
+  enabled: false
+  mode: "L2" # OverL2 and OverL3
