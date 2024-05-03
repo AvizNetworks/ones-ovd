@@ -397,7 +397,7 @@ Input Parameter for the API call -  Intent ID for the intent configuration for t
 
 
 ### <b>Get Current Devcice Configuration</b>
-## New table added
+<!-- ## New table added -->
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -581,7 +581,7 @@ This  REST API will list the existing backups  already taken for specific device
 </table>
 
 ### <b>Get the List of all Backedup Configuration</b>
-## New table added
+<!-- ## New table added -->
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -639,7 +639,7 @@ This  REST API will list the existing backups  already taken for specific device
 
 
 ### <b>Restore old backup configuration</b>
-## New table added
+<!-- ## New table added -->
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -847,7 +847,7 @@ This Rest API client call will feed the golden configuration template as input  
 </table>
 
 ### <b>Image status after SONiC NOS Image upgrade</b>
-### New table Added
+<!-- ### New table Added -->
 
 <!-- markdownlint-disable MD033 -->
 <style>
