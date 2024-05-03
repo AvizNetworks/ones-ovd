@@ -9,6 +9,19 @@ Fabric manager Command line interface provides a network operator an  interface 
 - Network operators are required to construct a complete configuration yaml  file including new incremental configuration section and not only the incremental change in the fabric configuration while doing incremental configuration as a part of Day2 Operations over the ONES enrolled Data center switches 
 - ONES Enrolled Devices will be on-boarded by a Fabric Manager Controller application called ONES  . Following rest API is first called which ensures network operator does not share the login  credentials with a re-occurrence 
 - This API call is well encrypted  which ensures ONES enrolled devices access credentials are not exposed in a  plain text to avoid any security compromise 
+- All these APIs use python script
+```py
+import requests
+import json
+```
+`print(result)`, will show the verification status <br />
+`print(result.text)` , will show the applied status
+
+- Config Status or VerificationStatus <br />
+```py
+0-Fail, 1-Pass, 2-Inprogress, 3-Notstarted
+```
+
 
 <!-- markdownlint-disable MD033 -->
 <style>
@@ -56,9 +69,11 @@ Fabric manager Command line interface provides a network operator an  interface 
   <tr>
     <th>Example</th>
     <td><pre>
-curl -X POST -H "Content-Type: application/json"
- -d '[{"ip":"device","user":"user","password":"pwd"}]' 
- http://server_ip:server_port/addDeviceFacts
+addDeviceFacts_url = 'http://10.20.0.74:8787/addDeviceFacts'
+payload = [{"ip":"10.20.3.11","user":"admin","password":"YourPaSsWoRd"},{"ip":"10.20.3.12","user":"admin","password":"YourPaSsWoRd"},{"ip":"10.20.3.14","user":"admin","password":"YourPaSsWoRd"},{"ip":"10.20.3.15","user":"admin","password":"YourPaSsWoRd"},{"ip":"10.20.3.16","user":"admin","password":"YourPaSsWoRd"},{"ip":"10.20.3.192","user":"admin","password":"YourPaSsWoRd"}]
+call_api = requests.post (addDeviceFacts_url, json = payload)
+print(call_api)
+print(call_api.text)
 </pre>
     </td>
   </tr>
@@ -113,18 +128,16 @@ Input Parameter for the REST API call -  Template file for the intent configurat
   </tr>
   <tr>
     <th>Example</th>
-    <td><pre>
-    <b>POST /uploadDay1Config HTTP/1.1</b>
-    Content-Type: application/json; charset=utf-8
-    Host: 10.x.x.6:8787
-    Connection: close
-    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-    Content-Length: 61
-    Input
-    configure_az_1.yaml
-    Response:
-    configure_az_1.yaml_20230223115541
-</pre>
+    <td>
+    <pre>
+    upload_url = 'http://10.20.0.74:8787/uploadDay1Config'
+    template = '/home/aviz/VXLAN.yaml'
+    file_upload = {'file': open(template, 'rb')}
+    getdata = requests.post(upload_url, files=file_upload)
+    print(getdata)
+    print(getdata.text)
+    #track_id = 'i-BGP-IPv4-CLOS-L2-host.yaml_20230629130445'
+    </pre>
     </td>
   </tr>
 </table>
@@ -168,7 +181,7 @@ Input Parameter for the REST API call -  Template file for the intent configurat
     <th>Parameters</th>
     <td><b>Input: &lt;Intent ID&gt;  Output: JSON (status)</b>
 
-Input Parameter for the Rest API call -  Intent ID for the intent configuration for the complete  fabric switches enrolled with ONES 
+Input Parameter for the API call -  Intent ID for the intent configuration for the complete  fabric switches enrolled with ONES 
     </td>
   </tr>
   <tr>
@@ -179,25 +192,13 @@ Input Parameter for the Rest API call -  Intent ID for the intent configuration 
     <th>Example</th>
     <td> 
     <pre>
-    <b>GET/getDay1ConfigStatus?intentID=configure_az_1.yaml_20230223115541</b>
-    HTTP/1.1
-    Content-Type: application/json; charset=utf-8
-    Host: 10.x.x.6:8787
-    Connection: close
-    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-    Content-Length: 61
-
-    Response
-    [
-      {
-        "intentName": "SNMPServer",
-        "ip": "10.x.x.69",
-        "verification_status": "1",
-        "config_status": "1",
-        "logs": ""
-      },
-    ]
-    </pre>
+    url= 'http://10.20.0.74:8787/getDay1ConfigStatus'
+    track_id = 'VXLAN.yaml_20240311054856'
+    payload = {'intentName': track_id}
+    result = requests.get(url = url, params = payload)
+    print ('Debug info: url = {} ; payload = {}'.format(url,payload))
+    print(result.text)
+        </pre>
     </td>
   </tr>
 </table>
@@ -259,15 +260,12 @@ Input Parameter for the Rest API call -  Intent ID for the intent configuration 
   <tr>
     <th>Example</th>
     <td><pre>
-   <b>POST /upgradeNOSImage  HTTP/1.1</b>
-  Content-Type: application/json; charset=utf-8
-  Host: localhost:8080
-  Connection: close
-  User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-  Content-Length: 61
-
-  [{"ip":"10.x.x.67","pathToImage":"http://10.x.x.10:8191/mnt/ws/<br />
-  images/SONiC-mellanox-e8daeacd.bin"}]</pre>
+    imageUpgradeRequest = 'http://10.20.0.74:8787/upgradeNOSImage'
+    payload = [{"ip":"10.20.3.14","pathToImage":"http://10.20.0.11:8080/ztp/Edgecore-SONiC_20231006_073817_ec202111_575.bin"}]
+    result = requests.post(url = imageUpgradeRequest, json = payload)
+    print ('debug :: imageUpgradeRequest -- {}'.format(result.json()))
+    print(result.text)
+</pre>
     </td>
   </tr>
 </table>
@@ -324,16 +322,12 @@ Input Parameter for the Rest API call -  Intent ID for the intent configuration 
     <th>Example</th>
     <td><pre>
 
-    POST /rebootRequest HTTP/1.1
-    Content-Type: application/json; charset=utf-8
-    Host: localhost:8080
-    Connection: close
-    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-    Content-Length: 61
-    Input
-    ["10.x.x.236"]
-    Response:
-    True
+    import requests
+    url = 'http://10.20.0.74:8787/rebootRequest'
+    call_api = requests.post (url, json = ['10.20.3.12'])
+    print (call_api.text)
+    print (call_api)
+
 
 </pre>
     </td>
@@ -386,28 +380,80 @@ Input Parameter for the Rest API call -  Intent ID for the intent configuration 
   <tr>
     <th>Example</th>
     <td><pre>
-<b>POST /getConfigDiff HTTP/1.1</b>
-Content-Type: application/json; charset=utf-8
-Host: localhost:8080
-Connection: close
-User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-Content-Length: 61
-Input
-{ "ip": "10.x.x.66", “diff_only”: “false”}
+    url = 'http://10.20.0.74:8787/getConfigDiff'
+    call_api = requests.post (url, json = {'ip' : '10.20.3.192'})
+    print (call_api.text)
 
-Response: current config on device vs config done via FM
-{
- "orchestrated_config": "Last login: Fri Sep 30 11:44:05 2022 <br/>
- from 10.x.x.150\r\r\nsave\nsave\r\n\rSN2100-Leaf1# save\r\n\r<br /> 
- Saving Configuration\r\n\rSN2100-Leaf1# show run\show run\r\n\r <br />
- configure terminal\r\nrouter-id 3.0.0.2\r\nntp add 128.138.141.172\<br />
- r\nclock timezone Asia/Kolkata\r\nsyslog add 10.x.11\r\snmp-server<br />
-  trap modify
-}
+    Readable format
+    url = 'http://10.20.0.74:8787/getConfigDiff'
+    call_api = requests.post (url, json = {'ip' : '10.20.3.192'})
+    parse = json.loads(call_api.text)
+    print (parse['orchestrated_config'])
+
 </pre>
     </td>
   </tr>
 </table>
+
+
+### <b>Get Current Devcice Configuration</b>
+## New table added
+
+<!-- markdownlint-disable MD033 -->
+<style>
+ table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 400px;
+    border: .1rem  solid #0000001f;
+  }
+  th, tr {
+    border: .1rem solid #0000001f;
+  }
+  
+  td {
+    border: .1rem solid #0000001f;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>API</th>
+    <td><b>getConfig</b></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Leveraging this API call, Operators get a view on the running configuration on enrolled devices
+    </td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td><b> API Input Parameter : < List of device IPs for which Configuration  is required > </b>
+    </td>
+  </tr>
+  <tr>
+    <th>Response</th>
+    <td>API Response is the running configuration  through  ONES fabric manager </td>
+  </tr>
+  <tr>
+    <th>Example</th>
+    <td><pre>
+    url = 'http://10.20.0.74:8787/getconfig'
+    payload = {'deviceip': '10.20.3.192'}
+    result = requests.get(url = url, params = payload)
+    parse = result.json()
+    print (parse['current_config'])
+
+</pre>
+    </td>
+  </tr>
+</table>
+
+
 
 
 ### <b>Get ONES Version</b>
@@ -457,24 +503,10 @@ Response: current config on device vs config done via FM
   <tr>
     <th>Example</th>
     <td><pre>
-    <b>POST /getONESVersion HTTP/1.1</b>
-    Content-Type: application/json; charset=utf-8
-    Host: 10.1.1.8:8787
-    Connection: close
-    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-    Content-Length: 61
-
-
-    ["10.x.x.79"]
-
-
-    [
-      {
-        "Version": "v1.3.16/1.3.25",
-        "IP": "10.x.x.61"
-      }
-    ]
-
+    getVersion = 'http://10.20.0.74:8787/getVersion'
+    ip_list = ['10.20.3.192']
+    result = requests.post(url = getVersion, json = ip_list)
+    print(result.text)
 
 </pre>
     </td>
@@ -537,14 +569,10 @@ This  REST API will list the existing backups  already taken for specific device
   <tr>
     <th>Example</th>
     <td><pre>
-    <b>POST /backupConfig HTTP/1.1</b>
-    Content-Type: application/json; charset=utf-8
-    Host: localhost:8080
-    Connection: close
-    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-    Content-Length: 61
-
-    [{"ip":"10.x.x.10","label":"test label"}]
+    backupconfig = 'http://10.20.0.74:8787/backupConfig'
+    payload = [{"ip": "10.20.3.192", "label": "Demo_backup"}]
+    result = requests.post(url = backupconfig, json = payload)
+    print(result.text)
 
 
 </pre>
@@ -552,6 +580,120 @@ This  REST API will list the existing backups  already taken for specific device
   </tr>
 </table>
 
+### <b>Get the List of all Backedup Configuration</b>
+## New table added
+
+<!-- markdownlint-disable MD033 -->
+<style>
+ table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 400px;
+    border: .1rem  solid #0000001f;
+  }
+  th, tr {
+    border: .1rem solid #0000001f;
+  }
+  
+  td {
+    border: .1rem solid #0000001f;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>API</th>
+    <td><b>configlistrestore</b></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Leveraging this API call, Operators get a view on all the backed-up configuration taken by user
+    </td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td><b> API Input Parameter : < List of device IPs for which Configuration  is required > </b>
+    </td>
+  </tr>
+  <tr>
+    <th>Response</th>
+    <td>API Response is the List of configuration  through  ONES fabric manager </td>
+  </tr>
+  <tr>
+    <th>Example</th>
+    <td><pre>
+    url = 'http://10.20.0.74:8787/configslisttorestore'
+    payload = {'devices': ['10.20.3.192'], 'onlylimited': False}
+    result = requests.post(url = url, json = payload)
+    print(result.text)
+
+
+</pre>
+    </td>
+  </tr>
+</table>
+
+
+### <b>Restore old backup configuration</b>
+## New table added
+
+<!-- markdownlint-disable MD033 -->
+<style>
+ table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 400px;
+    border: .1rem  solid #0000001f;
+  }
+  th, tr {
+    border: .1rem solid #0000001f;
+  }
+  
+  td {
+    border: .1rem solid #0000001f;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>API</th>
+    <td><b>restoreconfig</b></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Leveraging this API call, Operators can choose any backed-up configuration to restore 
+    </td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td><b> API Input Parameter : < List of device IPs for which Configuration  is required and the label name of the backed-up config > </b>
+    </td>
+  </tr>
+  <tr>
+    <th>Response</th>
+    <td>API Response is the success or failure of the API </td>
+  </tr>
+  <tr>
+    <th>Example</th>
+    <td><pre>
+    url = 'http://10.20.0.74:8787/restoreconfig'
+    payload = [{'ip': '10.20.3.11', 'label': 'test'}]
+    result = requests.post(url = url, json = payload)
+    print(result.text)
+
+
+</pre>
+    </td>
+  </tr>
+</table>
 
 ### <b>Replace Current Config for Devices</b>
 
@@ -589,7 +731,7 @@ This Rest API client call will feed the golden configuration template as input  
 
  - Provides difference between golden configuration and running configure and accordingly do the  required configure replacement operations through ONES API call also called as soft provisioning in Day 2 Operations <br />
  - PUSH - This Rest API client call also provisions and append  any new Day 2 operations over existing orchestrated DC fabric Sonic switches 
-
+ - User needs to feed .cfg file containing the new config changes, a FMCLI standard CLI configuration format can be used
     </td>
   </tr>
   <tr>
@@ -610,15 +752,26 @@ This Rest API client call will feed the golden configuration template as input  
     <th>Example</th>
     <td><pre>
     
-    POST /replaceConfig HTTP/1.1
-    Content-Type: application/json; charset=utf-8
-    Host: 100.100.10.10:8787
-    Connection: close
-    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-    Content-Length: 61
+    device = '10.20.3.192'
+    url = 'http://10.20.0.74:8787/replaceConfig'
+    config_file = '/home/aviz/fmcli_db.cfg'
 
-    file: goldenconfigfile
-    onlydiff: true/false
+<b>Check Incremental Config</b>
+    #This API will check the incremental config before applying it to device
+    diff_flag = True 
+    cfg_file_upload = {'file': open(config_file, 'rb')}
+    values = {'deviceip' : device , 'onlydiff':diff_flag}
+    getdata = requests.post(url, files=cfg_file_upload, data=values)
+    print(json.dumps(getdata.json(), indent = 3))
+
+
+<b>Applying Incremental Config</b>
+    #This API will apply the incremental config
+    diff_flag = False 
+    cfg_file_upload = {'file': open(config_file, 'rb')}
+    values = {'deviceip' : device , 'onlydiff':diff_flag}
+    getdata = requests.post(url, files=cfg_file_upload, data=values)
+    print(json.dumps(getdata.json(), indent = 3))
 
 </pre>
     </td>
@@ -683,17 +836,76 @@ This Rest API client call will feed the golden configuration template as input  
   <tr>
     <th>Example</th>
     <td><pre>
-    <b>POST /enableZTPUpgrade HTTP/1.1</b>
-    Content-Type: application/json; charset=utf-8
-    Host: localhost:8080
-    Connection: close
-    User-Agent: Paw/3.4.0 (Macintosh; OS X/12.3.0) GCDHTTPRequest
-    Content-Length: 61
-
-    ["10.x.x.10", "10.x.x.11"]
+    enableZTPAndRunRequest = 'http://10.20.0.74:8787/enableZTPUpgrade'
+    ip_list = ['10.20.3.14']
+    result = requests.post(url = enableZTPAndRunRequest, json = ip_list)
+    print(result.text)
 
 </pre>
     </td>
   </tr>
 </table>
 
+### <b>Image status after SONiC NOS Image upgrade</b>
+### New table Added
+
+<!-- markdownlint-disable MD033 -->
+<style>
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 400px;
+    border: .1rem  solid #0000001f;
+  }
+  th, tr {
+    border: .1rem solid #0000001f;
+  }
+
+
+  td {
+    border: .1rem solid #0000001f;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>API</th>
+    <td><b>getimgmgmtStatus</b></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td>Image Status - Status of Image after SONiC upgrade using ZTP mechanism.<br /><br />
+    
+  </td>
+  </tr>
+  <tr>
+    <th>Parameters</th>
+    <td><b>REST API Input parameter : `<`Input Device IPs`>`</b>
+    
+  </td>
+  </tr>
+  <tr>
+    <th>Response</th>
+    <td>
+    Response: true/False <br /><br />
+    Returns status true,  if ZTP enabled upgrade to SONiC enrolled devices is successful<br /><br />
+    Returns status false,  if ZTP enabled upgrade to SONiC enrolled devices is unsuccessful<br /><br />
+
+</pre> </td>
+  </tr>
+  <tr>
+    <th>Example</th>
+    <td><pre>
+    getImgmgmtStatus = 'http://10.20.0.74:8787/getImgmgmtStatus'
+    ip_list = ['10.20.3.12']
+    result = requests.post(url = getImgmgmtStatus, json = ip_list)
+    print(result.text)
+
+</pre>
+    </td>
+  </tr>
+</table>
