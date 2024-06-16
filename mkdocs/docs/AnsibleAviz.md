@@ -10,4 +10,4 @@ The SONiC Ansible collection supports network_cli connections over Aviz ISCLI (I
 
 ## <b>Accessing the collection</b>
 
-The complete collection and the detailed documentation can be found on Github [GitHub Repository](https://github.com/AvizNetworks/aviznetworks.sonic/) .
+The complete collection and the detailed documentation can be found on [Github](https://github.com/AvizNetworks/aviznetworks.sonic/) .
