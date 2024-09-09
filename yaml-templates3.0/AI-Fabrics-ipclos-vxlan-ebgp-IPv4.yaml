@@ -1,0 +1,181 @@
+
+Inventory:
+  SSpines: 0
+  Spines: 2
+  Leafs: 3
+  Tors: 0
+Connectivity:
+  SSpine: []
+  Spine:
+    - switchId: 1
+      switchName: "Spine-1"
+      ipAddress: "100.40.40.94"
+      ASN: 1001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag: null
+      Links:
+        - link: "S1_Ethernet47 | L1_Ethernet51"
+          staticLink: true
+          properties: null
+        - link: "S1_Ethernet46 | L2_Ethernet51"
+          staticLink: true
+          properties: null
+        - link: "S1_Ethernet45 | L3_Ethernet47"
+          staticLink: true
+          properties: null
+    - switchId: 2
+      switchName: "Spine-2"
+      ipAddress: "100.40.40.61"
+      ASN: 1002
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag: null
+      Links:
+        - link: "S2_Ethernet232 | L1_Ethernet52"
+          staticLink: true
+          properties: null
+        - link: "S2_Ethernet224 | L2_Ethernet52"
+          staticLink: true
+          properties: null
+        - link: "S2_Ethernet240 | L3_Ethernet48"
+          staticLink: true
+          properties: null
+  Leaf:
+    - switchId: 1
+      switchName: "Leaf-1"
+      ipAddress: "100.40.40.96"
+      ASN: 2001
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag: null
+      Links:
+        - link: "L1_Ethernet51 | S1_Ethernet47"
+          staticLink: true
+          properties:
+            pfcwd: false
+        - link: "L1_Ethernet52 | S2_Ethernet232"
+          staticLink: true
+          properties:
+            pfcwd: false
+        - link: "L1_Ethernet46 |  H1_Ethernet0"
+          staticLink: true
+          properties:
+            pfcwd: false
+            mode: "L2-Trunk"
+            vlan: 200
+        - link: "L1_Ethernet50 |  H1_Ethernet1"
+          staticLink: true
+          properties:
+            pfcwd: false
+            mode: "L2-Trunk"
+            vlan: 200
+    - switchId: 2
+      switchName: "Leaf-2"
+      ipAddress: "100.40.40.101"
+      ASN: 2002
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag: null
+      Links:
+        - link: "L2_Ethernet51 | S1_Ethernet46"
+          staticLink: true
+          properties:
+            pfcwd: false
+        - link: "L2_Ethernet52 | S2_Ethernet224"
+          staticLink: true
+          properties:
+            pfcwd: false
+        - link: "L2_Ethernet46 |  H2_Ethernet1"
+          staticLink: true
+          properties:
+            pfcwd: false
+            mode: "L2-Trunk"
+            vlan: 201
+    - switchId: 3
+      switchName: "Leaf-3"
+      ipAddress: "100.40.40.98"
+      ASN: 2003
+      Credentials:
+        user: "admin"
+        password: "YourPaSsWoRd"
+      mclag: null
+      Links:
+        - link: "L3_Ethernet47 | S1_Ethernet45"
+          staticLink: true
+          properties: null
+        - link: "L3_Ethernet48 | S2_Ethernet240"
+          staticLink: true
+          properties: null
+        - link: "L3_Ethernet0 |  H3_Ethernet0"
+          staticLink: true
+          properties:
+            mode: "L2-Trunk"
+            vlan: 202
+  Tor: []
+BGP:
+  BGP_U: false
+  ND_RA: 30
+PhysicalIfCfg:
+  FEC: "Off"
+  MTU: 9000
+  AdminStatus: "Up"
+ASN:
+  SSpine: "10000-20000"
+  Spine: "21000-50000"
+  Leaf: "51000-60000"
+  Tor: "61000-70000"
+IPv4Pool:
+  Loopback: "10.10.10.0/24"
+  LeafSpine: "40.0.0.0/24"
+  LeafTor: "39.0.0.0/24"
+  Host: "49.0.0.0/24"
+IPv6Pool:
+  LeafSpine: null
+  LeafTor: null
+  Host: null
+NTP:
+  server: "100.4.5.248"
+  timezone: "Asia/Kolkata"
+SYSLOG:
+  server: "100.4.5.248"
+SNMP:
+  trapserver: "100.4.5.248"
+Parameters:
+  vlan: "200-205"
+  vni: "40000-40005"
+  anycast_gateway: "100.10.0.0/23"
+  hosts_per_vlan: 10
+  routing_symmetric: false
+  sag: False
+QoS:
+  dscp_to_tc_map: "0,63:0 | 26:3 | 48:4"
+  dot1p_to_tc_map: null
+  tc_to_queue_map: "0:0 | 3:3 | 4:4"
+  tc_to_pg_map: null
+  pfc_enable: "3,4"
+  pfcwd:
+    enable: true
+    big_red_switch: false
+    action: "alert"
+    restoration_time: 400
+    detection_time: 400
+  ecn:
+    mode: "ecn"
+    cnp_queue: 6
+    ecn_gmin: 100000
+    ecn_gmax: 250000
+    ecn_gmark: 15
+    ecn_rmin: null
+    ecn_rmax: null
+    ecn_rmark: null
+    ecn_ymin: null
+    ecn_ymax: null
+    ecn_ymark: null
+  scheduler:
+    type: "DWRR"
+    weight: "0:0 | 1:0 | 2:0 | 3:60 | 4:40 | 5:0 | 7:0"
