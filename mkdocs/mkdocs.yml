@@ -1,6 +1,6 @@
-site_name: Aviz ONES Validated Design
+site_name: Aviz Networks
 site_author: Aviz Engineering & Sales Team
-site_description: ONES Validated Designs Documentation
+site_description: Aviz Networks
 site_url: https://www.aviznetworks.com
 copyright: Copyright &copy; 2026 Aviz Networks
 
@@ -71,8 +71,9 @@ markdown_extensions:
       alternate_style: true 
 
 nav:
+  - Home: index.md
   - ONES Validated Designs:
-    - Getting started with SONiC Journey: index.md
+    - Getting started with SONiC Journey: ovd_ai.md
     - SONiC Advantages: SonicAdvantages.md
     - How Aviz lowers the Barrier to Adopt SONiC based Fabric: AvizBuisnessModel.md
     - Day 1 Operations for SONiC with ONES: day1Operation/Day1OperationsSONiC.md
@@ -113,8 +114,8 @@ nav:
     - Deploy ONES: DeployONES/DeployONES.md
     - Contact Us: ConnectWithAviz.md
 
-  - Aviz Network Copilot:
-    - Aviz Network Copilot: AvizNetworkCopilot/AvizNetworkCopilot.md
+  - Network Copilot SDK:
+    - SDK User Guide: AvizNetworkCopilot/AvizNetworkCopilot.md
     - Agent Mo: AvizNetworkCopilot/AgentMo.md
     - Intent Drift Detector: AvizNetworkCopilot/IntentDriftDetector.md
     - Inventory Traceout Agent: AvizNetworkCopilot/InventoryTraceoutAgent.md
