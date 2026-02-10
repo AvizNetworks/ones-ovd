@@ -43,7 +43,7 @@ Whether you’re building your first agent or scaling an agent ecosystem, the SD
 
 - 🚀 **New to SONiC or Aviz ONES?** Start by exploring the OVD.AI reference documentation to understand validated designs, deployment templates, and operational best practices.  
 - 🛠 **Developers building AI Agents?** Dive into the Network Copilot SDK section to learn how to write, test, and deploy intelligent network agents.  
-- 📄 **Looking for examples?** Browse the agent catalog in the SDK docs to see ready-to-use use cases.
+- 📄 **Looking for examples?** Browse the [agent catalog](AvizNetworkCopilot/AgentMo) in the SDK docs to see ready-to-use use cases.
 
 ---
 
