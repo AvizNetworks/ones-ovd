@@ -1,8 +1,8 @@
-# Aviz - ONES Validated Designs and Netowork Copilot SDK
+# Aviz - ONES Validated Designs and Network Copilot SDK
 
 Welcome! This documentation hub introduces two powerful resources from Aviz Networks:
 
-- **Aviz - ONES Validated Designs** — validated design and operational documentation for SONiC-based fabrics  
+- **Aviz - ONES Validated Designs** — validated design and operational documentation for SONiC-based fabrics managed by ONES.
 - **Network Copilot SDK (ncp-sdk)** — a developer toolkit for building AI-powered network agents
 
 ---
@@ -18,7 +18,7 @@ Welcome! This documentation hub introduces two powerful resources from Aviz Netw
 - Migration guides to SONiC from other NOS  
 - REST APIs and automation capabilities  
 - Aviz SONiC Ansible Collection  
-- Deployment guidance and contact information :contentReference[oaicite:1]{index=1}
+- Deployment guidance and contact information
 
 **[Explore Aviz - ONES Validated Designs Reference Docs](ovd_ai/)**
 
@@ -26,7 +26,7 @@ Welcome! This documentation hub introduces two powerful resources from Aviz Netw
 
 ## What is the Network Copilot SDK?
 
-The **Network Copilot SDK (ncp-sdk)** is a developer-focused framework that lets you build **AI/LLM-powered agents** for network automation and observability. Using this SDK, you can:
+The **Network Copilot SDK** is a developer-focused framework that lets you build **AI/LLM-powered agents** for network automation and observability. Using this SDK, you can:
 
 - Create custom agents to assist in troubleshooting, configuration, monitoring, and automation  
 - Integrate directly with telemetry or operational APIs (e.g., ONES REST APIs)  
@@ -50,4 +50,4 @@ Whether you’re building your first agent or scaling an agent ecosystem, the SD
 ## Quick Navigation
 
 - **Aviz - ONES Validated Designs** → `ovd_ai/`
-- **Network Copilot SDK (ncp-sdk)** → `ncp_sdk/`  
+- **Network Copilot SDK** → `ncp_sdk/`  
