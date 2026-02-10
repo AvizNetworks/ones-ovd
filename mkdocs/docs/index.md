@@ -1,15 +1,15 @@
-# Welcome to OVD.AI and Network Copilot SDK
+# Aviz - ONES Validated Designs and Netowork Copilot SDK
 
 Welcome! This documentation hub introduces two powerful resources from Aviz Networks:
 
-- **OVD.AI (Aviz ONES Validated Design)** — validated design and operational documentation for SONiC-based fabrics  
+- **Aviz - ONES Validated Designs** — validated design and operational documentation for SONiC-based fabrics  
 - **Network Copilot SDK (ncp-sdk)** — a developer toolkit for building AI-powered network agents
 
 ---
 
-## 🤖 What is OVD.AI?
+## What is Aviz - ONES Validated Designs?
 
-**OVD.AI (Aviz ONES Validated Design)** is a comprehensive set of reference documentation, workflows, and operational guidance focused on deploying and managing **SONiC-based network fabrics** using Aviz’s ONES platform. It includes:
+**Aviz - ONES Validated Designs** is a comprehensive set of reference documentation, workflows, and operational guidance focused on deploying and managing **SONiC-based network fabrics** using Aviz’s ONES platform. It includes:
 
 - Getting started with the SONiC journey  
 - SONiC advantages and operational best practices  
@@ -20,11 +20,11 @@ Welcome! This documentation hub introduces two powerful resources from Aviz Netw
 - Aviz SONiC Ansible Collection  
 - Deployment guidance and contact information :contentReference[oaicite:1]{index=1}
 
-👉 **[Explore OVD.AI Reference Docs](ovd_ai/)**
+**[Explore Aviz - ONES Validated Designs Reference Docs](ovd_ai/)**
 
 ---
 
-## 🧠 What is the Network Copilot SDK?
+## What is the Network Copilot SDK?
 
 The **Network Copilot SDK (ncp-sdk)** is a developer-focused framework that lets you build **AI/LLM-powered agents** for network automation and observability. Using this SDK, you can:
 
@@ -35,19 +35,19 @@ The **Network Copilot SDK (ncp-sdk)** is a developer-focused framework that lets
 
 Whether you’re building your first agent or scaling an agent ecosystem, the SDK provides the tools, guides, and examples you need.
 
-👉 **[Explore Network Copilot SDK Docs](AvizNetworkCopilot/AvizNetworkCopilot/)**
+**[Explore Network Copilot SDK Docs](AvizNetworkCopilot/AvizNetworkCopilot/)**
 
 ---
 
-## 🎯 Where to Start
+## Where to Start
 
-- 🚀 **New to SONiC or Aviz ONES?** Start by exploring the OVD.AI reference documentation to understand validated designs, deployment templates, and operational best practices.  
-- 🛠 **Developers building AI Agents?** Dive into the Network Copilot SDK section to learn how to write, test, and deploy intelligent network agents.  
-- 📄 **Looking for examples?** Browse the [agent catalog](AvizNetworkCopilot/AgentMo) in the SDK docs to see ready-to-use use cases.
+- **New to SONiC or Aviz ONES?** Start by exploring the Aviz - ONES Validated Designs reference documentation to understand validated designs, deployment templates, and operational best practices.  
+- **Developers building AI Agents?** Dive into the Network Copilot SDK section to learn how to write, test, and deploy intelligent network agents.  
+- **Looking for examples?** Browse the [agent catalog](AvizNetworkCopilot/AgentMo) in the SDK docs to see ready-to-use use cases.
 
 ---
 
-## 🔗 Quick Navigation
+## Quick Navigation
 
-- 📘 **OVD.AI (SONiC validated designs)** → `ovd_ai/`
-- 📦 **Network Copilot SDK (ncp-sdk)** → `ncp_sdk/`  
+- **Aviz - ONES Validated Designs** → `ovd_ai/`
+- **Network Copilot SDK (ncp-sdk)** → `ncp_sdk/`  
