@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var repo = "AvizNetworks/ncp-sdk-agents"; // <--- Your 2nd Repo Name
+  var repo = "AvizNetworks/ncp-sdk-examples"; // <--- Your 2nd Repo Name
   var container = document.getElementById("second-repo-facts");
 
   if (container) {

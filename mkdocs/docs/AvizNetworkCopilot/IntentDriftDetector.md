@@ -78,3 +78,13 @@ The **Intent Drift Detector**:
             | - Markdown / CSV     |
             | - Patch suggestions  |
             +----------------------+
+
+## Screenshots
+
+#### Figure 1. Intent Drift Check
+![Intent Drift Check](../img/IntentDrift_1.png)
+
+#### Figure 2. Sample ONES-FM Intent
+![Sample ONES-FM Intent](../img/IntentDrift_2.png)
+
+
