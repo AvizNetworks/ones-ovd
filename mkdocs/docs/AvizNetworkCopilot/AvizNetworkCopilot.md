@@ -1,5 +1,5 @@
 # Aviz Network Copilot SDK Documentation
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/AvizNetworks/ncp-sdk-agents/tree/master/)
+[![Documentation](https://img.shields.io/badge/Documentation-Read%20Docs-blue?logo=readthedocs)](https://pypi.org/project/ncp-sdk/)
 # NCP SDK User Guide
 
 Comprehensive Guide to Network Copilot SDK for AI Agent Development

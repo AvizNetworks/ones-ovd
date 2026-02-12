@@ -12,15 +12,15 @@ It works at **device**, **service**, and **network** levels and supports both **
 
 ## Key Capabilities
 
-* 📊 **Real-time memory utilization analysis**
-* 🔍 **Memory leak detection [Mann-kendall]**
+* **Real-time memory utilization analysis**
+* **Memory leak detection [Mann-kendall]**
 
   * Device-level
   * Network-level
   * Service-level
-* 📈 **Memory forecasting using XGBoost** 
-* 🧠 **Catalyst Center–aware analysis**
-* 🛠️ **Guided troubleshooting recommendations**
+* **Memory forecasting using XGBoost** 
+* **Catalyst Center–aware analysis**
+* **Guided troubleshooting recommendations**
 
 ---
 
@@ -132,7 +132,7 @@ PASSWORD_ONES = "YOUR_ONES_PASSWORD"
 
 ## Setup & Run Instructions
 
-### 1️⃣ Clone the Repository
+#### Clone the Repository
 
 ```bash
 git clone https://github.com/AvizNetworks/ncp-sdk-agents.git
@@ -142,7 +142,7 @@ git checkout agent-mo
 
 ---
 
-### 2️⃣ Configure ONES Credentials
+#### Configure ONES Credentials
 
 Edit `tools.py` and update:
 
@@ -154,7 +154,7 @@ PASSWORD_ONES
 
 ---
 
-### 3️⃣ Authenticate with NCP
+#### Authenticate with NCP
 
 Provide the following details when prompted or via config:
 
@@ -164,13 +164,13 @@ Provide the following details when prompted or via config:
 
 ---
 
-### 4️⃣ Install NCP SDK Package
+#### Install NCP SDK Package
 
 ```bash
 pip install ncp
 ```
 
-### For creating package (.ncp)
+#### For creating package (.ncp)
 
 ```bash
 ncp authenticate
@@ -179,7 +179,7 @@ ncp package .
 
 ---
 
-### 5️⃣ Deploy Agent to NCP Playground
+#### Deploy Agent to NCP Playground
 
 1. Open **NCP Playground**
 2. Upload `agent_mo.ncp`
@@ -187,7 +187,7 @@ ncp package .
 
 ---
 
-### 6️⃣ Use the NCP UI
+#### Use the NCP UI
 
 * Open NCP UI
 * Select **Agent-MO**
@@ -205,11 +205,20 @@ ncp package .
 
 ---
 
-## Demo
+## Screenshots
 
-🎥 **Demo Recording Available**
-A demo recording showcasing Agent-MO’s workflows and capabilities is available here ->
-!(https://drive.google.com/file/d/1L-Q4WoTJXYM9uyc9sAFzk-5zzaUkH2HR/view?usp=sharing)
+#### Figure 1. Agent-MO Memory Leak Detection
+![Agent-MO Memory Leak Detection](../img/AgentMo_1.png)
+
+#### Figure 2. Service-Level Memory Analysis
+![Service-Level Memory Analysis](../img/AgentMo_2.png)
+<br /> <br />
+![Service-Level Memory Analysis 2](../img/AgentMo_3.png)
+
+#### Figure 3. Memory Forecasting Output with Chart
+![Memory Forecasting Output with Chart](../img/AgentMo_4.png)
+
+
 
 ---
 

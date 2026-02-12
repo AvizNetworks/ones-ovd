@@ -117,7 +117,8 @@ nav:
   - Network Copilot SDK:
     - SDK User Guide: AvizNetworkCopilot/AvizNetworkCopilot.md
     - Agents:
+      - Sample Agents: AvizNetworkCopilot/SampleAgents.md
       - Agent Mo: AvizNetworkCopilot/AgentMo.md
       - Intent Drift Detector: AvizNetworkCopilot/IntentDriftDetector.md
-      - Inventory Traceout Agent: AvizNetworkCopilot/InventoryTraceoutAgent.md
+      # - Inventory Traceout Agent: AvizNetworkCopilot/InventoryTraceoutAgent.md
       - SONiC Dump Analysis Agent: AvizNetworkCopilot/SonicDumpAnalysisAgent.md
