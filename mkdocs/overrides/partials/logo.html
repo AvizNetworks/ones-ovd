@@ -1,0 +1,12 @@
+{% if config.theme.logo %}
+  <img 
+    src="{{ config.theme.logo | url }}" 
+    alt="{{ config.site_name }}" 
+    style="height: 1.6rem !important; width: auto !important;" 
+  />
+
+{% else %}
+  <span style="height: 1.6rem; width: auto; display: inline-block;">
+    {% include ".icons/" ~ (config.theme.icon.logo or "material/library") ~ ".svg" %}
+  </span>
+{% endif %}

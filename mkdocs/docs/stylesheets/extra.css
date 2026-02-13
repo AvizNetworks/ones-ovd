@@ -13,3 +13,46 @@
    width: 50px;
    height: 50px;
 }
+
+/* Force the source container to hold two buttons side-by-side */
+.md-header__source {
+    max-width: none !important;
+    width: auto !important;
+    display: flex !important;
+    gap: 10px; /* Space between the two buttons */
+}
+
+/* Ensure both buttons display properly */
+.md-header__source .md-source {
+    display: flex !important;
+    width: auto !important;
+    padding: 0 10px; /* spacing inside the button */
+}
+
+/* Optional: Hide the second button on mobile to prevent layout breaking */
+@media screen and (max-width: 600px) {
+    .custom-repo-button {
+        display: none !important;
+    }
+}
+
+/* Ensure the facts list (stars/forks) sits under the text */
+#second-repo-facts {
+    font-size: 0.55rem;
+    color: rgb(255, 255, 255);
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    padding-top: 3px;
+    list-style: none;
+    line-height: 1.2;
+}
+
+/* Add icons via CSS if they are missing */
+.md-source__fact--stars::before {
+    content: "★ ";
+}
+.md-source__fact--forks::before {
+    content: "⑂ "; /* Fork symbol roughly */
+}

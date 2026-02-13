@@ -1,33 +1,44 @@
-site_name: Aviz ONES Validated Design
+site_name: Aviz Networks
 site_author: Aviz Engineering & Sales Team
-site_description: ONES Validated Designs Documentation
+site_description: Aviz Networks
 site_url: https://www.aviznetworks.com
-copyright: Copyright &copy; 2023 Aviz Networks
+copyright: Copyright &copy; 2026 Aviz Networks
 
 # Repository information
-repo_name: ones-ovd on github
+repo_name: ones-ovd 
 repo_url: https://github.com/AvizNetworks/ones-ovd
 
 theme:
   features:
     - content.code.copy
   name: 'material'
+  custom_dir: overrides
   favicon: icons/avizLogo.png
-  logo: icons/image2vector.svg
+  logo: icons/AvizLatestLogo.svg
   palette:
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
+        icon: material/link
         name: Switch to light mode
 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to dark mode
+      
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to system preference
+
+extra_javascript:
+  - javascripts/extra.js
 extra_css:
   - stylesheets/extra.css
 
@@ -44,6 +55,10 @@ extra:
 
     - icon: fontawesome/solid/globe
       link: https://www.aviznetworks.com
+
+    - icon: fontawesome/brands/github
+      link: https://github.com/AvizNetworks/ones-ovd
+      name: ones-ovd
    
 plugins:
   - search
@@ -56,43 +71,54 @@ markdown_extensions:
       alternate_style: true 
 
 nav:
-  - Getting started with SONiC Journey: index.md
-  - SONiC Advantages: SonicAdvantages.md
-  - How Aviz lowers the Barrier to Adopt SONiC based Fabric: AvizBuisnessModel.md
-  - Day 1 Operations for SONiC with ONES: day1Operation/Day1OperationsSONiC.md
-  - Day 2 Operations for SONiC with ONES: day2Operations/Day2OperationSonic.md
-  - SONiC Deployment Configurations & Templates:
-    - Overview: ONESValidateDesign.md
-    - BGP IP CLOS: OverviewOnesValidatedDesigns/BGP_IP_CLOS.md
-    - BGP-IP-CLOS-MC LAG : OverviewOnesValidatedDesigns/BGP-IP-CLOS-MCLAG.md
-    - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
-    - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
-    - DCI EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
-    - Layer 2 Leaf Spine Topology: OverviewOnesValidatedDesigns/Layer2LeafSpineTopology.md
-    - Rack-2-Rack Deployement: OverviewOnesValidatedDesigns/Rack2Deployement.md
-    - Layer 3 MC-LAG Deployment: OverviewOnesValidatedDesigns/Layer3mclag.md
-    # - BGP over MC-LAG peering with Port channel ICL Link: OverviewOnesValidatedDesigns/BGPoverMCLAGpeeringwithPortchannelICLLink.md
-    # - BGP over MC-LAG peering separate ICL link: OverviewOnesValidatedDesigns/BGPoverMCLAGpeeringseparateICLlink.md
-    - Layer 3 Fabric with BGP over Port channel: OverviewOnesValidatedDesigns/Layer3BGPoverSimpleLinkAggregationLAG.md
-    # - DHCP IP-CLOS SVI Access Host: OverviewOnesValidatedDesigns/DHCP_IP-CLOSSVIAccessHost.md
-    # - BGP over Port Channel with Sflow enabled: OverviewOnesValidatedDesigns/BGPoverPortChannelwithSflowenabled.md
+  - Home: index.md
+  - ONES Validated Designs:
+    - Getting started with SONiC Journey: ovd_ai.md
+    - SONiC Advantages: SonicAdvantages.md
+    - How Aviz lowers the Barrier to Adopt SONiC based Fabric: AvizBuisnessModel.md
+    - Day 1 Operations for SONiC with ONES: day1Operation/Day1OperationsSONiC.md
+    - Day 2 Operations for SONiC with ONES: day2Operations/Day2OperationSonic.md
+    - SONiC Deployment Configurations & Templates:
+      - Overview: ONESValidateDesign.md
+      - BGP IP CLOS: OverviewOnesValidatedDesigns/BGP_IP_CLOS.md
+      - BGP-IP-CLOS-MC LAG : OverviewOnesValidatedDesigns/BGP-IP-CLOS-MCLAG.md
+      - L3 VXLAN + EVPN Symmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L3VXLAN_EVPNSymmetricIRBoverMC-LAG.md
+      - L2 VXLAN + EVPN Asymmetric IRB over MC-LAG: OverviewOnesValidatedDesigns/L2VXLAN_EVPNAsymmetricIRBoverMC-LAG.md
+      - DCI EVPN Multihoming: OverviewOnesValidatedDesigns/DCL_EVPNMultihoming.md
+      - Layer 2 Leaf Spine Topology: OverviewOnesValidatedDesigns/Layer2LeafSpineTopology.md
+      - Rack-2-Rack Deployement: OverviewOnesValidatedDesigns/Rack2Deployement.md
+      - Layer 3 MC-LAG Deployment: OverviewOnesValidatedDesigns/Layer3mclag.md
+      # - BGP over MC-LAG peering with Port channel ICL Link: OverviewOnesValidatedDesigns/BGPoverMCLAGpeeringwithPortchannelICLLink.md
+      # - BGP over MC-LAG peering separate ICL link: OverviewOnesValidatedDesigns/BGPoverMCLAGpeeringseparateICLlink.md
+      - Layer 3 Fabric with BGP over Port channel: OverviewOnesValidatedDesigns/Layer3BGPoverSimpleLinkAggregationLAG.md
+      # - DHCP IP-CLOS SVI Access Host: OverviewOnesValidatedDesigns/DHCP_IP-CLOSSVIAccessHost.md
+      # - BGP over Port Channel with Sflow enabled: OverviewOnesValidatedDesigns/BGPoverPortChannelwithSflowenabled.md
 
-  - Migrate to SONiC  Example Configurations :
-    - Overview: migrateToSonic/overview.md
-    - SONiC NOS Installation from ONIE: SONIC-NOS-INSTALL/SONIC-NOS-INSTALL.md
-    - PICOS to SONiC Migration guide: 
-      - Why Migrate from PICOS to SONiC?: PICOStoSONiCMigration/PICOS_to_SONiC.md
-      - Configuration convertor from PICOS to SONiC: PICOStoSONiCMigration/MainSection.md
-    - Cumulus to SONiC Migration guide:
-      - Migrate from Cumulus to Future Proof and Proven NOS - SONiC: CumulusMigration/cumulus1.md
-      - Why Migrate from Cumulus: CumulusMigration/cumulus2.md
-      - Why Migrate to SONiC: CumulusMigration/cumulus3.md
-      - Configuration convertor from Cumulus to SONiC: CumulusMigration/MainSection.md
-  - ONES REST APIs for multi-vendor SONiC:
-    - Overview: day2Operations/onesAPI/OnesAPI.md
-    - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
-    - ONES‘s Sample REST APIs: 
-      - Fabric Manager orchestration Sample APIs: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/FebricManagerAPIs.md
-  - Aviz SONiC Ansible Collection: AnsibleAviz.md
-  - Deploy ONES: DeployONES/DeployONES.md
-  - Contact Us: ConnectWithAviz.md
+    - Migrate to SONiC  Example Configurations :
+      - Overview: migrateToSonic/overview.md
+      - SONiC NOS Installation from ONIE: SONIC-NOS-INSTALL/SONIC-NOS-INSTALL.md
+      - PICOS to SONiC Migration guide: 
+        - Why Migrate from PICOS to SONiC?: PICOStoSONiCMigration/PICOS_to_SONiC.md
+        - Configuration convertor from PICOS to SONiC: PICOStoSONiCMigration/MainSection.md
+      - Cumulus to SONiC Migration guide:
+        - Migrate from Cumulus to Future Proof and Proven NOS - SONiC: CumulusMigration/cumulus1.md
+        - Why Migrate from Cumulus: CumulusMigration/cumulus2.md
+        - Why Migrate to SONiC: CumulusMigration/cumulus3.md
+        - Configuration convertor from Cumulus to SONiC: CumulusMigration/MainSection.md
+    - ONES REST APIs for multi-vendor SONiC:
+      - Overview: day2Operations/onesAPI/OnesAPI.md
+      - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
+      - ONES‘s Sample REST APIs: 
+        - Fabric Manager orchestration Sample APIs: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/FebricManagerAPIs.md
+    - Aviz SONiC Ansible Collection: AnsibleAviz.md
+    - Deploy ONES: DeployONES/DeployONES.md
+    - Contact Us: ConnectWithAviz.md
+
+  - Network Copilot SDK:
+    - SDK User Guide: AvizNetworkCopilot/AvizNetworkCopilot.md
+    - Agents:
+      - Sample Agents: AvizNetworkCopilot/SampleAgents.md
+      - Agent Mo: AvizNetworkCopilot/AgentMo.md
+      - Intent Drift Detector: AvizNetworkCopilot/IntentDriftDetector.md
+      # - Inventory Traceout Agent: AvizNetworkCopilot/InventoryTraceoutAgent.md
+      - SONiC Dump Analysis Agent: AvizNetworkCopilot/SonicDumpAnalysisAgent.md
