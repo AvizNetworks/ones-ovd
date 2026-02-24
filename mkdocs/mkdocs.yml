@@ -109,7 +109,7 @@ nav:
       - Overview: day2Operations/onesAPI/OnesAPI.md
       - REST API Explorer: day2Operations/onesAPI/onesAPIExplorer/OnesAPIExplorer.md
       - ONES‘s Sample REST APIs: 
-        - Fabric Manager orchestration Sample APIs: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/FebricManagerAPIs.md
+        - Fabric Manager orchestration Sample APIs: day2Operations/onesAPI/onesAPIExplorer/onesSampleAPI/FabricManagerAPIs.md
     - Aviz SONiC Ansible Collection: AnsibleAviz.md
     - Deploy ONES: DeployONES/DeployONES.md
     - Contact Us: ConnectWithAviz.md
