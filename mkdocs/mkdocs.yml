@@ -122,3 +122,4 @@ nav:
       - Intent Drift Detector: AvizNetworkCopilot/IntentDriftDetector.md
       # - Inventory Traceout Agent: AvizNetworkCopilot/InventoryTraceoutAgent.md
       - SONiC Dump Analysis Agent: AvizNetworkCopilot/SonicDumpAnalysisAgent.md
+      - Net Path Agent: AvizNetworkCopilot/NetPathAgent.md
