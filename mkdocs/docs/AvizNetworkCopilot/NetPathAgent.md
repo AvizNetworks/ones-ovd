@@ -1,5 +1,7 @@
 # NetPath-Agent (Network Path Intelligence)
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/AvizNetworks/ncp-sdk-agents/tree/master/netpath-agent)
+
 ## Overview
 
 **NetPath-Agent** is an advanced, automated network diagnostic agent designed to **dynamically analyze, map, and troubleshoot** complex multi-vendor network fabrics.
