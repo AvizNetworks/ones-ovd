@@ -124,3 +124,4 @@ nav:
       - SONiC Dump Analysis Agent: AvizNetworkCopilot/SonicDumpAnalysisAgent.md
       - Net Path Agent: AvizNetworkCopilot/NetPathAgent.md
       - Log Lens Agent: AvizNetworkCopilot/LogLens.md
+      - Network Configurator: AvizNetworkCopilot/NetworkConfigurator.md
